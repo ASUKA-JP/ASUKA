@@ -1,0 +1,1833 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minna Study</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <div class="brand-mark">み</div>
+          <h1>Minna Study</h1>
+        </div>
+        <button id="settingsBtn" class="settings-btn" aria-label="Pengaturan">
+          ⚙️
+        </button>
+      </header>
+
+      <nav class="lesson-scroll-container">
+        <div class="lesson-scroll" id="lessonGrid"></div>
+      </nav>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Minna no Nihongo</p>
+            <h2 id="pageTitle">Kosakata Bab 1</h2>
+          </div>
+          <div class="progress-pill">
+            <span id="wordCount">30</span>
+            <span id="metricLabel">kata</span>
+          </div>
+        </header>
+
+        <section class="page active" id="vocabularyPage">
+          <div class="section-head">
+            <div>
+              <h3 id="lessonName">Bab 1: Perkenalan</h3>
+              <p>Klik tanda panah untuk melihat romaji dan contoh kalimat.</p>
+            </div>
+            <label class="search-box">
+              <span>Cari</span>
+              <input id="searchInput" type="search" placeholder="watashi, guru, 学生..." />
+            </label>
+          </div>
+
+          <div class="vocab-list" id="vocabList"></div>
+          <p class="empty-state" id="emptyState">Kosakata tidak ditemukan.</p>
+        </section>
+
+                <section class="page" id="patternsPage">
+          <div class="section-head">
+            <div>
+              <h3 id="patternsPageTitle">Pola Kalimat</h3>
+              <p>Keterangan tata bahasa dan contoh kalimat.</p>
+            </div>
+          </div>
+
+          <div class="vocab-list" id="patternsList">
+            <!-- Dynamic content will be injected here -->
+          </div>
+
+          <!-- Template Bab 1 -->
+          <template id="pattern-template-1">
+<!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">は</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                  <span class="formula-box">です</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>1) Partikel は</strong><br>
+                  Partikel <strong>は</strong> menunjukkan bahwa kata sebelumnya adalah topik kalimat (Lihat: Kolom1: Topik dan Subjek). Si pembicara memakai <strong>は</strong> untuk hal yang mau dibicarakannya, kemudian selanjutnya membuat kalimat dengan menambahkan berbagai deskripsi.</p>
+                  <p><span class="example-jp">① わたしは マイク・ミラーです。</span><br>
+                  Saya Mike Miller.<br>
+                  <span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] Partikel は dibaca わ.</span></p>
+
+                  <p><strong>2) です</strong><br>
+                  Kata Benda yang diikuti oleh <strong>です</strong> menjadi Predikat. <strong>です</strong> menyatakan maksud penilaian dan kepastian, juga menunjukkan sikap sopan terhadap lawan bicara. Jika <strong>です</strong> dalam kalimat negatif atau waktu lampau, bentuknya berubah.</p>
+                  <p><span class="example-jp">② わたしは <ruby>会社員<rt>かいしゃいん</rt></ruby>です。</span><br>
+                  Saya pegawai perusahaan.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">は</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                  <span class="formula-box">じゃ（では）ありません</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>じゃ（では）ありません</strong> adalah bentuk negatif untuk <strong>です</strong>. Dalam percakapan sehari-hari sering digunakan <strong>じゃ ありません</strong>. Dalam pidato yang resmi atau bahasa tertulis digunakan <strong>では ありません</strong>.</p>
+                  <p><span class="example-jp">③ サントスさんは <ruby>学生<rt>がくせい</rt></ruby>じゃ（では） ありません。</span><br>
+                  Sdr. Santos bukan mahasiswa.<br>
+                  <span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] は dari では diucapkan わ.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">は</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                  <span class="formula-box">ですか</span>
+                  <span style="font-size: 0.7em; font-weight: normal; color: var(--muted);">(kalimat tanya)</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>1) Partikel か</strong><br>
+                  Partikel <strong>か</strong> menyatakan perasaan ketidakpastian atau heran si pembicara. Dengan memakai <strong>か</strong> pada akhir kalimat maka dapat membuat kalimat tanya. Kalimat tanya biasanya menyertai intonasi naik pada akhir kalimat.</p>
+
+                  <p><strong>2) Kalimat tanya untuk menanyakan "Ya" atau "Tidak" tentang isi kalimat.</strong><br>
+                  Tanpa mengubah susunan kata-kata, membuat kalimat dengan membubuhi <strong>か</strong> pada akhir kalimat. Kalimat tanya ini menanyakan apakah benar atau tidak isi kalimat, dan jika benar menjawab dengan memakai <strong>はい</strong>, jika salah menjawab dengan <strong>いいえ</strong>.</p>
+                  <p><span class="example-jp">④ ミラーさんは アメリカ<ruby>人<rt>じん</rt></ruby>ですか。</span><br>
+                  Apakah Sdr. Miller orang Amerika?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……はい、アメリカ<ruby>人<rt>じん</rt></ruby>です。</span><br>
+                  <span style="margin-left: 20px;">……Ya, orang Amerika.</span></p>
+                  <p><span class="example-jp">⑤ ミラーさんは <ruby>先生<rt>せんせい</rt></ruby>ですか。</span><br>
+                  Apakah Sdr. Miller guru?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、<ruby>先生<rt>せんせい</rt></ruby>じゃ ありません。</span><br>
+                  <span style="margin-left: 20px;">……Bukan, dia bukan guru.</span></p>
+                  
+                  <p><strong>3) Kalimat tanya dengan kata tanya</strong><br>
+                  Bagian isi yang ingin ditanyakan diganti dengan kata tanya, dan dibubuhkan <strong>か</strong> pada akhir kalimat.</p>
+                  <p><span class="example-jp">⑥ あの<ruby>方<rt>かた</rt></ruby>は どなたですか。</span><br>
+                  Siapakah orang itu?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……[あの<ruby>方<rt>かた</rt></ruby>は] ミラーさんです。</span><br>
+                  <span style="margin-left: 20px;">……[Beliau] Sdr. Miller.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">も</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>も</strong> digunakan apabila menyatakan predikatnya dianggap sama dengan predikat sebelumnya.</p>
+                  <p><span class="example-jp">⑦ ミラーさんは <ruby>会社員<rt>かいしゃいん</rt></ruby>です。グプタさんも <ruby>会社員<rt>かいしゃいん</rt></ruby>です。</span><br>
+                  Sdr. Miller pegawai perusahaan. Sdr. Gupta juga pegawai perusahaan.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">の</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Jika Kata Benda<sub style="font-size: 0.8em">1</sub> di depan menerangkan Kata Benda<sub style="font-size: 0.8em">2</sub> di belakangnya, maka kedua Kata Benda disambung dengan <strong>の</strong>. Pada Pelajaran 1 Kata Benda<sub style="font-size: 0.8em">1</sub> menunjukkan satu kesatuan Kata Benda<sub style="font-size: 0.8em">2</sub>.</p>
+                  <p><span class="example-jp">⑧ ミラーさんは IMCの <ruby>社員<rt>しゃいん</rt></ruby>です。</span><br>
+                  Sdr. Miller pegawai perusahaan IMC.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 6 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>6.</span>
+                  <span>〜</span>
+                  <span class="formula-box">さん</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Dalam bahasa Jepang memakai <strong>さん</strong> di belakang marga atau nama lawan bicara atau orang pihak ketiga. Karena <strong>さん</strong> menunjukkan kesopanan, tidak dipakai untuk marga atau nama si pembicara sendiri. Sebagai gantinya <strong>さん</strong>, untuk anak kecil dengan rasa akrab dipakai <strong>ちゃん</strong>.</p>
+                  <p><span class="example-jp">⑨ あの<ruby>方<rt>かた</rt></ruby>は ミラーさんです。</span><br>
+                  Beliau Sdr. Miller.</p>
+                  <p>Ketika memanggil lawan bicara, jika telah mengenal namanya maka <strong>あなた</strong> tidak dipakai lagi, tetapi memanggil marga atau namanya yang dibubuhi dengan <strong>さん</strong>.</p>
+                  <p><span class="example-jp">⑩ <ruby>鈴木<rt>すずき</rt></ruby>： ミラーさんは <ruby>学生<rt>がくせい</rt></ruby>ですか。</span><br>
+                  Suzuki: Apakah Sdr. Miller mahasiswa?<br>
+                  <span class="example-jp">ミラー： いいえ、<ruby>会社員<rt>かいしゃいん</rt></ruby>です。</span><br>
+                  Miller: Bukan, saya pegawai perusahaan.</p>
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] <strong>あなた</strong> digunakan terhadap orang yang berhubungan sangat dekat (suami istri, pacar dll.). Perlu hati-hati bahwa jika menggunakannya kepada lawan bicara yang hubungan tidak dekat maka akan memberi kesan yang kurang sopan.</span></p>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Template Bab 2 -->
+          <template id="pattern-template-2">
+<!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box">これ</span>
+                  <span>／</span>
+                  <span class="formula-box">それ</span>
+                  <span>／</span>
+                  <span class="formula-box">あれ</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>これ, それ, あれ</strong> menunjukkan benda dan berfungsi sebagai Kata Benda.<br>
+                  <strong>これ</strong> menunjukkan benda yang ada di dekat si pembicara.<br>
+                  <strong>それ</strong> menunjukkan benda yang ada di dekat lawan bicara.<br>
+                  <strong>あれ</strong> menunjukkan benda yang ada jauh dari pembicara dan lawan bicara.</p>
+                  <p><span class="example-jp">① それは <ruby>辞書<rt>じしょ</rt></ruby>ですか。</span><br>
+                  Apakah ini kamus?</p>
+                  <p><span class="example-jp">② これは だれの <ruby>傘<rt>かさ</rt></ruby>ですか。</span><br>
+                  Ini payung siapa?</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">この Kata Benda</span>
+                  <span>／</span>
+                  <span class="formula-box">その Kata Benda</span>
+                  <span>／</span>
+                  <span class="formula-box">あの Kata Benda</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Jika menerangkan Kata Benda, dipakai <strong>この, その</strong> dan <strong>あの</strong>.</p>
+                  <p><span class="example-jp">③ この <ruby>本<rt>ほん</rt></ruby>は わたしのです。</span><br>
+                  Buku ini kepunyaan saya.</p>
+                  <p><span class="example-jp">④ あの <ruby>方<rt>かた</rt></ruby>は どなたですか。</span><br>
+                  Siapakah beliau?</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box">そうです</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Dalam kalimat nominal yang menanyakan positif atau negatif, sering digunakan <strong>そう</strong> terhadap jawaban positif, dan dapat menjawab dengan kalimat <strong>はい、そうです</strong>.</p>
+                  <p><span class="example-jp">⑤ それは <ruby>辞書<rt>じしょ</rt></ruby>ですか。</span><br>
+                  Apakah itu kamus?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……はい、そうです。</span><br>
+                  <span style="margin-left: 20px;">……Ya, betul.</span></p>
+                  <p>Untuk bentuk negatif, tidak lazim menjawab dengan <strong>そう</strong>, tetapi sebagai gantinya digunakan <strong>ちがいます</strong> (bukan), atau menyatakan jawaban yang sebenarnya.</p>
+                  <p><span class="example-jp">⑥ それは ミラーさんのですか。</span><br>
+                  Apakah itu punya Sdr. Miller?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、<ruby>違<rt>ちが</rt></ruby>います。</span><br>
+                  <span style="margin-left: 20px;">……Bukan.</span></p>
+                  <p><span class="example-jp">⑦ それは シャープペンシルですか。</span><br>
+                  Apakah itu pensil isi ulang?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、ボールペンです。</span><br>
+                  <span style="margin-left: 20px;">……Bukan, bolpoin.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span>〜</span>
+                  <span class="formula-box particle">か</span>
+                  <span>、〜</span>
+                  <span class="formula-box particle">か</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Dengan kalimat tanya ini memberi pilihan yang lebih dari dua, kemudian lawan bicara memilih yang benar. Untuk jawaban, tidak dibubuhi <strong>はい、いいえ</strong>, tetapi menyatakan langsung kalimat yang dipilih.</p>
+                  <p><span class="example-jp">⑧ これは 「9」ですか、「7」ですか。</span><br>
+                  Apakah ini "9" atau "7"?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……「9」です。</span><br>
+                  <span style="margin-left: 20px;">……"9".</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">の</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Pada Pelajaran 1 telah dipelajari bahwa jika Kata Benda<sub style="font-size: 0.8em">1</sub> menerangkan Kata Benda<sub style="font-size: 0.8em">2</sub>, maka digunakan <strong>の</strong> di antara Kata Benda<sub style="font-size: 0.8em">1</sub> dan Kata Benda<sub style="font-size: 0.8em">2</sub>. Pada pelajaran ini belajar cara penggunaan <strong>の</strong> sebagai berikut di bawah ini:</p>
+                  <p><strong>1) Kata Benda<sub style="font-size: 0.8em">1</sub> menerangkan sesuatu dari Kata Benda<sub style="font-size: 0.8em">2</sub>.</strong></p>
+                  <p><span class="example-jp">⑨ これは コンピューターの <ruby>本<rt>ほん</rt></ruby>です。</span><br>
+                  Ini buku komputer.</p>
+                  <p><strong>2) Kata Benda<sub style="font-size: 0.8em">1</sub> menyatakan pemilik Kata Benda<sub style="font-size: 0.8em">2</sub>.</strong></p>
+                  <p><span class="example-jp">⑩ これは わたしの <ruby>本<rt>ほん</rt></ruby>です。</span><br>
+                  Ini buku saya.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 6 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>6.</span>
+                  <span class="formula-box particle">の</span>
+                  <span style="font-size: 0.85em; font-weight: normal;">yang berfungsi sebagai pengganti Kata Benda</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>の</strong> ini digunakan untuk mengganti Kata Benda yang terdapat sebelumnya (<strong>かばん</strong> pada contoh ⑪). Seperti contoh ⑪, jika diletakkan di belakang Kata Benda (<strong>さとうさん</strong>), maka bentuk kalimat menjadi sama maknanya dengan dihilangkannya Kata Benda<sub style="font-size: 0.8em">2</sub> dari kalimat Kata Benda<sub style="font-size: 0.8em">1</sub> <strong>の</strong> Kata Benda<sub style="font-size: 0.8em">2</sub> (<strong>さとうさん の かばん</strong>). <strong>の</strong> digunakan sebagai pengganti kata benda, tetapi tidak digunakan sebagai pengganti orang.</p>
+                  <p><span class="example-jp">⑪ あれは だれの かばんですか。</span><br>
+                  Itu tas siapa?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>佐藤<rt>さとう</rt></ruby>さんのです。</span><br>
+                  <span style="margin-left: 20px;">……Kepunyaan Sdr. Sato.</span></p>
+                  <p><span class="example-jp">⑫ この かばんは あなたのですか。</span><br>
+                  Apakah tas ini tas Anda?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、わたしのじゃ ありません。</span><br>
+                  <span style="margin-left: 20px;">……Bukan, bukan kepunyaan saya.</span></p>
+                  <p><span class="example-jp">⑬ ミラーさんは IMCの <ruby>社員<rt>しゃいん</rt></ruby>ですか。</span><br>
+                  Apakah Sdr. Miller pegawai perusahaan IMC?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……はい、IMCの <ruby>社員<rt>しゃいん</rt></ruby>です。</span><br>
+                  <span style="margin-left: 20px;">……Ya, pegawai perusahaan IMC.</span><br>
+                  <span style="color: var(--pink-strong); font-weight: bold; margin-left: 20px;">× はい、IMCのです。</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 7 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>7.</span>
+                  <span class="formula-box">お</span>
+                  <span>〜</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>お</strong> dibubuhkan pada Kata Benda dan berfungsi untuk menyatakan kesopanan.<br>
+                  (Contoh: [お]みやげ, [お]さけ)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 8 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>8.</span>
+                  <span class="formula-box">そうですか</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Ketika mendapatkan informasi baru, ekspresi ini digunakan untuk menyatakan telah mengerti. Diucapkan dengan intonasi menurun.</p>
+                  <p><span class="example-jp">⑭ この <ruby>傘<rt>かさ</rt></ruby>は あなたのですか。</span><br>
+                  Apakah payung ini punya Anda?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、<ruby>違<rt>ちが</rt></ruby>います。シュミットさんのです。</span><br>
+                  <span style="margin-left: 20px;">……Bukan, salah. Punya Sdr. Schmidt.</span><br>
+                  <span class="example-jp" style="margin-left: 20px;">そうですか。</span><br>
+                  <span style="margin-left: 20px;">O, begitu.</span></p>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Template Bab 3 -->
+          <template id="pattern-template-3">
+            <!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box">ここ</span>
+                  <span>／</span>
+                  <span class="formula-box">そこ</span>
+                  <span>／</span>
+                  <span class="formula-box">あそこ</span>
+                  <span>／</span>
+                  <span class="formula-box">こちら</span>
+                  <span>／</span>
+                  <span class="formula-box">そちら</span>
+                  <span>／</span>
+                  <span class="formula-box">あちら</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>ここ, そこ, あそこ</strong> menunjukkan tempat.<br>
+                  <strong>ここ</strong> menunjukkan tempat di mana si pembicara berada, <strong>そこ</strong> menunjukkan tempat di mana lawan bicara berada, dan <strong>あそこ</strong> menunjukkan tempat yang jauh dari kedua-duanya.<br>
+                  <strong>こちら, そちら, あちら</strong> menunjukkan arah, tetapi juga dapat dipakai untuk menunjukkan tempat yang dapat dilihat oleh mata yang digantikan dengan <strong>ここ, そこ, あそこ</strong>. Dalam hal ini <strong>こちら, そちら, あちら</strong> menyatakan perasaan yang lebih sopan.</p>
+                  
+                  <div style="display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0;">
+                    <div style="border: 1px solid var(--line); border-radius: 12px; padding: 16px; flex: 1; text-align: center; background: var(--surface-soft); position: relative; min-width: 250px;">
+                      <div style="position: absolute; right: 10px; top: 10px; font-weight: bold; color: var(--pink-strong); background: #ffffff; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--line);">あそこ ☁️</div>
+                      <div style="display: flex; justify-content: space-around; align-items: flex-end; height: 100px; margin-top: 30px;">
+                        <div>
+                          <div style="font-size: 40px; line-height: 1;">🗣️</div>
+                          <div style="font-weight: bold; color: var(--pink-strong); margin-top: 4px;">ここ</div>
+                        </div>
+                        <div>
+                          <div style="font-size: 40px; line-height: 1;">👤</div>
+                          <div style="font-weight: bold; color: var(--pink-strong); margin-top: 4px;">そこ</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div style="border: 1px solid var(--line); border-radius: 12px; padding: 16px; flex: 1; text-align: center; background: var(--surface-soft); position: relative; min-width: 250px;">
+                      <div style="position: absolute; right: 10px; top: 10%; font-weight: bold; color: var(--pink-strong); background: #ffffff; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--line);">あそこ ☁️</div>
+                      <div style="position: absolute; right: 30%; top: 40%; font-weight: bold; color: var(--pink-strong); background: #ffffff; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--line);">そこ ☁️</div>
+                      <div style="display: flex; justify-content: flex-start; align-items: flex-end; height: 100px; padding-left: 15%; margin-top: 30px; position: relative;">
+                        <div style="position: absolute; left: 5%; bottom: -10px; width: 55%; height: 60px; background: rgba(238, 79, 136, 0.15); border-radius: 40px; z-index: 0;"></div>
+                        <div style="z-index: 1;">
+                          <div style="font-size: 40px; line-height: 1; letter-spacing: -8px; margin-bottom: 2px;">🗣️👤</div>
+                          <div style="font-weight: bold; color: var(--pink-strong); margin-top: 4px;">ここ</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] Jika si pembicara menganggap bahwa lawan bicaran berada di daerah yang sama, maka tempat di mana kedua-duanya berada dikatakan ここ, tempat yang sedikit jauh dikatakan そこ, dan tempat yang jauh dikatakan あそこ.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">は</span>
+                  <span class="formula-box">tempat</span>
+                  <span class="formula-box">です</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Dengan menggunakan pola kalimat ini, dapat menyatakan tempat di mana benda, tempat, atau orang berada.</p>
+                  <p><span class="example-jp">① お<ruby>手洗<rt>てあら</rt></ruby>いは あそこです。</span><br>
+                  Kamar kecil di sana.</p>
+                  <p><span class="example-jp">② <ruby>電話<rt>でんわ</rt></ruby>は 2<ruby>階<rt>かい</rt></ruby>です。</span><br>
+                  Telepon di lantai dua.</p>
+                  <p><span class="example-jp">③ <ruby>山田<rt>やまだ</rt></ruby>さんは <ruby>事務所<rt>じむしょ</rt></ruby>です。</span><br>
+                  Sdr. Yamada di kantor.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box">どこ</span>
+                  <span>／</span>
+                  <span class="formula-box">どちら</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>どこ</strong> adalah Kata Tanya untuk tempat, dan <strong>どちら</strong> adalah Kata Tanya untuk bertanya arah. Untuk bertanya tempat, adakalanya digunakan <strong>どちら</strong>. Dalam hal ini, ungkapan menjadi lebih sopan daripada menggunakan <strong>どこ</strong>.</p>
+                  <p><span class="example-jp">④ お<ruby>手洗<rt>てあら</rt></ruby>いは どこですか。</span><br>
+                  Di mana kamar kecil?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……あそこです。</span><br>
+                  <span style="margin-left: 20px;">……Di sana.</span></p>
+                  <p><span class="example-jp">⑤ エレベーターは どちらですか。</span><br>
+                  Lift di sebelah mana?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……あちらです。</span><br>
+                  <span style="margin-left: 20px;">……Di sebelah sana.</span></p>
+                  
+                  <p>Jika menanyakan nama negara, perusahaan, sekolah dan lain-lain seperti tempat atau organisasi, tidak menggunakan Kata Tanya <strong>なん</strong> melainkan menggunakan <strong>どこ, どちら</strong>. Dalam hal ini, ungkapan <strong>どちら</strong> menjadi lebih sopan daripada menggunakan <strong>どこ</strong>.</p>
+                  <p><span class="example-jp">⑥ <ruby>学校<rt>がっこう</rt></ruby>は どこですか。</span><br>
+                  Sekolah di mana?</p>
+                  <p><span class="example-jp">⑦ <ruby>会社<rt>かいしゃ</rt></ruby>は どちらですか。</span><br>
+                  Perusahaan mana?</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">の</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Jika Kata Benda<sub style="font-size: 0.8em">1</sub> adalah nama negara dan Kata Benda<sub style="font-size: 0.8em">2</sub> adalah produknya, maka Kata Benda<sub style="font-size: 0.8em">1</sub> <strong>の</strong> berarti buatan dari negara tersebut. Kalau Kata Benda<sub style="font-size: 0.8em">1</sub> adalah nama perusahaan, dan Kata Benda<sub style="font-size: 0.8em">2</sub> adalah produknya, Kata Benda<sub style="font-size: 0.8em">1</sub> <strong>の</strong> berarti buatan perusahaan tersebut. Untuk kedua pertanyaan digunakan Kata Tanya <strong>どこ</strong>.</p>
+                  <p><span class="example-jp">⑧ これは どこの コンピューターですか。</span><br>
+                  Ini komputer buatan mana?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>日本<rt>にほん</rt></ruby>の コンピューターです。</span><br>
+                  <span style="margin-left: 20px;">……Komputer buatan Jepang.</span><br>
+                  <span class="example-jp" style="margin-left: 20px;">……パワー<ruby>電気<rt>でんき</rt></ruby>の コンピューターです。</span><br>
+                  <span style="margin-left: 20px;">……Komputer Power Elektronik.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span style="font-size: 0.9em; font-weight: normal;">Daftar</span>
+                  <span class="formula-box">こ</span>
+                  <span>／</span>
+                  <span class="formula-box">そ</span>
+                  <span>／</span>
+                  <span class="formula-box">あ</span>
+                  <span>／</span>
+                  <span class="formula-box">ど</span>
+                  <span style="font-size: 0.9em; font-weight: normal;">(Kata Penunjuk)</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <div style="overflow-x: auto; margin: 8px 0 16px;">
+                    <table style="width: 100%; min-width: 500px; border-collapse: collapse; text-align: left; font-size: 14px; background: #ffffff;">
+                      <thead>
+                        <tr style="background: var(--surface-soft); border-bottom: 2px solid var(--pink);">
+                          <th style="padding: 12px; border: 1px solid var(--line);"></th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">kelompok こ</th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">kelompok そ</th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">kelompok あ</th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">kelompok ど</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line); font-weight: bold; color: var(--ink);">Barang</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">これ</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">それ</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">あれ</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">どれ (Pel.16)</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line); font-weight: bold; color: var(--ink);">Barang/Orang</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">この Kata Benda</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">その Kata Benda</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">あの Kata Benda</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">どの Kata Benda<br><span style="font-size: 0.9em; color: var(--muted);">(Pel.16)</span></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line); font-weight: bold; color: var(--ink);">Tempat</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">ここ</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">そこ</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">あそこ</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">どこ</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line); font-weight: bold; color: var(--ink);">Arah /<br>Tempat (halus)</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">こちら</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">そちら</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">あちら</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">どちら</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 6 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>6.</span>
+                  <span class="formula-box">お</span>
+                  <span>〜</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Prefiks <strong>お</strong> dibubuhkan pada hal-hal yang bersangkut dengan lawan bicara atau orang pihak ketiga untuk menyatakan rasa hormat dari si pembicara.</p>
+                  <p><span class="example-jp">⑨ [お]<ruby>国<rt>くに</rt></ruby>は どちらですか。</span><br>
+                  Berasal dari mana?</p>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Template Bab 4 -->
+          <template id="pattern-template-4">
+<!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box"><ruby>今<rt>いま</rt></ruby></span>
+                  <span>〜</span>
+                  <span class="formula-box"><ruby>時<rt>じ</rt></ruby></span>
+                  <span>〜</span>
+                  <span class="formula-box"><ruby>分<rt>ふん</rt></ruby></span>
+                  <span class="formula-box">です</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Untuk menyatakan waktu, dibubuhkan Kata Bantu Bilangan <strong><ruby>時<rt>じ</rt></ruby></strong>, dan <strong><ruby>分<rt>ふん</rt></ruby></strong> di belakang angka. Jika angka 2,5,7, dan 9 di depan <strong>分</strong>, dibacanya <strong>ふん</strong>, dan 1,3,4,6,8, dan 10 di depannya maka dibacanya <strong>ぷん</strong>. Jika angka 1,6,8 dan 10 di depan <strong>分</strong>, masing-masing angka dibacanya <strong>いっ, ろっ, はっ</strong>, dan <strong>じゅっ(じっ)</strong> (Lihat Lampiran Buku Induk).<br>
+                  Jika menanyakan waktu, <strong>なん</strong> dibubuhkan di depan <strong>じ</strong> atau <strong>ふん</strong>.</p>
+                  <p><span class="example-jp">① <ruby>今<rt>いま</rt></ruby> <ruby>何時<rt>なんじ</rt></ruby>ですか。</span><br>
+                  Sekarang pukul berapa?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……7<ruby>時<rt>じ</rt></ruby> 10<ruby>分<rt>じゅっぷん</rt></ruby>です。</span><br>
+                  <span style="margin-left: 20px;">……Pukul tujuh lewat sepuluh menit.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">Kata Kerja ます</span>
+                  <span>／</span>
+                  <span class="formula-box">Kata Kerja ません</span>
+                  <span>／</span>
+                  <span class="formula-box">Kata Kerja ました</span>
+                  <span>／</span>
+                  <span class="formula-box">Kata Kerja ませんでした</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">1) Kata Kerja <strong>ます</strong> berfungsi sebagai predikat pada kalimat. <strong>ます</strong> menyatakan sikap halus terhadap lawan bicara.</p>
+                  <p><span class="example-jp">② わたしは <ruby>毎日<rt>まいにち</rt></ruby> <ruby>勉強<rt>べんきょう</rt></ruby>します。</span><br>
+                  Saya belajar setiap hari.</p>
+                  <p>2) Kata Kerja <strong>ます</strong> digunakan untuk menjelaskan kebiasaan dan kebenaran saat ini, dan aksi serta peristiwa yang akan terjadi masa depan. Kalimat negatif dan bentuk lampau berubah menjadi seperti berikut:</p>
+                  
+                  <div style="overflow-x: auto; margin: 16px 0;">
+                    <table style="width: 100%; min-width: 400px; border-collapse: collapse; text-align: left; font-size: 14px; background: #ffffff;">
+                      <thead>
+                        <tr style="background: var(--surface-soft); border-bottom: 2px solid var(--pink);">
+                          <th style="padding: 12px; border: 1px solid var(--line);"></th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">Waktu non lampau<br>(Sekarang dan masa depan)</th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">Waktu lampau</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line); font-weight: bold; color: var(--ink);">Positif</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">おきます</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">おきました</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line); font-weight: bold; color: var(--ink);">Negatif</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">おきません</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">おきませんでした</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <p><span class="example-jp">③ <ruby>毎朝<rt>まいあさ</rt></ruby> 6<ruby>時<rt>じ</rt></ruby>に <ruby>起<rt>お</rt></ruby>きます。</span><br>
+                  Setiap pagi saya bangun pukul enam.</p>
+                  <p><span class="example-jp">④ あした 6<ruby>時<rt>じ</rt></ruby>に <ruby>起<rt>お</rt></ruby>きます。</span><br>
+                  Besok saya bangun pukul enam.</p>
+                  <p><span class="example-jp">⑤ けさ 6<ruby>時<rt>じ</rt></ruby>に <ruby>起<rt>お</rt></ruby>きました。</span><br>
+                  Tadi pagi saya bangun pukul enam.</p>
+
+                  <p>3) Kalimat Tanya tidak mengubah susunan kata, tetapi dibubuhkan <strong>か</strong> pada akhir kalimat. Kata Tanya diletakkan dibagian yang ingin tanyakan.<br>
+                  Untuk jawabannya, menjawab dengan mengulang Kata Kerja yang terdapat di dalam kalimat tanya. <strong>そうです, ちがいます</strong> (Lihat Pel.2) tidak dapat digunakan sebagai jawaban untuk kalimat tanya dari kalimat verbal.</p>
+                  <p><span class="example-jp">⑥ きのう <ruby>勉強<rt>べんきょう</rt></ruby> しましたか。</span><br>
+                  Kemarin belajar?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……はい、<ruby>勉強<rt>べんきょう</rt></ruby> しました。</span><br>
+                  <span style="margin-left: 20px;">……Ya, belajar.</span><br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、<ruby>勉強<rt>べんきょう</rt></ruby> しませんでした。</span><br>
+                  <span style="margin-left: 20px;">……Tidak, tidak belajar.</span></p>
+                  <p><span class="example-jp">⑦ <ruby>毎朝<rt>まいあさ</rt></ruby> <ruby>何時<rt>なんじ</rt></ruby>に <ruby>起<rt>お</rt></ruby>きますか。</span><br>
+                  Setiap pagi bangun pukul berapa?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……6<ruby>時<rt>じ</rt></ruby>に <ruby>起<rt>お</rt></ruby>きます。</span><br>
+                  <span style="margin-left: 20px;">……Bangun pukul enam.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box">Kata Benda (waktu)</span>
+                  <span class="formula-box particle">に</span>
+                  <span class="formula-box">Kata Kerja</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Setelah Kata Benda yang menunjukkan waktu, dibubuhkan partikel <strong>に</strong> untuk menunjukkan waktu ketika melakukan sesuatu.</p>
+                  <p><span class="example-jp">⑧ 6<ruby>時半<rt>じはん</rt></ruby>に <ruby>起<rt>お</rt></ruby>きます。</span><br>
+                  Bangun pukul setengah tujuh.</p>
+                  <p><span class="example-jp">⑨ 7<ruby>月<rt>がつ</rt></ruby>2<ruby>日<rt>ふつか</rt></ruby>に <ruby>日本<rt>にほん</rt></ruby>へ <ruby>来<rt>き</rt></ruby>ました。</span><br>
+                  Datang ke Jepang pada tanggal 2 Juli yang lalu. (Pel.5)</p>
+                  
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian 1] Kata Benda yang menunjukkan waktu seperti di bawah ini, tidak dibubuhkan に.</span><br>
+                  きょう, あした, あさって, きのう, おととい, けさ, こんばん, いま, まいあさ, まいばん, まいにち, せんしゅう (Pel.5), こんしゅう (Pel.5), らいしゅう (Pel.5), いつ (Pel.5), せんげつ (Pel.5), こんげつ (Pel.5), らいげつ (Pel.5), ことし (Pel.5), らいねん (Pel.5), きょねん (Pel.5), dan lain-lain.</p>
+                  
+                  <p><span class="example-jp">⑩ きのう <ruby>勉強<rt>べんきょう</rt></ruby> しました。</span><br>
+                  Kemarin belajar.</p>
+                  
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian 2] Untuk Kata Benda berikut, に boleh dibubuhkan dan juga boleh tidak dibubuhkan. 〜ようび, あさ, ひる, ばん, よる</span></p>
+                  <p><span class="example-jp">⑪ <ruby>日曜日<rt>にちようび</rt></ruby>[に] <ruby>奈良<rt>なら</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。</span><br>
+                  Pada hari Minggu, pergi ke Nara. (Pel.5)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">から</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                  <span class="formula-box particle">まで</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">1) <strong>から</strong> menunjukkan titik permulaan waktu atau tempat, sedangkan <strong>まで</strong> menunjukkan titik akhir waktu atau tempat.</p>
+                  <p><span class="example-jp">⑫ 9<ruby>時<rt>じ</rt></ruby>から 5<ruby>時<rt>じ</rt></ruby>まで <ruby>勉強<rt>べんきょう</rt></ruby> します。</span><br>
+                  Belajar dari pukul sembilan sampai dengan pukul lima.</p>
+                  <p><span class="example-jp">⑬ <ruby>大阪<rt>おおさか</rt></ruby>から <ruby>東京<rt>とうきょう</rt></ruby>まで 3<ruby>時間<rt>じかん</rt></ruby> かかります。</span><br>
+                  Menghabiskan waktu tiga jam dari Osaka sampai di Tokyo. (Pel.11)</p>
+                  <p>2) <strong>から</strong> dan <strong>まで</strong> tidak selalu dipakai secara bersamaan, tetapi juga dipakai sendiri.</p>
+                  <p><span class="example-jp">⑭ 9<ruby>時<rt>じ</rt></ruby>から <ruby>働<rt>はたら</rt></ruby>きます。</span><br>
+                  Bekerja dari pukul sembilan.</p>
+                  <p>3) Untuk menyatakan waktu atau tanggal mulai dan selesainya Kata Benda yang diangkat pada topik, dapat digunakan dengan <strong>です</strong> di belakang <strong>〜から, 〜まで, 〜から〜まで</strong>.</p>
+                  <p><span class="example-jp">⑮ <ruby>銀行<rt>ぎんこう</rt></ruby>は 9<ruby>時<rt>じ</rt></ruby>から 3<ruby>時<rt>じ</rt></ruby>までです。</span><br>
+                  Bank dibuka dari pukul sembilan sampai dengan pukul tiga.</p>
+                  <p><span class="example-jp">⑯ <ruby>昼休<rt>ひるやす</rt></ruby>みは 12<ruby>時<rt>じ</rt></ruby>からです。</span><br>
+                  Waktu istirahat siang dari pukul dua belas.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">と</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Jika menyambung Kata Benda secara setaraf, Kata Benda dan Kata Benda disambung dengan <strong>と</strong>.</p>
+                  <p><span class="example-jp">⑰ <ruby>銀行<rt>ぎんこう</rt></ruby>の <ruby>休<rt>やす</rt></ruby>みは <ruby>土曜日<rt>どようび</rt></ruby>と <ruby>日曜日<rt>にちようび</rt></ruby>です。</span><br>
+                  Hari libur bank adalah hari Sabtu dan hari Minggu.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 6 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>6.</span>
+                  <span>〜</span>
+                  <span class="formula-box particle">ね</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Kata Bantu <strong>ね</strong> dibubuhkan di akhir kalimat, dan digunakan ketika mengharapkan persetujuan dari lawan bicara, menegaskan, atau menekankan.</p>
+                  <p><span class="example-jp">⑱ <ruby>毎日<rt>まいにち</rt></ruby> 10<ruby>時<rt>じ</rt></ruby>まで <ruby>勉強<rt>べんきょう</rt></ruby> します。</span><br>
+                  Setiap hari belajar sampai pukul sepuluh.<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>大変<rt>たいへん</rt></ruby>ですね。</span><br>
+                  <span style="margin-left: 20px;">……O, berat ya.</span></p>
+                  <p><span class="example-jp">⑲ <ruby>山田<rt>やまだ</rt></ruby>さんの <ruby>電話番号<rt>でんわばんごう</rt></ruby>は 871の 6813です。</span><br>
+                  Nomor telepon Sdr. Yamada 871-6813.<br>
+                  <span class="example-jp" style="margin-left: 20px;">……871の 6813ですね。</span><br>
+                  <span style="margin-left: 20px;">……871-6813, ya.</span></p>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Template Bab 5 -->
+          <template id="pattern-template-5">
+            <!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box">Kata Benda (tempat)</span>
+                  <span class="formula-box particle">へ</span>
+                  <span class="formula-box"><ruby>行<rt>い</rt></ruby>きます / <ruby>来<rt>き</rt></ruby>ます / <ruby>帰<rt>かえ</rt></ruby>ります</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Jika menunjukkan pindah, arah pindahnya dinyatakan dengan membubuhkan partikel <strong>へ</strong>.</p>
+                  <p><span class="example-jp">① <ruby>京都<rt>きょうと</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。</span><br>
+                  Pergi ke Kyoto.</p>
+                  <p><span class="example-jp">② <ruby>日本<rt>にほん</rt></ruby>へ <ruby>来<rt>き</rt></ruby>ました。</span><br>
+                  Datang ke Jepang.</p>
+                  <p><span class="example-jp">③ うちへ <ruby>帰<rt>かえ</rt></ruby>ります。</span><br>
+                  Pulang ke rumah.</p>
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] Partikel へ diucapkan え.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">どこ[へ]</span>
+                  <span class="formula-box particle">も</span>
+                  <span class="formula-box"><ruby>行<rt>い</rt></ruby>きません / <ruby>行<rt>い</rt></ruby>きませんでした</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Apabila ingin menyangkal hal yang ditanyakan oleh Kata Tanya secara total, pembentukkan Kata Kerja negatif dengan membubuhkan partikel <strong>も</strong> pada Kata Tanya.</p>
+                  <p><span class="example-jp">④ どこ[へ]も <ruby>行<rt>い</rt></ruby>きません。</span><br>
+                  Tidak pergi ke mana-mana.</p>
+                  <p><span class="example-jp">⑤ <ruby>何<rt>なに</rt></ruby>も <ruby>食<rt>た</rt></ruby>べません。</span><br>
+                  Tidak makan apa-apa.</p>
+                  <p><span class="example-jp">⑥ だれも <ruby>来<rt>き</rt></ruby>ませんでした。</span><br>
+                  Tidak datang siapa-siapa.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box">Kata Benda (kendaraan)</span>
+                  <span class="formula-box particle">で</span>
+                  <span class="formula-box"><ruby>行<rt>い</rt></ruby>きます / <ruby>来<rt>き</rt></ruby>ます / <ruby>帰<rt>かえ</rt></ruby>ります</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Partikel <strong>で</strong> menunjukkan sarana dan cara. Yang dimaksud di bagian ini yang diikuti Kata Benda yang menunjukkan kendaraan adalah menunjukkan sarana transportasi.</p>
+                  <p><span class="example-jp">⑦ <ruby>電車<rt>でんしゃ</rt></ruby>で <ruby>行<rt>い</rt></ruby>きます。</span><br>
+                  Pergi dengan kereta rel listrik.</p>
+                  <p><span class="example-jp">⑧ タクシーで <ruby>来<rt>き</rt></ruby>ました。</span><br>
+                  Datang dengan taksi.</p>
+                  <p>Jika pergi dengan jalan kaki digunakan <strong><ruby>歩<rt>ある</rt></ruby>いて</strong>, tetapi tidak dibubuhkan partikel <strong>で</strong>.</p>
+                  <p><span class="example-jp">⑨ <ruby>駅<rt>えき</rt></ruby>から <ruby>歩<rt>ある</rt></ruby>いて <ruby>帰<rt>かえ</rt></ruby>りました。</span><br>
+                  Pulang dengan jalan kaki dari stasiun.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span class="formula-box">Kata Benda (orang/hewan)</span>
+                  <span class="formula-box particle">と</span>
+                  <span class="formula-box">Kata Kerja</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Jika melakukan sesuatu bersama orang (hewan) maka ditunjukkan dengan membubuhkan partikel <strong>と</strong>.</p>
+                  <p><span class="example-jp">⑩ <ruby>家族<rt>かぞく</rt></ruby>と <ruby>日本<rt>にほん</rt></ruby>へ <ruby>来<rt>き</rt></ruby>ました。</span><br>
+                  Datang ke Jepang bersama dengan keluarga.</p>
+                  <p>Jika melakukan suatu aksi sendiri digunakan <strong><ruby>一人<rt>ひとり</rt></ruby>で</strong>. Dalam hal ini tidak menggunakan partikel <strong>と</strong>.</p>
+                  <p><span class="example-jp">⑪ <ruby>一人<rt>ひとり</rt></ruby>で <ruby>東京<rt>とうきょう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。</span><br>
+                  Pergi ke Tokyo sendirian.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span class="formula-box">いつ</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Untuk menanyakan waktu, selain digunakan Kata Tanya <strong>なん</strong> digunakan Kata Tanya <strong>いつ</strong> sebagaimana halnya seperti <strong>なんじ, なんようび, なんがつ, なんにち</strong>. Kata <strong>いつ</strong> tidak dapat dibubuhkan partikel <strong>に</strong>.</p>
+                  <p><span class="example-jp">⑫ いつ <ruby>日本<rt>にほん</rt></ruby>へ <ruby>来<rt>き</rt></ruby>ましたか。</span><br>
+                  Kapan datang ke Jepang?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……3<ruby>月<rt>がつ</rt></ruby>25<ruby>日<rt>にち</rt></ruby>に <ruby>来<rt>き</rt></ruby>ました。</span><br>
+                  <span style="margin-left: 20px;">……Datang pada tanggal 25 Maret.</span></p>
+                  <p><span class="example-jp">⑬ いつ <ruby>広島<rt>ひろしま</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きますか。</span><br>
+                  Kapan pergi ke Hiroshima?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>来週<rt>らいしゅう</rt></ruby> <ruby>行<rt>い</rt></ruby>きます。</span><br>
+                  <span style="margin-left: 20px;">……Pergi minggu depan.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 6 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>6.</span>
+                  <span>〜</span>
+                  <span class="formula-box particle">よ</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Partikel <strong>よ</strong> dibubuhkan pada akhir kalimat dan digunakan untuk memberitahukan suatu hal yang belum diketahui oleh lawan bicara, atau menyampaikan tanggapan dan pendapat si pembicara kepada lawan bicaranya.</p>
+                  <p><span class="example-jp">⑭ この <ruby>電車<rt>でんしゃ</rt></ruby>は <ruby>甲子園<rt>こうしえん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きますか。</span><br>
+                  Apakah kereta rel listrik ini menuju Koshien?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、<ruby>行<rt>い</rt></ruby>きません。<ruby>次<rt>つぎ</rt></ruby>の「<ruby>普通<rt>ふつう</rt></ruby>」ですよ。</span><br>
+                  <span style="margin-left: 20px;">……Tidak, tidak pergi. Yang "Biasa" berikutnya.</span></p>
+                  <p><span class="example-jp">⑮ <ruby>北海道<rt>ほっかいどう</rt></ruby>に <ruby>馬<rt>うま</rt></ruby>が たくさん いますよ。</span><br>
+                  Di Hokkaido ada banyak kuda. (Pel.18)</p>
+                  <p><span class="example-jp">⑯ マリアさん、この アイスクリーム、おいしいですよ。</span><br>
+                  Ibu Maria, es krim ini enak. (Pel.19)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 7 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>7.</span>
+                  <span class="formula-box">そうですね</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>そうですね</strong> digunakan jika menyetujui atau sependapat dengan hal yang dikatakan oleh lawan bicara. Adapun ungkapan mirip (Lihat Pel.2-8) yaitu <strong>そうですか</strong>, tetapi <strong>そうですか</strong> adalah ekspresi ketika mendapat informasi baru yang belum diketahui si pembicara kemudian memahaminya sedangkan <strong>そうですね</strong> digunakan untuk menunjukkan bahwa si pembicara berpikir hal yang sama, menyetujui hal yang telah dikenal, atau sependapat.</p>
+                  <p><span class="example-jp">⑰ あしたは <ruby>日曜日<rt>にちようび</rt></ruby>ですね。</span><br>
+                  Besok hari Minggu, ya.<br>
+                  <span class="example-jp" style="margin-left: 20px;">……あ、そうですね。</span><br>
+                  <span style="margin-left: 20px;">……O, ya betul.</span></p>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Template Bab 6 -->
+          <template id="pattern-template-6">
+            <!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">を</span>
+                  <span class="formula-box">Kata Kerja (Kata Kerja Transitif)</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Objek dari Kata Kerja Transitif ditunjukkan oleh partikel <strong>を</strong>.</p>
+                  <p><span class="example-jp">① ジュースを <ruby>飲<rt>の</rt></ruby>みます。</span><br>
+                  Minum jus.</p>
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] を hanya dipakai untuk menulis partikel saja.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">を</span>
+                  <span class="formula-box">します</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>します</strong> disertai Kata Benda secara luas sebagai objek. <strong>します</strong> mempunyai arti bahwa melakukan hal yang ditunjukan oleh objek tersebut. Beberapa contoh diberikan di bawah ini:</p>
+                  <p><strong>1) Olahraga, permainan dan lain-lain</strong></p>
+                  <p><span class="example-jp">サッカーを します</span><br>bermain sepak bola</p>
+                  <p><span class="example-jp">トランプを します</span><br>bermain kartu</p>
+                  <p><strong>2) Pertemuan, acara dan lain-lain</strong></p>
+                  <p><span class="example-jp">パーティーを します</span><br>berpesta</p>
+                  <p><span class="example-jp"><ruby>会議<rt>かいぎ</rt></ruby>を します</span><br>mengadakan rapat</p>
+                  <p><strong>3) Dan lain-lain</strong></p>
+                  <p><span class="example-jp"><ruby>宿題<rt>しゅくだい</rt></ruby>を します</span><br>membuat PR</p>
+                  <p><span class="example-jp"><ruby>仕事<rt>しごと</rt></ruby>を します</span><br>bekerja</p>
+                  <p><span class="example-jp"><ruby>電話<rt>でんわ</rt></ruby>を します</span><br>menelepon</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box"><ruby>何<rt>なに</rt></ruby></span>
+                  <span class="formula-box particle">を</span>
+                  <span class="formula-box">しますか</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Ini adalah pertanyaan untuk menanyakan hal yang dilakukan.</p>
+                  <p><span class="example-jp">② <ruby>月曜日<rt>げつようび</rt></ruby> <ruby>何<rt>なに</rt></ruby>を しますか。</span><br>
+                  Hari Senin melakukan apa?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>京都<rt>きょうと</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。</span><br>
+                  <span style="margin-left: 20px;">……Pergi ke Kyoto.</span></p>
+                  <p><span class="example-jp">③ きのう <ruby>何<rt>なに</rt></ruby>を しましたか。</span><br>
+                  Kemarin melakukan apa?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……サッカーを しました。</span><br>
+                  <span style="margin-left: 20px;">……Bermain sepak bola.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span class="formula-box">なん</span>
+                  <span>dan</span>
+                  <span class="formula-box">なに</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>なん</strong> dan <strong>なに</strong> mempunyai arti yang sama. <strong>なん</strong> digunakan pada hal-hal berikut:</p>
+                  <p><strong>1) Jika kata yang mengikutinya diawali dengan baris た, だ, dan な.</strong></p>
+                  <p><span class="example-jp">④ それは <ruby>何<rt>なん</rt></ruby>ですか。</span><br>
+                  Itu apa?</p>
+                  <p><span class="example-jp">⑤ <ruby>何<rt>なん</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>ですか。</span><br>
+                  Buku apa?</p>
+                  <p><span class="example-jp">⑥ <ruby>寝<rt>ね</rt></ruby>るまえに、<ruby>何<rt>なん</rt></ruby>と<ruby>言<rt>い</rt></ruby>いますか。</span><br>
+                  Sebelum tidur, mengucapkan apa? (Pel.21)</p>
+                  <p><span class="example-jp">⑦ <ruby>何<rt>なん</rt></ruby>で <ruby>東京<rt>とうきょう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きますか。</span><br>
+                  Dengan apa pergi ke Tokyo?</p>
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] Selain bertanya tentang sarana, なんで digunakan untuk menanyakan alasan juga. Adakalanya dikatakan なにで jika ingin menunjukkan lebih jelas untuk menanyakan sarana.</span></p>
+                  <p><span class="example-jp">⑧ <ruby>何<rt>なに</rt></ruby>で <ruby>東京<rt>とうきょう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きますか。</span><br>
+                  Dengan apa pergi ke Tokyo?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>新幹線<rt>しんかんせん</rt></ruby>で <ruby>行<rt>い</rt></ruby>きます。</span><br>
+                  <span style="margin-left: 20px;">……Dengan Shinkansen.</span></p>
+                  
+                  <p><strong>2) Disertai Kata Bantu Bilangan</strong></p>
+                  <p><span class="example-jp">⑨ テレーザちゃんは <ruby>何歳<rt>なんさい</rt></ruby>ですか。</span><br>
+                  Berapa usia Teresa?</p>
+                  
+                  <p>Selain 1) dan 2) menggunakan <strong>なに</strong>.</p>
+                  <p><span class="example-jp">⑩ <ruby>何<rt>なに</rt></ruby>を <ruby>買<rt>か</rt></ruby>いますか。</span><br>
+                  Mau membeli apa?</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span class="formula-box">Kata Benda (tempat)</span>
+                  <span class="formula-box particle">で</span>
+                  <span class="formula-box">Kata Kerja</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Partikel yang dipelajari di sini disertai Kata Benda yang menunjukkan tempat kemudian menunjukkan tempat yang melakukan aksi.</p>
+                  <p><span class="example-jp">⑪ <ruby>駅<rt>えき</rt></ruby>で <ruby>新聞<rt>しんぶん</rt></ruby>を <ruby>買<rt>か</rt></ruby>います。</span><br>
+                  Membeli surat kabar di stasiun.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 6 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>6.</span>
+                  <span class="formula-box">Kata Kerja ませんか</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Ekspresi untuk mengajak lawan bicara.</p>
+                  <p><span class="example-jp">⑫ いっしょに <ruby>京都<rt>きょうと</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きませんか。</span><br>
+                  Bagaimana kita pergi ke Kyoto bersama-sama?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……ええ、いいですね。</span><br>
+                  <span style="margin-left: 20px;">……Ya, bagus ya.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 7 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>7.</span>
+                  <span class="formula-box">Kata Kerja ましょう</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Ekspresi untuk mengusulkan secara aktif dan mengajak. Dipakai untuk menanggapi usulan atau ajakan secara aktif juga.</p>
+                  <p><span class="example-jp">⑬ ちょっと <ruby>休<rt>やす</rt></ruby>みましょう。</span><br>
+                  Mari istirahat sebentar.</p>
+                  <p><span class="example-jp">⑭ いっしょに <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>食<rt>た</rt></ruby>べませんか。</span><br>
+                  Bagaimana kita makan siang bersama-sama?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……ええ、<ruby>食<rt>た</rt></ruby>べましょう。</span><br>
+                  <span style="margin-left: 20px;">……Ya, ayo kita makan.</span></p>
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] Kata Kerja ませんか dan Kata Kerja ましょう kedua-duanya adalah ekspresi untuk mengajak lawan bicara, tetapi Kata Kerja ませんか lebih ditunjukkan perasaan yang menghormati keinginan lawan bicara.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 8 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>8.</span>
+                  <span>〜</span>
+                  <span class="formula-box particle">か</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>か</strong> menyatakan hal untuk mendapatkan informasi baru yang belum diketahui oleh lawan bicara sebelumnya, kemudian memahaminya. Ini adalah cara penggunaan yang sama dengan <strong>か</strong> dari <strong>そうですか</strong> (Lihat Pel.2-8).</p>
+                  <p><span class="example-jp">⑮ <ruby>日曜日<rt>にちようび</rt></ruby> <ruby>京都<rt>きょうと</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きました。</span><br>
+                  Hari Minggu yang lalu pergi ke Kyoto.<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>京都<rt>きょうと</rt></ruby>ですか。いいですね。</span><br>
+                  <span style="margin-left: 20px;">……Kyoto? Bagus ya.</span></p>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Template Bab 7 -->
+          <template id="pattern-template-7">
+            <!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box">Kata Benda (alat/sarana)</span>
+                  <span class="formula-box particle">で</span>
+                  <span class="formula-box">Kata Kerja</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Di bagian ini mempelajari partikel <strong>で</strong> yang menunjukkan sarana dan cara.</p>
+                  <p><span class="example-jp">① はしで <ruby>食<rt>た</rt></ruby>べます。</span><br>
+                  Makan dengan sumpit.</p>
+                  <p><span class="example-jp">② <ruby>日本語<rt>にほんご</rt></ruby>で レポートを <ruby>書<rt>か</rt></ruby>きます。</span><br>
+                  Menulis laporan dalam bahasa Jepang.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">"Kata/Kalimat"</span>
+                  <span class="formula-box particle">は</span>
+                  <span>〜</span>
+                  <span class="formula-box"><ruby>語<rt>ご</rt></ruby></span>
+                  <span class="formula-box particle">で</span>
+                  <span class="formula-box"><ruby>何<rt>なん</rt></ruby>ですか</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Pertanyaan ini digunakan ketika menanyakan bagaimana cara mengatakan arti kata atau kalimat dalam bahasa lain.</p>
+                  <p><span class="example-jp">③ 「ありがとう」は <ruby>英語<rt>えいご</rt></ruby>で <ruby>何<rt>なん</rt></ruby>ですか。</span><br>
+                  Apa bahasa Inggris dari "Arigato"?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……「Thank you」です。</span><br>
+                  <span style="margin-left: 20px;">……"Thank you".</span></p>
+                  <p><span class="example-jp">④ 「Thank you」は <ruby>日本語<rt>にほんご</rt></ruby>で <ruby>何<rt>なん</rt></ruby>ですか。</span><br>
+                  Apa bahasa Jepang dari "Thank you"?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……「ありがとう」です。</span><br>
+                  <span style="margin-left: 20px;">……"Arigato".</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub> (orang)</span>
+                  <span class="formula-box particle">に</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                  <span class="formula-box particle">を</span>
+                  <span class="formula-box">あげます dan lain-lain</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Kata Kerja <strong>あげます</strong>, <strong>かします</strong>, <strong>おしえます</strong> dan lain-lainnya menunjukkan arti yang memberi barang atau informasi, dan memerlukan lawan yang diberikan barang atau informasi. Kata Benda<sub style="font-size: 0.8em">1</sub> (orang) tersebut dibubuhkan dengan partikel <strong>に</strong>.</p>
+                  <p><span class="example-jp">⑤ [わたしは] <ruby>木村<rt>きむら</rt></ruby>さんに <ruby>花<rt>はな</rt></ruby>を あげました。</span><br>
+                  Saya memberikan Sdr. Kimura bunga.</p>
+                  <p><span class="example-jp">⑥ [わたしは] イーさんに <ruby>本<rt>ほん</rt></ruby>を <ruby>貸<rt>か</rt></ruby>しました。</span><br>
+                  Saya meminjamkan buku kepada Sdr. Lee.</p>
+                  <p><span class="example-jp">⑦ [わたしは] <ruby>山田<rt>やまだ</rt></ruby>さんに <ruby>英語<rt>えいご</rt></ruby>を <ruby>教<rt>おし</rt></ruby>えます。</span><br>
+                  Saya mengajar bahasa Inggris kepada Sdr. Yamada.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub> (orang)</span>
+                  <span class="formula-box particle">に</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                  <span class="formula-box particle">を</span>
+                  <span class="formula-box">もらいます dan lain-lain</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Kata Kerja <strong>もらいます</strong>, <strong>かります</strong>, <strong>ならいます</strong> dan lain-lainnya menunjukkan arti yang menerima barang atau informasi, dan memerlukan lawan yang diberikan barang atau informasi. Kata Benda<sub style="font-size: 0.8em">1</sub> (orang) tersebut dibubuhkan dengan partikel <strong>に</strong>.</p>
+                  <p><span class="example-jp">⑧ [わたしは] <ruby>山田<rt>やまだ</rt></ruby>さんに <ruby>花<rt>はな</rt></ruby>を もらいました。</span><br>
+                  Saya mendapatkan bunga dari Sdr. Yamada.</p>
+                  <p><span class="example-jp">⑨ [わたしは] カリナさんに CDを <ruby>借<rt>か</rt></ruby>りました。</span><br>
+                  Saya meminjam CD dari Karina.</p>
+                  <p><span class="example-jp">⑩ [わたしは] ワンさんに <ruby>中国語<rt>ちゅうごくご</rt></ruby>を <ruby>習<rt>なら</rt></ruby>います。</span><br>
+                  Saya belajar bahasa Tionghua dari Sdr. Wang.</p>
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] Untuk pola kalimat ini, partikel から juga dapat digunakan sebagai pengganti partikel に. Terutama jika lawannya bukan orang melainkan organisasi seperti perusahaan atau sekolah, dan sebagainya bukan に yang digunakan, melainkan から.</span></p>
+                  <p><span class="example-jp">⑪ [わたしは] <ruby>山田<rt>やまだ</rt></ruby>さんから <ruby>花<rt>はな</rt></ruby>を もらいました。</span><br>
+                  Saya mendapatkan bunga dari Sdr. Yamada.</p>
+                  <p><span class="example-jp">⑫ <ruby>銀行<rt>ぎんこう</rt></ruby>から お<ruby>金<rt>かね</rt></ruby>を <ruby>借<rt>か</rt></ruby>りました。</span><br>
+                  Saya meminjam uang dari bank.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span class="formula-box">もう</span>
+                  <span class="formula-box">Kata Kerja ました</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>もう</strong> mempunyai arti sudah dan digunakan dengan kombinasi Kata Kerja <strong>ました</strong>. Dalam hal ini, Kata Kerja <strong>ました</strong> bermaksud bahwa perbuatan telah diselesaikan saat ini.</p>
+                  <p>Jawaban untuk pertanyaan mengenai apakah perbuatannya telah diselesaikan atau belum yaitu <strong>もう Kata Kerja ましたか</strong> adalah jika telah diselesaikan atau jawaban positif <strong>はい、もう Kata Kerja ました</strong>, sedangkan belum diselesaikan atau jawaban negatif <strong>いいえ、まだです</strong>. <strong>いいえ、Kata Kerja ませんでした</strong> tidak dapat digunakan sebab mempunyai arti yang tidak dilakukan pada waktu lampau.</p>
+                  <p><span class="example-jp">⑬ もう <ruby>荷物<rt>にもつ</rt></ruby>を <ruby>送<rt>おく</rt></ruby>りましたか。</span><br>
+                  Apakah barang sudah dikirim?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……はい、[もう] <ruby>送<rt>おく</rt></ruby>りました。</span><br>
+                  <span style="margin-left: 20px;">……Ya, sudah dikirim.</span><br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、まだ <ruby>送<rt>おく</rt></ruby>って いません。</span><br>
+                  <span style="margin-left: 20px;">……Belum, belum dikirim. (Pel.31)</span><br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、まだです。</span><br>
+                  <span style="margin-left: 20px;">……Belum.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 6 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>6.</span>
+                  <span class="formula-box">Menghilangkan partikel</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Dalam kalimat percakapan, jika sudah dapat memahami arti dari hubungan sebelum dan sesudahnya maka partikel sering dihilangkan.</p>
+                  <p><span class="example-jp">⑭ この スプーン[は]、すてきですね。</span><br>
+                  Sendok ini bagus ya.</p>
+                  <p><span class="example-jp">⑮ コーヒー[を]、もう <ruby>一杯<rt>いっぱい</rt></ruby> いかがですか。</span><br>
+                  Bagaimana kopi secangkir lagi? (Pel.8)</p>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Template Bab 8 -->
+          <template id="pattern-template-8">
+            <!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box">Kata Sifat</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Kata Sifat berfungsi sebagai predikat dan menunjukkan kondisi Kata Benda dalam kalimat <strong>Kata Benda は Kata Sifat です</strong> atau digunakan sebagai kata yang menerangkan Kata Benda. Dalam bahasa Jepang terdapat dua jenis Kata Sifat yaitu Kata Sifat <strong>い</strong> dan Kata Sifat <strong>な</strong>, lalu perubahan bentuknya berbeda.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">は</span>
+                  <span class="formula-box">Kata Sifat な[な] です</span>
+                  <br>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">は</span>
+                  <span class="formula-box">Kata Sifat い(〜い) です</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Kalimat adjektival positif waktu non lampau diakhiri <strong>です</strong>. <strong>です</strong> menunjukkan sikap yang hormat terhadap pendengar. Kata Sifat <strong>な</strong> disambung dengan <strong>です</strong> tanpa <strong>な</strong>, sedangkan Kata Sifat <strong>い</strong> disambung dengan <strong>です</strong> dalam bentuk yang sama.</p>
+                  <p><span class="example-jp">① ワット<ruby>先生<rt>せんせい</rt></ruby>は <ruby>親切<rt>しんせつ</rt></ruby>です。</span><br>
+                  Bapak Watt baik hati.</p>
+                  <p><span class="example-jp">② <ruby>富士山<rt>ふじさん</rt></ruby>は <ruby>高<rt>たか</rt></ruby>いです。</span><br>
+                  Gunung Fuji tinggi.</p>
+                  
+                  <p><strong>1) Kata Sifat な[な] じゃ(では) ありません</strong></p>
+                  <p>Negatif waktu non lampau dari Kata Sifat な dibuat dengan dibubuhkan <strong>じゃ(では) ありません</strong> pada bentuk tanpa <strong>な</strong> dari Kata Sifat な.</p>
+                  <p><span class="example-jp">③ あそこは <ruby>静<rt>しず</rt></ruby>かじゃ(では) ありません。</span><br>
+                  Di sana tidak sunyi.</p>
+                  
+                  <p><strong>2) Kata Sifat い(〜い) です -> 〜くない です</strong></p>
+                  <p>Negatif waktu non lampau dari Kata Sifat い dibuat dengan dibubuhkan <strong>くないです</strong> pada bentuk yang dihilangkan <strong>い</strong> di bagian akhir dari Kata Sifat い.</p>
+                  <p><span class="example-jp">④ この <ruby>本<rt>ほん</rt></ruby>は おもしろくないです。</span><br>
+                  Buku ini tidak menarik.</p>
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] Negatif untuk いいです adalah よくないです.</span></p>
+                  
+                  <p><strong>3) Rangkuman Perubahan Bentuk</strong></p>
+                  <div style="overflow-x: auto; margin-bottom: 16px;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; background: white; border: 1px solid var(--line);">
+                      <thead>
+                        <tr style="background: var(--surface-soft);">
+                          <th style="padding: 12px; border: 1px solid var(--line);"></th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">Kata Sifat な</th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">Kata Sifat い</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line);">Positif waktu non lampau</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">しんせつです</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">たかいです</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line);">Negatif waktu non lampau</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">しんせつじゃ(では) ありません</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">たかくないです</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <p><strong>4) Cara membuat kalimat tanya</strong> dari kalimat adjektival sama seperti kalimat nominal (Lihat Pel.1) dan kalimat verbal (Lihat Pel.4). Untuk jawabannya digunakan Kata Sifat, dan tidak dapat menjawab dengan menggunakan <strong>そうです</strong> atau <strong>ちがいます</strong>.</p>
+                  <p><span class="example-jp">⑤ ペキンは <ruby>寒<rt>さむ</rt></ruby>いですか。</span><br>
+                  Apakah Beijing dingin?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……はい、<ruby>寒<rt>さむ</rt></ruby>いです。</span><br>
+                  <span style="margin-left: 20px;">……Ya, dingin.</span></p>
+                  <p><span class="example-jp">⑥ <ruby>奈良公園<rt>ならこうえん</rt></ruby>は にぎやかですか。</span><br>
+                  Apakah Taman Nara ramai?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、にぎやかじゃ ありません。</span><br>
+                  <span style="margin-left: 20px;">……Tidak, tidak ramai.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box">Kata Sifat な[な]</span>
+                  <span class="formula-box">Kata Benda</span>
+                  <br>
+                  <span class="formula-box">Kata Sifat い(〜い)</span>
+                  <span class="formula-box">Kata Benda</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Jika Kata Sifat menerangkan Kata Benda, Kata Sifat diletakan di depan Kata Benda. Kata Sifat な menerangkan Kata Benda dengan bentuk diikuti <strong>な</strong>.</p>
+                  <p><span class="example-jp">⑦ ワット<ruby>先生<rt>せんせい</rt></ruby>は <ruby>親切<rt>しんせつ</rt></ruby>な <ruby>先生<rt>せんせい</rt></ruby>です。</span><br>
+                  Bapak Watt adalah guru yang baik hati.</p>
+                  <p><span class="example-jp">⑧ <ruby>富士山<rt>ふじさん</rt></ruby>は <ruby>高<rt>たか</rt></ruby>い <ruby>山<rt>やま</rt></ruby>です。</span><br>
+                  Gunung Fuji adalah gunung yang tinggi.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span>〜</span>
+                  <span class="formula-box particle">が</span>
+                  <span>、〜</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>が</strong> menyambungkan kalimat yang menyatakan sebelum dan sesudah secara paradoksal. Dalam kalimat adjektival yang subjeknya sama, hal yang bernilai positif oleh si pembicara diletakkan di bagian depan, maka hal yang negatif di bagian belakangnya. Sebaliknya, jika hal yang bernilai negatif oleh si pembicara diletakkan di bagian depan, maka hal yang positif di bagian belakangnya.</p>
+                  <p><span class="example-jp">⑨ <ruby>日本<rt>にほん</rt></ruby>の <ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>は おいしいですが、<ruby>高<rt>たか</rt></ruby>いです。</span><br>
+                  Makanan Jepang enak, tetapi mahal.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span class="formula-box">とても</span>
+                  <span>／</span>
+                  <span class="formula-box">あまり</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>とても</strong> dan <strong>あまり</strong> adalah Kata keterangan yang menyatakan tingkat, dan jika menerangkan Kata Sifat kata tersebut diletakkan di depan Kata Sifat. <strong>とても</strong> mempunyai arti sangat dan digunakan pada kalimat positif. <strong>あまり</strong> digunakan bersamaan dengan kalimat negatif yang mempunyai arti tidak begitu.</p>
+                  <p><span class="example-jp">⑩ ペキンは とても <ruby>寒<rt>さむ</rt></ruby>いです。</span><br>
+                  Beijing sangat dingin.</p>
+                  <p><span class="example-jp">⑪ これは とても <ruby>有名<rt>ゆうめい</rt></ruby>な <ruby>映画<rt>えいが</rt></ruby>です。</span><br>
+                  Ini film yang sangat terkenal.</p>
+                  <p><span class="example-jp">⑫ シャンハイは あまり <ruby>寒<rt>さむ</rt></ruby>くないです。</span><br>
+                  Shanghai tidak begitu dingin.</p>
+                  <p><span class="example-jp">⑬ さくら<ruby>大学<rt>だいがく</rt></ruby>は あまり <ruby>有名<rt>ゆうめい</rt></ruby>な <ruby>大学<rt>だいがく</rt></ruby>じゃ ありません。</span><br>
+                  Universitas Sakura adalah universitas yang tidak begitu terkenal.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 6 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>6.</span>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">は</span>
+                  <span class="formula-box">どうですか</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>Kata Benda は どうですか</strong> menanyakan citra, pendapat, dan kesan mengenai hal yang dialami tentang tempat yang telah dikunjungi atau orang yang pernah dijumpai dan lain-lainnya oleh lawan bicara.</p>
+                  <p><span class="example-jp">⑭ <ruby>日本<rt>にほん</rt></ruby>の <ruby>生活<rt>せいかつ</rt></ruby>は どうですか。</span><br>
+                  Bagaimana kehidupan di Jepang?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>楽<rt>たの</rt></ruby>しいです。</span><br>
+                  <span style="margin-left: 20px;">……Senang.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 7 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>7.</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">1</sub></span>
+                  <span class="formula-box particle">は</span>
+                  <span class="formula-box">どんな</span>
+                  <span class="formula-box">Kata Benda<sub style="font-size: 0.6em; font-weight: normal; bottom: -0.2em; margin-left: 2px;">2</sub></span>
+                  <span class="formula-box">ですか</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>どんな</strong> adalah Kata Tanya untuk menanyakan keadaan atau sifat orang dan benda, kemudian digunakan untuk menerangkan Kata Benda.</p>
+                  <p><span class="example-jp">⑮ <ruby>奈良<rt>なら</rt></ruby>は どんな <ruby>町<rt>まち</rt></ruby>ですか。</span><br>
+                  Nara kota bagaimana?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>古<rt>ふる</rt></ruby>い <ruby>町<rt>まち</rt></ruby>です。</span><br>
+                  <span style="margin-left: 20px;">……Kota yang lama.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 8 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>8.</span>
+                  <span class="formula-box">そうですね</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Pada Pelajaran 5 telah dipelajari <strong>そうですね</strong> yang menyatakan persetujuan atau perasaan yang sama. Pada pelajaran ini terdapat <strong>そうですね</strong> menunjukkan sikap dari lawan bicaranya yang sedang berpikir seperti pada percakapan ⑯.</p>
+                  <p><span class="example-jp">⑯ お<ruby>仕事<rt>しごと</rt></ruby>は どうですか。</span><br>
+                  Bagaimana pekerjaannya?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……そうですね。<ruby>忙<rt>いそが</rt></ruby>しいですが、おもしろいです。</span><br>
+                  <span style="margin-left: 20px;">……Ya... Sibuk, tetapi menyenangkan.</span></p>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Template Bab 9 -->
+          <template id="pattern-template-9">
+            <!-- Pattern 1 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>1.</span>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">が</span>
+                  <span class="formula-box">あります / わかります</span>
+                  <br>
+                  <span class="formula-box">Kata Benda</span>
+                  <span class="formula-box particle">が</span>
+                  <span class="formula-box"><ruby>好<rt>す</rt></ruby>きです / <ruby>嫌<rt>きら</rt></ruby>いです / <ruby>上手<rt>じょうず</rt></ruby>です / <ruby>下手<rt>へた</rt></ruby>です</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Sebagian Kata Kerja atau Kata Sifat menunjukkan objek dengan partikel <strong>が</strong>.</p>
+                  <p><span class="example-jp">① わたしは イタリア<ruby>料理<rt>りょうり</rt></ruby>が <ruby>好<rt>す</rt></ruby>きです。</span><br>
+                  Saya suka masakan Italia.</p>
+                  <p><span class="example-jp">② わたしは <ruby>日本語<rt>にほんご</rt></ruby>が わかります。</span><br>
+                  Saya mengerti bahasa Jepang.</p>
+                  <p><span class="example-jp">③ わたしは <ruby>車<rt>くるま</rt></ruby>が あります。</span><br>
+                  Saya mempunyai mobil.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 2 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>2.</span>
+                  <span class="formula-box">どんな</span>
+                  <span class="formula-box">Kata Benda</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Cara menjawab untuk kalimat tanya dengan menggunakan <strong>どんな</strong>, selain cara menjawab yang telah dipelajari pada Pelajaran 8, dapat dijawab juga dengan memberikan nama secara kongkret.</p>
+                  <p><span class="example-jp">④ どんな スポーツが <ruby>好<rt>す</rt></ruby>きですか。</span><br>
+                  Suka olahraga apa?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……サッカーが <ruby>好<rt>す</rt></ruby>きです。</span><br>
+                  <span style="margin-left: 20px;">……Suka sepak bola.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 3 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>3.</span>
+                  <span class="formula-box">よく</span>
+                  <span>／</span>
+                  <span class="formula-box">だいたい</span>
+                  <span>／</span>
+                  <span class="formula-box">たくさん</span>
+                  <span>／</span>
+                  <span class="formula-box"><ruby>少<rt>すこ</rt></ruby>し</span>
+                  <span>／</span>
+                  <span class="formula-box">あまり</span>
+                  <span>／</span>
+                  <span class="formula-box"><ruby>全然<rt>ぜんぜん</rt></ruby></span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Kata Keterangan tersebut di atas diletakkan di depan Kata Kerja yang diterangkannya.</p>
+                  <div style="overflow-x: auto; margin-bottom: 16px;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; background: white; border: 1px solid var(--line);">
+                      <thead>
+                        <tr style="background: var(--surface-soft);">
+                          <th style="padding: 12px; border: 1px solid var(--line);"></th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">Kata Keterangan tingkat</th>
+                          <th style="padding: 12px; border: 1px solid var(--line);">Kata Keterangan kuantitas</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line);">digunakan dengan kalimat positif</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">よく わかります<br>だいたい わかります<br>すこし わかります</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">たくさん あります<br>すこし あります</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid var(--line);">digunakan dengan kalimat negatif</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">あまり わかりません<br>ぜんぜん わかりません</td>
+                          <td style="padding: 12px; border: 1px solid var(--line);">あまり ありません<br>ぜんぜん ありません</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <p><span class="example-jp">⑤ <ruby>英語<rt>えいご</rt></ruby>が よく わかります。</span><br>
+                  Mengerti bahasa Inggris dengan baik.</p>
+                  <p><span class="example-jp">⑥ <ruby>英語<rt>えいご</rt></ruby>が <ruby>少<rt>すこ</rt></ruby>し わかります。</span><br>
+                  Mengerti bahasa Inggris sedikit.</p>
+                  <p><span class="example-jp">⑦ <ruby>英語<rt>えいご</rt></ruby>が あまり わかりません。</span><br>
+                  Tidak begitu mengerti bahasa Inggris.</p>
+                  <p><span class="example-jp">⑧ お<ruby>金<rt>かね</rt></ruby>が たくさん あります。</span><br>
+                  Uang ada banyak.</p>
+                  <p><span class="example-jp">⑨ お<ruby>金<rt>かね</rt></ruby>が <ruby>全然<rt>ぜんぜん</rt></ruby> ありません。</span><br>
+                  Uang tidak ada sama sekali.</p>
+                  <p><span style="color: var(--pink-strong); font-size: 0.9em; font-weight: bold;">[Perhatian] すこし, ぜんぜん dan あまり juga dapat menerangkan Kata Sifat.</span></p>
+                  <p><span class="example-jp">⑩ ここは <ruby>少<rt>すこ</rt></ruby>し <ruby>寒<rt>さむ</rt></ruby>いです。</span><br>
+                  Di sini sedikit dingin.</p>
+                  <p><span class="example-jp">⑪ あの <ruby>映画<rt>えいが</rt></ruby>は <ruby>全然<rt>ぜんぜん</rt></ruby> おもしろくないです。</span><br>
+                  Film itu tidak menarik sama sekali.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 4 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>4.</span>
+                  <span>〜</span>
+                  <span class="formula-box particle">から</span>
+                  <span>、〜</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;">Hal yang dinyatakan di depan <strong>から</strong> merupakan alasan dari kalimat yang dinyatakan di belakangnya.</p>
+                  <p><span class="example-jp">⑫ <ruby>時間<rt>じかん</rt></ruby>が ありませんから、<ruby>新聞<rt>しんぶん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みません。</span><br>
+                  Karena tidak ada waktu, tidak membaca surat kabar.</p>
+                  <p>Digunakan juga untuk menyatakan suatu hal dan alasan dengan memasukkan <strong>〜から</strong>.</p>
+                  <p><span class="example-jp">⑬ <ruby>毎朝<rt>まいあさ</rt></ruby> <ruby>新聞<rt>しんぶん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みますか。</span><br>
+                  Apakah membaca surat kabar setiap pagi?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……いいえ、<ruby>読<rt>よ</rt></ruby>みません。<ruby>時間<rt>じかん</rt></ruby>が ありませんから。</span><br>
+                  <span style="margin-left: 20px;">……Tidak, tidak membaca. Karena tidak ada waktu.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pattern 5 -->
+            <div class="vocab-card open">
+              <div class="vocab-main" style="grid-template-columns: 1fr;">
+                <div class="japanese" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; line-height: 1.5;">
+                  <span>5.</span>
+                  <span class="formula-box">どうして</span>
+                </div>
+              </div>
+              <div class="vocab-detail" style="display: block; padding-top: 0;">
+                <div class="detail-explanation" style="max-width: 100%;">
+                  <p style="margin-top: 0;"><strong>どうして</strong> adalah Kata Tanya untuk menanyakan alasan. Pada akhir kalimat dibubuhkan <strong>から</strong> untuk menyatakan alasannya.</p>
+                  <p><span class="example-jp">⑭ どうして <ruby>朝<rt>あさ</rt></ruby> <ruby>新聞<rt>しんぶん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みませんか。</span><br>
+                  Mengapa pada pagi hari tidak membaca surat kabar?<br>
+                  <span class="example-jp" style="margin-left: 20px;">……<ruby>時間<rt>じかん</rt></ruby>が ありませんから。</span><br>
+                  <span style="margin-left: 20px;">……Sebab tidak ada waktu.</span></p>
+                  <p>Jika menanyakan alasan yang dikatakan oleh lawan bicara, dapat mengatakan <strong>どうしてですか</strong> untuk tidak menanyakan kata-kata yang dikatakan oleh lawan bicara.</p>
+                  <p><span class="example-jp">⑮ きょうは <ruby>早<rt>はや</rt></ruby>く <ruby>帰<rt>かえ</rt></ruby>ります。</span><br>
+                  Hari ini cepat pulang.<br>
+                  <span class="example-jp" style="margin-left: 20px;">……どうしてですか。</span><br>
+                  <span style="margin-left: 20px;">……Mengapa?</span><br>
+                  <span class="example-jp" style="margin-left: 20px;"><ruby>子<rt>こ</rt></ruby>どもの お<ruby>誕生日<rt>たんじょうび</rt></ruby>ですから。</span><br>
+                  <span style="margin-left: 20px;">Sebab hari ulang tahun anak.</span></p>
+                </div>
+              </div>
+            </div>
+          </template>
+        </section>
+
+        <section class="page placeholder-page" id="quizPage">
+          <div class="placeholder-icon">Q</div>
+          <h3>Quiz</h3>
+          <p>Area latihan akan dipakai untuk menguji kosakata dan arti Indonesia.</p>
+        </section>
+
+        <section class="page" id="extraPage">
+          <div class="section-head">
+            <div>
+              <h3>Negara, Orang, Bahasa</h3>
+              <p>Pilih kategori untuk melihat kosakata negara, orang, atau bahasa.</p>
+            </div>
+          </div>
+
+          <div class="extra-menu" aria-label="Kategori kosakata lain">
+            <button class="extra-menu-card active" type="button" data-extra-category="country">
+              <span class="extra-menu-title">Negara</span>
+              <span class="extra-menu-subtitle">国・くに</span>
+            </button>
+            <button class="extra-menu-card" type="button" data-extra-category="person">
+              <span class="extra-menu-title">Orang</span>
+              <span class="extra-menu-subtitle">人・ひと</span>
+            </button>
+            <button class="extra-menu-card" type="button" data-extra-category="language">
+              <span class="extra-menu-title">Bahasa</span>
+              <span class="extra-menu-subtitle">ことば</span>
+            </button>
+            <button class="extra-menu-card" type="button" data-extra-category="department">
+              <span class="extra-menu-title">Toserba</span>
+              <span class="extra-menu-subtitle">デパート</span>
+            </button>
+          </div>
+
+          <div class="extra-list" id="extraList"></div>
+        </section>
+      </main>
+
+      <!-- Minimal Bottom Navigation -->
+      <nav class="bottom-nav">
+        <button class="nav-item active" data-page="vocabulary">
+          <span class="nav-icon">語</span>
+          <span class="nav-text">Kosakata</span>
+        </button>
+        <button class="nav-item" data-page="patterns">
+          <span class="nav-icon">文</span>
+          <span class="nav-text">Tata Bahasa</span>
+        </button>
+        <button class="nav-item" data-page="quiz">
+          <span class="nav-icon">Q</span>
+          <span class="nav-text">Quiz</span>
+        </button>
+        <button class="nav-item" data-page="extra">
+          <span class="nav-icon">＋</span>
+          <span class="nav-text">Lainnya</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Pengaturan Tampilan</h3>
+          <button id="closeSettingsBtn" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="setting-group">
+            <label>Ukuran Teks</label>
+            <div class="setting-controls">
+              <button class="font-size-btn" data-size="14px">Kecil</button>
+              <button class="font-size-btn active" data-size="16px">Sedang</button>
+              <button class="font-size-btn" data-size="18px">Besar</button>
+            </div>
+          </div>
+          <div class="setting-group">
+            <label>Jenis Huruf</label>
+            <select id="fontFamilySelect" class="setting-select">
+              <option value='system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'>Modern (Default)</option>
+              <option value='Georgia, "Times New Roman", serif'>Klasik (Serif)</option>
+              <option value='"Comic Sans MS", "Chalkboard SE", sans-serif'>Santai (Rounded)</option>
+            </select>
+          </div>
+          <div class="setting-group">
+            <label>Tema Warna</label>
+            <select id="themeSelect" class="setting-select">
+              <option value="default">Default Pink</option>
+              <option value="light">Light Blue</option>
+              <option value="dark">Dark Neon</option>
+              <option value="custom">Custom...</option>
+            </select>
+          </div>
+          <div id="customColorGroup" class="setting-group custom-color-group" style="display: none;">
+            <label>Warna Custom</label>
+            <div class="color-pickers">
+              <div>
+                <input type="color" id="customBg" value="#fff7fa">
+                <div class="color-label">Latar</div>
+              </div>
+              <div>
+                <input type="color" id="customSurface" value="#ffffff">
+                <div class="color-label">Kotak</div>
+              </div>
+              <div>
+                <input type="color" id="customPink" value="#ee4f88">
+                <div class="color-label">Aksen</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
