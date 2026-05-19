@@ -1,0 +1,355 @@
+window.lessonData = window.lessonData || {};
+
+window.lessonData[21] = {
+  title: "Bab 21: Pendapat dan Informasi",
+  vocabulary: [
+    {
+      "japanese": "思います I",
+      "furigana": "おもいます",
+      "meaning": "mengira, berpikir 🤔",
+      "romaji": "omoimasu",
+      "dictionaryForm": "思う（おもう）",
+      "dictionaryRomaji": "omou",
+      "example": "いい と 思います。",
+      "exampleRomaji": "Ii to omoimasu.",
+      "translation": "Saya pikir bagus."
+    },
+    {
+      "japanese": "言います I",
+      "furigana": "いいます",
+      "meaning": "mengatakan 🗣️",
+      "romaji": "iimasu",
+      "dictionaryForm": "言う（いう）",
+      "dictionaryRomaji": "iu",
+      "example": "先生 が 「がんばって」 と 言いました。",
+      "exampleRomaji": "Sensei ga “ganbatte” to iimashita.",
+      "translation": "Guru berkata “semangat”."
+    },
+    {
+      "japanese": "勝ちます I",
+      "furigana": "かちます",
+      "meaning": "menang 🏆",
+      "romaji": "kachimasu",
+      "dictionaryForm": "勝つ（かつ）",
+      "dictionaryRomaji": "katsu",
+      "example": "試合 に 勝ちました。",
+      "exampleRomaji": "Shiai ni kachimashita.",
+      "translation": "Menang pertandingan."
+    },
+    {
+      "japanese": "負けます II",
+      "furigana": "まけます",
+      "meaning": "kalah 😢",
+      "romaji": "makemasu",
+      "dictionaryForm": "負ける（まける）",
+      "dictionaryRomaji": "makeru",
+      "example": "ゲーム に 負けました。",
+      "exampleRomaji": "Geemu ni makemashita.",
+      "translation": "Kalah dalam game."
+    },
+    {
+      "japanese": "あります I",
+      "furigana": "",
+      "meaning": "ada, diadakan 🎉",
+      "romaji": "arimasu",
+      "dictionaryForm": "ある",
+      "dictionaryRomaji": "aru",
+      "example": "お祭り が あります。",
+      "exampleRomaji": "Omatsuri ga arimasu.",
+      "translation": "Ada festival."
+    },
+    {
+      "japanese": "役に立ちます I",
+      "furigana": "やくにたちます",
+      "meaning": "berguna 👍",
+      "romaji": "yaku ni tachimasu",
+      "dictionaryForm": "役に立つ（やくにたつ）",
+      "dictionaryRomaji": "yaku ni tatsu",
+      "example": "この 本 は 役に立ちます。",
+      "exampleRomaji": "Kono hon wa yaku ni tachimasu.",
+      "translation": "Buku ini berguna."
+    },
+    {
+      "japanese": "動きます I",
+      "furigana": "うごきます",
+      "meaning": "bergerak 🚶",
+      "romaji": "ugokimasu",
+      "dictionaryForm": "動く（うごく）",
+      "dictionaryRomaji": "ugoku",
+      "example": "ロボット が 動きます。",
+      "exampleRomaji": "Robotto ga ugokimasu.",
+      "translation": "Robot bergerak."
+    },
+    {
+      "japanese": "やめます II",
+      "furigana": "",
+      "meaning": "berhenti ✋",
+      "romaji": "yamemasu",
+      "dictionaryForm": "やめる",
+      "dictionaryRomaji": "yameru",
+      "example": "会社 を やめます。",
+      "exampleRomaji": "Kaisha o yamemasu.",
+      "translation": "Berhenti dari perusahaan."
+    },
+    {
+      "japanese": "気をつけます II",
+      "furigana": "きをつけます",
+      "meaning": "berhati-hati ⚠️",
+      "romaji": "ki o tsukemasu",
+      "dictionaryForm": "気をつける（きをつける）",
+      "dictionaryRomaji": "ki o tsukeru",
+      "example": "車 に 気をつけます。",
+      "exampleRomaji": "Kuruma ni ki o tsukemasu.",
+      "translation": "Berhati-hati terhadap mobil."
+    },
+    {
+      "japanese": "留学します III",
+      "furigana": "りゅうがくします",
+      "meaning": "studi di luar negeri ✈️",
+      "romaji": "ryuugaku shimasu",
+      "dictionaryForm": "留学する（りゅうがくする）",
+      "dictionaryRomaji": "ryuugaku suru",
+      "example": "日本 へ 留学します。",
+      "exampleRomaji": "Nihon e ryuugaku shimasu.",
+      "translation": "Belajar di Jepang."
+    },
+    {
+      "japanese": "無駄",
+      "furigana": "むだ",
+      "meaning": "sia-sia 🚫",
+      "romaji": "muda",
+      "example": "時間 の 無駄 です。",
+      "exampleRomaji": "Jikan no muda desu.",
+      "translation": "Itu membuang waktu."
+    },
+    {
+      "japanese": "不便",
+      "furigana": "ふべん",
+      "meaning": "tidak praktis 😓",
+      "romaji": "fuben",
+      "example": "ここ は 不便 です。",
+      "exampleRomaji": "Koko wa fuben desu.",
+      "translation": "Tempat ini tidak praktis."
+    },
+    {
+      "japanese": "すごい",
+      "furigana": "",
+      "meaning": "hebat 😲",
+      "romaji": "sugoi",
+      "example": "すごい 人 ですね。",
+      "exampleRomaji": "Sugoi hito desu ne.",
+      "translation": "Orang yang hebat ya."
+    },
+    {
+      "japanese": "本当",
+      "furigana": "ほんとう",
+      "meaning": "betul, benar ✅",
+      "romaji": "hontou",
+      "example": "本当 ですか。",
+      "exampleRomaji": "Hontou desu ka.",
+      "translation": "Benarkah?"
+    },
+    {
+      "japanese": "うそ",
+      "furigana": "",
+      "meaning": "bohong ❌",
+      "romaji": "uso",
+      "example": "それ は うそ です。",
+      "exampleRomaji": "Sore wa uso desu.",
+      "translation": "Itu bohong."
+    },
+    {
+      "japanese": "自動車",
+      "furigana": "じどうしゃ",
+      "meaning": "mobil 🚗",
+      "romaji": "jidousha",
+      "example": "自動車 を 買いました。",
+      "exampleRomaji": "Jidousha o kaimashita.",
+      "translation": "Membeli mobil."
+    },
+    {
+      "japanese": "交通",
+      "furigana": "こうつう",
+      "meaning": "lalu lintas 🚦",
+      "romaji": "koutsuu",
+      "example": "交通 が 多い です。",
+      "exampleRomaji": "Koutsuu ga ooi desu.",
+      "translation": "Lalu lintas ramai."
+    },
+    {
+      "japanese": "物価",
+      "furigana": "ぶっか",
+      "meaning": "harga barang 💴",
+      "romaji": "bukka",
+      "example": "東京 は 物価 が 高い です。",
+      "exampleRomaji": "Toukyou wa bukka ga takai desu.",
+      "translation": "Harga barang di Tokyo mahal."
+    },
+    {
+      "japanese": "放送",
+      "furigana": "ほうそう",
+      "meaning": "siaran 📡",
+      "romaji": "housou",
+      "example": "ニュース の 放送 を 聞きます。",
+      "exampleRomaji": "Nyuusu no housou o kikimasu.",
+      "translation": "Mendengar siaran berita."
+    },
+    {
+      "japanese": "ニュース",
+      "furigana": "",
+      "meaning": "warta berita 📰",
+      "romaji": "nyuusu",
+      "example": "毎日 ニュース を 見ます。",
+      "exampleRomaji": "Mainichi nyuusu o mimasu.",
+      "translation": "Menonton berita setiap hari."
+    },
+    {
+      "japanese": "アニメ",
+      "furigana": "",
+      "meaning": "animasi 🎬",
+      "romaji": "anime",
+      "example": "アニメ が 好き です。",
+      "exampleRomaji": "Anime ga suki desu.",
+      "translation": "Suka anime."
+    },
+    {
+      "japanese": "マンガ",
+      "furigana": "",
+      "meaning": "manga, komik 📚",
+      "romaji": "manga",
+      "example": "マンガ を 読みます。",
+      "exampleRomaji": "Manga o yomimasu.",
+      "translation": "Membaca manga."
+    },
+    {
+      "japanese": "デザイン",
+      "furigana": "",
+      "meaning": "desain 🎨",
+      "romaji": "dezain",
+      "example": "この デザイン は きれい です。",
+      "exampleRomaji": "Kono dezain wa kirei desu.",
+      "translation": "Desain ini indah."
+    },
+    {
+      "japanese": "夢",
+      "furigana": "ゆめ",
+      "meaning": "mimpi 🌙",
+      "romaji": "yume",
+      "example": "夢 が あります。",
+      "exampleRomaji": "Yume ga arimasu.",
+      "translation": "Saya punya mimpi."
+    },
+    {
+      "japanese": "天才",
+      "furigana": "てんさい",
+      "meaning": "genius 🧠",
+      "romaji": "tensai",
+      "example": "彼 は 天才 です。",
+      "exampleRomaji": "Kare wa tensai desu.",
+      "translation": "Dia seorang genius."
+    },
+    {
+      "japanese": "試合",
+      "furigana": "しあい",
+      "meaning": "pertandingan ⚽",
+      "romaji": "shiai",
+      "example": "試合 を します。",
+      "exampleRomaji": "Shiai o shimasu.",
+      "translation": "Mengadakan pertandingan."
+    },
+    {
+      "japanese": "意見",
+      "furigana": "いけん",
+      "meaning": "pendapat 💭",
+      "romaji": "iken",
+      "example": "意見 を 言います。",
+      "exampleRomaji": "Iken o iimasu.",
+      "translation": "Mengatakan pendapat."
+    },
+    {
+      "japanese": "話",
+      "furigana": "はなし",
+      "meaning": "cerita 📖",
+      "romaji": "hanashi",
+      "example": "面白い 話 ですね。",
+      "exampleRomaji": "Omoshiroi hanashi desu ne.",
+      "translation": "Ceritanya menarik ya."
+    },
+    {
+      "japanese": "地球",
+      "furigana": "ちきゅう",
+      "meaning": "bumi 🌏",
+      "romaji": "chikyuu",
+      "example": "地球 は 青い です。",
+      "exampleRomaji": "Chikyuu wa aoi desu.",
+      "translation": "Bumi itu biru."
+    },
+    {
+      "japanese": "月",
+      "furigana": "つき",
+      "meaning": "bulan 🌕",
+      "romaji": "tsuki",
+      "example": "月 が きれい です。",
+      "exampleRomaji": "Tsuki ga kirei desu.",
+      "translation": "Bulannya indah."
+    },
+    {
+      "japanese": "最近",
+      "furigana": "さいきん",
+      "meaning": "akhir-akhir ini 🕒",
+      "romaji": "saikin",
+      "example": "最近 忙しい です。",
+      "exampleRomaji": "Saikin isogashii desu.",
+      "translation": "Akhir-akhir ini sibuk."
+    },
+    {
+      "japanese": "たぶん",
+      "furigana": "",
+      "meaning": "mungkin 🤔",
+      "romaji": "tabun",
+      "example": "たぶん 来ます。",
+      "exampleRomaji": "Tabun kimasu.",
+      "translation": "Mungkin datang."
+    },
+    {
+      "japanese": "きっと",
+      "furigana": "",
+      "meaning": "pasti ✨",
+      "romaji": "kitto",
+      "example": "きっと 大丈夫 です。",
+      "exampleRomaji": "Kitto daijoubu desu.",
+      "translation": "Pasti tidak apa-apa."
+    },
+    {
+      "japanese": "本当に",
+      "furigana": "ほんとうに",
+      "meaning": "betul-betul 💯",
+      "romaji": "hontou ni",
+      "example": "本当に ありがとうございます。",
+      "exampleRomaji": "Hontou ni arigatou gozaimasu.",
+      "translation": "Terima kasih banyak."
+    },
+    {
+      "japanese": "そんなに",
+      "furigana": "",
+      "meaning": "tidak begitu 📉",
+      "romaji": "sonna ni",
+      "example": "そんなに 高くない です。",
+      "exampleRomaji": "Sonna ni takakunai desu.",
+      "translation": "Tidak begitu mahal."
+    },
+    {
+      "japanese": "～について",
+      "furigana": "",
+      "meaning": "tentang ~ 📘",
+      "romaji": "~ ni tsuite",
+      "example": "日本 について 勉強します。",
+      "exampleRomaji": "Nihon ni tsuite benkyou shimasu.",
+      "translation": "Belajar tentang Jepang."
+    }
+  ],
+  patterns: String.raw`
+
+  `,
+  quiz: [],
+};
