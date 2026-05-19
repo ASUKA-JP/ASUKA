@@ -463,5 +463,116 @@ window.lessonData[14] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari つけます?",
+      "options": [
+        "menyalakan, memasang",
+        "mematikan",
+        "membuka",
+        "menutup"
+      ],
+      "answer": "menyalakan, memasang",
+      "explanation": "つけます dibaca tsukemasu. Contoh: 電気 を つけます。 (Menyalakan lampu.)"
+    },
+    {
+      "question": "Apa arti dari 消します?",
+      "options": [
+        "mematikan",
+        "menyalakan, memasang",
+        "membuka",
+        "menutup"
+      ],
+      "answer": "mematikan",
+      "explanation": "消します dibaca keshimasu. Contoh: エアコン を 消します。 (Mematikan AC.)"
+    },
+    {
+      "question": "Apa arti dari 開けます?",
+      "options": [
+        "membuka",
+        "menyalakan, memasang",
+        "mematikan",
+        "menutup"
+      ],
+      "answer": "membuka",
+      "explanation": "開けます dibaca akemasu. Contoh: ドア を 開けます。 (Membuka pintu.)"
+    },
+    {
+      "question": "Apa arti dari 閉めます?",
+      "options": [
+        "menutup",
+        "menyalakan, memasang",
+        "mematikan",
+        "membuka"
+      ],
+      "answer": "menutup",
+      "explanation": "閉めます dibaca shimemasu. Contoh: 窓 を 閉めます。 (Menutup jendela.)"
+    },
+    {
+      "question": "Apa arti dari 急ぎます?",
+      "options": [
+        "buru-buru",
+        "menyalakan, memasang",
+        "mematikan",
+        "membuka"
+      ],
+      "answer": "buru-buru",
+      "explanation": "急ぎます dibaca isogimasu. Contoh: 駅 へ 急ぎます。 (Buru-buru ke stasiun.)"
+    },
+    {
+      "question": "Apa arti dari 待ちます?",
+      "options": [
+        "menunggu ⏳",
+        "menyalakan, memasang",
+        "mematikan",
+        "membuka"
+      ],
+      "answer": "menunggu ⏳",
+      "explanation": "待ちます dibaca machimasu. Contoh: ここ で 待ちます。 (Menunggu di sini.)"
+    },
+    {
+      "question": "Apa arti dari 持ちます?",
+      "options": [
+        "membawa",
+        "menyalakan, memasang",
+        "mematikan",
+        "membuka"
+      ],
+      "answer": "membawa",
+      "explanation": "持ちます dibaca mochimasu. Contoh: 荷物 を 持ちます。 (Membawa barang.)"
+    },
+    {
+      "question": "Apa arti dari 取ります?",
+      "options": [
+        "mengambil",
+        "menyalakan, memasang",
+        "mematikan",
+        "membuka"
+      ],
+      "answer": "mengambil",
+      "explanation": "取ります dibaca torimasu. Contoh: 塩 を 取ります。 (Mengambil garam.)"
+    },
+    {
+      "question": "Apa arti dari 手伝います?",
+      "options": [
+        "membantu",
+        "menyalakan, memasang",
+        "mematikan",
+        "membuka"
+      ],
+      "answer": "membantu",
+      "explanation": "手伝います dibaca tetsudaimasu. Contoh: 母 を 手伝います。 (Membantu ibu.)"
+    },
+    {
+      "question": "Apa arti dari 呼びます?",
+      "options": [
+        "memanggil",
+        "menyalakan, memasang",
+        "mematikan",
+        "membuka"
+      ],
+      "answer": "memanggil",
+      "explanation": "呼びます dibaca yobimasu. Contoh: タクシー を 呼びます。 (Memanggil taksi.)"
+    }
+  ],
 };

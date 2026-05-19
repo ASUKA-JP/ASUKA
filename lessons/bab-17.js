@@ -350,5 +350,116 @@ window.lessonData[17] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 覚えます II?",
+      "options": [
+        "mengingat, menghafal",
+        "lupa",
+        "kehilangan",
+        "membayar"
+      ],
+      "answer": "mengingat, menghafal",
+      "explanation": "覚えます II dibaca oboemasu. Contoh: 漢字 を 覚えます。 (Menghafal kanji.)"
+    },
+    {
+      "question": "Apa arti dari 忘れます II?",
+      "options": [
+        "lupa",
+        "mengingat, menghafal",
+        "kehilangan",
+        "membayar"
+      ],
+      "answer": "lupa",
+      "explanation": "忘れます II dibaca wasuremasu. Contoh: 宿題 を 忘れました。 (Lupa PR.)"
+    },
+    {
+      "question": "Apa arti dari なくします I?",
+      "options": [
+        "kehilangan",
+        "mengingat, menghafal",
+        "lupa",
+        "membayar"
+      ],
+      "answer": "kehilangan",
+      "explanation": "なくします I dibaca nakushimasu. Contoh: 財布 を なくしました。 (Saya kehilangan dompet.)"
+    },
+    {
+      "question": "Apa arti dari 払います I?",
+      "options": [
+        "membayar",
+        "mengingat, menghafal",
+        "lupa",
+        "kehilangan"
+      ],
+      "answer": "membayar",
+      "explanation": "払います I dibaca haraimasu. Contoh: お金 を 払います。 (Membayar uang.)"
+    },
+    {
+      "question": "Apa arti dari 返します I?",
+      "options": [
+        "mengembalikan",
+        "mengingat, menghafal",
+        "lupa",
+        "kehilangan"
+      ],
+      "answer": "mengembalikan",
+      "explanation": "返します I dibaca kaeshimasu. Contoh: 本 を 返します。 (Mengembalikan buku.)"
+    },
+    {
+      "question": "Apa arti dari 出かけます II?",
+      "options": [
+        "pergi, keluar",
+        "mengingat, menghafal",
+        "lupa",
+        "kehilangan"
+      ],
+      "answer": "pergi, keluar",
+      "explanation": "出かけます II dibaca dekakemasu. Contoh: 友達 と 出かけます。 (Pergi keluar dengan teman.)"
+    },
+    {
+      "question": "Apa arti dari 脱ぎます I?",
+      "options": [
+        "melepas pakaian",
+        "mengingat, menghafal",
+        "lupa",
+        "kehilangan"
+      ],
+      "answer": "melepas pakaian",
+      "explanation": "脱ぎます I dibaca nugimasu. Contoh: 靴 を 脱ぎます。 (Melepas sepatu.)"
+    },
+    {
+      "question": "Apa arti dari 持って 行きます I?",
+      "options": [
+        "membawa pergi",
+        "mengingat, menghafal",
+        "lupa",
+        "kehilangan"
+      ],
+      "answer": "membawa pergi",
+      "explanation": "持って 行きます I dibaca motte ikimasu. Contoh: 傘 を 持って 行きます。 (Membawa payung pergi.)"
+    },
+    {
+      "question": "Apa arti dari 持って 来ます III?",
+      "options": [
+        "membawa datang",
+        "mengingat, menghafal",
+        "lupa",
+        "kehilangan"
+      ],
+      "answer": "membawa datang",
+      "explanation": "持って 来ます III dibaca motte kimasu. Contoh: 辞書 を 持って 来ます。 (Membawa kamus ke sini.)"
+    },
+    {
+      "question": "Apa arti dari 心配します III?",
+      "options": [
+        "mengkhawatirkan",
+        "mengingat, menghafal",
+        "lupa",
+        "kehilangan"
+      ],
+      "answer": "mengkhawatirkan",
+      "explanation": "心配します III dibaca shinpai shimasu. Contoh: 母 を 心配します。 (Mengkhawatirkan ibu.)"
+    }
+  ],
 };

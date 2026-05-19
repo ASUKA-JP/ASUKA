@@ -575,5 +575,116 @@ window.lessonData[9] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari わかります?",
+      "options": [
+        "mengerti",
+        "ada, mempunyai",
+        "suka, gemar ️",
+        "tidak suka"
+      ],
+      "answer": "mengerti",
+      "explanation": "わかります dibaca wakarimasu. Contoh: 日本語 が わかります。 (Saya mengerti bahasa Jepang。)"
+    },
+    {
+      "question": "Apa arti dari あります?",
+      "options": [
+        "ada, mempunyai",
+        "mengerti",
+        "suka, gemar ️",
+        "tidak suka"
+      ],
+      "answer": "ada, mempunyai",
+      "explanation": "あります dibaca arimasu. Contoh: 時間 が あります。 (Saya punya waktu。)"
+    },
+    {
+      "question": "Apa arti dari 好き?",
+      "options": [
+        "suka, gemar ️",
+        "mengerti",
+        "ada, mempunyai",
+        "tidak suka"
+      ],
+      "answer": "suka, gemar ️",
+      "explanation": "好き dibaca suki. Contoh: スポーツ が 好き です。 (Saya suka olahraga。)"
+    },
+    {
+      "question": "Apa arti dari 嫌い?",
+      "options": [
+        "tidak suka",
+        "mengerti",
+        "ada, mempunyai",
+        "suka, gemar ️"
+      ],
+      "answer": "tidak suka",
+      "explanation": "嫌い dibaca kirai. Contoh: 野菜 が 嫌い です。 (Saya tidak suka sayur。)"
+    },
+    {
+      "question": "Apa arti dari 上手?",
+      "options": [
+        "pandai, pintar",
+        "mengerti",
+        "ada, mempunyai",
+        "suka, gemar ️"
+      ],
+      "answer": "pandai, pintar",
+      "explanation": "上手 dibaca jouzu. Contoh: ラヌさん は 日本語 が 上手 です。 (Ranu pandai bahasa Jepang。)"
+    },
+    {
+      "question": "Apa arti dari 下手?",
+      "options": [
+        "tidak pandai",
+        "mengerti",
+        "ada, mempunyai",
+        "suka, gemar ️"
+      ],
+      "answer": "tidak pandai",
+      "explanation": "下手 dibaca heta. Contoh: わたし は 歌 が 下手 です。 (Saya tidak pandai menyanyi。)"
+    },
+    {
+      "question": "Apa arti dari 飲み物?",
+      "options": [
+        "minuman",
+        "mengerti",
+        "ada, mempunyai",
+        "suka, gemar ️"
+      ],
+      "answer": "minuman",
+      "explanation": "飲み物 dibaca nomimono. Contoh: 飲み物 を 買います。 (Saya membeli minuman。)"
+    },
+    {
+      "question": "Apa arti dari 料理?",
+      "options": [
+        "masakan, memasak",
+        "mengerti",
+        "ada, mempunyai",
+        "suka, gemar ️"
+      ],
+      "answer": "masakan, memasak",
+      "explanation": "料理 dibaca ryouri. Contoh: 料理 を します。 (Saya memasak。)"
+    },
+    {
+      "question": "Apa arti dari スポーツ?",
+      "options": [
+        "olahraga",
+        "mengerti",
+        "ada, mempunyai",
+        "suka, gemar ️"
+      ],
+      "answer": "olahraga",
+      "explanation": "スポーツ dibaca supootsu. Contoh: スポーツ が 好き です。 (Saya suka olahraga。)"
+    },
+    {
+      "question": "Apa arti dari 野球?",
+      "options": [
+        "baseball",
+        "mengerti",
+        "ada, mempunyai",
+        "suka, gemar ️"
+      ],
+      "answer": "baseball",
+      "explanation": "野球 dibaca yakyuu. Contoh: 野球 を します。 (Saya bermain baseball。)"
+    }
+  ],
 };

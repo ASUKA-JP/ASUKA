@@ -239,5 +239,116 @@ window.lessonData[15] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 置きます I?",
+      "options": [
+        "meletakkan, menaruh",
+        "membuat ️",
+        "menjual",
+        "mengetahui, mengenal"
+      ],
+      "answer": "meletakkan, menaruh",
+      "explanation": "置きます I dibaca okimasu. Contoh: 机 の 上 に 本 を 置きます。 (Meletakkan buku di atas meja.)"
+    },
+    {
+      "question": "Apa arti dari 作ります I?",
+      "options": [
+        "membuat ️",
+        "meletakkan, menaruh",
+        "menjual",
+        "mengetahui, mengenal"
+      ],
+      "answer": "membuat ️",
+      "explanation": "作ります I dibaca tsukurimasu. Contoh: 晩ご飯 を 作ります。 (Membuat makan malam.)"
+    },
+    {
+      "question": "Apa arti dari 売ります I?",
+      "options": [
+        "menjual",
+        "meletakkan, menaruh",
+        "membuat ️",
+        "mengetahui, mengenal"
+      ],
+      "answer": "menjual",
+      "explanation": "売ります I dibaca urimasu. Contoh: 店 で 野菜 を 売ります。 (Menjual sayur di toko.)"
+    },
+    {
+      "question": "Apa arti dari 知ります I?",
+      "options": [
+        "mengetahui, mengenal",
+        "meletakkan, menaruh",
+        "membuat ️",
+        "menjual"
+      ],
+      "answer": "mengetahui, mengenal",
+      "explanation": "知ります I dibaca shirimasu. Contoh: その 人 を 知っています。 (Saya mengenal orang itu.)"
+    },
+    {
+      "question": "Apa arti dari 住みます I?",
+      "options": [
+        "tinggal",
+        "meletakkan, menaruh",
+        "membuat ️",
+        "menjual"
+      ],
+      "answer": "tinggal",
+      "explanation": "住みます I dibaca sumimasu. Contoh: 日本 に 住んでいます。 (Saya tinggal di Jepang.)"
+    },
+    {
+      "question": "Apa arti dari 研究します III?",
+      "options": [
+        "meneliti",
+        "meletakkan, menaruh",
+        "membuat ️",
+        "menjual"
+      ],
+      "answer": "meneliti",
+      "explanation": "研究します III dibaca kenkyuu shimasu. Contoh: 日本語 を 研究します。 (Meneliti bahasa Jepang.)"
+    },
+    {
+      "question": "Apa arti dari 資料?",
+      "options": [
+        "data, bahan",
+        "meletakkan, menaruh",
+        "membuat ️",
+        "menjual"
+      ],
+      "answer": "data, bahan",
+      "explanation": "資料 dibaca shiryou. Contoh: 資料 を 読みます。 (Membaca data.)"
+    },
+    {
+      "question": "Apa arti dari カタログ?",
+      "options": [
+        "katalog",
+        "meletakkan, menaruh",
+        "membuat ️",
+        "menjual"
+      ],
+      "answer": "katalog",
+      "explanation": "カタログ dibaca katarogu. Contoh: カタログ を 見ます。 (Melihat katalog.)"
+    },
+    {
+      "question": "Apa arti dari 時刻表?",
+      "options": [
+        "jadwal",
+        "meletakkan, menaruh",
+        "membuat ️",
+        "menjual"
+      ],
+      "answer": "jadwal",
+      "explanation": "時刻表 dibaca jikokuhyou. Contoh: 時刻表 を 見ます。 (Melihat jadwal.)"
+    },
+    {
+      "question": "Apa arti dari 服?",
+      "options": [
+        "baju",
+        "meletakkan, menaruh",
+        "membuat ️",
+        "menjual"
+      ],
+      "answer": "baju",
+      "explanation": "服 dibaca fuku. Contoh: 新しい 服 を 買いました。 (Saya membeli baju baru.)"
+    }
+  ],
 };

@@ -405,6 +405,25 @@ ruby rt {
   min-width: 0;
 }
 
+.quiz-option {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 0 8px 8px 0;
+  padding: 5px 10px;
+  color: var(--ink);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.quiz-option.correct {
+  color: #ffffff;
+  background: var(--pink-strong);
+  border-color: var(--pink-strong);
+}
+
 .detail-explanation {
   max-width: 760px;
   color: #4f4852;
@@ -1089,4 +1108,3 @@ ruby rt {
   background: var(--surface-soft);
   border-color: var(--pink-strong);
 }
-

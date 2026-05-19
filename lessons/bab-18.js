@@ -295,5 +295,116 @@ window.lessonData[18] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari できます II?",
+      "options": [
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bermain alat musik",
+        "bernyanyi"
+      ],
+      "answer": "dapat, bisa, mampu",
+      "explanation": "できます II dibaca dekimasu. Contoh: 日本語 が できます。 (Bisa bahasa Jepang.)"
+    },
+    {
+      "question": "Apa arti dari 洗います I?",
+      "options": [
+        "mencuci",
+        "dapat, bisa, mampu",
+        "bermain alat musik",
+        "bernyanyi"
+      ],
+      "answer": "mencuci",
+      "explanation": "洗います I dibaca araimasu. Contoh: 手 を 洗います。 (Mencuci tangan.)"
+    },
+    {
+      "question": "Apa arti dari 弾きます I?",
+      "options": [
+        "bermain alat musik",
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bernyanyi"
+      ],
+      "answer": "bermain alat musik",
+      "explanation": "弾きます I dibaca hikimasu. Contoh: ギター を 弾きます。 (Bermain gitar.)"
+    },
+    {
+      "question": "Apa arti dari 歌います I?",
+      "options": [
+        "bernyanyi",
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bermain alat musik"
+      ],
+      "answer": "bernyanyi",
+      "explanation": "歌います I dibaca utaimasu. Contoh: 歌 を 歌います。 (Menyanyikan lagu.)"
+    },
+    {
+      "question": "Apa arti dari 集めます II?",
+      "options": [
+        "mengumpulkan",
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bermain alat musik"
+      ],
+      "answer": "mengumpulkan",
+      "explanation": "集めます II dibaca atsumemasu. Contoh: 切手 を 集めます。 (Mengumpulkan perangko.)"
+    },
+    {
+      "question": "Apa arti dari 捨てます II?",
+      "options": [
+        "membuang ️",
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bermain alat musik"
+      ],
+      "answer": "membuang ️",
+      "explanation": "捨てます II dibaca sutemasu. Contoh: ごみ を 捨てます。 (Membuang sampah.)"
+    },
+    {
+      "question": "Apa arti dari 換えます II?",
+      "options": [
+        "mengganti, menukar",
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bermain alat musik"
+      ],
+      "answer": "mengganti, menukar",
+      "explanation": "換えます II dibaca kaemasu. Contoh: お金 を ドル に 換えます。 (Menukar uang menjadi dolar.)"
+    },
+    {
+      "question": "Apa arti dari 運転します III?",
+      "options": [
+        "menyetir",
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bermain alat musik"
+      ],
+      "answer": "menyetir",
+      "explanation": "運転します III dibaca unten shimasu. Contoh: 車 を 運転します。 (Mengendarai mobil.)"
+    },
+    {
+      "question": "Apa arti dari 予約します III?",
+      "options": [
+        "memesan",
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bermain alat musik"
+      ],
+      "answer": "memesan",
+      "explanation": "予約します III dibaca yoyaku shimasu. Contoh: ホテル を 予約します。 (Memesan hotel.)"
+    },
+    {
+      "question": "Apa arti dari ピアノ?",
+      "options": [
+        "piano",
+        "dapat, bisa, mampu",
+        "mencuci",
+        "bermain alat musik"
+      ],
+      "answer": "piano",
+      "explanation": "ピアノ dibaca piano. Contoh: ピアノ を 弾きます。 (Bermain piano.)"
+    }
+  ],
 };

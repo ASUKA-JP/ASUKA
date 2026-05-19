@@ -251,5 +251,116 @@ window.lessonData[19] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 登ります I?",
+      "options": [
+        "naik ️",
+        "menginap",
+        "membersihkan",
+        "mencuci pakaian"
+      ],
+      "answer": "naik ️",
+      "explanation": "登ります I dibaca noborimasu. Contoh: 山 に 登ります。 (Naik gunung.)"
+    },
+    {
+      "question": "Apa arti dari 泊まります I?",
+      "options": [
+        "menginap",
+        "naik ️",
+        "membersihkan",
+        "mencuci pakaian"
+      ],
+      "answer": "menginap",
+      "explanation": "泊まります I dibaca tomarimasu. Contoh: ホテル に 泊まります。 (Menginap di hotel.)"
+    },
+    {
+      "question": "Apa arti dari 掃除します III?",
+      "options": [
+        "membersihkan",
+        "naik ️",
+        "menginap",
+        "mencuci pakaian"
+      ],
+      "answer": "membersihkan",
+      "explanation": "掃除します III dibaca souji shimasu. Contoh: 部屋 を 掃除します。 (Membersihkan kamar.)"
+    },
+    {
+      "question": "Apa arti dari 洗濯します III?",
+      "options": [
+        "mencuci pakaian",
+        "naik ️",
+        "menginap",
+        "membersihkan"
+      ],
+      "answer": "mencuci pakaian",
+      "explanation": "洗濯します III dibaca sentaku shimasu. Contoh: 服 を 洗濯します。 (Mencuci pakaian.)"
+    },
+    {
+      "question": "Apa arti dari なります I?",
+      "options": [
+        "menjadi",
+        "naik ️",
+        "menginap",
+        "membersihkan"
+      ],
+      "answer": "menjadi",
+      "explanation": "なります I dibaca narimasu. Contoh: 医者 に なります。 (Menjadi dokter.)"
+    },
+    {
+      "question": "Apa arti dari 眠い?",
+      "options": [
+        "mengantuk",
+        "naik ️",
+        "menginap",
+        "membersihkan"
+      ],
+      "answer": "mengantuk",
+      "explanation": "眠い dibaca nemui. Contoh: とても 眠い です。 (Sangat mengantuk.)"
+    },
+    {
+      "question": "Apa arti dari 強い?",
+      "options": [
+        "kuat",
+        "naik ️",
+        "menginap",
+        "membersihkan"
+      ],
+      "answer": "kuat",
+      "explanation": "強い dibaca tsuyoi. Contoh: この チーム は 強い です。 (Tim ini kuat.)"
+    },
+    {
+      "question": "Apa arti dari 弱い?",
+      "options": [
+        "lemah",
+        "naik ️",
+        "menginap",
+        "membersihkan"
+      ],
+      "answer": "lemah",
+      "explanation": "弱い dibaca yowai. Contoh: 体 が 弱い です。 (Tubuhnya lemah.)"
+    },
+    {
+      "question": "Apa arti dari 練習?",
+      "options": [
+        "latihan",
+        "naik ️",
+        "menginap",
+        "membersihkan"
+      ],
+      "answer": "latihan",
+      "explanation": "練習 dibaca renshuu. Contoh: 毎日 練習します。 (Berlatih setiap hari.)"
+    },
+    {
+      "question": "Apa arti dari ゴルフ?",
+      "options": [
+        "golf",
+        "naik ️",
+        "menginap",
+        "membersihkan"
+      ],
+      "answer": "golf",
+      "explanation": "ゴルフ dibaca gorufu. Contoh: ゴルフ を します。 (Bermain golf.)"
+    }
+  ],
 };

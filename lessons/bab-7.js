@@ -589,5 +589,116 @@ window.lessonData[7] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 切ります?",
+      "options": [
+        "memotong, menggunting ️",
+        "mengirim",
+        "memberikan",
+        "mendapatkan, menerima"
+      ],
+      "answer": "memotong, menggunting ️",
+      "explanation": "切ります dibaca kirimasu. Contoh: はさみ で 紙 を 切ります。 (Saya memotong kertas dengan gunting.)"
+    },
+    {
+      "question": "Apa arti dari 送ります?",
+      "options": [
+        "mengirim",
+        "memotong, menggunting ️",
+        "memberikan",
+        "mendapatkan, menerima"
+      ],
+      "answer": "mengirim",
+      "explanation": "送ります dibaca okurimasu. Contoh: メール を 送ります。 (Saya mengirim e-mail.)"
+    },
+    {
+      "question": "Apa arti dari あげます?",
+      "options": [
+        "memberikan",
+        "memotong, menggunting ️",
+        "mengirim",
+        "mendapatkan, menerima"
+      ],
+      "answer": "memberikan",
+      "explanation": "あげます dibaca agemasu. Contoh: 友達 に プレゼント を あげます。 (Saya memberi hadiah kepada teman.)"
+    },
+    {
+      "question": "Apa arti dari もらいます?",
+      "options": [
+        "mendapatkan, menerima",
+        "memotong, menggunting ️",
+        "mengirim",
+        "memberikan"
+      ],
+      "answer": "mendapatkan, menerima",
+      "explanation": "もらいます dibaca moraimasu. Contoh: 友達 に 花 を もらいます。 (Saya menerima bunga dari teman.)"
+    },
+    {
+      "question": "Apa arti dari 貸します?",
+      "options": [
+        "meminjamkan, menyewakan",
+        "memotong, menggunting ️",
+        "mengirim",
+        "memberikan"
+      ],
+      "answer": "meminjamkan, menyewakan",
+      "explanation": "貸します dibaca kashimasu. Contoh: 友達 に 本 を 貸します。 (Saya meminjamkan buku kepada teman.)"
+    },
+    {
+      "question": "Apa arti dari 借ります?",
+      "options": [
+        "meminjam, menyewa",
+        "memotong, menggunting ️",
+        "mengirim",
+        "memberikan"
+      ],
+      "answer": "meminjam, menyewa",
+      "explanation": "借ります dibaca karimasu. Contoh: 友達 に 本 を 借ります。 (Saya meminjam buku dari teman.)"
+    },
+    {
+      "question": "Apa arti dari 教えます?",
+      "options": [
+        "mengajar, memberi tahu ‍",
+        "memotong, menggunting ️",
+        "mengirim",
+        "memberikan"
+      ],
+      "answer": "mengajar, memberi tahu ‍",
+      "explanation": "教えます dibaca oshiemasu. Contoh: 電話番号 を 教えます。 (Saya memberi tahu nomor telepon.)"
+    },
+    {
+      "question": "Apa arti dari 習います?",
+      "options": [
+        "belajar dari seseorang",
+        "memotong, menggunting ️",
+        "mengirim",
+        "memberikan"
+      ],
+      "answer": "belajar dari seseorang",
+      "explanation": "習います dibaca naraimasu. Contoh: 先生 に 日本語 を 習います。 (Saya belajar bahasa Jepang dari guru.)"
+    },
+    {
+      "question": "Apa arti dari 電話をかけます?",
+      "options": [
+        "menelepon ️",
+        "memotong, menggunting ️",
+        "mengirim",
+        "memberikan"
+      ],
+      "answer": "menelepon ️",
+      "explanation": "電話をかけます dibaca denwa o kakemasu. Contoh: 友達 に 電話 を かけます。 (Saya menelepon teman.)"
+    },
+    {
+      "question": "Apa arti dari 手?",
+      "options": [
+        "tangan",
+        "memotong, menggunting ️",
+        "mengirim",
+        "memberikan"
+      ],
+      "answer": "tangan",
+      "explanation": "手 dibaca te. Contoh: 手 で 食べます。 (Saya makan dengan tangan.)"
+    }
+  ],
 };

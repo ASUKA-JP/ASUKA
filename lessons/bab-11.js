@@ -439,5 +439,116 @@ window.lessonData[11] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari ひとつ?",
+      "options": [
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "tiga 3️⃣",
+        "empat 4️⃣"
+      ],
+      "answer": "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+      "explanation": "ひとつ dibaca hitotsu. Contoh: りんご は ひとつ です。 (Ada satu apel.)"
+    },
+    {
+      "question": "Apa arti dari ふたつ?",
+      "options": [
+        "dua 2️⃣",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "tiga 3️⃣",
+        "empat 4️⃣"
+      ],
+      "answer": "dua 2️⃣",
+      "explanation": "ふたつ dibaca futatsu. Contoh: みかん が ふたつ あります。 (Ada dua mandarin.)"
+    },
+    {
+      "question": "Apa arti dari みっつ?",
+      "options": [
+        "tiga 3️⃣",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "empat 4️⃣"
+      ],
+      "answer": "tiga 3️⃣",
+      "explanation": "みっつ dibaca mittsu. Contoh: 本 が みっつ ありました。 (Ada tiga buku.)"
+    },
+    {
+      "question": "Apa arti dari よっつ?",
+      "options": [
+        "empat 4️⃣",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "tiga 3️⃣"
+      ],
+      "answer": "empat 4️⃣",
+      "explanation": "よっつ dibaca yottsu. Contoh: さくら は よっつ の 花 が あります。 (Ada empat bunga sakura.)"
+    },
+    {
+      "question": "Apa arti dari いつつ?",
+      "options": [
+        "lima 5️⃣",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "tiga 3️⃣"
+      ],
+      "answer": "lima 5️⃣",
+      "explanation": "いつつ dibaca itsutsu. Contoh: りんご が いつつ あります。 (Ada lima apel.)"
+    },
+    {
+      "question": "Apa arti dari むっつ?",
+      "options": [
+        "enam 6️⃣",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "tiga 3️⃣"
+      ],
+      "answer": "enam 6️⃣",
+      "explanation": "むっつ dibaca muttsu. Contoh: 卵 が むっつ ありました。 (Ada enam telur.)"
+    },
+    {
+      "question": "Apa arti dari ななつ?",
+      "options": [
+        "tujuh 7️⃣",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "tiga 3️⃣"
+      ],
+      "answer": "tujuh 7️⃣",
+      "explanation": "ななつ dibaca nanatsu. Contoh: ななつ の 色 があります。 (Ada tujuh warna.)"
+    },
+    {
+      "question": "Apa arti dari やっつ?",
+      "options": [
+        "delapan 8️⃣",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "tiga 3️⃣"
+      ],
+      "answer": "delapan 8️⃣",
+      "explanation": "やっつ dibaca yattsu. Contoh: 蜘蛛 は やっつ の 脚 があります。 (Laba-laba memiliki delapan kaki.)"
+    },
+    {
+      "question": "Apa arti dari ここのつ?",
+      "options": [
+        "sembilan 9️⃣",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "tiga 3️⃣"
+      ],
+      "answer": "sembilan 9️⃣",
+      "explanation": "ここのつ dibaca kokonotsu. Contoh: ここのつ の ピン があります。 (Ada sembilan pin.)"
+    },
+    {
+      "question": "Apa arti dari とお?",
+      "options": [
+        "sepuluh",
+        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+        "dua 2️⃣",
+        "tiga 3️⃣"
+      ],
+      "answer": "sepuluh",
+      "explanation": "とお dibaca too. Contoh: とお の 話 があります。 (Ada sepuluh cerita.)"
+    }
+  ],
 };

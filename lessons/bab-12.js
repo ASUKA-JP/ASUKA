@@ -486,5 +486,116 @@ window.lessonData[12] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 簡単?",
+      "options": [
+        "mudah, gampang",
+        "dekat",
+        "jauh",
+        "cepat"
+      ],
+      "answer": "mudah, gampang",
+      "explanation": "簡単 dibaca kantan. Contoh: この 問題 は 簡単 です。 (Soal ini mudah.)"
+    },
+    {
+      "question": "Apa arti dari 近い?",
+      "options": [
+        "dekat",
+        "mudah, gampang",
+        "jauh",
+        "cepat"
+      ],
+      "answer": "dekat",
+      "explanation": "近い dibaca chikai. Contoh: 駅 は 近い です。 (Stasiun dekat.)"
+    },
+    {
+      "question": "Apa arti dari 遠い?",
+      "options": [
+        "jauh",
+        "mudah, gampang",
+        "dekat",
+        "cepat"
+      ],
+      "answer": "jauh",
+      "explanation": "遠い dibaca tooi. Contoh: 学校 は 遠い です。 (Sekolah jauh.)"
+    },
+    {
+      "question": "Apa arti dari 速い?",
+      "options": [
+        "cepat",
+        "mudah, gampang",
+        "dekat",
+        "jauh"
+      ],
+      "answer": "cepat",
+      "explanation": "速い dibaca hayai. Contoh: この 車 は 速い です。 (Mobil ini cepat.)"
+    },
+    {
+      "question": "Apa arti dari 遅い?",
+      "options": [
+        "lambat",
+        "mudah, gampang",
+        "dekat",
+        "jauh"
+      ],
+      "answer": "lambat",
+      "explanation": "遅い dibaca osoi. Contoh: 電車 が 遅い です。 (Keretanya lambat.)"
+    },
+    {
+      "question": "Apa arti dari 多い?",
+      "options": [
+        "banyak",
+        "mudah, gampang",
+        "dekat",
+        "jauh"
+      ],
+      "answer": "banyak",
+      "explanation": "多い dibaca ooi. Contoh: 人 が 多い です。 (Orangnya banyak.)"
+    },
+    {
+      "question": "Apa arti dari 少ない?",
+      "options": [
+        "sedikit",
+        "mudah, gampang",
+        "dekat",
+        "jauh"
+      ],
+      "answer": "sedikit",
+      "explanation": "少ない dibaca sukunai. Contoh: 学生 が 少ない です。 (Siswanya sedikit.)"
+    },
+    {
+      "question": "Apa arti dari 暖かい?",
+      "options": [
+        "hangat ️",
+        "mudah, gampang",
+        "dekat",
+        "jauh"
+      ],
+      "answer": "hangat ️",
+      "explanation": "暖かい dibaca atatakai. Contoh: 今日 は 暖かい です。 (Hari ini hangat.)"
+    },
+    {
+      "question": "Apa arti dari 涼しい?",
+      "options": [
+        "sejuk",
+        "mudah, gampang",
+        "dekat",
+        "jauh"
+      ],
+      "answer": "sejuk",
+      "explanation": "涼しい dibaca suzushii. Contoh: 山 は 涼しい です。 (Gunung sejuk.)"
+    },
+    {
+      "question": "Apa arti dari 甘い?",
+      "options": [
+        "manis",
+        "mudah, gampang",
+        "dekat",
+        "jauh"
+      ],
+      "answer": "manis",
+      "explanation": "甘い dibaca amai. Contoh: この ケーキ は 甘い です。 (Kue ini manis.)"
+    }
+  ],
 };

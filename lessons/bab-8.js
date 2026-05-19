@@ -509,5 +509,116 @@ window.lessonData[8] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari ハンサム?",
+      "options": [
+        "tampan, gagah",
+        "cantik, bersih",
+        "sunyi, tenang",
+        "ramai"
+      ],
+      "answer": "tampan, gagah",
+      "explanation": "ハンサム dibaca hansamu. Contoh: あの 人 は ハンサム です。 (Orang itu tampan.)"
+    },
+    {
+      "question": "Apa arti dari きれい?",
+      "options": [
+        "cantik, bersih",
+        "tampan, gagah",
+        "sunyi, tenang",
+        "ramai"
+      ],
+      "answer": "cantik, bersih",
+      "explanation": "きれい dibaca kirei. Contoh: この 町 は きれい です。 (Kota ini bersih.)"
+    },
+    {
+      "question": "Apa arti dari 静か?",
+      "options": [
+        "sunyi, tenang",
+        "tampan, gagah",
+        "cantik, bersih",
+        "ramai"
+      ],
+      "answer": "sunyi, tenang",
+      "explanation": "静か dibaca shizuka. Contoh: ここ は 静か です。 (Di sini tenang.)"
+    },
+    {
+      "question": "Apa arti dari にぎやか?",
+      "options": [
+        "ramai",
+        "tampan, gagah",
+        "cantik, bersih",
+        "sunyi, tenang"
+      ],
+      "answer": "ramai",
+      "explanation": "にぎやか dibaca nigiyaka. Contoh: 東京 は にぎやか です。 (Tokyo ramai.)"
+    },
+    {
+      "question": "Apa arti dari 有名?",
+      "options": [
+        "terkenal ⭐",
+        "tampan, gagah",
+        "cantik, bersih",
+        "sunyi, tenang"
+      ],
+      "answer": "terkenal ⭐",
+      "explanation": "有名 dibaca yuumei. Contoh: 富士山 は 有名 です。 (Gunung Fuji terkenal.)"
+    },
+    {
+      "question": "Apa arti dari 親切?",
+      "options": [
+        "baik hati",
+        "tampan, gagah",
+        "cantik, bersih",
+        "sunyi, tenang"
+      ],
+      "answer": "baik hati",
+      "explanation": "親切 dibaca shinsetsu. Contoh: 田中さん は 親切 です。 (Tanaka-san baik hati.)"
+    },
+    {
+      "question": "Apa arti dari 元気?",
+      "options": [
+        "sehat, semangat",
+        "tampan, gagah",
+        "cantik, bersih",
+        "sunyi, tenang"
+      ],
+      "answer": "sehat, semangat",
+      "explanation": "元気 dibaca genki. Contoh: お元気 ですか。 (Apa kabar?)"
+    },
+    {
+      "question": "Apa arti dari 暇?",
+      "options": [
+        "senggang ️",
+        "tampan, gagah",
+        "cantik, bersih",
+        "sunyi, tenang"
+      ],
+      "answer": "senggang ️",
+      "explanation": "暇 dibaca hima. Contoh: 日曜日 は 暇 です。 (Hari Minggu saya senggang.)"
+    },
+    {
+      "question": "Apa arti dari 便利?",
+      "options": [
+        "praktis",
+        "tampan, gagah",
+        "cantik, bersih",
+        "sunyi, tenang"
+      ],
+      "answer": "praktis",
+      "explanation": "便利 dibaca benri. Contoh: スマホ は 便利 です。 (Smartphone praktis.)"
+    },
+    {
+      "question": "Apa arti dari すてき?",
+      "options": [
+        "bagus, indah",
+        "tampan, gagah",
+        "cantik, bersih",
+        "sunyi, tenang"
+      ],
+      "answer": "bagus, indah",
+      "explanation": "すてき dibaca suteki. Contoh: その ドレス は すてき です。 (Gaun itu bagus.)"
+    }
+  ],
 };

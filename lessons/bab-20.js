@@ -211,5 +211,116 @@ window.lessonData[20] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 要ります I?",
+      "options": [
+        "memerlukan",
+        "memeriksa, mengecek",
+        "memperbaiki",
+        "aku"
+      ],
+      "answer": "memerlukan",
+      "explanation": "要ります I dibaca irimasu. Contoh: ビザ が 要ります。 (Memerlukan VISA.)"
+    },
+    {
+      "question": "Apa arti dari 調べます II?",
+      "options": [
+        "memeriksa, mengecek",
+        "memerlukan",
+        "memperbaiki",
+        "aku"
+      ],
+      "answer": "memeriksa, mengecek",
+      "explanation": "調べます II dibaca shirabemasu. Contoh: 辞書 で 調べます。 (Mengecek di kamus.)"
+    },
+    {
+      "question": "Apa arti dari 修理します III?",
+      "options": [
+        "memperbaiki",
+        "memerlukan",
+        "memeriksa, mengecek",
+        "aku"
+      ],
+      "answer": "memperbaiki",
+      "explanation": "修理します III dibaca shuuri shimasu. Contoh: 車 を 修理します。 (Memperbaiki mobil.)"
+    },
+    {
+      "question": "Apa arti dari 僕?",
+      "options": [
+        "aku",
+        "memerlukan",
+        "memeriksa, mengecek",
+        "memperbaiki"
+      ],
+      "answer": "aku",
+      "explanation": "僕 dibaca boku. Contoh: 僕 は 学生 です。 (Aku adalah pelajar.)"
+    },
+    {
+      "question": "Apa arti dari 君?",
+      "options": [
+        "kamu",
+        "memerlukan",
+        "memeriksa, mengecek",
+        "memperbaiki"
+      ],
+      "answer": "kamu",
+      "explanation": "君 dibaca kimi. Contoh: 君 は 元気 ですか。 (Apa kamu sehat?)"
+    },
+    {
+      "question": "Apa arti dari ～君?",
+      "options": [
+        "sdr.~, panggilan informal",
+        "memerlukan",
+        "memeriksa, mengecek",
+        "memperbaiki"
+      ],
+      "answer": "sdr.~, panggilan informal",
+      "explanation": "～君 dibaca ~kun. Contoh: 田中君 は 来ました。 (Tanaka datang.)"
+    },
+    {
+      "question": "Apa arti dari うん?",
+      "options": [
+        "ya",
+        "memerlukan",
+        "memeriksa, mengecek",
+        "memperbaiki"
+      ],
+      "answer": "ya",
+      "explanation": "うん dibaca un. Contoh: 「行く？」「うん。」 (“Pergi?” “Ya.”)"
+    },
+    {
+      "question": "Apa arti dari ううん?",
+      "options": [
+        "tidak",
+        "memerlukan",
+        "memeriksa, mengecek",
+        "memperbaiki"
+      ],
+      "answer": "tidak",
+      "explanation": "ううん dibaca uun. Contoh: 「大丈夫？」「ううん。」 (“Tidak apa-apa?” “Tidak.”)"
+    },
+    {
+      "question": "Apa arti dari 言葉?",
+      "options": [
+        "kata, bahasa ️",
+        "memerlukan",
+        "memeriksa, mengecek",
+        "memperbaiki"
+      ],
+      "answer": "kata, bahasa ️",
+      "explanation": "言葉 dibaca kotoba. Contoh: 難しい 言葉 です。 (Itu kata yang sulit.)"
+    },
+    {
+      "question": "Apa arti dari 着物?",
+      "options": [
+        "kimono",
+        "memerlukan",
+        "memeriksa, mengecek",
+        "memperbaiki"
+      ],
+      "answer": "kimono",
+      "explanation": "着物 dibaca kimono. Contoh: 着物 を 着ます。 (Memakai kimono.)"
+    }
+  ],
 };

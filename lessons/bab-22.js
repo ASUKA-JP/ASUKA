@@ -298,5 +298,116 @@ window.lessonData[22] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 着ます II?",
+      "options": [
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai topi",
+        "memakai kacamata"
+      ],
+      "answer": "memakai (kemeja)",
+      "explanation": "着ます II dibaca kimasu. Contoh: シャツ を 着ます。 (Memakai kemeja.)"
+    },
+    {
+      "question": "Apa arti dari はきます I?",
+      "options": [
+        "memakai (sepatu, celana)",
+        "memakai (kemeja)",
+        "memakai topi",
+        "memakai kacamata"
+      ],
+      "answer": "memakai (sepatu, celana)",
+      "explanation": "はきます I dibaca hakimasu. Contoh: ズボン を はきます。 (Memakai celana.)"
+    },
+    {
+      "question": "Apa arti dari かぶります I?",
+      "options": [
+        "memakai topi",
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai kacamata"
+      ],
+      "answer": "memakai topi",
+      "explanation": "かぶります I dibaca kaburimasu. Contoh: 帽子 を かぶります。 (Memakai topi.)"
+    },
+    {
+      "question": "Apa arti dari かけます II?",
+      "options": [
+        "memakai kacamata",
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai topi"
+      ],
+      "answer": "memakai kacamata",
+      "explanation": "かけます II dibaca kakemasu. Contoh: 眼鏡 を かけます。 (Memakai kacamata.)"
+    },
+    {
+      "question": "Apa arti dari します III?",
+      "options": [
+        "memakai dasi",
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai topi"
+      ],
+      "answer": "memakai dasi",
+      "explanation": "します III dibaca shimasu. Contoh: ネクタイ を します。 (Memakai dasi.)"
+    },
+    {
+      "question": "Apa arti dari 生まれます II?",
+      "options": [
+        "lahir",
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai topi"
+      ],
+      "answer": "lahir",
+      "explanation": "生まれます II dibaca umaremasu. Contoh: 東京 で 生まれました。 (Lahir di Tokyo.)"
+    },
+    {
+      "question": "Apa arti dari わたしたち?",
+      "options": [
+        "kami, kita ‍‍‍",
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai topi"
+      ],
+      "answer": "kami, kita ‍‍‍",
+      "explanation": "わたしたち dibaca watashitachi. Contoh: わたしたち は 学生 です。 (Kami adalah pelajar.)"
+    },
+    {
+      "question": "Apa arti dari コート?",
+      "options": [
+        "mantal",
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai topi"
+      ],
+      "answer": "mantal",
+      "explanation": "コート dibaca kooto. Contoh: 冬 に コート を 着ます。 (Memakai mantel di musim dingin.)"
+    },
+    {
+      "question": "Apa arti dari セーター?",
+      "options": [
+        "sweater",
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai topi"
+      ],
+      "answer": "sweater",
+      "explanation": "セーター dibaca seetaa. Contoh: 暖かい セーター です。 (Sweater yang hangat.)"
+    },
+    {
+      "question": "Apa arti dari スーツ?",
+      "options": [
+        "pakaian setelan",
+        "memakai (kemeja)",
+        "memakai (sepatu, celana)",
+        "memakai topi"
+      ],
+      "answer": "pakaian setelan",
+      "explanation": "スーツ dibaca suutsu. Contoh: スーツ を 着ます。 (Memakai setelan jas.)"
+    }
+  ],
 };

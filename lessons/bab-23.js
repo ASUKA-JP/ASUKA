@@ -277,5 +277,116 @@ window.lessonData[23] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 聞きます I?",
+      "options": [
+        "bertanya [kepada guru]",
+        "memutar",
+        "tarik ↩️",
+        "mengubah"
+      ],
+      "answer": "bertanya [kepada guru]",
+      "explanation": "聞きます I dibaca kikimasu. Contoh: 先生 に 聞きます。 (Bertanya kepada guru.)"
+    },
+    {
+      "question": "Apa arti dari 回します I?",
+      "options": [
+        "memutar",
+        "bertanya [kepada guru]",
+        "tarik ↩️",
+        "mengubah"
+      ],
+      "answer": "memutar",
+      "explanation": "回します I dibaca mawashimasu. Contoh: ドアノブ を 回します。 (Memutar gagang pintu.)"
+    },
+    {
+      "question": "Apa arti dari 引きます I?",
+      "options": [
+        "tarik ↩️",
+        "bertanya [kepada guru]",
+        "memutar",
+        "mengubah"
+      ],
+      "answer": "tarik ↩️",
+      "explanation": "引きます I dibaca hikimasu. Contoh: ドア を 引きます。 (Menarik pintu.)"
+    },
+    {
+      "question": "Apa arti dari 変えます II?",
+      "options": [
+        "mengubah",
+        "bertanya [kepada guru]",
+        "memutar",
+        "tarik ↩️"
+      ],
+      "answer": "mengubah",
+      "explanation": "変えます II dibaca kaemasu. Contoh: 予定 を 変えます。 (Mengubah jadwal.)"
+    },
+    {
+      "question": "Apa arti dari 触ります I?",
+      "options": [
+        "menyentuh",
+        "bertanya [kepada guru]",
+        "memutar",
+        "tarik ↩️"
+      ],
+      "answer": "menyentuh",
+      "explanation": "触ります I dibaca sawarimasu. Contoh: ドア に 触ります。 (Menyentuh pintu.)"
+    },
+    {
+      "question": "Apa arti dari 出ます II?",
+      "options": [
+        "keluar [uang kembalian]",
+        "bertanya [kepada guru]",
+        "memutar",
+        "tarik ↩️"
+      ],
+      "answer": "keluar [uang kembalian]",
+      "explanation": "出ます II dibaca demasu. Contoh: お釣り が 出ます。 (Uang kembaliannya keluar.)"
+    },
+    {
+      "question": "Apa arti dari 歩きます I?",
+      "options": [
+        "berjalan kaki",
+        "bertanya [kepada guru]",
+        "memutar",
+        "tarik ↩️"
+      ],
+      "answer": "berjalan kaki",
+      "explanation": "歩きます I dibaca arukimasu. Contoh: 駅 まで 歩きます。 (Berjalan kaki sampai stasiun.)"
+    },
+    {
+      "question": "Apa arti dari 渡ります I?",
+      "options": [
+        "menyeberang",
+        "bertanya [kepada guru]",
+        "memutar",
+        "tarik ↩️"
+      ],
+      "answer": "menyeberang",
+      "explanation": "渡ります I dibaca watarimasu. Contoh: 橋 を 渡ります。 (Menyeberangi jembatan.)"
+    },
+    {
+      "question": "Apa arti dari 曲がります I?",
+      "options": [
+        "belok ↪️",
+        "bertanya [kepada guru]",
+        "memutar",
+        "tarik ↩️"
+      ],
+      "answer": "belok ↪️",
+      "explanation": "曲がります I dibaca magarimasu. Contoh: 右 へ 曲がります。 (Belok ke kanan.)"
+    },
+    {
+      "question": "Apa arti dari 寂しい?",
+      "options": [
+        "sepi",
+        "bertanya [kepada guru]",
+        "memutar",
+        "tarik ↩️"
+      ],
+      "answer": "sepi",
+      "explanation": "寂しい dibaca sabishii. Contoh: この 町 は 寂しい です。 (Kota ini sepi.)"
+    }
+  ],
 };

@@ -724,5 +724,116 @@ window.lessonData[6] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 食べます?",
+      "options": [
+        "makan",
+        "minum",
+        "mengisap, merokok",
+        "melihat, menonton"
+      ],
+      "answer": "makan",
+      "explanation": "食べます dibaca tabemasu. Contoh: 朝ごはん を 食べます。 (Saya makan sarapan.)"
+    },
+    {
+      "question": "Apa arti dari 飲みます?",
+      "options": [
+        "minum",
+        "makan",
+        "mengisap, merokok",
+        "melihat, menonton"
+      ],
+      "answer": "minum",
+      "explanation": "飲みます dibaca nomimasu. Contoh: 水 を 飲みます。 (Saya minum air.)"
+    },
+    {
+      "question": "Apa arti dari 吸います?",
+      "options": [
+        "mengisap, merokok",
+        "makan",
+        "minum",
+        "melihat, menonton"
+      ],
+      "answer": "mengisap, merokok",
+      "explanation": "吸います dibaca suimasu. Contoh: たばこ を 吸います。 (Saya merokok.)"
+    },
+    {
+      "question": "Apa arti dari 見ます?",
+      "options": [
+        "melihat, menonton",
+        "makan",
+        "minum",
+        "mengisap, merokok"
+      ],
+      "answer": "melihat, menonton",
+      "explanation": "見ます dibaca mimasu. Contoh: 映画 を 見ます。 (Saya menonton film.)"
+    },
+    {
+      "question": "Apa arti dari 聞きます?",
+      "options": [
+        "mendengar",
+        "makan",
+        "minum",
+        "mengisap, merokok"
+      ],
+      "answer": "mendengar",
+      "explanation": "聞きます dibaca kikimasu. Contoh: ラジオ を 聞きます。 (Saya mendengarkan radio.)"
+    },
+    {
+      "question": "Apa arti dari 読みます?",
+      "options": [
+        "membaca",
+        "makan",
+        "minum",
+        "mengisap, merokok"
+      ],
+      "answer": "membaca",
+      "explanation": "読みます dibaca yomimasu. Contoh: 本 を 読みます。 (Saya membaca buku.)"
+    },
+    {
+      "question": "Apa arti dari 書きます?",
+      "options": [
+        "menulis, menggambar ️",
+        "makan",
+        "minum",
+        "mengisap, merokok"
+      ],
+      "answer": "menulis, menggambar ️",
+      "explanation": "書きます dibaca kakimasu. Contoh: 手紙 を 書きます。 (Saya menulis surat.)"
+    },
+    {
+      "question": "Apa arti dari 買います?",
+      "options": [
+        "membeli",
+        "makan",
+        "minum",
+        "mengisap, merokok"
+      ],
+      "answer": "membeli",
+      "explanation": "買います dibaca kaimasu. Contoh: パン を 買います。 (Saya membeli roti.)"
+    },
+    {
+      "question": "Apa arti dari 撮ります?",
+      "options": [
+        "mengambil foto",
+        "makan",
+        "minum",
+        "mengisap, merokok"
+      ],
+      "answer": "mengambil foto",
+      "explanation": "撮ります dibaca torimasu. Contoh: 写真 を 撮ります。 (Saya mengambil foto.)"
+    },
+    {
+      "question": "Apa arti dari します?",
+      "options": [
+        "mengerjakan, melakukan",
+        "makan",
+        "minum",
+        "mengisap, merokok"
+      ],
+      "answer": "mengerjakan, melakukan",
+      "explanation": "します dibaca shimasu. Contoh: 宿題 を します。 (Saya mengerjakan PR.)"
+    }
+  ],
 };

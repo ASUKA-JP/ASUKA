@@ -633,5 +633,116 @@ window.lessonData[1] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari わたし?",
+      "options": [
+        "saya",
+        "anda",
+        "orang itu",
+        "beliau"
+      ],
+      "answer": "saya",
+      "explanation": "わたし dibaca watashi. Contoh: わたし は ラヌ です。 (Saya adalah Ranu.)"
+    },
+    {
+      "question": "Apa arti dari あなた?",
+      "options": [
+        "anda",
+        "saya",
+        "orang itu",
+        "beliau"
+      ],
+      "answer": "anda",
+      "explanation": "あなた dibaca anata. Contoh: あなた は インドネシアじん ですか。 (Apakah Anda orang Indonesia?)"
+    },
+    {
+      "question": "Apa arti dari あのひと?",
+      "options": [
+        "orang itu",
+        "saya",
+        "anda",
+        "beliau"
+      ],
+      "answer": "orang itu",
+      "explanation": "あのひと dibaca ano hito. Contoh: あのひと は せんせい です。 (Orang itu adalah guru.)"
+    },
+    {
+      "question": "Apa arti dari あの人?",
+      "options": [
+        "orang itu",
+        "saya",
+        "anda",
+        "beliau"
+      ],
+      "answer": "orang itu",
+      "explanation": "あの人 dibaca ano hito. Contoh: あの人 は 会社員 です。 (Orang itu adalah pegawai perusahaan.)"
+    },
+    {
+      "question": "Apa arti dari あのかた?",
+      "options": [
+        "beliau",
+        "saya",
+        "anda",
+        "orang itu"
+      ],
+      "answer": "beliau",
+      "explanation": "あのかた dibaca ano kata. Contoh: あのかた は どなた ですか。 (Beliau siapa?)"
+    },
+    {
+      "question": "Apa arti dari あの方?",
+      "options": [
+        "beliau bentuk sopan",
+        "saya",
+        "anda",
+        "orang itu"
+      ],
+      "answer": "beliau bentuk sopan",
+      "explanation": "あの方 dibaca ano kata. Contoh: あの方 は 先生 です。 (Beliau adalah guru.)"
+    },
+    {
+      "question": "Apa arti dari みなさん?",
+      "options": [
+        "semua orang",
+        "saya",
+        "anda",
+        "orang itu"
+      ],
+      "answer": "semua orang",
+      "explanation": "みなさん dibaca minasan. Contoh: みなさん は がくせい です。 (Semuanya adalah pelajar.)"
+    },
+    {
+      "question": "Apa arti dari ～さん?",
+      "options": [
+        "Saudara/Saudari",
+        "saya",
+        "anda",
+        "orang itu"
+      ],
+      "answer": "Saudara/Saudari",
+      "explanation": "～さん dibaca san. Contoh: ラヌさん は かいしゃいん です。 (Saudara Ranu adalah pegawai perusahaan.)"
+    },
+    {
+      "question": "Apa arti dari ～ちゃん?",
+      "options": [
+        "panggilan anak/akrab",
+        "saya",
+        "anda",
+        "orang itu"
+      ],
+      "answer": "panggilan anak/akrab",
+      "explanation": "～ちゃん dibaca chan. Contoh: さくらちゃん は 5さい です。 (Sakura berumur 5 tahun.)"
+    },
+    {
+      "question": "Apa arti dari ～くん?",
+      "options": [
+        "panggilan laki-laki/akrab",
+        "saya",
+        "anda",
+        "orang itu"
+      ],
+      "answer": "panggilan laki-laki/akrab",
+      "explanation": "～くん dibaca kun. Contoh: たなかくん は がくせい です。 (Tanaka adalah pelajar.)"
+    }
+  ],
 };

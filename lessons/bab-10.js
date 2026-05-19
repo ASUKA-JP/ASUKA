@@ -452,5 +452,116 @@ window.lessonData[10] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari あります?",
+      "options": [
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "berbagai",
+        "orang laki-laki"
+      ],
+      "answer": "ada (untuk benda mati)",
+      "explanation": "あります dibaca arimasu. Contoh: 机 の 上 に 本 が あります。 (Ada buku di atas meja.)"
+    },
+    {
+      "question": "Apa arti dari います?",
+      "options": [
+        "ada (untuk makhluk hidup)",
+        "ada (untuk benda mati)",
+        "berbagai",
+        "orang laki-laki"
+      ],
+      "answer": "ada (untuk makhluk hidup)",
+      "explanation": "います dibaca imasu. Contoh: 部屋 に 猫 が います。 (Ada kucing di kamar.)"
+    },
+    {
+      "question": "Apa arti dari いろいろ?",
+      "options": [
+        "berbagai",
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "orang laki-laki"
+      ],
+      "answer": "berbagai",
+      "explanation": "いろいろ dibaca iroiro. Contoh: いろいろ な 本 が あります。 (Ada berbagai macam buku.)"
+    },
+    {
+      "question": "Apa arti dari 男の人?",
+      "options": [
+        "orang laki-laki",
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "berbagai"
+      ],
+      "answer": "orang laki-laki",
+      "explanation": "男の人 dibaca otoko no hito. Contoh: 男の人 が います。 (Ada seorang laki-laki.)"
+    },
+    {
+      "question": "Apa arti dari 女の人?",
+      "options": [
+        "orang perempuan",
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "berbagai"
+      ],
+      "answer": "orang perempuan",
+      "explanation": "女の人 dibaca onna no hito. Contoh: 女の人 が います。 (Ada seorang perempuan.)"
+    },
+    {
+      "question": "Apa arti dari 男の子?",
+      "options": [
+        "anak laki-laki",
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "berbagai"
+      ],
+      "answer": "anak laki-laki",
+      "explanation": "男の子 dibaca otoko no ko. Contoh: 男の子 が 公園 に います。 (Ada anak laki-laki di taman.)"
+    },
+    {
+      "question": "Apa arti dari 女の子?",
+      "options": [
+        "anak perempuan",
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "berbagai"
+      ],
+      "answer": "anak perempuan",
+      "explanation": "女の子 dibaca onna no ko. Contoh: 女の子 が います。 (Ada anak perempuan.)"
+    },
+    {
+      "question": "Apa arti dari 犬?",
+      "options": [
+        "anjing",
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "berbagai"
+      ],
+      "answer": "anjing",
+      "explanation": "犬 dibaca inu. Contoh: 犬 が います。 (Ada anjing.)"
+    },
+    {
+      "question": "Apa arti dari 猫?",
+      "options": [
+        "kucing",
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "berbagai"
+      ],
+      "answer": "kucing",
+      "explanation": "猫 dibaca neko. Contoh: 猫 が います。 (Ada kucing.)"
+    },
+    {
+      "question": "Apa arti dari パンダ?",
+      "options": [
+        "panda",
+        "ada (untuk benda mati)",
+        "ada (untuk makhluk hidup)",
+        "berbagai"
+      ],
+      "answer": "panda",
+      "explanation": "パンダ dibaca panda. Contoh: パンダ が 好き です。 (Saya suka panda.)"
+    }
+  ],
 };

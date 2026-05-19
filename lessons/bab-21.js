@@ -351,5 +351,116 @@ window.lessonData[21] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 思います I?",
+      "options": [
+        "mengira, berpikir",
+        "mengatakan ️",
+        "menang",
+        "kalah"
+      ],
+      "answer": "mengira, berpikir",
+      "explanation": "思います I dibaca omoimasu. Contoh: いい と 思います。 (Saya pikir bagus.)"
+    },
+    {
+      "question": "Apa arti dari 言います I?",
+      "options": [
+        "mengatakan ️",
+        "mengira, berpikir",
+        "menang",
+        "kalah"
+      ],
+      "answer": "mengatakan ️",
+      "explanation": "言います I dibaca iimasu. Contoh: 先生 が 「がんばって」 と 言いました。 (Guru berkata “semangat”.)"
+    },
+    {
+      "question": "Apa arti dari 勝ちます I?",
+      "options": [
+        "menang",
+        "mengira, berpikir",
+        "mengatakan ️",
+        "kalah"
+      ],
+      "answer": "menang",
+      "explanation": "勝ちます I dibaca kachimasu. Contoh: 試合 に 勝ちました。 (Menang pertandingan.)"
+    },
+    {
+      "question": "Apa arti dari 負けます II?",
+      "options": [
+        "kalah",
+        "mengira, berpikir",
+        "mengatakan ️",
+        "menang"
+      ],
+      "answer": "kalah",
+      "explanation": "負けます II dibaca makemasu. Contoh: ゲーム に 負けました。 (Kalah dalam game.)"
+    },
+    {
+      "question": "Apa arti dari あります I?",
+      "options": [
+        "ada, diadakan",
+        "mengira, berpikir",
+        "mengatakan ️",
+        "menang"
+      ],
+      "answer": "ada, diadakan",
+      "explanation": "あります I dibaca arimasu. Contoh: お祭り が あります。 (Ada festival.)"
+    },
+    {
+      "question": "Apa arti dari 役に立ちます I?",
+      "options": [
+        "berguna",
+        "mengira, berpikir",
+        "mengatakan ️",
+        "menang"
+      ],
+      "answer": "berguna",
+      "explanation": "役に立ちます I dibaca yaku ni tachimasu. Contoh: この 本 は 役に立ちます。 (Buku ini berguna.)"
+    },
+    {
+      "question": "Apa arti dari 動きます I?",
+      "options": [
+        "bergerak",
+        "mengira, berpikir",
+        "mengatakan ️",
+        "menang"
+      ],
+      "answer": "bergerak",
+      "explanation": "動きます I dibaca ugokimasu. Contoh: ロボット が 動きます。 (Robot bergerak.)"
+    },
+    {
+      "question": "Apa arti dari やめます II?",
+      "options": [
+        "berhenti",
+        "mengira, berpikir",
+        "mengatakan ️",
+        "menang"
+      ],
+      "answer": "berhenti",
+      "explanation": "やめます II dibaca yamemasu. Contoh: 会社 を やめます。 (Berhenti dari perusahaan.)"
+    },
+    {
+      "question": "Apa arti dari 気をつけます II?",
+      "options": [
+        "berhati-hati ️",
+        "mengira, berpikir",
+        "mengatakan ️",
+        "menang"
+      ],
+      "answer": "berhati-hati ️",
+      "explanation": "気をつけます II dibaca ki o tsukemasu. Contoh: 車 に 気をつけます。 (Berhati-hati terhadap mobil.)"
+    },
+    {
+      "question": "Apa arti dari 留学します III?",
+      "options": [
+        "studi di luar negeri ️",
+        "mengira, berpikir",
+        "mengatakan ️",
+        "menang"
+      ],
+      "answer": "studi di luar negeri ️",
+      "explanation": "留学します III dibaca ryuugaku shimasu. Contoh: 日本 へ 留学します。 (Belajar di Jepang.)"
+    }
+  ],
 };

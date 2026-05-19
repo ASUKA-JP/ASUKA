@@ -559,5 +559,116 @@ window.lessonData[16] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 乗ります I?",
+      "options": [
+        "naik",
+        "turun",
+        "ganti, pindah",
+        "mandi"
+      ],
+      "answer": "naik",
+      "explanation": "乗ります I dibaca norimasu. Contoh: 電車 に 乗ります。 (Naik kereta.)"
+    },
+    {
+      "question": "Apa arti dari 降ります II?",
+      "options": [
+        "turun",
+        "naik",
+        "ganti, pindah",
+        "mandi"
+      ],
+      "answer": "turun",
+      "explanation": "降ります II dibaca orimasu. Contoh: 電車 を 降ります。 (Turun dari kereta.)"
+    },
+    {
+      "question": "Apa arti dari 乗り換えます II?",
+      "options": [
+        "ganti, pindah",
+        "naik",
+        "turun",
+        "mandi"
+      ],
+      "answer": "ganti, pindah",
+      "explanation": "乗り換えます II dibaca norikaemasu. Contoh: 東京駅 で 乗り換えます。 (Pindah kereta di Stasiun Tokyo.)"
+    },
+    {
+      "question": "Apa arti dari 浴びます II?",
+      "options": [
+        "mandi",
+        "naik",
+        "turun",
+        "ganti, pindah"
+      ],
+      "answer": "mandi",
+      "explanation": "浴びます II dibaca abimasu. Contoh: シャワー を 浴びます。 (Mandi shower.)"
+    },
+    {
+      "question": "Apa arti dari 入れます II?",
+      "options": [
+        "memasukkan",
+        "naik",
+        "turun",
+        "ganti, pindah"
+      ],
+      "answer": "memasukkan",
+      "explanation": "入れます II dibaca iremasu. Contoh: 砂糖 を 入れます。 (Memasukkan gula.)"
+    },
+    {
+      "question": "Apa arti dari 出します I?",
+      "options": [
+        "mengeluarkan, menyerahkan",
+        "naik",
+        "turun",
+        "ganti, pindah"
+      ],
+      "answer": "mengeluarkan, menyerahkan",
+      "explanation": "出します I dibaca dashimasu. Contoh: レポート を 出します。 (Menyerahkan laporan.)"
+    },
+    {
+      "question": "Apa arti dari 下ろします I?",
+      "options": [
+        "mengambil uang",
+        "naik",
+        "turun",
+        "ganti, pindah"
+      ],
+      "answer": "mengambil uang",
+      "explanation": "下ろします I dibaca oroshimasu. Contoh: ATM で お金 を 下ろします。 (Mengambil uang di ATM.)"
+    },
+    {
+      "question": "Apa arti dari 入ります I?",
+      "options": [
+        "masuk",
+        "naik",
+        "turun",
+        "ganti, pindah"
+      ],
+      "answer": "masuk",
+      "explanation": "入ります I dibaca hairimasu. Contoh: 大学 に 入ります。 (Masuk universitas.)"
+    },
+    {
+      "question": "Apa arti dari 出ます II?",
+      "options": [
+        "tamat",
+        "naik",
+        "turun",
+        "ganti, pindah"
+      ],
+      "answer": "tamat",
+      "explanation": "出ます II dibaca demasu. Contoh: 大学 を 出ます。 (Lulus dari universitas.)"
+    },
+    {
+      "question": "Apa arti dari 押します I?",
+      "options": [
+        "menekan",
+        "naik",
+        "turun",
+        "ganti, pindah"
+      ],
+      "answer": "menekan",
+      "explanation": "押します I dibaca oshimasu. Contoh: ボタン を 押します。 (Menekan tombol.)"
+    }
+  ],
 };

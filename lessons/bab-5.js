@@ -721,5 +721,116 @@ window.lessonData[5] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 行きます?",
+      "options": [
+        "pergi",
+        "datang",
+        "pulang",
+        "sekolah"
+      ],
+      "answer": "pergi",
+      "explanation": "行きます dibaca ikimasu. Contoh: 学校 へ 行きます。 (Saya pergi ke sekolah.)"
+    },
+    {
+      "question": "Apa arti dari 来ます?",
+      "options": [
+        "datang",
+        "pergi",
+        "pulang",
+        "sekolah"
+      ],
+      "answer": "datang",
+      "explanation": "来ます dibaca kimasu. Contoh: 友達 が うち へ 来ます。 (Teman datang ke rumah.)"
+    },
+    {
+      "question": "Apa arti dari 帰ります?",
+      "options": [
+        "pulang",
+        "pergi",
+        "datang",
+        "sekolah"
+      ],
+      "answer": "pulang",
+      "explanation": "帰ります dibaca kaerimasu. Contoh: うち へ 帰ります。 (Saya pulang ke rumah.)"
+    },
+    {
+      "question": "Apa arti dari 学校?",
+      "options": [
+        "sekolah",
+        "pergi",
+        "datang",
+        "pulang"
+      ],
+      "answer": "sekolah",
+      "explanation": "学校 dibaca gakkou. Contoh: 学校 へ 行きます。 (Saya pergi ke sekolah.)"
+    },
+    {
+      "question": "Apa arti dari スーパー?",
+      "options": [
+        "pasar swalayan",
+        "pergi",
+        "datang",
+        "pulang"
+      ],
+      "answer": "pasar swalayan",
+      "explanation": "スーパー dibaca suupaa. Contoh: スーパー へ 行きます。 (Saya pergi ke pasar swalayan.)"
+    },
+    {
+      "question": "Apa arti dari 駅?",
+      "options": [
+        "stasiun",
+        "pergi",
+        "datang",
+        "pulang"
+      ],
+      "answer": "stasiun",
+      "explanation": "駅 dibaca eki. Contoh: 駅 へ 行きます。 (Saya pergi ke stasiun.)"
+    },
+    {
+      "question": "Apa arti dari 飛行機?",
+      "options": [
+        "pesawat terbang ️",
+        "pergi",
+        "datang",
+        "pulang"
+      ],
+      "answer": "pesawat terbang ️",
+      "explanation": "飛行機 dibaca hikouki. Contoh: 飛行機 で 東京 へ 行きます。 (Saya pergi ke Tokyo dengan pesawat.)"
+    },
+    {
+      "question": "Apa arti dari 船?",
+      "options": [
+        "kapal laut",
+        "pergi",
+        "datang",
+        "pulang"
+      ],
+      "answer": "kapal laut",
+      "explanation": "船 dibaca fune. Contoh: 船 で 行きます。 (Saya pergi dengan kapal.)"
+    },
+    {
+      "question": "Apa arti dari 電車?",
+      "options": [
+        "kereta rel listrik",
+        "pergi",
+        "datang",
+        "pulang"
+      ],
+      "answer": "kereta rel listrik",
+      "explanation": "電車 dibaca densha. Contoh: 電車 で 学校 へ 行きます。 (Saya pergi ke sekolah dengan kereta.)"
+    },
+    {
+      "question": "Apa arti dari 地下鉄?",
+      "options": [
+        "kereta bawah tanah",
+        "pergi",
+        "datang",
+        "pulang"
+      ],
+      "answer": "kereta bawah tanah",
+      "explanation": "地下鉄 dibaca chikatetsu. Contoh: 地下鉄 で 駅 へ 行きます。 (Saya pergi ke stasiun dengan kereta bawah tanah.)"
+    }
+  ],
 };

@@ -695,5 +695,116 @@ window.lessonData[3] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari ここ?",
+      "options": [
+        "sini",
+        "situ",
+        "sana",
+        "di mana"
+      ],
+      "answer": "sini",
+      "explanation": "ここ dibaca koko. Contoh: ここ は 教室 です。 (Di sini adalah ruang kelas.)"
+    },
+    {
+      "question": "Apa arti dari そこ?",
+      "options": [
+        "situ",
+        "sini",
+        "sana",
+        "di mana"
+      ],
+      "answer": "situ",
+      "explanation": "そこ dibaca soko. Contoh: そこ は 受付 です。 (Di situ adalah meja informasi.)"
+    },
+    {
+      "question": "Apa arti dari あそこ?",
+      "options": [
+        "sana",
+        "sini",
+        "situ",
+        "di mana"
+      ],
+      "answer": "sana",
+      "explanation": "あそこ dibaca asoko. Contoh: あそこ は 食堂 です。 (Di sana adalah kantin.)"
+    },
+    {
+      "question": "Apa arti dari どこ?",
+      "options": [
+        "di mana",
+        "sini",
+        "situ",
+        "sana"
+      ],
+      "answer": "di mana",
+      "explanation": "どこ dibaca doko. Contoh: トイレ は どこ ですか。 (Toilet ada di mana?)"
+    },
+    {
+      "question": "Apa arti dari こちら?",
+      "options": [
+        "sini, bentuk sopan dari ここ",
+        "sini",
+        "situ",
+        "sana"
+      ],
+      "answer": "sini, bentuk sopan dari ここ",
+      "explanation": "こちら dibaca kochira. Contoh: 受付 は こちら です。 (Meja informasi ada di sebelah sini.)"
+    },
+    {
+      "question": "Apa arti dari そちら?",
+      "options": [
+        "situ, bentuk sopan dari そこ",
+        "sini",
+        "situ",
+        "sana"
+      ],
+      "answer": "situ, bentuk sopan dari そこ",
+      "explanation": "そちら dibaca sochira. Contoh: エレベーター は そちら です。 (Lift ada di sebelah situ.)"
+    },
+    {
+      "question": "Apa arti dari あちら?",
+      "options": [
+        "sana, bentuk sopan dari あそこ",
+        "sini",
+        "situ",
+        "sana"
+      ],
+      "answer": "sana, bentuk sopan dari あそこ",
+      "explanation": "あちら dibaca achira. Contoh: 会議室 は あちら です。 (Ruang rapat ada di sebelah sana.)"
+    },
+    {
+      "question": "Apa arti dari どちら?",
+      "options": [
+        "mana, bentuk sopan dari どこ",
+        "sini",
+        "situ",
+        "sana"
+      ],
+      "answer": "mana, bentuk sopan dari どこ",
+      "explanation": "どちら dibaca dochira. Contoh: 会社 は どちら ですか。 (Perusahaan Anda di mana?)"
+    },
+    {
+      "question": "Apa arti dari 教室?",
+      "options": [
+        "ruang kelas",
+        "sini",
+        "situ",
+        "sana"
+      ],
+      "answer": "ruang kelas",
+      "explanation": "教室 dibaca kyoushitsu. Contoh: ここ は 教室 です。 (Di sini adalah ruang kelas.)"
+    },
+    {
+      "question": "Apa arti dari 食堂?",
+      "options": [
+        "ruang makan, kantin ️",
+        "sini",
+        "situ",
+        "sana"
+      ],
+      "answer": "ruang makan, kantin ️",
+      "explanation": "食堂 dibaca shokudou. Contoh: 食堂 は あそこ です。 (Kantin ada di sana.)"
+    }
+  ],
 };

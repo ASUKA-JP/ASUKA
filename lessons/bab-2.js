@@ -620,5 +620,116 @@ window.lessonData[2] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari これ?",
+      "options": [
+        "ini ️",
+        "itu",
+        "itu di sana",
+        "... ini ️"
+      ],
+      "answer": "ini ️",
+      "explanation": "これ dibaca kore. Contoh: これ は 本 です。 (Ini adalah buku.)"
+    },
+    {
+      "question": "Apa arti dari それ?",
+      "options": [
+        "itu",
+        "ini ️",
+        "itu di sana",
+        "... ini ️"
+      ],
+      "answer": "itu",
+      "explanation": "それ dibaca sore. Contoh: それ は 辞書 です。 (Itu adalah kamus.)"
+    },
+    {
+      "question": "Apa arti dari あれ?",
+      "options": [
+        "itu di sana",
+        "ini ️",
+        "itu",
+        "... ini ️"
+      ],
+      "answer": "itu di sana",
+      "explanation": "あれ dibaca are. Contoh: あれ は 車 です。 (Itu adalah mobil.)"
+    },
+    {
+      "question": "Apa arti dari この～?",
+      "options": [
+        "... ini ️",
+        "ini ️",
+        "itu",
+        "itu di sana"
+      ],
+      "answer": "... ini ️",
+      "explanation": "この～ dibaca kono. Contoh: この 本 は わたし の です。 (Buku ini milik saya.)"
+    },
+    {
+      "question": "Apa arti dari その～?",
+      "options": [
+        "... itu",
+        "ini ️",
+        "itu",
+        "itu di sana"
+      ],
+      "answer": "... itu",
+      "explanation": "その～ dibaca sono. Contoh: その ノート は あなた の ですか。 (Apakah buku catatan itu milik Anda?)"
+    },
+    {
+      "question": "Apa arti dari あの～?",
+      "options": [
+        "... itu di sana",
+        "ini ️",
+        "itu",
+        "itu di sana"
+      ],
+      "answer": "... itu di sana",
+      "explanation": "あの～ dibaca ano. Contoh: あの 人 は 先生 です。 (Orang itu adalah guru.)"
+    },
+    {
+      "question": "Apa arti dari 本?",
+      "options": [
+        "buku",
+        "ini ️",
+        "itu",
+        "itu di sana"
+      ],
+      "answer": "buku",
+      "explanation": "本 dibaca hon. Contoh: これ は 本 です。 (Ini adalah buku.)"
+    },
+    {
+      "question": "Apa arti dari 辞書?",
+      "options": [
+        "kamus",
+        "ini ️",
+        "itu",
+        "itu di sana"
+      ],
+      "answer": "kamus",
+      "explanation": "辞書 dibaca jisho. Contoh: それ は 辞書 です。 (Itu adalah kamus.)"
+    },
+    {
+      "question": "Apa arti dari 雑誌?",
+      "options": [
+        "majalah",
+        "ini ️",
+        "itu",
+        "itu di sana"
+      ],
+      "answer": "majalah",
+      "explanation": "雑誌 dibaca zasshi. Contoh: これは 雑誌 ですか。 (Apakah ini majalah?)"
+    },
+    {
+      "question": "Apa arti dari 新聞?",
+      "options": [
+        "koran, surat kabar ️",
+        "ini ️",
+        "itu",
+        "itu di sana"
+      ],
+      "answer": "koran, surat kabar ️",
+      "explanation": "新聞 dibaca shinbun. Contoh: あれ は 新聞 です。 (Itu adalah koran.)"
+    }
+  ],
 };

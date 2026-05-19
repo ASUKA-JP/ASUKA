@@ -170,5 +170,116 @@ window.lessonData[25] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 考えます II?",
+      "options": [
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "berumur, lanjut usia",
+        "cukup ️"
+      ],
+      "answer": "berpikir, memikirkan",
+      "explanation": "考えます II dibaca kangaemasu. Contoh: 将来 の こと を 考えます。 (Memikirkan masa depan.)"
+    },
+    {
+      "question": "Apa arti dari 着きます I?",
+      "options": [
+        "tiba, sampai",
+        "berpikir, memikirkan",
+        "berumur, lanjut usia",
+        "cukup ️"
+      ],
+      "answer": "tiba, sampai",
+      "explanation": "着きます I dibaca tsukimasu. Contoh: 駅 に 着きました。 (Sudah sampai di stasiun.)"
+    },
+    {
+      "question": "Apa arti dari 取ります I?",
+      "options": [
+        "berumur, lanjut usia",
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "cukup ️"
+      ],
+      "answer": "berumur, lanjut usia",
+      "explanation": "取ります I dibaca torimasu. Contoh: 年 を 取ります。 (Bertambah usia.)"
+    },
+    {
+      "question": "Apa arti dari 足ります II?",
+      "options": [
+        "cukup ️",
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "berumur, lanjut usia"
+      ],
+      "answer": "cukup ️",
+      "explanation": "足ります II dibaca tarimasu. Contoh: お金 が 足りません。 (Uangnya tidak cukup.)"
+    },
+    {
+      "question": "Apa arti dari 田舎?",
+      "options": [
+        "desa, kampung halaman",
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "berumur, lanjut usia"
+      ],
+      "answer": "desa, kampung halaman",
+      "explanation": "田舎 dibaca inaka. Contoh: 田舎 に 帰ります。 (Pulang ke kampung halaman.)"
+    },
+    {
+      "question": "Apa arti dari チャンス?",
+      "options": [
+        "kesempatan",
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "berumur, lanjut usia"
+      ],
+      "answer": "kesempatan",
+      "explanation": "チャンス dibaca chansu. Contoh: いい チャンス です。 (Ini kesempatan bagus.)"
+    },
+    {
+      "question": "Apa arti dari 億?",
+      "options": [
+        "ratus juta",
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "berumur, lanjut usia"
+      ],
+      "answer": "ratus juta",
+      "explanation": "億 dibaca oku. Contoh: 一億 円 です。 (Seratus juta yen.)"
+    },
+    {
+      "question": "Apa arti dari もし [〜たら]?",
+      "options": [
+        "kalau",
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "berumur, lanjut usia"
+      ],
+      "answer": "kalau",
+      "explanation": "もし [〜たら] dibaca moshi [~tara]. Contoh: もし 時間 が あったら、行きます。 (Kalau ada waktu, saya pergi.)"
+    },
+    {
+      "question": "Apa arti dari 意味?",
+      "options": [
+        "arti, makna",
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "berumur, lanjut usia"
+      ],
+      "answer": "arti, makna",
+      "explanation": "意味 dibaca imi. Contoh: この 言葉 の 意味 は 何ですか。 (Apa arti kata ini?)"
+    },
+    {
+      "question": "Apa arti dari もしもし?",
+      "options": [
+        "halo [saat menelepon] ️",
+        "berpikir, memikirkan",
+        "tiba, sampai",
+        "berumur, lanjut usia"
+      ],
+      "answer": "halo [saat menelepon] ️",
+      "explanation": "もしもし dibaca moshi moshi. Contoh: もしもし、田中さん ですか。 (Halo, apakah ini Tanaka?)"
+    }
+  ],
 };

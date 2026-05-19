@@ -763,5 +763,116 @@ window.lessonData[4] = {
               </div>
             </div>
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 起きます?",
+      "options": [
+        "bangun",
+        "tidur",
+        "bekerja",
+        "beristirahat, libur"
+      ],
+      "answer": "bangun",
+      "explanation": "起きます dibaca okimasu. Contoh: わたし は 6時 に 起きます。 (Saya bangun pukul 6.)"
+    },
+    {
+      "question": "Apa arti dari 寝ます?",
+      "options": [
+        "tidur",
+        "bangun",
+        "bekerja",
+        "beristirahat, libur"
+      ],
+      "answer": "tidur",
+      "explanation": "寝ます dibaca nemasu. Contoh: わたし は 10時 に 寝ます。 (Saya tidur pukul 10.)"
+    },
+    {
+      "question": "Apa arti dari 働きます?",
+      "options": [
+        "bekerja",
+        "bangun",
+        "tidur",
+        "beristirahat, libur"
+      ],
+      "answer": "bekerja",
+      "explanation": "働きます dibaca hatarakimasu. Contoh: 月曜日 から 金曜日 まで 働きます。 (Saya bekerja dari Senin sampai Jumat.)"
+    },
+    {
+      "question": "Apa arti dari 休みます?",
+      "options": [
+        "beristirahat, libur",
+        "bangun",
+        "tidur",
+        "bekerja"
+      ],
+      "answer": "beristirahat, libur",
+      "explanation": "休みます dibaca yasumimasu. Contoh: 日曜日 休みます。 (Saya libur hari Minggu.)"
+    },
+    {
+      "question": "Apa arti dari 勉強します?",
+      "options": [
+        "belajar",
+        "bangun",
+        "tidur",
+        "bekerja"
+      ],
+      "answer": "belajar",
+      "explanation": "勉強します dibaca benkyou shimasu. Contoh: 毎晩 日本語 を 勉強します。 (Setiap malam saya belajar bahasa Jepang.)"
+    },
+    {
+      "question": "Apa arti dari 終わります?",
+      "options": [
+        "selesai",
+        "bangun",
+        "tidur",
+        "bekerja"
+      ],
+      "answer": "selesai",
+      "explanation": "終わります dibaca owarimasu. Contoh: 仕事 は 5時 に 終わります。 (Pekerjaan selesai pukul 5.)"
+    },
+    {
+      "question": "Apa arti dari デパート?",
+      "options": [
+        "toserba",
+        "bangun",
+        "tidur",
+        "bekerja"
+      ],
+      "answer": "toserba",
+      "explanation": "デパート dibaca depaato. Contoh: デパート は 10時 から です。 (Toserba mulai buka dari pukul 10.)"
+    },
+    {
+      "question": "Apa arti dari 銀行?",
+      "options": [
+        "bank",
+        "bangun",
+        "tidur",
+        "bekerja"
+      ],
+      "answer": "bank",
+      "explanation": "銀行 dibaca ginkou. Contoh: 銀行 は 3時 まで です。 (Bank sampai pukul 3.)"
+    },
+    {
+      "question": "Apa arti dari 郵便局?",
+      "options": [
+        "kantor pos",
+        "bangun",
+        "tidur",
+        "bekerja"
+      ],
+      "answer": "kantor pos",
+      "explanation": "郵便局 dibaca yuubinkyoku. Contoh: 郵便局 は どこ ですか。 (Kantor pos ada di mana?)"
+    },
+    {
+      "question": "Apa arti dari 図書館?",
+      "options": [
+        "perpustakaan",
+        "bangun",
+        "tidur",
+        "bekerja"
+      ],
+      "answer": "perpustakaan",
+      "explanation": "図書館 dibaca toshokan. Contoh: 図書館 は 9時 から です。 (Perpustakaan mulai dari pukul 9.)"
+    }
+  ],
 };

@@ -320,5 +320,116 @@ window.lessonData[13] = {
   patterns: String.raw`
 
   `,
-  quiz: [],
+  quiz: [
+    {
+      "question": "Apa arti dari 遊びます?",
+      "options": [
+        "bermain",
+        "berenang",
+        "menjemput",
+        "lelah"
+      ],
+      "answer": "bermain",
+      "explanation": "遊びます dibaca asobimasu. Contoh: 友達 と 遊びます。 (Saya bermain dengan teman.)"
+    },
+    {
+      "question": "Apa arti dari 泳ぎます?",
+      "options": [
+        "berenang",
+        "bermain",
+        "menjemput",
+        "lelah"
+      ],
+      "answer": "berenang",
+      "explanation": "泳ぎます dibaca oyogimasu. Contoh: 海 で 泳ぎます。 (Saya berenang di laut.)"
+    },
+    {
+      "question": "Apa arti dari 迎えます?",
+      "options": [
+        "menjemput",
+        "bermain",
+        "berenang",
+        "lelah"
+      ],
+      "answer": "menjemput",
+      "explanation": "迎えます dibaca mukaemasu. Contoh: 駅 へ 友達 を 迎えます。 (Saya menjemput teman ke stasiun.)"
+    },
+    {
+      "question": "Apa arti dari 疲れます?",
+      "options": [
+        "lelah",
+        "bermain",
+        "berenang",
+        "menjemput"
+      ],
+      "answer": "lelah",
+      "explanation": "疲れます dibaca tsukaremasu. Contoh: たくさん 働いて 疲れました。 (Saya lelah karena banyak bekerja.)"
+    },
+    {
+      "question": "Apa arti dari 結婚します?",
+      "options": [
+        "menikah",
+        "bermain",
+        "berenang",
+        "menjemput"
+      ],
+      "answer": "menikah",
+      "explanation": "結婚します dibaca kekkon shimasu. Contoh: 来年 結婚します。 (Saya akan menikah tahun depan.)"
+    },
+    {
+      "question": "Apa arti dari 買い物します?",
+      "options": [
+        "berbelanja ️",
+        "bermain",
+        "berenang",
+        "menjemput"
+      ],
+      "answer": "berbelanja ️",
+      "explanation": "買い物します dibaca kaimono shimasu. Contoh: デパート で 買い物します。 (Saya berbelanja di department store.)"
+    },
+    {
+      "question": "Apa arti dari 食事します?",
+      "options": [
+        "makan ️",
+        "bermain",
+        "berenang",
+        "menjemput"
+      ],
+      "answer": "makan ️",
+      "explanation": "食事します dibaca shokuji shimasu. Contoh: 家族 と 食事します。 (Saya makan bersama keluarga.)"
+    },
+    {
+      "question": "Apa arti dari 散歩します?",
+      "options": [
+        "berjalan-jalan",
+        "bermain",
+        "berenang",
+        "menjemput"
+      ],
+      "answer": "berjalan-jalan",
+      "explanation": "散歩します dibaca sanpo shimasu. Contoh: 公園 を 散歩します。 (Saya berjalan-jalan di taman.)"
+    },
+    {
+      "question": "Apa arti dari 大変?",
+      "options": [
+        "berat, susah",
+        "bermain",
+        "berenang",
+        "menjemput"
+      ],
+      "answer": "berat, susah",
+      "explanation": "大変 dibaca taihen. Contoh: 仕事 は 大変 です。 (Pekerjaan itu berat.)"
+    },
+    {
+      "question": "Apa arti dari 欲しい?",
+      "options": [
+        "ingin, mau",
+        "bermain",
+        "berenang",
+        "menjemput"
+      ],
+      "answer": "ingin, mau",
+      "explanation": "欲しい dibaca hoshii. Contoh: 新しい 車 が 欲しい です。 (Saya ingin mobil baru.)"
+    }
+  ],
 };

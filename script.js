@@ -375,7 +375,7 @@ function renderQuiz() {
         <article class="vocab-card">
           <button class="vocab-main" type="button" aria-expanded="false">
             <span class="japanese">${index + 1}. ${item.question}</span>
-            <span class="meaning">${item.answer ?? ""}</span>
+            <span class="meaning">${item.options?.length ?? 0} pilihan</span>
             <span class="toggle-icon">
               <svg class="moon-icon" viewBox="0 0 100 100" width="16" height="16">
                 <circle cx="50" cy="50" r="45" fill="var(--pink-strong)" />
@@ -384,6 +384,18 @@ function renderQuiz() {
             </span>
           </button>
           <div class="vocab-detail">
+            ${
+              item.options?.length
+                ? `
+                  <span class="detail-label">Pilihan</span>
+                  <span class="detail-value">
+                    ${item.options
+                      .map((option) => `<span class="quiz-option${option === item.answer ? " correct" : ""}">${option}</span>`)
+                      .join("")}
+                  </span>
+                `
+                : ""
+            }
             <span class="detail-label">Jawaban</span>
             <span class="detail-value">${item.answer ?? "-"}</span>
             ${
