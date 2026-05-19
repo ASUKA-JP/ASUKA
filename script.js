@@ -9728,6 +9728,7 @@ const departmentStoreData = [
 ];
 
 const lessonGrid = document.querySelector("#lessonGrid");
+const lessonSelect = document.querySelector("#lessonSelect");
 const vocabList = document.querySelector("#vocabList");
 const wordCount = document.querySelector("#wordCount");
 const metricLabel = document.querySelector("#metricLabel");
@@ -9821,6 +9822,10 @@ function renderLessons() {
       }
     });
     lessonGrid.appendChild(button);
+  }
+
+  if (lessonSelect) {
+    lessonSelect.value = activeLesson;
   }
 }
 
@@ -9931,6 +9936,11 @@ function switchPage(pageName) {
     item.classList.toggle("active", item.dataset.page === pageName);
   });
 
+  const menuItems = document.querySelectorAll(".menu-item");
+  menuItems.forEach((item) => {
+    item.classList.toggle("active", item.dataset.page === pageName);
+  });
+
   Object.entries(pages).forEach(([name, page]) => {
     page.classList.toggle("active", name === pageName);
   });
@@ -9972,6 +9982,52 @@ navItems.forEach((item) => {
   item.addEventListener("click", () => switchPage(item.dataset.page));
 });
 
+// Mobile Drawer Menu events
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
+const menuSettingsBtn = document.getElementById("menuSettingsBtn");
+const menuItems = document.querySelectorAll(".menu-item");
+
+if (hamburgerBtn && mobileMenu) {
+  hamburgerBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("open");
+  });
+}
+
+if (closeMenuBtn && mobileMenu) {
+  closeMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+  });
+}
+
+if (mobileMenu) {
+  mobileMenu.addEventListener("click", (e) => {
+    if (e.target === mobileMenu) {
+      mobileMenu.classList.remove("open");
+    }
+  });
+}
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    switchPage(item.dataset.page);
+    if (mobileMenu) {
+      mobileMenu.classList.remove("open");
+    }
+  });
+});
+
+if (menuSettingsBtn && mobileMenu) {
+  menuSettingsBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+    const settingsModal = document.getElementById("settingsModal");
+    if (settingsModal) {
+      settingsModal.classList.add("show");
+    }
+  });
+}
+
 extraMenuCards.forEach((card) => {
   card.addEventListener("click", () => {
     activeExtraCategory = card.dataset.extraCategory;
@@ -9979,6 +10035,35 @@ extraMenuCards.forEach((card) => {
   });
 });
 
+function initLessonSelect() {
+  if (!lessonSelect) return;
+  lessonSelect.innerHTML = "";
+  for (let lesson = 1; lesson <= 50; lesson += 1) {
+    const option = document.createElement("option");
+    option.value = lesson;
+    option.textContent = `Bab ${lesson}`;
+    lessonSelect.appendChild(option);
+  }
+  lessonSelect.value = activeLesson;
+
+  lessonSelect.addEventListener("change", (e) => {
+    activeLesson = parseInt(e.target.value, 10);
+    renderLessons();
+    renderVocabulary();
+    renderPatterns();
+    // Update the title if active page changes
+    const activePage = document.querySelector(".page.active");
+    if (activePage) {
+      if (activePage.id === "patternsPage") {
+        pageTitle.textContent = `Pola Kalimat Bab ${activeLesson}`;
+      } else if (activePage.id === "vocabularyPage") {
+        pageTitle.textContent = `Kosakata Bab ${activeLesson}`;
+      }
+    }
+  });
+}
+
+initLessonSelect();
 renderLessons();
 renderVocabulary();
 renderPatterns();
@@ -10059,7 +10144,9 @@ function applySettings() {
   localStorage.setItem("minnaSettings", JSON.stringify(currentSettings));
 }
 
-settingsBtn.addEventListener("click", () => settingsModal.classList.add("show"));
+if (settingsBtn) {
+  settingsBtn.addEventListener("click", () => settingsModal.classList.add("show"));
+}
 closeSettingsBtn.addEventListener("click", () => settingsModal.classList.remove("show"));
 settingsModal.addEventListener("click", (e) => {
   if (e.target === settingsModal) settingsModal.classList.remove("show");

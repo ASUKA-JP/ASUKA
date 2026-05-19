@@ -13,13 +13,16 @@
           <div class="brand-mark">み</div>
           <h1>Minna Study</h1>
         </div>
-        <button id="settingsBtn" class="settings-btn" aria-label="Pengaturan">
-          ⚙️
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Menu">
+          ☰
         </button>
       </header>
 
       <nav class="lesson-scroll-container">
         <div class="lesson-scroll" id="lessonGrid"></div>
+        <div class="lesson-select-wrapper">
+          <select id="lessonSelect" class="lesson-select" aria-label="Pilih Bab"></select>
+        </div>
       </nav>
 
       <main class="content">
@@ -1772,6 +1775,42 @@
           <span class="nav-text">Lainnya</span>
         </button>
       </nav>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="mobile-menu-overlay">
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <div class="brand">
+            <div class="brand-mark">み</div>
+            <h3>Minna Study</h3>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn" aria-label="Tutup Menu">&times;</button>
+        </div>
+        <div class="mobile-menu-links">
+          <button class="menu-item active" data-page="vocabulary">
+            <span class="menu-icon">語</span>
+            <span class="menu-text">Kosakata</span>
+          </button>
+          <button class="menu-item" data-page="patterns">
+            <span class="menu-icon">文</span>
+            <span class="menu-text">Tata Bahasa</span>
+          </button>
+          <button class="menu-item" data-page="quiz">
+            <span class="menu-icon">Q</span>
+            <span class="menu-text">Quiz</span>
+          </button>
+          <button class="menu-item" data-page="extra">
+            <span class="menu-icon">＋</span>
+            <span class="menu-text">Lainnya</span>
+          </button>
+        </div>
+        <div class="mobile-menu-footer">
+          <button id="menuSettingsBtn" class="menu-settings-btn">
+            ⚙️ Pengaturan
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Settings Modal -->
