@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minna Study</title>
+    <title>ASUKA</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="app-shell">
       <header class="app-header">
         <div class="brand">
-          <div class="brand-mark">み</div>
-          <h1>Minna Study</h1>
+          <div class="brand-mark">
+            <svg class="moon-icon brand-moon" viewBox="0 0 100 100" width="32" height="32" style="display: block;">
+              <circle cx="50" cy="50" r="45" fill="var(--pink-strong)" />
+              <circle class="moon-cutout" cx="50" cy="50" r="41" fill="var(--bg-card, #ffffff)" />
+            </svg>
+          </div>
+          <h1>ASUKA</h1>
         </div>
         <button id="hamburgerBtn" class="hamburger-btn" aria-label="Menu">
-          ☰
+          <svg class="moon-icon" viewBox="0 0 100 100" width="26" height="26">
+            <circle cx="50" cy="50" r="45" fill="var(--pink-strong)" />
+            <circle class="moon-cutout" cx="50" cy="50" r="41" fill="var(--bg-card, #ffffff)" />
+          </svg>
         </button>
       </header>
 
@@ -1782,8 +1790,16 @@
       <div class="mobile-menu-content">
         <div class="mobile-menu-header">
           <div class="brand">
-            <div class="brand-mark">み</div>
-            <h3>Minna Study</h3>
+            <div class="brand-mark">
+              <svg viewBox="0 0 100 100" width="32" height="32" style="display: block;">
+                <mask id="crescent-mask-drawer">
+                  <rect width="100" height="100" fill="white" />
+                  <circle cx="62" cy="50" r="41" fill="black" />
+                </mask>
+                <circle cx="50" cy="50" r="45" fill="var(--pink-strong)" mask="url(#crescent-mask-drawer)" />
+              </svg>
+            </div>
+            <h3>ASUKA</h3>
           </div>
           <button id="closeMenuBtn" class="close-menu-btn" aria-label="Tutup Menu">&times;</button>
         </div>
@@ -1840,7 +1856,7 @@
           <div class="setting-group">
             <label>Tema Warna</label>
             <select id="themeSelect" class="setting-select">
-              <option value="default">Default Pink</option>
+              <option value="default">Logo Red (Default)</option>
               <option value="light">Light Blue</option>
               <option value="dark">Dark Neon</option>
               <option value="custom">Custom...</option>
@@ -1850,7 +1866,7 @@
             <label>Warna Custom</label>
             <div class="color-pickers">
               <div>
-                <input type="color" id="customBg" value="#fff7fa">
+                <input type="color" id="customBg" value="#faf8f8">
                 <div class="color-label">Latar</div>
               </div>
               <div>
@@ -1858,7 +1874,7 @@
                 <div class="color-label">Kotak</div>
               </div>
               <div>
-                <input type="color" id="customPink" value="#ee4f88">
+                <input type="color" id="customPink" value="#d61a21">
                 <div class="color-label">Aksen</div>
               </div>
             </div>

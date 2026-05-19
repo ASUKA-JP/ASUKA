@@ -1,17 +1,48 @@
 :root {
-  --bg: #fff7fa;
+  --bg: #faf8f8;
   --surface: #ffffff;
-  --surface-soft: #fff0f5;
-  --pink: #ff7aa8;
-  --pink-strong: #ee4f88;
-  --ink: #28242a;
-  --muted: #766e78;
-  --line: #f0dce5;
-  --shadow: 0 18px 45px rgba(160, 85, 115, 0.12);
+  --surface-soft: #f6eeef;
+  --pink: #ff4d5a;
+  --pink-strong: #d61a21;
+  --ink: #1f1b1c;
+  --muted: #726668;
+  --line: #ecdfe2;
+  --shadow: 0 18px 45px rgba(214, 26, 33, 0.08);
+  --bg-card: var(--surface);
 
   /* Typography Variables */
   --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-size-base: 16px;
+}
+
+/* --- Moon Morphing Icon --- */
+.moon-icon {
+  display: block;
+  overflow: visible;
+  flex: 0 0 auto;
+  pointer-events: none;
+}
+
+/* Default state = crescent moon (sabit) */
+.moon-icon .moon-cutout {
+  transform: translateX(12px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===================================================
+   Saat menu terbuka ATAU kartu di-expand:
+   → semua ikon bulan berubah jadi bulan PURNAMA merah
+   =================================================== */
+
+/* 1. Tombol Hamburger — saat drawer menu terbuka */
+body.menu-open #hamburgerBtn .moon-icon .moon-cutout,
+
+/* 2. Logo ASUKA di header — ikut berubah saat menu terbuka */
+body.menu-open .brand-moon .moon-cutout,
+
+/* 3. Dropdown Kosakata & Pola Kalimat — saat kartu di-expand */
+.vocab-card.open .moon-icon .moon-cutout {
+  transform: translateX(100px);
 }
 
 html {
@@ -27,7 +58,7 @@ body {
   min-height: 100vh;
   color: var(--ink);
   background:
-    linear-gradient(180deg, rgba(255, 240, 245, 0.8), rgba(255, 255, 255, 0.75)),
+    linear-gradient(180deg, rgba(246, 238, 239, 0.8), rgba(255, 255, 255, 0.75)),
     var(--bg);
   font-family: var(--font-family-base);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -49,7 +80,7 @@ button {
   min-height: 100vh;
   width: 100%;
   background: var(--surface);
-  box-shadow: 0 0 40px rgba(160, 85, 115, 0.05);
+  box-shadow: 0 0 40px rgba(214, 26, 33, 0.04);
 }
 
 .app-header {
@@ -73,17 +104,12 @@ button {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
   height: 32px;
   flex: 0 0 auto;
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--pink), #ffadc7);
-  border-radius: 10px;
-  font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
 }
 
 .brand h1 {
@@ -221,7 +247,7 @@ button {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 999px;
-  box-shadow: 0 10px 24px rgba(160, 85, 115, 0.08);
+  box-shadow: 0 10px 24px rgba(214, 26, 33, 0.05);
   color: var(--muted);
   font-size: 12px;
   font-weight: 800;
@@ -297,7 +323,7 @@ button {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--line);
   border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(160, 85, 115, 0.06);
+  box-shadow: 0 10px 28px rgba(214, 26, 33, 0.04);
 }
 
 .vocab-main {
@@ -340,18 +366,17 @@ ruby rt {
 .toggle-icon {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   justify-self: end;
-  color: var(--pink-strong);
-  background: var(--surface-soft);
+  background: transparent;
   border-radius: 50%;
-  font-size: 13px;
+  overflow: hidden;
   transition: 0.18s ease;
 }
 
 .vocab-card.open .toggle-icon {
-  transform: rotate(180deg);
+  transform: none;
 }
 
 .vocab-detail {
@@ -365,6 +390,10 @@ ruby rt {
 
 .vocab-card.open .vocab-detail {
   display: grid;
+}
+
+.vocab-card:not(.open) .vocab-detail {
+  display: none !important;
 }
 
 .detail-label {
@@ -469,7 +498,7 @@ ruby rt {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--line);
   border-radius: 18px;
-  box-shadow: 0 10px 28px rgba(160, 85, 115, 0.06);
+  box-shadow: 0 10px 28px rgba(214, 26, 33, 0.04);
   text-align: left;
   transition: 0.18s ease;
 }
@@ -478,7 +507,7 @@ ruby rt {
 .extra-menu-card.active {
   color: var(--pink-strong);
   background: var(--surface-soft);
-  border-color: #ffc1d5;
+  border-color: #f5ced2;
   transform: translateY(-1px);
 }
 
@@ -516,7 +545,7 @@ ruby rt {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--line);
   border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(160, 85, 115, 0.06);
+  box-shadow: 0 10px 28px rgba(214, 26, 33, 0.04);
 }
 
 .extra-japanese {
@@ -618,12 +647,12 @@ ruby rt {
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ee4f88' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d61a21' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 12px;
     padding-right: 30px;
-    box-shadow: 0 2px 6px rgba(160, 85, 115, 0.03);
+    box-shadow: 0 2px 6px rgba(214, 26, 33, 0.02);
   }
 
   .lesson-scroll-container {
@@ -638,7 +667,7 @@ ruby rt {
   .vocab-card {
     border: none;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(160, 85, 115, 0.03);
+    box-shadow: 0 2px 8px rgba(214, 26, 33, 0.02);
   }
 
   .vocab-main {
@@ -749,7 +778,7 @@ ruby rt {
     gap: 2px;
     padding: 8px 10px;
     border: none;
-    box-shadow: 0 2px 8px rgba(160, 85, 115, 0.03);
+    box-shadow: 0 2px 8px rgba(214, 26, 33, 0.02);
   }
 
   .extra-japanese {
@@ -778,16 +807,16 @@ ruby rt {
 .hamburger-btn {
   background: transparent;
   border: none;
-  font-size: 24px;
-  padding: 6px 12px;
+  padding: 4px;
   border-radius: 8px;
-  color: var(--pink-strong);
   cursor: pointer;
   transition: 0.2s;
   margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 36px;
+  height: 36px;
 }
 .hamburger-btn:hover {
   background: var(--surface-soft);

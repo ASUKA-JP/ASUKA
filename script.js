@@ -9837,7 +9837,28 @@ function renderPatterns() {
 
   const template = document.getElementById(`pattern-template-${activeLesson}`);
   if (template) {
-    patternsList.appendChild(template.content.cloneNode(true));
+    const clone = template.content.cloneNode(true);
+    clone.querySelectorAll(".vocab-card").forEach(card => {
+      card.classList.remove("open");
+      
+      const main = card.querySelector(".vocab-main");
+      if (main) {
+        main.style.gridTemplateColumns = "1fr auto";
+        
+        if (!main.querySelector(".toggle-icon")) {
+          const toggleIcon = document.createElement("span");
+          toggleIcon.className = "toggle-icon";
+          toggleIcon.innerHTML = `
+            <svg class="moon-icon" viewBox="0 0 100 100" width="16" height="16">
+              <circle cx="50" cy="50" r="45" fill="var(--pink-strong)" />
+              <circle class="moon-cutout" cx="50" cy="50" r="41" fill="var(--bg-card, #ffffff)" />
+            </svg>
+          `;
+          main.appendChild(toggleIcon);
+        }
+      }
+    });
+    patternsList.appendChild(clone);
   } else {
     patternsList.innerHTML = `<article class="placeholder-page" style="margin-top: 32px;"><div class="placeholder-icon">文</div><h3>Bab ${activeLesson}</h3><p>Pola kalimat untuk bab ini belum tersedia.</p></article>`;
   }
@@ -9890,7 +9911,12 @@ function renderVocabulary() {
           <button class="vocab-main" type="button" aria-expanded="false">
             <span class="japanese">${makeJapaneseMarkup(word)}</span>
             <span class="meaning">${word.meaning}</span>
-            <span class="toggle-icon">▼</span>
+            <span class="toggle-icon">
+              <svg class="moon-icon" viewBox="0 0 100 100" width="16" height="16">
+                <circle cx="50" cy="50" r="45" fill="var(--pink-strong)" />
+                <circle class="moon-cutout" cx="50" cy="50" r="41" fill="var(--bg-card, #ffffff)" />
+              </svg>
+            </span>
           </button>
           <div class="vocab-detail">
             <span class="detail-label">Romaji</span>
@@ -9976,6 +10002,19 @@ vocabList.addEventListener("click", (event) => {
   button.setAttribute("aria-expanded", String(isOpen));
 });
 
+const patternsList = document.getElementById("patternsList");
+if (patternsList) {
+  patternsList.addEventListener("click", (event) => {
+    const button = event.target.closest(".vocab-main");
+
+    if (!button) return;
+
+    const card = button.closest(".vocab-card");
+    const isOpen = card.classList.toggle("open");
+    button.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
 searchInput.addEventListener("input", renderVocabulary);
 
 navItems.forEach((item) => {
@@ -9992,12 +10031,14 @@ const menuItems = document.querySelectorAll(".menu-item");
 if (hamburgerBtn && mobileMenu) {
   hamburgerBtn.addEventListener("click", () => {
     mobileMenu.classList.add("open");
+    document.body.classList.add("menu-open");
   });
 }
 
 if (closeMenuBtn && mobileMenu) {
   closeMenuBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("open");
+    document.body.classList.remove("menu-open");
   });
 }
 
@@ -10005,6 +10046,7 @@ if (mobileMenu) {
   mobileMenu.addEventListener("click", (e) => {
     if (e.target === mobileMenu) {
       mobileMenu.classList.remove("open");
+      document.body.classList.remove("menu-open");
     }
   });
 }
@@ -10014,6 +10056,7 @@ menuItems.forEach((item) => {
     switchPage(item.dataset.page);
     if (mobileMenu) {
       mobileMenu.classList.remove("open");
+      document.body.classList.remove("menu-open");
     }
   });
 });
@@ -10021,6 +10064,7 @@ menuItems.forEach((item) => {
 if (menuSettingsBtn && mobileMenu) {
   menuSettingsBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("open");
+    document.body.classList.remove("menu-open");
     const settingsModal = document.getElementById("settingsModal");
     if (settingsModal) {
       settingsModal.classList.add("show");
@@ -10085,7 +10129,7 @@ let currentSettings = JSON.parse(localStorage.getItem("minnaSettings")) || {
   fontSize: "16px",
   fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   theme: "default",
-  customColors: { bg: "#fff7fa", surface: "#ffffff", pink: "#ee4f88" }
+  customColors: { bg: "#faf8f8", surface: "#ffffff", pink: "#d61a21" }
 };
 
 const root = document.documentElement;
@@ -10103,14 +10147,14 @@ function applySettings() {
   customColorGroup.style.display = currentSettings.theme === "custom" ? "block" : "none";
 
   if (currentSettings.theme === "default") {
-    root.style.setProperty("--bg", "#fff7fa");
+    root.style.setProperty("--bg", "#faf8f8");
     root.style.setProperty("--surface", "#ffffff");
-    root.style.setProperty("--surface-soft", "#fff0f5");
-    root.style.setProperty("--pink", "#ff7aa8");
-    root.style.setProperty("--pink-strong", "#ee4f88");
-    root.style.setProperty("--ink", "#28242a");
-    root.style.setProperty("--muted", "#766e78");
-    root.style.setProperty("--line", "#f0dce5");
+    root.style.setProperty("--surface-soft", "#f6eeef");
+    root.style.setProperty("--pink", "#ff4d5a");
+    root.style.setProperty("--pink-strong", "#d61a21");
+    root.style.setProperty("--ink", "#1f1b1c");
+    root.style.setProperty("--muted", "#726668");
+    root.style.setProperty("--line", "#ecdfe2");
   } else if (currentSettings.theme === "light") {
     root.style.setProperty("--bg", "#f1f5f9");
     root.style.setProperty("--surface", "#ffffff");
