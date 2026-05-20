@@ -2,65 +2,66 @@ window.lessonData = window.lessonData || {};
 
 window.lessonData[11] = {
   title: "Bab 11: Hitung-menghitung",
+
   vocabulary: [
     {
       "japanese": "ひとつ",
       "furigana": "",
-      "meaning": "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
+      "meaning": "satu benda 1️⃣",
       "romaji": "hitotsu",
-      "example": "りんご は ひとつ です。",
-      "exampleRomaji": "Ringo wa hitotsu desu.",
-      "translation": "Ada satu apel."
+      "example": "りんご を ひとつ 買いました。",
+      "exampleRomaji": "Ringo o hitotsu kaimashita.",
+      "translation": "Membeli satu apel."
     },
     {
       "japanese": "ふたつ",
       "furigana": "",
-      "meaning": "dua 2️⃣",
+      "meaning": "dua benda 2️⃣",
       "romaji": "futatsu",
       "example": "みかん が ふたつ あります。",
       "exampleRomaji": "Mikan ga futatsu arimasu.",
-      "translation": "Ada dua mandarin."
+      "translation": "Ada dua jeruk."
     },
     {
       "japanese": "みっつ",
       "furigana": "",
-      "meaning": "tiga 3️⃣",
+      "meaning": "tiga benda 3️⃣",
       "romaji": "mittsu",
-      "example": "本 が みっつ ありました。",
-      "exampleRomaji": "Hon ga mittsu arimashita.",
-      "translation": "Ada tiga buku."
+      "example": "本 を みっつ 買いました。",
+      "exampleRomaji": "Hon o mittsu kaimashita.",
+      "translation": "Membeli tiga buku."
     },
     {
       "japanese": "よっつ",
       "furigana": "",
-      "meaning": "empat 4️⃣",
+      "meaning": "empat benda 4️⃣",
       "romaji": "yottsu",
-      "example": "さくら は よっつ の 花 が あります。",
-      "exampleRomaji": "Sakura wa yottsu no hana ga arimasu.",
-      "translation": "Ada empat bunga sakura."
+      "example": "りんご を よっつ 食べました。",
+      "exampleRomaji": "Ringo o yottsu tabemashita.",
+      "translation": "Makan empat apel."
     },
     {
       "japanese": "いつつ",
       "furigana": "",
-      "meaning": "lima 5️⃣",
+      "meaning": "lima benda 5️⃣",
       "romaji": "itsutsu",
-      "example": "りんご が いつつ あります。",
-      "exampleRomaji": "Ringo ga itsutsu arimasu.",
-      "translation": "Ada lima apel."
+      "example": "ケーキ を いつつ 作りました。",
+      "exampleRomaji": "Keeki o itsutsu tsukurimashita.",
+      "translation": "Membuat lima kue."
     },
     {
       "japanese": "むっつ",
       "furigana": "",
-      "meaning": "enam 6️⃣",
+      "meaning": "enam benda 6️⃣",
       "romaji": "muttsu",
-      "example": "卵 が むっつ ありました。",
-      "exampleRomaji": "Tamago ga muttsu arimashita.",
+      "example": "卵 が むっつ あります。",
+      "exampleRomaji": "Tamago ga muttsu arimasu.",
       "translation": "Ada enam telur."
     },
     {
       "japanese": "ななつ",
       "furigana": "",
-      "meaning": "tujuh 7️⃣",
+      "meaning": "tujuh benda 7️⃣",
       "romaji": "nanatsu",
       "example": "ななつ の 色 があります。",
       "exampleRomaji": "Nanatsu no iro ga arimasu.",
@@ -69,486 +70,676 @@ window.lessonData[11] = {
     {
       "japanese": "やっつ",
       "furigana": "",
-      "meaning": "delapan 8️⃣",
+      "meaning": "delapan benda 8️⃣",
       "romaji": "yattsu",
-      "example": "蜘蛛 は やっつ の 脚 があります。",
-      "exampleRomaji": "Kumo wa yattsu no ashi ga arimasu.",
-      "translation": "Laba-laba memiliki delapan kaki."
+      "example": "みかん を やっつ 買いました。",
+      "exampleRomaji": "Mikan o yattsu kaimashita.",
+      "translation": "Membeli delapan jeruk."
     },
     {
       "japanese": "ここのつ",
       "furigana": "",
-      "meaning": "sembilan 9️⃣",
+      "meaning": "sembilan benda 9️⃣",
       "romaji": "kokonotsu",
-      "example": "ここのつ の ピン があります。",
-      "exampleRomaji": "Kokonotsu no pin ga arimasu.",
-      "translation": "Ada sembilan pin."
+      "example": "ここのつ の 本 があります。",
+      "exampleRomaji": "Kokonotsu no hon ga arimasu.",
+      "translation": "Ada sembilan buku."
     },
     {
       "japanese": "とお",
       "furigana": "",
-      "meaning": "sepuluh 🔟",
+      "meaning": "sepuluh benda 🔟",
       "romaji": "too",
-      "example": "とお の 話 があります。",
-      "exampleRomaji": "Too no hanashi ga arimasu.",
-      "translation": "Ada sepuluh cerita."
+      "example": "とお の りんご を 買いました。",
+      "exampleRomaji": "Too no ringo o kaimashita.",
+      "translation": "Membeli sepuluh apel."
     },
     {
       "japanese": "いくつ",
       "furigana": "",
       "meaning": "berapa 🤔",
       "romaji": "ikutsu",
-      "example": "これ は いくつ ですか。",
-      "exampleRomaji": "Kore wa ikutsu desu ka.",
-      "translation": "Ini berapa?"
+      "example": "みかん を いくつ 買いましたか。",
+      "exampleRomaji": "Mikan o ikutsu kaimashita ka.",
+      "translation": "Membeli berapa jeruk?"
     },
     {
       "japanese": "ひとり",
       "furigana": "",
-      "meaning": "seorang 👤",
+      "meaning": "satu orang 👤",
       "romaji": "hitori",
-      "example": "女の人 が ひとり います。",
-      "exampleRomaji": "Onna no hito ga hitori imasu.",
-      "translation": "Ada satu perempuan."
+      "example": "学生 が ひとり います。",
+      "exampleRomaji": "Gakusei ga hitori imasu.",
+      "translation": "Ada satu murid."
     },
     {
       "japanese": "ふたり",
       "furigana": "",
       "meaning": "dua orang 👥",
       "romaji": "futari",
-      "example": "兄弟 が ふたり います。",
-      "exampleRomaji": "Kyoudai ga futari imasu.",
-      "translation": "Ada dua saudara laki-laki."
+      "example": "友達 が ふたり います。",
+      "exampleRomaji": "Tomodachi ga futari imasu.",
+      "translation": "Ada dua teman."
     },
     {
-      "japanese": "～にん",
-      "furigana": "",
-      "meaning": "... orang (kata bantu bilangan untuk menghitung orang) 👫",
-      "romaji": "nin",
-      "example": "がくせい は 20人 です。",
-      "exampleRomaji": "Gakusei wa nijuu-nin desu.",
-      "translation": "Ada 20 pelajar."
+      "japanese": "～人",
+      "furigana": "～にん",
+      "meaning": "orang 👨‍👩‍👧",
+      "romaji": "~nin",
+      "example": "クラス に 20人 います。",
+      "exampleRomaji": "Kurasu ni nijuu-nin imasu.",
+      "translation": "Ada 20 orang di kelas."
     },
     {
-      "japanese": "～だい",
-      "furigana": "",
-      "meaning": "buah (kata bantu bilangan yang digunakan untuk menghitung mesin dan mobil) 🚗",
-      "romaji": "dai",
-      "example": "車 が さんだい あります。",
+      "japanese": "～台",
+      "furigana": "～だい",
+      "meaning": "buah untuk kendaraan / mesin 🚗",
+      "romaji": "~dai",
+      "example": "車 が 3台 あります。",
       "exampleRomaji": "Kuruma ga san-dai arimasu.",
       "translation": "Ada tiga mobil."
     },
     {
-      "japanese": "～まい",
-      "furigana": "",
-      "meaning": "lembar, helai (kata bantu bilangan yang digunakan untuk menghitung kertas dan perangko) 📄",
-      "romaji": "mai",
-      "example": "切手 が 10枚 です。",
-      "exampleRomaji": "Kitte ga juu-mai desu.",
-      "translation": "Ada 10 lembar perangko."
+      "japanese": "～枚",
+      "furigana": "～まい",
+      "meaning": "lembar 📄",
+      "romaji": "~mai",
+      "example": "切手 を 5枚 買いました。",
+      "exampleRomaji": "Kitte o go-mai kaimashita.",
+      "translation": "Membeli lima lembar perangko."
     },
     {
-      "japanese": "～かい",
-      "furigana": "",
+      "japanese": "～回",
+      "furigana": "～かい",
       "meaning": "kali 🔄",
-      "romaji": "kai",
-      "example": "一週間 に さんかい 行きます。",
-      "exampleRomaji": "Isshukan ni san-kai ikimasu.",
-      "translation": "Saya pergi tiga kali seminggu."
-    },
-    {
-      "japanese": "りんご",
-      "furigana": "",
-      "meaning": "apel 🍎",
-      "romaji": "ringo",
-      "example": "りんご は 赤 です。",
-      "exampleRomaji": "Ringo wa aka desu.",
-      "translation": "Apel berwarna merah."
-    },
-    {
-      "japanese": "みかん",
-      "furigana": "",
-      "meaning": "jeruk 🍊",
-      "romaji": "mikan",
-      "example": "みかん は 甘い です。",
-      "exampleRomaji": "Mikan wa amai desu.",
-      "translation": "Jeruk itu manis."
-    },
-    {
-      "japanese": "サンドィッチ",
-      "furigana": "",
-      "meaning": "sandwich 🥪",
-      "romaji": "sandoitchi",
-      "example": "サンドィッチ を 食べます。",
-      "exampleRomaji": "Sandoitchi o tabemasu.",
-      "translation": "Saya makan sandwich."
-    },
-    {
-      "japanese": "カレー",
-      "furigana": "",
-      "meaning": "[nasi dan] kare 🍛",
-      "romaji": "kare",
-      "example": "カレー が 好き です。",
-      "exampleRomaji": "Kare ga suki desu.",
-      "translation": "Saya suka kare."
-    },
-    {
-      "japanese": "カレー[ライス]",
-      "furigana": "",
-      "meaning": "kare dengan nasi 🍛",
-      "romaji": "kare raisu",
-      "example": "昼食 は カレーライス です。",
-      "exampleRomaji": "Chuushoku wa kare raisu desu.",
-      "translation": "Makan siang adalah kare dengan nasi."
-    },
-    {
-      "japanese": "アイスクリーム",
-      "furigana": "",
-      "meaning": "es krim 🍦",
-      "romaji": "aisu kurimu",
-      "example": "アイスクリーム は 冷たい です。",
-      "exampleRomaji": "Aisu kurimu wa tsumetai desu.",
-      "translation": "Es krim sangat dingin."
-    },
-    {
-      "japanese": "切手",
-      "furigana": "きって",
-      "meaning": "perangko 📮",
-      "romaji": "kitte",
-      "example": "切手 を 買います。",
-      "exampleRomaji": "Kitte o kaimasu.",
-      "translation": "Saya membeli perangko."
-    },
-    {
-      "japanese": "はがき",
-      "furigana": "",
-      "meaning": "kartu pos 📬",
-      "romaji": "hagaki",
-      "example": "はがき を 送ります。",
-      "exampleRomaji": "Hagaki o okurimasu.",
-      "translation": "Saya mengirim kartu pos."
-    },
-    {
-      "japanese": "ぶうとう",
-      "furigana": "",
-      "meaning": "amplop 📪",
-      "romaji": "fuutou",
-      "example": "ぶうとう に 手紙 を 入れます。",
-      "exampleRomaji": "Fuutou ni tegami o iremasu.",
-      "translation": "Saya memasukkan surat ke dalam amplop."
-    },
-    {
-      "japanese": "封筒",
-      "furigana": "ふうとう",
-      "meaning": "amplop (bentuk kanji) 📪",
-      "romaji": "fuutou",
-      "example": "封筒 を 郵便局 で 買います。",
-      "exampleRomaji": "Fuutou o yuubinkyoku de kaimasu.",
-      "translation": "Saya membeli amplop di kantor pos."
-    },
-    {
-      "japanese": "ペランぎこ",
-      "furigana": "",
-      "meaning": "perangko 📮",
-      "romaji": "perangko",
-      "example": "ペランぎこ が 必要 です。",
-      "exampleRomaji": "Perangko ga hitsuyou desu.",
-      "translation": "Perangko diperlukan."
-    },
-    {
-      "japanese": "おいさん",
-      "furigana": "",
-      "meaning": "kakak laki-laki (untuk menyebut orang tua) 🧑",
-      "romaji": "oniisan",
-      "example": "おいさん は どこ にいますか。",
-      "exampleRomaji": "Oniisan wa doko ni imasu ka.",
-      "translation": "Di mana kakak laki-laki?"
-    },
-    {
-      "japanese": "姉",
-      "furigana": "あね",
-      "meaning": "kakak perempuan (untuk menyebut kakak sendiri) 👧",
-      "romaji": "ane",
-      "example": "私 の 姉 は 学生 です。",
-      "exampleRomaji": "Watashi no ane wa gakusei desu.",
-      "translation": "Kakak perempuan saya adalah pelajar."
-    },
-    {
-      "japanese": "おねさん",
-      "furigana": "",
-      "meaning": "kakak perempuan (untuk menyebut kakak orang lain) 👧",
-      "romaji": "oneesan",
-      "example": "あなた の おねさん は 誰 ですか。",
-      "exampleRomaji": "Anata no oneesan wa dare desu ka.",
-      "translation": "Siapa kakak perempuan Anda?"
-    },
-    {
-      "japanese": "弟",
-      "furigana": "おとうと",
-      "meaning": "adik laki-laki (untuk menyebut adik sendiri) 👦",
-      "romaji": "otouto",
-      "example": "私 の 弟 は 高校生 です。",
-      "exampleRomaji": "Watashi no otouto wa koukousei desu.",
-      "translation": "Adik laki-laki saya adalah siswa sekolah menengah atas."
-    },
-    {
-      "japanese": "おうとうさん",
-      "furigana": "",
-      "meaning": "adik laki-laki (untuk menyebut adik orang lain bentuk sopan) 👦",
-      "romaji": "otouto-san",
-      "example": "あなた の おうとうさん は 何 をしていますか。",
-      "exampleRomaji": "Anata no otouto-san wa nani o shite imasu ka.",
-      "translation": "Apa yang dilakukan adik laki-laki Anda?"
-    },
-    {
-      "japanese": "妹",
-      "furigana": "いもうと",
-      "meaning": "adik perempuan (untuk menyebut adik sendiri) 👧",
-      "romaji": "imouto",
-      "example": "私 の 妹 は 中学生 です。",
-      "exampleRomaji": "Watashi no imouto wa chuugakusei desu.",
-      "translation": "Adik perempuan saya adalah siswa sekolah menengah pertama."
-    },
-    {
-      "japanese": "いもうとうさん",
-      "furigana": "",
-      "meaning": "adik perempuan (untuk menyebut adik orang lain bentuk sopan) 👧",
-      "romaji": "imouto-san",
-      "example": "あなた の いもうとうさん は どこ に いますか。",
-      "exampleRomaji": "Anata no imouto-san wa doko ni imasu ka.",
-      "translation": "Di mana adik perempuan Anda?"
-    },
-    {
-      "japanese": "兄",
-      "furigana": "あに",
-      "meaning": "kakak laki-laki (untuk menyebut kakak sendiri) 🧑",
-      "romaji": "ani",
-      "example": "兄 と 一緒 に 勉強します。",
-      "exampleRomaji": "Ani to issho ni benkyou shimasu.",
-      "translation": "Saya belajar bersama kakak laki-laki."
-    },
-    {
-      "japanese": "がいこく",
-      "furigana": "",
-      "meaning": "luar negeri 🌏",
-      "romaji": "gaikoku",
-      "example": "がいこく へ 行きたい です。",
-      "exampleRomaji": "Gaikoku e ikitai desu.",
-      "translation": "Saya ingin pergi ke luar negeri."
-    },
-    {
-      "japanese": "りゅうがくせい",
-      "furigana": "",
-      "meaning": "pelajar asing 🎓",
-      "romaji": "ryuugakusei",
-      "example": "りゅうがくせい が 大学 に います。",
-      "exampleRomaji": "Ryuugakusei ga daigaku ni imasu.",
-      "translation": "Ada pelajar asing di universitas."
-    },
-    {
-      "japanese": "クラス",
-      "furigana": "",
-      "meaning": "kelas 📚",
-      "romaji": "kurasu",
-      "example": "私 の クラス は 30人 です。",
-      "exampleRomaji": "Watashi no kurasu wa sanjuu-nin desu.",
-      "translation": "Kelas saya memiliki 30 orang."
+      "romaji": "~kai",
+      "example": "１週間 に ３回 映画 を 見ます。",
+      "exampleRomaji": "Isshuukan ni san-kai eiga o mimasu.",
+      "translation": "Menonton film tiga kali seminggu."
     },
     {
       "japanese": "～時間",
-      "furigana": "じかん",
-      "meaning": "~ jam ⏰",
-      "romaji": "jikan",
-      "example": "会議 は 2時間 かかります。",
-      "exampleRomaji": "Kaigi wa ni-jikan kakarimasu.",
-      "translation": "Rapat membutuhkan 2 jam."
+      "furigana": "～じかん",
+      "meaning": "jam ⏰",
+      "romaji": "~jikan",
+      "example": "２時間 勉強しました。",
+      "exampleRomaji": "Ni-jikan benkyou shimashita.",
+      "translation": "Belajar selama dua jam."
     },
     {
       "japanese": "～週間",
-      "furigana": "しゅうかん",
-      "meaning": "~ minggu 📆",
-      "romaji": "shuukan",
-      "example": "ゆっくり 2週間 いました。",
-      "exampleRomaji": "Yukkuri ni-shuukan imashita.",
-      "translation": "Saya tinggal selama 2 minggu dengan santai."
+      "furigana": "～しゅうかん",
+      "meaning": "minggu 📆",
+      "romaji": "~shuukan",
+      "example": "２週間 日本 に いました。",
+      "exampleRomaji": "Ni-shuukan Nihon ni imashita.",
+      "translation": "Tinggal di Jepang selama dua minggu."
     },
     {
       "japanese": "～ヶ月",
-      "furigana": "かげつ",
-      "meaning": "~ bulan 📅",
-      "romaji": "kagetsu",
-      "example": "3ヶ月 学びます。",
-      "exampleRomaji": "San-kagetsu manabimasu.",
-      "translation": "Saya belajar selama 3 bulan."
+      "furigana": "～かげつ",
+      "meaning": "bulan 🗓️",
+      "romaji": "~kagetsu",
+      "example": "３ヶ月 日本語 を 勉強しました。",
+      "exampleRomaji": "San-kagetsu Nihongo o benkyou shimashita.",
+      "translation": "Belajar bahasa Jepang selama tiga bulan."
     },
     {
       "japanese": "～年",
-      "furigana": "ねん",
-      "meaning": "~ tahun 📊",
-      "romaji": "nen",
-      "example": "5年 住んでいます。",
-      "exampleRomaji": "Go-nen sunde imasu.",
-      "translation": "Saya tinggal selama 5 tahun."
+      "furigana": "～ねん",
+      "meaning": "tahun 📊",
+      "romaji": "~nen",
+      "example": "５年 日本 に 住んでいます。",
+      "exampleRomaji": "Go-nen Nihon ni sundeimasu.",
+      "translation": "Sudah tinggal di Jepang selama lima tahun."
     },
     {
       "japanese": "どのくらい",
       "furigana": "",
       "meaning": "berapa lama ⏱️",
       "romaji": "dono kurai",
-      "example": "どのくらい 滞在 しますか。",
-      "exampleRomaji": "Dono kurai taizai shimasu ka.",
-      "translation": "Berapa lama Anda menginap?"
+      "example": "どのくらい 日本語 を 勉強しましたか。",
+      "exampleRomaji": "Dono kurai Nihongo o benkyou shimashita ka.",
+      "translation": "Berapa lama belajar bahasa Jepang?"
     },
     {
-      "japanese": "きら～",
-      "furigana": "きらきら",
-      "meaning": "kira-kira ... saja (bersifat kurang pasti) ✨",
-      "romaji": "kira-kira",
-      "example": "きらきら 1週間 です。",
-      "exampleRomaji": "Kira-kira is-shuukan desu.",
-      "translation": "Kira-kira seminggu."
-    },
-    {
-      "japanese": "全部で",
-      "furigana": "ぜんぶで",
-      "meaning": "semuanya, sama sekali 🔢",
-      "romaji": "zenbu de",
-      "example": "全部で いくら ですか。",
-      "exampleRomaji": "Zenbu de ikura desu ka.",
-      "translation": "Berapa semuanya?"
-    },
-    {
-      "japanese": "みんな",
+      "japanese": "～ぐらい",
       "furigana": "",
-      "meaning": "semua, semuanya 👨‍👩‍👧‍👦",
-      "romaji": "minna",
-      "example": "みんな は 準備 しました。",
-      "exampleRomaji": "Minna wa junbi shimashita.",
-      "translation": "Semua orang sudah bersiap."
+      "meaning": "sekitar, kira-kira ⌛",
+      "romaji": "~gurai",
+      "example": "15分 ぐらい かかります。",
+      "exampleRomaji": "Juu-go fun gurai kakarimasu.",
+      "translation": "Memerlukan waktu sekitar 15 menit."
     },
     {
       "japanese": "～だけ",
       "furigana": "",
-      "meaning": "hanya ~, saja 💬",
-      "romaji": "dake",
+      "meaning": "hanya ~ saja 💬",
+      "romaji": "~dake",
       "example": "水 だけ 飲みます。",
       "exampleRomaji": "Mizu dake nomimasu.",
-      "translation": "Saya hanya minum air."
+      "translation": "Hanya minum air."
     }
   ],
+
   patterns: String.raw`
 
-  `,
+<!-- Pattern 1 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main"
+  style="grid-template-columns:1fr;">
+
+    <div class="japanese"
+    style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>1.</span>
+
+      <span class="formula-box">
+        Cara menghitung kuantitas
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail"
+  style="display:block; padding-top:0;">
+
+    <div class="detail-explanation"
+    style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Untuk menghitung benda dari 1 sampai 10 digunakan:
+      </p>
+
+      <p>
+        <strong>
+          ひとつ、ふたつ、みっつ、よっつ、
+          いつつ、むっつ、ななつ、
+          やっつ、ここのつ、とお
+        </strong>
+      </p>
+
+      <p>
+        Untuk angka 11 ke atas biasanya menggunakan angka biasa.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 2 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main"
+  style="grid-template-columns:1fr;">
+
+    <div class="japanese"
+    style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>2.</span>
+
+      <span class="formula-box">
+        Kata Keterangan Bilangan
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail"
+  style="display:block; padding-top:0;">
+
+    <div class="detail-explanation"
+    style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Kata keterangan bilangan biasanya diletakkan setelah kata benda.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ① りんご を ４つ 買いました。
+        </span><br>
+
+        Membeli empat buah apel.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ② 外国人 の 学生 が ２人 います。
+        </span><br>
+
+        Ada dua mahasiswa asing.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ③ 国 で ２か月 日本語 を 勉強しました。
+        </span><br>
+
+        Belajar bahasa Jepang selama dua bulan.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 3 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main"
+  style="grid-template-columns:1fr;">
+
+    <div class="japanese"
+    style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>3.</span>
+
+      <span class="formula-box">
+        いくつ
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail"
+  style="display:block; padding-top:0;">
+
+    <div class="detail-explanation"
+    style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Digunakan untuk menanyakan jumlah benda.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ④ みかん を いくつ 買いましたか。
+        </span><br>
+
+        Membeli berapa buah jeruk?
+      </p>
+
+      <p>
+        <span class="example-jp"
+        style="margin-left:20px;">
+          ……８つ 買いました。
+        </span><br>
+
+        <span style="margin-left:20px;">
+          ……Membeli delapan buah.
+        </span>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 4 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main"
+  style="grid-template-columns:1fr;">
+
+    <div class="japanese"
+    style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>4.</span>
+
+      <span class="formula-box">
+        なん + Kata Bantu Bilangan
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail"
+  style="display:block; padding-top:0;">
+
+    <div class="detail-explanation"
+    style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Digunakan untuk menanyakan jumlah berdasarkan kata bantu bilangan.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑤ この会社 に 外国人 が 何人 いますか。
+        </span><br>
+
+        Di perusahaan ini ada berapa orang asing?
+      </p>
+
+      <p>
+        <span class="example-jp"
+        style="margin-left:20px;">
+          ……５人 います。
+        </span><br>
+
+        <span style="margin-left:20px;">
+          ……Ada lima orang.
+        </span>
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑥ 毎晩 何時間 日本語 を 勉強しますか。
+        </span><br>
+
+        Setiap malam belajar bahasa Jepang berapa jam?
+      </p>
+
+      <p>
+        <span class="example-jp"
+        style="margin-left:20px;">
+          ……２時間 勉強します。
+        </span><br>
+
+        <span style="margin-left:20px;">
+          ……Belajar dua jam.
+        </span>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 5 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main"
+  style="grid-template-columns:1fr;">
+
+    <div class="japanese"
+    style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>5.</span>
+
+      <span class="formula-box">
+        どのくらい
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail"
+  style="display:block; padding-top:0;">
+
+    <div class="detail-explanation"
+    style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Digunakan untuk menanyakan lama waktu.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑦ どのくらい 日本語 を 勉強しましたか。
+        </span><br>
+
+        Berapa lama belajar bahasa Jepang?
+      </p>
+
+      <p>
+        <span class="example-jp"
+        style="margin-left:20px;">
+          ……３年 勉強しました。
+        </span><br>
+
+        <span style="margin-left:20px;">
+          ……Belajar selama tiga tahun.
+        </span>
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑧ 大阪 から 東京 まで
+          どのくらい かかりますか。
+        </span><br>
+
+        Memerlukan waktu berapa lama dari Osaka sampai Tokyo?
+      </p>
+
+      <p>
+        <span class="example-jp"
+        style="margin-left:20px;">
+          ……新幹線 で ２時間半 かかります。
+        </span><br>
+
+        <span style="margin-left:20px;">
+          ……Memerlukan waktu dua setengah jam dengan Shinkansen.
+        </span>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 6 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main"
+  style="grid-template-columns:1fr;">
+
+    <div class="japanese"
+    style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>6.</span>
+
+      <span class="formula-box">
+        ～ぐらい
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail"
+  style="display:block; padding-top:0;">
+
+    <div class="detail-explanation"
+    style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Digunakan untuk menunjukkan perkiraan jumlah atau waktu.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑨ 学校 に 先生 が ３０人 ぐらい います。
+        </span><br>
+
+        Di sekolah ada kira-kira 30 guru.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑩ １５分 ぐらい かかります。
+        </span><br>
+
+        Memerlukan waktu sekitar 15 menit.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 7 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main"
+  style="grid-template-columns:1fr;">
+
+    <div class="japanese"
+    style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>7.</span>
+
+      <span class="formula-box">
+        Kata Keterangan Bilangan
+      </span>
+
+      <span class="formula-box particle">
+        に
+      </span>
+
+      <span class="formula-box">
+        ～回
+      </span>
+
+      <span class="formula-box">
+        Kata Kerja
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail"
+  style="display:block; padding-top:0;">
+
+    <div class="detail-explanation"
+    style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Digunakan untuk menunjukkan frekuensi.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑪ １か月 に ２回 映画 を 見ます。
+        </span><br>
+
+        Sebulan dua kali menonton film.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 8 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main"
+  style="grid-template-columns:1fr;">
+
+    <div class="japanese"
+    style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>8.</span>
+
+      <span class="formula-box">
+        Kata Keterangan Bilangan
+      </span>
+
+      <span class="formula-box">
+        だけ
+      </span>
+
+      <span style="font-size:0.8em; color:var(--muted);">
+        /
+      </span>
+
+      <span class="formula-box">
+        Kata Benda
+      </span>
+
+      <span class="formula-box">
+        だけ
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail"
+  style="display:block; padding-top:0;">
+
+    <div class="detail-explanation"
+    style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        <strong>だけ</strong> berarti “hanya” atau “cuma”.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑫ パワー電気 に 外国人 の 社員 が
+          １人 だけ います。
+        </span><br>
+
+        Di Power Elektronik hanya ada satu pegawai asing.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑬ 休み は 日曜日 だけ です。
+        </span><br>
+
+        Hari libur hanya hari Minggu saja.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+`,
+
   quiz: [
     {
       "question": "Apa arti dari ひとつ?",
       "options": [
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "tiga 3️⃣",
-        "empat 4️⃣"
+        "satu benda",
+        "dua benda",
+        "tiga benda",
+        "empat benda"
       ],
-      "answer": "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-      "explanation": "ひとつ dibaca hitotsu. Contoh: りんご は ひとつ です。 (Ada satu apel.)"
+      "answer": "satu benda",
+      "explanation": "ひとつ dibaca hitotsu."
     },
     {
-      "question": "Apa arti dari ふたつ?",
+      "question": "Apa arti dari ふたり?",
       "options": [
-        "dua 2️⃣",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "tiga 3️⃣",
-        "empat 4️⃣"
+        "dua orang",
+        "satu orang",
+        "tiga orang",
+        "empat orang"
       ],
-      "answer": "dua 2️⃣",
-      "explanation": "ふたつ dibaca futatsu. Contoh: みかん が ふたつ あります。 (Ada dua mandarin.)"
+      "answer": "dua orang",
+      "explanation": "ふたり digunakan untuk menghitung dua orang."
     },
     {
-      "question": "Apa arti dari みっつ?",
+      "question": "Apa arti dari ～ぐらい?",
       "options": [
-        "tiga 3️⃣",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "empat 4️⃣"
+        "sekitar",
+        "hanya",
+        "berapa",
+        "kali"
       ],
-      "answer": "tiga 3️⃣",
-      "explanation": "みっつ dibaca mittsu. Contoh: 本 が みっつ ありました。 (Ada tiga buku.)"
-    },
-    {
-      "question": "Apa arti dari よっつ?",
-      "options": [
-        "empat 4️⃣",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "tiga 3️⃣"
-      ],
-      "answer": "empat 4️⃣",
-      "explanation": "よっつ dibaca yottsu. Contoh: さくら は よっつ の 花 が あります。 (Ada empat bunga sakura.)"
-    },
-    {
-      "question": "Apa arti dari いつつ?",
-      "options": [
-        "lima 5️⃣",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "tiga 3️⃣"
-      ],
-      "answer": "lima 5️⃣",
-      "explanation": "いつつ dibaca itsutsu. Contoh: りんご が いつつ あります。 (Ada lima apel.)"
-    },
-    {
-      "question": "Apa arti dari むっつ?",
-      "options": [
-        "enam 6️⃣",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "tiga 3️⃣"
-      ],
-      "answer": "enam 6️⃣",
-      "explanation": "むっつ dibaca muttsu. Contoh: 卵 が むっつ ありました。 (Ada enam telur.)"
-    },
-    {
-      "question": "Apa arti dari ななつ?",
-      "options": [
-        "tujuh 7️⃣",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "tiga 3️⃣"
-      ],
-      "answer": "tujuh 7️⃣",
-      "explanation": "ななつ dibaca nanatsu. Contoh: ななつ の 色 があります。 (Ada tujuh warna.)"
-    },
-    {
-      "question": "Apa arti dari やっつ?",
-      "options": [
-        "delapan 8️⃣",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "tiga 3️⃣"
-      ],
-      "answer": "delapan 8️⃣",
-      "explanation": "やっつ dibaca yattsu. Contoh: 蜘蛛 は やっつ の 脚 があります。 (Laba-laba memiliki delapan kaki.)"
-    },
-    {
-      "question": "Apa arti dari ここのつ?",
-      "options": [
-        "sembilan 9️⃣",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "tiga 3️⃣"
-      ],
-      "answer": "sembilan 9️⃣",
-      "explanation": "ここのつ dibaca kokonotsu. Contoh: ここのつ の ピン があります。 (Ada sembilan pin.)"
-    },
-    {
-      "question": "Apa arti dari とお?",
-      "options": [
-        "sepuluh",
-        "satu (kata bantu bilangan yang digunakan untuk menghitung barang) 1️⃣",
-        "dua 2️⃣",
-        "tiga 3️⃣"
-      ],
-      "answer": "sepuluh",
-      "explanation": "とお dibaca too. Contoh: とお の 話 があります。 (Ada sepuluh cerita.)"
+      "answer": "sekitar",
+      "explanation": "～ぐらい digunakan untuk menunjukkan perkiraan jumlah atau waktu."
     }
   ],
 };
