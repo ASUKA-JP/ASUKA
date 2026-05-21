@@ -214,6 +214,7 @@ const extraList = document.querySelector("#extraList");
 const quizList = document.querySelector("#quizList");
 const extraMenuCards = document.querySelectorAll(".extra-menu-card");
 const navItems = document.querySelectorAll(".nav-item");
+const headerNavBtns = document.querySelectorAll(".header-nav-btn");
 const pages = {
   vocabulary: document.querySelector("#vocabularyPage"),
   patterns: document.querySelector("#patternsPage"),
@@ -517,6 +518,10 @@ function switchPage(pageName) {
     item.classList.toggle("active", item.dataset.page === pageName);
   });
 
+  headerNavBtns.forEach((item) => {
+    item.classList.toggle("active", item.dataset.page === pageName);
+  });
+
   Object.entries(pages).forEach(([name, page]) => {
     page.classList.toggle("active", name === pageName);
   });
@@ -584,6 +589,10 @@ if (quizList) {
 searchInput.addEventListener("input", renderVocabulary);
 
 navItems.forEach((item) => {
+  item.addEventListener("click", () => switchPage(item.dataset.page));
+});
+
+headerNavBtns.forEach((item) => {
   item.addEventListener("click", () => switchPage(item.dataset.page));
 });
 

@@ -318,7 +318,202 @@ window.lessonData[13] = {
     }
   ],
   patterns: String.raw`
+<!-- Pattern 1 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>1.</span>
+      <span class="formula-box">Kata Benda</span>
+      <span class="formula-box particle">が</span>
+      <span class="formula-box">欲しいです</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        <strong>欲しい（ほしい）</strong> adalah Kata Sifat い. Objek untuk <strong>欲しい</strong> ditunjuk dengan partikel <strong>が</strong>. Digunakan untuk menyatakan keinginan pelaku untuk memiliki suatu benda/barang.
+      </p>
+      <p>
+        <span class="example-jp">① わたしは <ruby>友達<rt>ともだち</rt></ruby> が <ruby>欲しい<rt>ほ</rt></ruby>しいです。</span><br>
+        Saya ingin punya teman.
+      </p>
+      <p>
+        <span class="example-jp">② <ruby>今<rt>いま</rt></ruby> <ruby>何<rt>なに</rt></ruby> が いちばん <ruby>欲しい<rt>ほ</rt></ruby>しいですか。</span><br>
+        Sekarang apa yang paling diinginkan?<br>
+        <span class="example-jp" style="margin-left:20px;">……<ruby>車<rt>くるま</rt></ruby> が <ruby>欲しい<rt>ほ</rt></ruby>しいです。</span><br>
+        <span style="margin-left:20px;">……Ingin punya mobil.</span>
+      </p>
+      <p>
+        <span class="example-jp">③ 子ども が <ruby>欲しい<rt>ほ</rt></ruby>しいですか。</span><br>
+        Apakah ingin punya anak?<br>
+        <span class="example-jp" style="margin-left:20px;">……いいえ、<ruby>欲<rt>ほ</rt></ruby>しくないです。</span><br>
+        <span style="margin-left:20px;">……Tidak, tidak ingin punya.</span>
+      </p>
+    </div>
+  </div>
+</div>
 
+<!-- Pattern 2 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>2.</span>
+      <span class="formula-box">Kata Kerja (Bentuk ます)</span>
+      <span class="formula-box">たいです</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        <strong>1) Kata Kerja Bentuk ます (Masu stem)</strong><br>
+        Bentuk kata kerja sebelum akhiran <strong>ます</strong> (Contoh: <strong>かい</strong> dari <strong>かいます</strong>, <strong>たべ</strong> dari <strong>たべます</strong>) disebut bentuk ます.
+      </p>
+      <p>
+        <strong>2) Kata Kerja (Bentuk ます) たいです</strong><br>
+        Digunakan untuk menunjukkan keinginan pelaku untuk melakukan suatu aktivitas/perbuatan. Objek dari kata kerja berakhiran <strong>～たい</strong> dapat ditunjuk dengan partikel <strong>を</strong> maupun partikel <strong>が</strong>. Perubahan bentuk negatif/lampau dari <strong>～たい</strong> sama persis dengan perubahan Kata Sifat い (misal: <strong>たい</strong> &rarr; <strong>たくない</strong> &rarr; <strong>たかった</strong> &rarr; <strong>たくなかった</strong>).
+      </p>
+      <p>
+        <span class="example-jp">④ わたしは <ruby>沖縄<rt>おきなわ</rt></ruby> へ <ruby>行<rt>い</rt></ruby>きたいです。</span><br>
+        Saya ingin pergi ke Okinawa.
+      </p>
+      <p>
+        <span class="example-jp">⑤ わたしは てんぷら を（が） <ruby>食<rt>た</rt></ruby>べたいです。</span><br>
+        Saya ingin makan Tempura.
+      </p>
+      <p>
+        <span class="example-jp">⑥ <ruby>神戸<rt>こうべ</rt></ruby> で <ruby>何<rt>なに</rt></ruby> を（が） <ruby>買<rt>か</rt></ruby>いたいですか。</span><br>
+        Di Kobe ingin membeli apa?<br>
+        <span class="example-jp" style="margin-left:20px;">……<ruby>靴<rt>くつ</rt></ruby> を（が） <ruby>買<rt>か</rt></ruby>いたいです。</span><br>
+        <span style="margin-left:20px;">……Ingin membeli sepatu.</span>
+      </p>
+      <p>
+        <span class="example-jp">⑦ おなか が <ruby>痛<rt>いた</rt></ruby>いですから、<ruby>何<rt>なに</rt></ruby>も <ruby>食<rt>た</rt></ruby>べたくないです。</span><br>
+        Karena perut sakit, tidak mau makan apa-apa. (Pel. 17)
+      </p>
+      <p style="color: var(--pink-strong); font-size: 0.95em; font-weight: bold; margin-top: 15px;">
+        [Perhatian 1] Keinginan Pihak Ketiga
+      </p>
+      <p style="margin-top: 5px;">
+        Pola <strong>欲しいです</strong> dan <strong>たいです</strong> hanya digunakan untuk menyatakan keinginan diri sendiri (orang pertama) atau menanyakan keinginan lawan bicara (orang kedua). Pola ini tidak dapat digunakan untuk menyatakan keinginan pihak ketiga (orang ketiga).
+      </p>
+      <p style="color: var(--pink-strong); font-size: 0.95em; font-weight: bold; margin-top: 10px;">
+        [Perhatian 2] Menawarkan Sesuatu
+      </p>
+      <p style="margin-top: 5px;">
+        Gunakanlah penawaran yang lebih sopan (seperti <strong>いかがですか</strong> atau <strong>～ませんか</strong>) alih-alih menggunakan <strong>欲しいですか</strong> atau <strong>たいですか</strong> untuk menawarkan sesuatu ke lawan bicara.<br>
+        Misalnya, tawarkan kopi dengan: <strong>「コーヒーは いかがですか」</strong> atau <strong>「コーヒーを 飲みませんか」</strong>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 3 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>3.</span>
+      <span class="formula-box">Kata Benda (tempat)</span>
+      <span class="formula-box particle">へ</span>
+      <span class="formula-box">{ KK (Bentuk ます) / KB }</span>
+      <span class="formula-box particle">に</span>
+      <span class="formula-box">行きます / 来ます / 帰ります</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Digunakan untuk menunjukkan tujuan/maksud kepergian, kedatangan, atau kepulangan ke suatu tempat. Partikel <strong>に</strong> di sini menyatakan tujuan (purpose) dari pergerakan tersebut.
+      </p>
+      <p>
+        <strong>1) Menggunakan Kata Kerja (Bentuk ます)</strong>
+      </p>
+      <p>
+        <span class="example-jp">⑧ <ruby>神戸<rt>こうべ</rt></ruby> へ インド<ruby>料理<rt>りょうり</rt></ruby> を <ruby>食<rt>た</rt></ruby>べ に <ruby>行<rt>い</rt></ruby>きます。</span><br>
+        Pergi makan masakan India ke Kobe.
+      </p>
+      <p style="margin-top:15px;">
+        <strong>2) Menggunakan Kata Benda</strong><br>
+        Jika menggunakan kata kerja kelompok 3 berakhiran <strong>します</strong> (seperti <strong>買い物します</strong> &rarr; <strong>買い物</strong>, <strong>勉強します</strong> &rarr; <strong>勉強</strong>), atau kata benda aktivitas (seperti <strong>お花見</strong>, <strong>釣り</strong>), bentuk Kata Benda tersebut dapat dipasangkan langsung sebelum partikel <strong>に</strong>.
+      </p>
+      <p>
+        <span class="example-jp">⑨ <ruby>神戸<rt>こうべ</rt></ruby> へ <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby> に <ruby>行<rt>い</rt></ruby>きます。</span><br>
+        Pergi ke Kobe untuk belanja.
+      </p>
+      <p>
+        <span class="example-jp">⑩ <ruby>日本<rt>にほん</rt></ruby> へ <ruby>美術<rt>びじゅつ</rt></ruby> の <ruby>勉強<rt>べんきょう</rt></ruby> に <ruby>来<rt>き</rt></ruby>ました。</span><br>
+        Datang ke Jepang untuk belajar seni.
+      </p>
+      <p style="color: var(--pink-strong); font-size: 0.95em; font-weight: bold; margin-top: 15px;">
+        [Perhatian] Kata Benda yang Berupa Acara/Event
+      </p>
+      <p style="margin-top: 5px;">
+        Jika Kata Benda di depan <strong>に</strong> adalah nama perayaan, festival, konser, atau event sejenisnya, maka tujuannya diartikan secara implisit untuk menonton, mendengar, atau menikmati acara tersebut.
+      </p>
+      <p>
+        <span class="example-jp">⑪ あした <ruby>京都<rt>きょうと</rt></ruby> の <ruby>お祭り<rt>おまつり</rt></ruby> に <ruby>行<rt>い</rt></ruby>きます。</span><br>
+        Besok pergi ke perayaan (festival) di Kyoto.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 4 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>4.</span>
+      <span class="formula-box">どこか</span>
+      <span style="font-size:0.8em; color:var(--muted);">/</span>
+      <span class="formula-box">何か</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        ・<strong>どこか</strong> berarti "suatu tempat" (somewhere).<br>
+        ・<strong>何か（なにか）</strong> berarti "sesuatu" (something).<br>
+        Partikel arah <strong>へ</strong> di belakang <strong>どこか</strong> dan partikel objek <strong>を</strong> di belakang <strong>何か</strong> dapat dihilangkan.
+      </p>
+      <p>
+        <span class="example-jp">⑫ <ruby>冬休み<rt>ふゆやすみ</rt></ruby> は どこか [へ] <ruby>行<rt>い</rt></ruby>きましたか。</span><br>
+        Pada waktu liburan musim dingin pergi ke mana?<br>
+        <span class="example-jp" style="margin-left:20px;">……はい、<ruby>北海道<rt>ほっかいどう</rt></ruby> へ スキーに <ruby>行<rt>い</rt></ruby>きました。</span><br>
+        <span style="margin-left:20px;">……Ya, pergi ke Hokkaido untuk bermain ski.</span>
+      </p>
+      <p>
+        <span class="example-jp">⑬ のど が かわきましたから、<ruby>何<rt>なにか</rt></ruby>か [を] <ruby>飲<rt>の</rt></ruby>みたいです。</span><br>
+        Karena haus, ingin minum sesuatu.
+      </p>
+      <p style="color: var(--pink-strong); font-size: 0.95em; font-weight: bold; margin-top: 15px;">
+        [Perhatian] Topik Waktu
+      </p>
+      <p style="margin-top: 5px;">
+        Keterangan waktu (seperti <strong>冬休み</strong>) dapat diangkat menjadi topik kalimat dengan membubuhkan partikel <strong>は</strong>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 5 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>5.</span>
+      <span class="formula-box">ご～</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Awalan <strong>ご</strong> dibubuhkan di depan kata benda tertentu (biasanya kata serapan asal bahasa Mandarin / Sino-Japanese) untuk menyatakan penghormatan/kesopanan.
+      </p>
+      <p>
+        <span class="example-jp">⑭ <ruby>ご注文<rt>ごちゅうもん</rt></ruby> は？</span><br>
+        Mau pesan apa? (Bentuk halus/sopan menanyakan pesanan pelanggan)
+      </p>
+    </div>
+  </div>
+</div>
   `,
   quiz: [
     {

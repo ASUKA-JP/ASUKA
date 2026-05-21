@@ -461,7 +461,324 @@ window.lessonData[14] = {
     }
   ],
   patterns: String.raw`
+<!-- Pattern 1 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>1.</span>
+      <span class="formula-box">Kelompok Kata Kerja (動詞のグループ)</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Kata kerja dalam bahasa Jepang mengalami perubahan bentuk (konjugasi) untuk menyampaikan berbagai maksud. Kata kerja dibagi menjadi <strong>3 kelompok</strong> berdasarkan cara perubahan bentuknya:
+      </p>
 
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin:20px 0;">
+        <!-- Group I -->
+        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid var(--pink-strong); box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <h4 style="margin:0 0 10px 0; color:var(--pink-strong); display:flex; align-items:center; gap:6px;">
+            <span style="background:var(--pink-strong); color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">I</span>
+            Kelompok I (i-masu)
+          </h4>
+          <p style="font-size:0.85em; margin:0 0-10px 0; line-height:1.4; color:var(--muted);">
+            Bunyi suku kata tepat sebelum akhiran <strong>ます</strong> berakhir pada <strong>kolom -i</strong> (<em>~i, ~ki, ~shi, ~chi, ~ni, ~hi, ~mi, ~ri</em>).
+          </p>
+          <div style="font-size:0.8em; background:var(--bg-card); padding:8px; border-radius:6px; margin-top:10px;">
+            <strong>Contoh:</strong><br>
+            ・か<strong>き</strong>ます (menulis)<br>
+            ・の<strong>み</strong>ます (minum)<br>
+            ・まちます (menunggu &rarr; suku kata <strong>ち</strong>)
+          </div>
+        </div>
+
+        <!-- Group II -->
+        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid #3498db; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <h4 style="margin:0 0 10px 0; color:#3498db; display:flex; align-items:center; gap:6px;">
+            <span style="background:#3498db; color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">II</span>
+            Kelompok II (e-masu)
+          </h4>
+          <p style="font-size:0.85em; margin:0 0-10px 0; line-height:1.4; color:var(--muted);">
+            Bunyi suku kata sebelum akhiran <strong>ます</strong> berakhir pada <strong>kolom -e</strong>, atau beberapa pengecualian berakhiran <strong>kolom -i</strong> yang hanya terdiri dari 1 suku kata.
+          </p>
+          <div style="font-size:0.8em; background:var(--bg-card); padding:8px; border-radius:6px; margin-top:10px;">
+            <strong>Contoh:</strong><br>
+            ・た<strong>べ</strong>ます (makan)<br>
+            ・み<strong>せ</strong>ます (memperlihatkan)<br>
+            <strong>Pengecualian:</strong> みます (melihat), います (ada)
+          </div>
+        </div>
+
+        <!-- Group III -->
+        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid #2ecc71; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <h4 style="margin:0 0 10px 0; color:#2ecc71; display:flex; align-items:center; gap:6px;">
+            <span style="background:#2ecc71; color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">III</span>
+            Kelompok III (Irregular)
+          </h4>
+          <p style="font-size:0.85em; margin:0 0-10px 0; line-height:1.4; color:var(--muted);">
+            Hanya terdiri atas kata kerja bantu <strong>します</strong> (melakukan), <strong>きます</strong> (datang), serta gabungan <strong>[Kata Benda] + します</strong>.
+          </p>
+          <div style="font-size:0.8em; background:var(--bg-card); padding:8px; border-radius:6px; margin-top:10px;">
+            <strong>Contoh:</strong><br>
+            ・します (melakukan)<br>
+            ・きます (datang)<br>
+            ・買い物します (berbelanja)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 2 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>2.</span>
+      <span class="formula-box">Kata Kerja Bentuk て (動詞のて形)</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Bentuk konjugasi kata kerja yang berakhiran dengan bunyi <strong>て</strong> atau <strong>de</strong> disebut sebagai <strong>bentuk て (Te-form)</strong>. Perubahannya bergantung pada kelompok masing-masing:
+      </p>
+
+      <!-- Visualization Section -->
+      <div style="margin: 20px 0; padding: 16px; border-radius: 12px; background: var(--surface-soft); border-top: 3px solid var(--pink-strong);">
+        <h4 style="margin: 0 0 12px 0; color: var(--pink-strong); text-align: center; font-size: 1.1em; font-weight: bold;">💡 Peta Visual Konjugasi Bentuk て (Kelompok I)</h4>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+          <!-- Card 1 -->
+          <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="font-size: 1.05em; font-weight: bold; color: #e74c3c;">い ・ ち ・ り</div>
+            <div style="font-size: 1.4em; font-weight: 800; color: var(--pink-strong); margin: 6px 0;">&rarr; って</div>
+            <div style="font-size: 0.8em; color: var(--muted); line-height: 1.4;">
+              か<strong>い</strong>ます &rarr; か<strong>って</strong> (membeli)<br>
+              ま<strong>ち</strong>ます &rarr; ま<strong>って</strong> (menunggu)<br>
+              かえ<strong>り</strong>ます &rarr; かえ<strong>tteru/かえって</strong> (pulang)
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="font-size: 1.05em; font-weight: bold; color: #3498db;">み ・ び ・ に</div>
+            <div style="font-size: 1.4em; font-weight: 800; color: #3498db; margin: 6px 0;">&rarr; んで</div>
+            <div style="font-size: 0.8em; color: var(--muted); line-height: 1.4;">
+              の<strong>み</strong>ます &rarr; の<strong>んで</strong> (minum)<br>
+              よ<strong>び</strong>ます &rarr; よ<strong>んで</strong> (memanggil)<br>
+              し<strong>に</strong>ます &rarr; し<strong>nde/しんで</strong> (meninggal)
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="font-size: 1.05em; font-weight: bold; color: #2ecc71;">き &nbsp;|&nbsp; ぎ</div>
+            <div style="font-size: 1.4em; font-weight: 800; color: #2ecc71; margin: 6px 0;">&rarr; いて / いで</div>
+            <div style="font-size: 0.8em; color: var(--muted); line-height: 1.4;">
+              か<strong>き</strong>ます &rarr; か<strong>いて</strong> (menulis)<br>
+              いそ<strong>ぎ</strong>ます &rarr; いそ<strong>いで</strong> (buru-buru)
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="font-size: 1.05em; font-weight: bold; color: #9b59b6;">し</div>
+            <div style="font-size: 1.4em; font-weight: 800; color: #9b59b6; margin: 6px 0;">&rarr; して</div>
+            <div style="font-size: 0.8em; color: var(--muted); line-height: 1.4;">
+              か<strong>し</strong>ます &rarr; か<strong>して</strong> (meminjamkan)<br>
+              はな<strong>し</strong>ます &rarr; はな<strong>して</strong> (berbicara)
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 15px; padding: 10px 12px; background: rgba(231, 76, 60, 0.08); border-left: 4px solid #e74c3c; border-radius: 6px; font-size: 0.85em;">
+          ⭐ <strong>Pengecualian khusus:</strong> Kata kerja <strong>いきます (pergi)</strong> mengalami konjugasi menjadi <strong>いって</strong> (bukan <em>いいて</em>).
+        </div>
+      </div>
+
+      <!-- Group II and Group III -->
+      <table style="width:100%; border-collapse:collapse; margin-top:20px; font-size:0.85em;">
+        <thead>
+          <tr style="background:var(--surface-soft);">
+            <th style="border:1px solid #ddd; padding:10px; text-align:left; width: 100px;">Kelompok</th>
+            <th style="border:1px solid #ddd; padding:10px; text-align:left;">Cara Konjugasi</th>
+            <th style="border:1px solid #ddd; padding:10px; text-align:left;">Contoh</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #ddd; padding:10px; font-weight:bold; color:#3498db;">Kelompok II</td>
+            <td style="border:1px solid #ddd; padding:10px;">Cukup gantikan akhiran <strong>ます</strong> dengan <strong>て</strong>.</td>
+            <td style="border:1px solid #ddd; padding:10px;">
+              ・たべます &rarr; たべて (makan)<br>
+              ・みせます &rarr; みせて (memperlihatkan)<br>
+              ・みます &rarr; みて (melihat)
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ddd; padding:10px; font-weight:bold; color:#2ecc71;">Kelompok III</td>
+            <td style="border:1px solid #ddd; padding:10px;">Cukup gantikan akhiran <strong>ます</strong> dengan <strong>て</strong>.</td>
+            <td style="border:1px solid #ddd; padding:10px;">
+              ・きます &rarr; きて (datang)<br>
+              ・します &rarr; して (melakukan)<br>
+              ・さんぽします &rarr; さんぽして (berjalan-jalan)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 3 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>3.</span>
+      <span class="formula-box">Kata Kerja Bentuk て</span>
+      <span class="formula-box">ください</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Digunakan untuk meminta, memerintah, atau mempersilakan lawan bicara melakukan sesuatu secara sopan.
+      </p>
+      <p>
+        <span class="example-jp">① すみませんが、この <ruby>漢字<rt>かんじ</rt></ruby> の <ruby>読み方<rt>よみかた</rt></ruby> を <ruby>教えて<rt>おし</rt></ruby> ください。</span><br>
+        Maaf/Permisi, tolong ajarkan cara membaca Kanji ini.
+      </p>
+      <p>
+        <span class="example-jp">② ボールペン で <ruby>名前<rt>なまえ</rt></ruby> を <ruby>書いて<rt>か</rt></ruby> ください。</span><br>
+        Tolong tuliskan nama dengan bolpoin. (perintah sopan)
+      </p>
+      <p>
+        <span class="example-jp">③ どうぞ たくさん <ruby>食べて<rt>た</rt></ruby> ください。</span><br>
+        Silakan makan banyak. (ajakan/mempersilakan)
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 4 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>4.</span>
+      <span class="formula-box">Kata Kerja Bentuk て</span>
+      <span class="formula-box">います</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Menunjukkan suatu aksi atau aktivitas yang <strong>sedang berlangsung</strong> saat ini (Present Continuous).
+      </p>
+      <p>
+        <span class="example-jp">④ ミラーさん は <ruby>今<rt>いま</rt></ruby> <ruby>電話<rt>でんわ</rt></ruby> を かけて います。</span><br>
+        Sdr. Miller sedang menelepon sekarang.
+      </p>
+      <p>
+        <span class="example-jp">⑤ <ruby>今<rt>いま</rt></ruby> <ruby>雨<rt>あめ</rt></ruby> が <ruby>降って<rt>ふ</rt></ruby> いますか。</span><br>
+        Apakah sekarang sedang turun hujan?<br>
+        <span class="example-jp" style="margin-left:20px;">……はい、<ruby>降って<rt>ふ</rt></ruby> います。</span><br>
+        <span style="margin-left:20px;">……Ya, sedang turun hujan.</span><br>
+        <span class="example-jp" style="margin-left:20px;">……いいえ、<ruby>降って<rt>ふ</rt></ruby> いません。</span><br>
+        <span style="margin-left:20px;">……Tidak, tidak sedang turun hujan.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 5 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>5.</span>
+      <span class="formula-box">Kata Kerja (Bentuk ます)</span>
+      <span class="formula-box">ましょうか</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Ekspresi ketika pembicara menawarkan diri untuk melakukan sesuatu demi membantu/melayani lawan bicara (<em>Shall I do...? / Bagaimana kalau saya...</em>).
+      </p>
+      <p>
+        <span class="example-jp">⑥ あした も <ruby>来ましょうか<rt>き</rt></ruby>。</span><br>
+        Bagaimana kalau besok saya datang juga?<br>
+        <span class="example-jp" style="margin-left:20px;">……ええ、10<ruby>時<rt>じ</rt></ruby> に <ruby>来て<rt>き</rt></ruby> ください。</span><br>
+        <span style="margin-left:20px;">……Ya, tolong datang pada pukul sepuluh.</span>
+      </p>
+      <p>
+        <span class="example-jp">⑦ <ruby>傘<rt>かさ</rt></ruby> を <ruby>貸しましょうか<rt>か</rt></ruby>。</span><br>
+        Bagaimana kalau saya pinjamkan payung?<br>
+        <span class="example-jp" style="margin-left:20px;">……すみません。お<ruby>願い<rt>ねが</rt></ruby>します。</span><br>
+        <span style="margin-left:20px;">……Terima kasih. Tolong pinjamkan.</span>
+      </p>
+      <p>
+        <span class="example-jp">⑧ <ruby>荷物<rt>にもつ</rt></ruby> を <ruby>持ちましょうか<rt>も</rt></ruby>。</span><br>
+        Bagaimana kalau saya bawakan barang Anda?<br>
+        <span class="example-jp" style="margin-left:20px;">……いいえ、けっこう です。</span><br>
+        <span style="margin-left:20px;">……Tidak, terima kasih.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 6 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>6.</span>
+      <span class="formula-box">Kata Benda</span>
+      <span class="formula-box particle">が</span>
+      <span class="formula-box">Kata Kerja</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Ketika mengekspresikan suatu fenomena alam (seperti hujan turun, salju mencair, angin bertiup) atau keadaan objektif yang dirasakan langsung menggunakan panca indera, subjek kalimat ditandai menggunakan partikel <strong>が</strong>.
+      </p>
+      <p>
+        <span class="example-jp">⑨ <ruby>雨<rt>あめ</rt></ruby> が <ruby>降って<rt>ふ</rt></ruby> います。</span><br>
+        Hujan turun.
+      </p>
+      <p>
+        <span class="example-jp">⑩ ミラーさん が いませんね。</span><br>
+        Sdr. Miller tidak ada ya.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 7 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>7.</span>
+      <span class="formula-box">すみませんが</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Ekspresi <strong>すみませんが</strong> (atau bentuk sopannya <strong>失礼ですが</strong>) digunakan sebagai pembuka percakapan yang santun sebelum meminta bantuan atau menanyakan sesuatu. Partikel <strong>が</strong> di sini berfungsi melunakkan pembicaraan (pendahuluan), bukan menyatakan pertentangan ("tetapi").
+      </p>
+      <p>
+        <span class="example-jp">⑪ すみませんが、<ruby>塩<rt>しお</rt></ruby> を <ruby>取って<rt>と</rt></ruby> ください。</span><br>
+        Maaf/Permisi, tolong ambilkan garam.
+      </p>
+      <p>
+        <span class="example-jp">⑫ <ruby>失礼<rt>しつれい</rt></ruby> ですが、お<ruby>名前<rt>なまえ</rt></ruby> は？</span><br>
+        Maaf, siapa namanya?
+      </p>
+    </div>
+  </div>
+</div>
   `,
   quiz: [
     {

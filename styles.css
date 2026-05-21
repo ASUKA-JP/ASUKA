@@ -119,6 +119,40 @@ button {
   margin: 0;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.header-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.header-nav-btn:hover {
+  color: var(--pink-strong);
+  background: var(--surface-soft);
+}
+
+.header-nav-btn.active {
+  color: #ffffff;
+  background: var(--pink-strong);
+  border-color: var(--pink-strong);
+}
+
 .lesson-scroll-container {
   padding: 12px 16px;
   background: var(--surface-soft);
@@ -1107,4 +1141,22 @@ ruby rt {
 .menu-settings-btn:hover {
   background: var(--surface-soft);
   border-color: var(--pink-strong);
+}
+
+@media (max-width: 480px) {
+  .header-nav-btn {
+    padding: 0 8px;
+    font-size: 11px;
+    height: 28px;
+  }
+  .header-actions {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-nav-btn {
+    padding: 0 6px;
+    font-size: 10px;
+  }
 }
