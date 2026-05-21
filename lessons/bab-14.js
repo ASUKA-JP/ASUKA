@@ -10,6 +10,7 @@ window.lessonData[14] = {
       "romaji": "tsukemasu",
       "dictionaryForm": "つける",
       "dictionaryRomaji": "tsukeru",
+      "group": "II",
       "example": "電気 を つけます。",
       "exampleRomaji": "Denki o tsukemasu.",
       "translation": "Menyalakan lampu."
@@ -21,6 +22,7 @@ window.lessonData[14] = {
       "romaji": "keshimasu",
       "dictionaryForm": "消す（けす）",
       "dictionaryRomaji": "kesu",
+      "group": "I",
       "example": "エアコン を 消します。",
       "exampleRomaji": "Eakon o keshimasu.",
       "translation": "Mematikan AC."
@@ -32,6 +34,7 @@ window.lessonData[14] = {
       "romaji": "akemasu",
       "dictionaryForm": "開ける（あける）",
       "dictionaryRomaji": "akeru",
+      "group": "II",
       "example": "ドア を 開けます。",
       "exampleRomaji": "Doa o akemasu.",
       "translation": "Membuka pintu."
@@ -43,6 +46,7 @@ window.lessonData[14] = {
       "romaji": "shimemasu",
       "dictionaryForm": "閉める（しめる）",
       "dictionaryRomaji": "shimeru",
+      "group": "II",
       "example": "窓 を 閉めます。",
       "exampleRomaji": "Mado o shimemasu.",
       "translation": "Menutup jendela."
@@ -54,6 +58,7 @@ window.lessonData[14] = {
       "romaji": "isogimasu",
       "dictionaryForm": "急ぐ（いそぐ）",
       "dictionaryRomaji": "isogu",
+      "group": "I",
       "example": "駅 へ 急ぎます。",
       "exampleRomaji": "Eki e isogimasu.",
       "translation": "Buru-buru ke stasiun."
@@ -65,6 +70,7 @@ window.lessonData[14] = {
       "romaji": "machimasu",
       "dictionaryForm": "待つ（まつ）",
       "dictionaryRomaji": "matsu",
+      "group": "I",
       "example": "ここ で 待ちます。",
       "exampleRomaji": "Koko de machimasu.",
       "translation": "Menunggu di sini."
@@ -76,6 +82,7 @@ window.lessonData[14] = {
       "romaji": "mochimasu",
       "dictionaryForm": "持つ（もつ）",
       "dictionaryRomaji": "motsu",
+      "group": "I",
       "example": "荷物 を 持ちます。",
       "exampleRomaji": "Nimotsu o mochimasu.",
       "translation": "Membawa barang."
@@ -87,6 +94,7 @@ window.lessonData[14] = {
       "romaji": "torimasu",
       "dictionaryForm": "取る（とる）",
       "dictionaryRomaji": "toru",
+      "group": "I",
       "example": "塩 を 取ります。",
       "exampleRomaji": "Shio o torimasu.",
       "translation": "Mengambil garam."
@@ -98,6 +106,7 @@ window.lessonData[14] = {
       "romaji": "tetsudaimasu",
       "dictionaryForm": "手伝う（てつだう）",
       "dictionaryRomaji": "tetsudau",
+      "group": "I",
       "example": "母 を 手伝います。",
       "exampleRomaji": "Haha o tetsudaimasu.",
       "translation": "Membantu ibu."
@@ -109,6 +118,7 @@ window.lessonData[14] = {
       "romaji": "yobimasu",
       "dictionaryForm": "呼ぶ（よぶ）",
       "dictionaryRomaji": "yobu",
+      "group": "I",
       "example": "タクシー を 呼びます。",
       "exampleRomaji": "Takushii o yobimasu.",
       "translation": "Memanggil taksi."
@@ -120,6 +130,7 @@ window.lessonData[14] = {
       "romaji": "hanashimasu",
       "dictionaryForm": "話す（はなす）",
       "dictionaryRomaji": "hanasu",
+      "group": "I",
       "example": "先生 と 話します。",
       "exampleRomaji": "Sensei to hanashimasu.",
       "translation": "Berbicara dengan guru."
@@ -131,6 +142,7 @@ window.lessonData[14] = {
       "romaji": "tsukaimasu",
       "dictionaryForm": "使う（つかう）",
       "dictionaryRomaji": "tsukau",
+      "group": "I",
       "example": "日本語 を 使います。",
       "exampleRomaji": "Nihongo o tsukaimasu.",
       "translation": "Menggunakan bahasa Jepang."
@@ -142,6 +154,7 @@ window.lessonData[14] = {
       "romaji": "tomemasu",
       "dictionaryForm": "止める（とめる）",
       "dictionaryRomaji": "tomeru",
+      "group": "II",
       "example": "車 を 止めます。",
       "exampleRomaji": "Kuruma o tomemasu.",
       "translation": "Memarkir mobil."
@@ -153,6 +166,7 @@ window.lessonData[14] = {
       "romaji": "misemasu",
       "dictionaryForm": "見せる（みせる）",
       "dictionaryRomaji": "miseru",
+      "group": "II",
       "example": "写真 を 見せます。",
       "exampleRomaji": "Shashin o misemasu.",
       "translation": "Memperlihatkan foto."
@@ -164,6 +178,7 @@ window.lessonData[14] = {
       "romaji": "oshiemasu",
       "dictionaryForm": "教える（おしえる）",
       "dictionaryRomaji": "oshieru",
+      "group": "II",
       "example": "住所 を 教えます。",
       "exampleRomaji": "Juusho o oshiemasu.",
       "translation": "Memberitahukan alamat."
@@ -175,6 +190,7 @@ window.lessonData[14] = {
       "romaji": "suwarimasu",
       "dictionaryForm": "座る（すわる）",
       "dictionaryRomaji": "suwaru",
+      "group": "I",
       "example": "ここ に 座ります。",
       "exampleRomaji": "Koko ni suwarimasu.",
       "translation": "Duduk di sini."
@@ -186,6 +202,7 @@ window.lessonData[14] = {
       "romaji": "tachimasu",
       "dictionaryForm": "立つ（たつ）",
       "dictionaryRomaji": "tatsu",
+      "group": "I",
       "example": "ここ で 立ちます。",
       "exampleRomaji": "Koko de tachimasu.",
       "translation": "Berdiri di sini."
@@ -197,6 +214,7 @@ window.lessonData[14] = {
       "romaji": "hairimasu",
       "dictionaryForm": "入る（はいる）",
       "dictionaryRomaji": "hairu",
+      "group": "I",
       "example": "喫茶店 に 入ります。",
       "exampleRomaji": "Kissaten ni hairimasu.",
       "translation": "Masuk ke coffee shop."
@@ -208,6 +226,7 @@ window.lessonData[14] = {
       "romaji": "demasu",
       "dictionaryForm": "出る（でる）",
       "dictionaryRomaji": "deru",
+      "group": "II",
       "example": "喫茶店 を 出ます。",
       "exampleRomaji": "Kissaten o demasu.",
       "translation": "Keluar dari coffee shop."
@@ -219,6 +238,7 @@ window.lessonData[14] = {
       "romaji": "furimasu",
       "dictionaryForm": "降る（ふる）",
       "dictionaryRomaji": "furu",
+      "group": "I",
       "example": "雨 が 降ります。",
       "exampleRomaji": "Ame ga furimasu.",
       "translation": "Hujan turun."
@@ -230,6 +250,7 @@ window.lessonData[14] = {
       "romaji": "kopii shimasu",
       "dictionaryForm": "コピーする",
       "dictionaryRomaji": "kopii suru",
+      "group": "III",
       "example": "資料 を コピーします。",
       "exampleRomaji": "Shiryou o kopii shimasu.",
       "translation": "Memfotokopi dokumen."
@@ -477,9 +498,9 @@ window.lessonData[14] = {
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin:20px 0;">
         <!-- Group I -->
-        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid var(--pink-strong); box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <h4 style="margin:0 0 10px 0; color:var(--pink-strong); display:flex; align-items:center; gap:6px;">
-            <span style="background:var(--pink-strong); color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">I</span>
+        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid var(--verb-group-I); box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <h4 style="margin:0 0 10px 0; color:var(--verb-group-I); display:flex; align-items:center; gap:6px;">
+            <span style="background:var(--verb-group-I); color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">I</span>
             Kelompok I (i-masu)
           </h4>
           <p style="font-size:0.85em; margin:0 0-10px 0; line-height:1.4; color:var(--muted);">
@@ -494,9 +515,9 @@ window.lessonData[14] = {
         </div>
 
         <!-- Group II -->
-        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid #3498db; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <h4 style="margin:0 0 10px 0; color:#3498db; display:flex; align-items:center; gap:6px;">
-            <span style="background:#3498db; color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">II</span>
+        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid var(--verb-group-II); box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <h4 style="margin:0 0 10px 0; color:var(--verb-group-II); display:flex; align-items:center; gap:6px;">
+            <span style="background:var(--verb-group-II); color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">II</span>
             Kelompok II (e-masu)
           </h4>
           <p style="font-size:0.85em; margin:0 0-10px 0; line-height:1.4; color:var(--muted);">
@@ -511,9 +532,9 @@ window.lessonData[14] = {
         </div>
 
         <!-- Group III -->
-        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid #2ecc71; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <h4 style="margin:0 0 10px 0; color:#2ecc71; display:flex; align-items:center; gap:6px;">
-            <span style="background:#2ecc71; color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">III</span>
+        <div style="background:var(--surface-soft); padding:16px; border-radius:12px; border-left:4px solid var(--verb-group-III); box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <h4 style="margin:0 0 10px 0; color:var(--verb-group-III); display:flex; align-items:center; gap:6px;">
+            <span style="background:var(--verb-group-III); color:#fff; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:11px; font-weight:bold;">III</span>
             Kelompok III (Irregular)
           </h4>
           <p style="font-size:0.85em; margin:0 0-10px 0; line-height:1.4; color:var(--muted);">
@@ -546,36 +567,36 @@ window.lessonData[14] = {
       </p>
 
       <!-- Visualization Section -->
-      <div style="margin: 20px 0; padding: 16px; border-radius: 12px; background: var(--surface-soft); border-top: 3px solid var(--pink-strong);">
-        <h4 style="margin: 0 0 12px 0; color: var(--pink-strong); text-align: center; font-size: 1.1em; font-weight: bold;">💡 Peta Visual Konjugasi Bentuk て (Kelompok I)</h4>
+      <div style="margin: 20px 0; padding: 16px; border-radius: 12px; background: var(--surface-soft); border-top: 3px solid var(--verb-group-I);">
+        <h4 style="margin: 0 0 12px 0; color: var(--verb-group-I); text-align: center; font-size: 1.1em; font-weight: bold;">💡 Peta Visual Konjugasi Bentuk て (Kelompok I)</h4>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
           <!-- Card 1 -->
           <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
-            <div style="font-size: 1.05em; font-weight: bold; color: #e74c3c;">い ・ ち ・ り</div>
-            <div style="font-size: 1.4em; font-weight: 800; color: var(--pink-strong); margin: 6px 0;">&rarr; って</div>
+            <div style="font-size: 1.05em; font-weight: bold; color: var(--verb-group-I);">い ・ ち ・ り</div>
+            <div style="font-size: 1.4em; font-weight: 800; color: var(--verb-group-I); margin: 6px 0;">&rarr; って</div>
             <div style="font-size: 0.8em; color: var(--muted); line-height: 1.4;">
               か<strong>い</strong>ます &rarr; か<strong>って</strong> (membeli)<br>
               ま<strong>ち</strong>ます &rarr; ま<strong>って</strong> (menunggu)<br>
-              かえ<strong>り</strong>ます &rarr; かえ<strong>tteru/かえって</strong> (pulang)
+              かえ<strong>り</strong>ます &rarr; かえ<strong>って</strong> (pulang)
             </div>
           </div>
 
           <!-- Card 2 -->
           <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
-            <div style="font-size: 1.05em; font-weight: bold; color: #3498db;">み ・ び ・ に</div>
-            <div style="font-size: 1.4em; font-weight: 800; color: #3498db; margin: 6px 0;">&rarr; んで</div>
+            <div style="font-size: 1.05em; font-weight: bold; color: var(--verb-group-II);">み ・ び ・ に</div>
+            <div style="font-size: 1.4em; font-weight: 800; color: var(--verb-group-II); margin: 6px 0;">&rarr; んで</div>
             <div style="font-size: 0.8em; color: var(--muted); line-height: 1.4;">
               の<strong>み</strong>ます &rarr; の<strong>んで</strong> (minum)<br>
               よ<strong>び</strong>ます &rarr; よ<strong>んで</strong> (memanggil)<br>
-              し<strong>に</strong>ます &rarr; し<strong>nde/しんで</strong> (meninggal)
+              し<strong>に</strong>ます &rarr; し<strong>んで</strong> (meninggal)
             </div>
           </div>
 
           <!-- Card 3 -->
           <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
-            <div style="font-size: 1.05em; font-weight: bold; color: #2ecc71;">き &nbsp;|&nbsp; ぎ</div>
-            <div style="font-size: 1.4em; font-weight: 800; color: #2ecc71; margin: 6px 0;">&rarr; いて / いで</div>
+            <div style="font-size: 1.05em; font-weight: bold; color: var(--verb-group-III);">き ・ ぎ</div>
+            <div style="font-size: 1.4em; font-weight: 800; color: var(--verb-group-III); margin: 6px 0;">&rarr; いて / いで</div>
             <div style="font-size: 0.8em; color: var(--muted); line-height: 1.4;">
               か<strong>き</strong>ます &rarr; か<strong>いて</strong> (menulis)<br>
               いそ<strong>ぎ</strong>ます &rarr; いそ<strong>いで</strong> (buru-buru)
@@ -584,8 +605,8 @@ window.lessonData[14] = {
 
           <!-- Card 4 -->
           <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
-            <div style="font-size: 1.05em; font-weight: bold; color: #9b59b6;">し</div>
-            <div style="font-size: 1.4em; font-weight: 800; color: #9b59b6; margin: 6px 0;">&rarr; して</div>
+            <div style="font-size: 1.05em; font-weight: bold; color: var(--verb-group-I);">し</div>
+            <div style="font-size: 1.4em; font-weight: 800; color: var(--verb-group-I); margin: 6px 0;">&rarr; して</div>
             <div style="font-size: 0.8em; color: var(--muted); line-height: 1.4;">
               か<strong>し</strong>ます &rarr; か<strong>して</strong> (meminjamkan)<br>
               はな<strong>し</strong>ます &rarr; はな<strong>して</strong> (berbicara)
@@ -609,7 +630,7 @@ window.lessonData[14] = {
         </thead>
         <tbody>
           <tr>
-            <td style="border:1px solid #ddd; padding:10px; font-weight:bold; color:#3498db;">Kelompok II</td>
+            <td style="border:1px solid #ddd; padding:10px; font-weight:bold; color:var(--verb-group-II);">Kelompok II</td>
             <td style="border:1px solid #ddd; padding:10px;">Cukup gantikan akhiran <strong>ます</strong> dengan <strong>て</strong>.</td>
             <td style="border:1px solid #ddd; padding:10px;">
               ・たべます &rarr; たべて (makan)<br>
@@ -618,7 +639,7 @@ window.lessonData[14] = {
             </td>
           </tr>
           <tr>
-            <td style="border:1px solid #ddd; padding:10px; font-weight:bold; color:#2ecc71;">Kelompok III</td>
+            <td style="border:1px solid #ddd; padding:10px; font-weight:bold; color:var(--verb-group-III);">Kelompok III</td>
             <td style="border:1px solid #ddd; padding:10px;">Cukup gantikan akhiran <strong>ます</strong> dengan <strong>て</strong>.</td>
             <td style="border:1px solid #ddd; padding:10px;">
               ・きます &rarr; きて (datang)<br>

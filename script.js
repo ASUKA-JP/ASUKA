@@ -233,12 +233,124 @@ function getLessonVocabulary(lessonNumber = activeLesson) {
   return getLesson(lessonNumber)?.vocabulary ?? [];
 }
 
-function makeJapaneseMarkup(word) {
-  if (!word.furigana) {
-    return `<span class="hiragana-only">${word.japanese}</span>`;
+function getVerbGroup(word) {
+  if (word.group) return word.group;
+  if (!word.dictionaryForm) return null;
+
+  const jp = word.japanese || "";
+  const romaji = (word.romaji || "").toLowerCase().trim();
+
+  // 1. Group III: Ends in します or shimasu, or is 来ます (kimasu, to come)
+  if (jp.endsWith("します") || romaji.endsWith("shimasu") || romaji.endsWith(" shimasu")) {
+    return "III";
+  }
+  
+  if (jp === "来ます" || jp === "きます" || (romaji === "kimasu" && word.meaning && word.meaning.toLowerCase().includes("datang"))) {
+    return "III";
   }
 
-  return `<ruby>${word.japanese}<rt>${word.furigana}</rt></ruby>`;
+  // 2. Group II exceptions (known -i stem verbs that are actually Group II)
+  const groupIIExceptionsJp = [
+    "います", "見ます", "みます", "起きます", "おきます", 
+    "降ります", "おります", "借ります", "かります", 
+    "浴びます", "あびます", "できます", "足ります", "たります",
+    "着ます", "きます", "信じます", "しんじます", "過ぎます", "すぎます"
+  ];
+  
+  const groupIIExceptionsRomaji = [
+    "imasu", "mimasu", "okimasu", "orimasu", "karimasu", 
+    "abimasu", "dekimasu", "tarimasu", "shinjimasu", "sugimasu"
+  ];
+
+  if (romaji === "kimasu") {
+    if (word.meaning && word.meaning.toLowerCase().includes("pakai")) {
+      return "II";
+    }
+    return "III";
+  }
+  if (romaji === "furimasu" || (word.meaning && word.meaning.toLowerCase().includes("turun (hujan/salju)"))) {
+    return "I";
+  }
+
+  if (groupIIExceptionsJp.some(exc => jp.endsWith(exc)) || 
+      groupIIExceptionsRomaji.some(exc => romaji.endsWith(exc))) {
+    return "II";
+  }
+
+  // 3. Regular Group II: Stem ends in -e beforeます
+  const cleanRomaji = romaji.replace(/[~]/g, "").trim();
+  if (cleanRomaji.endsWith("emasu")) {
+    return "II";
+  }
+
+  if (jp.endsWith("ます") && jp.length >= 3) {
+    const stemChar = jp.charAt(jp.length - 3);
+    const eColumn = ["え", "け", "せ", "て", "ね", "へ", "め", "れ", "げ", "ぜ", "で", "べ", "ぺ"];
+    if (eColumn.includes(stemChar)) {
+      return "II";
+    }
+  }
+
+  // 4. Regular Group I: Stem ends in -i beforeます
+  if (cleanRomaji.endsWith("imasu") || cleanRomaji.endsWith("chimasu") || cleanRomaji.endsWith("shimasu") || cleanRomaji.endsWith("rimasu") || cleanRomaji.endsWith("bimasu") || cleanRomaji.endsWith("gimasu") || cleanRomaji.endsWith("mimasu") || cleanRomaji.endsWith("kimasu") || cleanRomaji.endsWith("nimasu")) {
+    return "I";
+  }
+  
+  if (jp.endsWith("ます") && jp.length >= 3) {
+    const stemChar = jp.charAt(jp.length - 3);
+    const iColumn = ["い", "き", "し", "ち", "に", "ひ", "み", "り", "ぎ", "じ", "ぢ", "び", "ぴ"];
+    if (iColumn.includes(stemChar)) {
+      return "I";
+    }
+  }
+
+  if (jp.endsWith("ます") || cleanRomaji.endsWith("masu")) {
+    return "I";
+  }
+
+  return null;
+}
+
+function highlightVerbText(text, group) {
+  if (!text || !group) return text;
+
+  if (group === "III") {
+    if (text.endsWith("します")) {
+      return text.slice(0, -3) + `<span class="indicator-highlight group-III">します</span>`;
+    }
+    if (text.endsWith("きます")) {
+      return text.slice(0, -3) + `<span class="indicator-highlight group-III">きます</span>`;
+    }
+    return text;
+  }
+
+  if (text.endsWith("ます")) {
+    const stemChar = text.charAt(text.length - 3);
+    const prefix = text.slice(0, text.length - 3);
+    const suffix = "ます";
+    return prefix + `<span class="indicator-highlight group-${group}">${stemChar}</span>` + suffix;
+  }
+
+  return text;
+}
+
+function makeJapaneseMarkup(word) {
+  let displayJp = word.japanese;
+  let displayFurigana = word.furigana;
+
+  const group = getVerbGroup(word);
+  if (group) {
+    displayJp = highlightVerbText(displayJp, group);
+    if (displayFurigana) {
+      displayFurigana = highlightVerbText(displayFurigana, group);
+    }
+  }
+
+  if (!displayFurigana) {
+    return `<span class="hiragana-only">${displayJp}</span>`;
+  }
+
+  return `<ruby>${displayJp}<rt>${displayFurigana}</rt></ruby>`;
 }
 
 function makeRubyMarkup(item) {
@@ -253,6 +365,24 @@ function renderExtraVocabulary() {
   extraMenuCards.forEach((card) => {
     card.classList.toggle("active", card.dataset.extraCategory === activeExtraCategory);
   });
+
+  if (activeExtraCategory === "verbs") {
+    extraList.innerHTML = window.verbsExplanationData?.content || `
+      <article class="placeholder-page">
+        <h3>Penjelasan Kata Kerja</h3>
+        <p>Data penjelasan kata kerja tidak ditemukan.</p>
+      </article>
+    `;
+    extraList.style.display = "block";
+
+    if (pages.extra.classList.contains("active")) {
+      wordCount.textContent = "3";
+      metricLabel.textContent = "golongan";
+    }
+    return;
+  }
+
+  extraList.style.display = "grid";
 
   if (activeExtraCategory === "department") {
     extraList.innerHTML = departmentStoreData
@@ -436,6 +566,7 @@ function renderVocabulary() {
   }
 
   const words = vocabulary.filter((word) => {
+    const group = getVerbGroup(word);
     const searchable = [
       word.japanese,
       word.furigana,
@@ -447,6 +578,7 @@ function renderVocabulary() {
       word.exampleRomaji,
       word.translation,
       word.explanation,
+      group ? `golongan ${group}` : "",
     ]
       .join(" ")
       .toLowerCase();
@@ -457,51 +589,64 @@ function renderVocabulary() {
   wordCount.textContent = vocabulary.length;
   vocabList.innerHTML = words
     .map(
-      (word) => `
-        <article class="vocab-card">
-          <button class="vocab-main" type="button" aria-expanded="false">
-            <span class="japanese">${makeJapaneseMarkup(word)}</span>
-            <span class="meaning">${word.meaning}</span>
-            <span class="toggle-icon">
-              <svg class="moon-icon" viewBox="0 0 100 100" width="16" height="16">
-                <circle cx="50" cy="50" r="45" fill="var(--pink-strong)" />
-                <circle class="moon-cutout" cx="50" cy="50" r="41" fill="var(--bg-card, #ffffff)" />
-              </svg>
-            </span>
-          </button>
-          <div class="vocab-detail">
-            <span class="detail-label">Romaji</span>
-            <span class="detail-value">${word.romaji}</span>
-            ${
-              word.dictionaryForm
-                ? `
-                  <span class="detail-label">Bentuk kamus</span>
-                  <span class="detail-value">
-                    <strong>${word.dictionaryForm}</strong>
-                    ${word.dictionaryRomaji ? `<br>${word.dictionaryRomaji}` : ""}
-                  </span>
-                  <span class="detail-label">Catatan kata kerja</span>
-                  <span class="detail-value detail-explanation">Bentuk yang tampil di daftar biasanya bentuk sopan seperti 〜ます atau ungkapan sopan. Bentuk kamus adalah bentuk dasar yang dipakai saat mencari di kamus dan saat belajar pola kalimat lain.</span>
-                `
-                : ""
-            }
-            <span class="detail-label">Contoh</span>
-            <span class="detail-value example-jp">${word.example}</span>
-            <span class="detail-label">Romaji contoh</span>
-            <span class="detail-value">${word.exampleRomaji}</span>
-            <span class="detail-label">Arti</span>
-            <span class="detail-value">${word.translation}</span>
-            ${
-              word.explanation
-                ? `
-                  <span class="detail-label">Penjelasan</span>
-                  <span class="detail-value detail-explanation">${word.explanation}</span>
-                `
-                : ""
-            }
-          </div>
-        </article>
-      `,
+      (word) => {
+        const group = getVerbGroup(word);
+        return `
+          <article class="vocab-card">
+            <button class="vocab-main" type="button" aria-expanded="false">
+              <span class="japanese">${makeJapaneseMarkup(word)}${group ? `<span class="verb-group-indicator group-${group}" title="Golongan ${group}" data-verb-group="${group}">${group}</span>` : ""}</span>
+              <span class="meaning">${word.meaning}</span>
+              <span class="toggle-icon">
+                <svg class="moon-icon" viewBox="0 0 100 100" width="16" height="16">
+                  <circle cx="50" cy="50" r="45" fill="var(--pink-strong)" />
+                  <circle class="moon-cutout" cx="50" cy="50" r="41" fill="var(--bg-card, #ffffff)" />
+                </svg>
+              </span>
+            </button>
+            <div class="vocab-detail">
+              <span class="detail-label">Romaji</span>
+              <span class="detail-value">${word.romaji}</span>
+              ${
+                word.dictionaryForm
+                  ? `
+                    <span class="detail-label">Bentuk kamus</span>
+                    <span class="detail-value">
+                      <strong>${word.dictionaryForm}</strong>
+                      ${word.dictionaryRomaji ? `<br>${word.dictionaryRomaji}` : ""}
+                    </span>
+                    <span class="detail-label">Catatan kata kerja</span>
+                    <span class="detail-value detail-explanation">Bentuk yang tampil di daftar biasanya bentuk sopan seperti 〜ます atau ungkapan sopan. Bentuk kamus adalah bentuk dasar yang dipakai saat mencari di kamus dan saat belajar pola kalimat lain.</span>
+                  `
+                  : ""
+              }
+              ${
+                group
+                  ? `
+                    <span class="detail-label">Golongan</span>
+                    <span class="detail-value">
+                      <span class="verb-group-badge group-${group}" data-verb-group="${group}" style="cursor: pointer;" title="Klik untuk melihat penjelasan golongan ${group}">Golongan ${group}</span>
+                    </span>
+                  `
+                  : ""
+              }
+              <span class="detail-label">Contoh</span>
+              <span class="detail-value example-jp">${word.example}</span>
+              <span class="detail-label">Romaji contoh</span>
+              <span class="detail-value">${word.exampleRomaji}</span>
+              <span class="detail-label">Arti</span>
+              <span class="detail-value">${word.translation}</span>
+              ${
+                word.explanation
+                  ? `
+                    <span class="detail-label">Penjelasan</span>
+                    <span class="detail-value detail-explanation">${word.explanation}</span>
+                  `
+                  : ""
+              }
+            </div>
+          </article>
+        `;
+      }
     )
     .join("");
 
@@ -530,14 +675,22 @@ function switchPage(pageName) {
     vocabulary: `Kosakata Bab ${activeLesson}`,
     patterns: `Pola Kalimat Bab ${activeLesson}`,
     quiz: `Quiz Bab ${activeLesson}`,
-    extra: "Negara, Orang, Bahasa",
+    extra: activeExtraCategory === "verbs" ? "Golongan Kata Kerja" : "Negara, Orang, Bahasa",
   };
 
   pageTitle.textContent = titles[pageName];
 
   if (pageName === "extra") {
-    wordCount.textContent = countryLanguageData.length;
-    metricLabel.textContent = "daftar";
+    if (activeExtraCategory === "verbs") {
+      wordCount.textContent = "3";
+      metricLabel.textContent = "golongan";
+    } else if (activeExtraCategory === "department") {
+      wordCount.textContent = departmentStoreData.length;
+      metricLabel.textContent = "daftar";
+    } else {
+      wordCount.textContent = countryLanguageData.length;
+      metricLabel.textContent = "daftar";
+    }
   } else if (pageName === "vocabulary") {
     wordCount.textContent = getLessonVocabulary().length;
     metricLabel.textContent = "kata";
@@ -552,6 +705,33 @@ function switchPage(pageName) {
 }
 
 vocabList.addEventListener("click", (event) => {
+  // Capture click on verb group indicator or detail badge and redirect
+  const verbBadge = event.target.closest(".verb-group-indicator, .verb-group-badge");
+  if (verbBadge) {
+    const group = verbBadge.dataset.verbGroup || verbBadge.textContent.replace("Golongan", "").trim();
+    
+    // Switch to extra (Lainnya) page
+    activeExtraCategory = "verbs";
+    switchPage("extra");
+    renderExtraVocabulary();
+    
+    // Scroll to the targeted explanation and flash highlight
+    setTimeout(() => {
+      const targetCard = document.getElementById(`group-${group}-explanation`);
+      if (targetCard) {
+        targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+        targetCard.classList.add("highlight-flash");
+        setTimeout(() => {
+          targetCard.classList.remove("highlight-flash");
+        }, 1600);
+      }
+    }, 120);
+    
+    event.stopPropagation();
+    event.preventDefault();
+    return;
+  }
+
   const button = event.target.closest(".vocab-main");
 
   if (!button) return;
@@ -651,6 +831,10 @@ extraMenuCards.forEach((card) => {
   card.addEventListener("click", () => {
     activeExtraCategory = card.dataset.extraCategory;
     renderExtraVocabulary();
+    // Also update headers immediately
+    if (pages.extra.classList.contains("active")) {
+      pageTitle.textContent = activeExtraCategory === "verbs" ? "Golongan Kata Kerja" : "Negara, Orang, Bahasa";
+    }
   });
 });
 
