@@ -563,7 +563,6 @@ window.lessonData[19] = {
         • 春になります。→ Menjadi musim semi.<br>
         • 医者になります。→ Menjadi dokter.
       </div>
-
     </div>
   </div>
 </div>
