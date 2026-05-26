@@ -558,6 +558,257 @@ window.lessonData[16] = {
   ],
   patterns: String.raw`
 
+<!-- Pattern 1 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>1.</span>
+      <span class="formula-box">Menyambung Kalimat (> 2 Klausa)</span>
+      <span style="font-size:0.85em; color:var(--muted);">(V-te / A-くて / Na-で / N-で)</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Pola ini digunakan untuk menyambungkan dua kalimat atau lebih menjadi satu kalimat tunggal yang logis. Cara menyambungkannya berbeda tergantung jenis kata terakhir pada klausa tersebut:
+      </p>
+
+      <!-- 1) Kata Kerja -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--pink-strong);">
+        <h4 style="margin:0 0 10px 0; color:var(--pink-strong);">1) Kata Kerja (Bentuk て)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Menunjukkan aksi-aksi yang terjadi <strong>berurutan secara kronologis</strong>. Tense (waktu) kalimat ditentukan oleh kata kerja paling akhir.</p>
+        <p>
+          <span class="example-jp">① <ruby>朝<rt>あさ</rt></ruby> ジョギングを して、シャワーを <ruby>浴びて<rt>あ</rt></ruby>、<ruby>会社<rt>かいしゃ</rt></ruby>へ <ruby>行きます<rt>い</rt></ruby>。</span><br>
+          Pagi hari joging, mandi, kemudian pergi ke kantor/perusahaan.
+        </p>
+        <p>
+          <span class="example-jp">② <ruby>神戸<rt>こうべ</rt></ruby>へ <ruby>行って<rt>い</rt></ruby>、<ruby>映画<rt>えいが</rt></ruby>を <ruby>見て<rt>み</rt></ruby>、お<ruby>茶<rt>ちゃ</rt></ruby>を <ruby>飲みました<rt>の</rt></ruby>。</span><br>
+          Pergi ke Kobe, menonton film, kemudian minum teh.
+        </p>
+        <div style="margin-top:10px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+          💡 <strong>Penjelasan Tambahan:</strong> Subjek pada setiap klausa yang berurutan ini umumnya harus sama. Bentuk ini murni menyatakan rentetan peristiwa tanpa ada hubungan sebab-akibat yang kuat.
+        </div>
+      </div>
+
+      <!-- 2) Kata Sifat-i -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">2) Kata Sifat い (〜い → 〜くて)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Untuk menyambungkan kata sifat-i, huruf akhiran <strong>い</strong> diganti dengan <strong>くて</strong>. Khusus untuk kata <strong>いい (bagus)</strong> berubah menjadi <strong>よくて</strong>.</p>
+        <p>
+          <span class="example-jp">③ ミラーさんは <ruby>若くて<rt>わか</rt></ruby>、<ruby>元気<rt>げんき</rt></ruby>です。</span><br>
+          Sdr. Miller muda dan sehat.
+        </p>
+        <p>
+          <span class="example-jp">④ きのうは <ruby>天気<rt>てんき</rt></ruby>が <ruby>よくて<rt>よ</rt></ruby>、<ruby>暑かったです<rt>あつ</rt></ruby>。</span><br>
+          Kemarin cuacanya bagus dan panas.
+        </p>
+      </div>
+
+      <!-- 3) Kata Sifat-na & Kata Benda -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">3) Kata Sifat な &amp; Kata Benda (〜で)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Kata Sifat-na (tanpa な) dan Kata Benda disambungkan dengan menambahkan partikel <strong>で</strong>.</p>
+        <p>
+          <span class="example-jp">⑤ ミラーさんは ハンサムで、<ruby>親切<rt>しんせつ</rt></ruby>です。</span><br>
+          Sdr. Miller tampan dan baik hati. (KS-na)
+        </p>
+        <p>
+          <span class="example-jp">⑥ <ruby>奈良<rt>なら</rt></ruby>は <ruby>静かで<rt>しずか</rt></ruby>、きれいな<ruby>町<rt>まち</rt></ruby>です。</span><br>
+          Nara adalah kota yang tenang dan indah. (KS-na)
+        </p>
+        <p>
+          <span class="example-jp">⑦ カリナさんは インドネシア<ruby>人<rt>じん</rt></ruby>で、<ruby>富士大学<rt>ふじだいがく</rt></ruby>の <ruby>留学生<rt>りゅうがくせい</rt></ruby>です。</span><br>
+          Sdr. Karina adalah orang Indonesia dan mahasiswa asing di Universitas Fuji. (KBenda)
+        </p>
+        <p>
+          <span class="example-jp">⑧ カリナさんは <ruby>学生<rt>がくせい</rt></ruby>で、マリアさんは <ruby>主婦<rt>しゅふ</rt></ruby>です。</span><br>
+          Sdr. Karina adalah mahasiswa, sedangkan Sdr. Maria adalah ibu rumah tangga. (KBenda - membandingkan dua subjek berbeda)
+        </p>
+      </div>
+
+      <!-- Perhatian -->
+      <div style="margin-top:12px; padding:12px 14px; background:rgba(231,76,60,0.08); border-left:4px solid #e74c3c; border-radius:6px; font-size:0.85em;">
+        ⚠️ <strong>[Penting] Pembatasan Penggunaan:</strong><br>
+        Pola <strong>〜て / 〜で</strong> hanya bisa menyambungkan klausa yang bernilai searah (sama-sama positif atau sama-sama negatif). Jika sifatnya berlawanan (misal: "sempit tetapi bersih"), tidak boleh memakai pola ini, melainkan harus memakai partikel <strong>が (tetapi)</strong>.<br>
+        ❌ この<ruby>部屋<rt>へや</rt></ruby>は <ruby>狭くて<rt>せま</rt></ruby>、きれいです。<br>
+        ⭕ この<ruby>部屋<rt>へや</rt></ruby>は <strong><ruby>狭い<rt>せま</rt></ruby>ですが</strong>、きれいです。 (Kamar ini sempit, tetapi bersih.)
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 2 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>2.</span>
+      <span class="formula-box">Kata Kerja₁ (Bentuk て)</span>
+      <span class="formula-box particle">から</span>
+      <span class="formula-box">Kata Kerja₂</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Pola kalimat ini berarti <strong>"Setelah melakukan KK₁, baru melakukan KK₂"</strong>. Pola ini menekankan bahwa aksi kedua baru bisa atau boleh dilakukan setelah aksi pertama benar-benar selesai sebagai prasyarat. Tense ditentukan di akhir kalimat.
+      </p>
+      <p>
+        <span class="example-jp">⑨ お<ruby>金<rt>かね</rt></ruby>を <ruby>入れて<rt>い</rt></ruby>から、ボタンを <ruby>押して<rt>お</rt></ruby> ください。</span><br>
+        Masukkan uang terlebih dahulu, baru tekan tombolnya. (Silakan tekan tombol setelah memasukkan uang.)
+      </p>
+      <p>
+        <span class="example-jp">⑩ もう <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>食べました<rt>た</rt></ruby>か。</span><br>
+        Apakah sudah makan siang?<br>
+        <span class="example-jp" style="margin-left:20px;">……この <ruby>仕事<rt>しごと</rt></ruby>が <ruby>終わって<rt>おわ</rt></ruby>から、<ruby>食べます<rt>た</rt></ruby>。</span><br>
+        <span style="margin-left:20px;">……Setelah pekerjaan ini selesai, baru saya makan.</span>
+      </p>
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+        💡 <strong>Penjelasan Tambahan dari Internet:</strong><br>
+        Perbedaan utama antara <strong>V-te, V</strong> dengan <strong>V-te kara, V</strong> adalah pada penekanan waktu. <strong>V-te kara</strong> menegaskan bahwa aksi pertama mutlak diselesaikan sebelum aksi kedua terjadi. Selain itu, subjek pada klausa anak (sebelum から) wajib menggunakan partikel <strong>が</strong> (seperti pada contoh ⑩: <em>shigoto <strong>ga</strong> owatte kara</em>).
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 3 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>3.</span>
+      <span class="formula-box">Kata Benda₁</span>
+      <span class="formula-box particle">は</span>
+      <span class="formula-box">Kata Benda₂</span>
+      <span class="formula-box particle">が</span>
+      <span class="formula-box">Kata Sifat</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Pola ini digunakan untuk menerangkan ciri khas, kondisi, atau kualitas dari sub-bagian (KBenda₂) yang dimiliki oleh suatu topik utama (KBenda₁). Pola ini sering digunakan untuk menerangkan <strong>ciri fisik tubuh seseorang</strong> atau <strong>keunikan suatu daerah/tempat</strong>.
+      </p>
+      <p>
+        <span class="example-jp">⑪ <ruby>大阪<rt>おおさか</rt></ruby>は <ruby>食べ物<rt>たべもの</rt></ruby>が おいしいです。</span><br>
+        Osaka makanannya enak. (Topik utama: Osaka, yang enak: makanannya)
+      </p>
+      <p>
+        <span class="example-jp">⑫ ドイツの フランケンは ワインが <ruby>有名<rt>ゆうめい</rt></ruby>です。</span><br>
+        Franken di Jerman anggurnya terkenal.
+      </p>
+      <p>
+        <span class="example-jp">⑬ マリアさんは <ruby>髪<rt>かみ</rt></ruby>が <ruby>長い<rt>なが</rt></ruby>です。</span><br>
+        Sdr. Maria rambutnya panjang. (Menjelaskan ciri fisik Maria)
+      </p>
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+        💡 <strong>Tips Tambahan:</strong><br>
+        Hindari menerjemahkan kalimat ciri fisik secara harfiah dengan kepemilikan の (seperti <em>Maria-san no kami wa nagai desu</em>). Meskipun tata bahasanya secara teknis bisa dimengerti, pola <strong>KB₁ は KB₂ が Sifat</strong> jauh lebih alami dan sering digunakan oleh penutur asli Jepang untuk mendeskripsikan penampilan fisik.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 4 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>4.</span>
+      <span class="formula-box">Kata Benda</span>
+      <span class="formula-box particle">を</span>
+      <span class="formula-box">Kata Kerja (Keluar/Turun)</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Partikel <strong>を</strong> digunakan bersama kata kerja gerakan seperti <strong>出ます (demasu - keluar)</strong>, <strong>降ります (orimasu - turun)</strong>, atau <strong>卒業します (sotsugyou shimasu - lulus)</strong> untuk menunjukkan <strong>titik keberangkatan, titik pemisahan, atau tempat asal keluar</strong>.
+      </p>
+      <p>
+        <span class="example-jp">⑭ 7<ruby>時<rt>じ</rt></ruby>に うちを <ruby>出ます<rt>で</rt></ruby>。</span><br>
+        Keluar dari rumah pada pukul 7.
+      </p>
+      <p>
+        <span class="example-jp">⑮ <ruby>梅田<rt>うめだ</rt></ruby>で <ruby>電車<rt>でんしゃ</rt></ruby>を <ruby>降りました<rt>お</rt></ruby>。</span><br>
+        Turun dari kereta di Umeda.
+      </p>
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(230,126,34,0.08); border-left:4px solid #e67e22; border-radius:6px; font-size:0.85em;">
+        📌 <strong>Perbedaan Partikel に dan を pada Transportasi:</strong><br>
+        • Saat <strong>naik</strong> kendaraan: Menggunakan partikel <strong>に</strong> (Contoh: <em>Densha <strong>ni</strong> norimasu</em>).<br>
+        • Saat <strong>turun</strong> dari kendaraan: Menggunakan partikel <strong>を</strong> (Contoh: <em>Densha <strong>o</strong> orimasu</em>).
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 5 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>5.</span>
+      <span class="formula-box">どうやって</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Kata tanya <strong>どうやって (douyatte)</strong> digunakan untuk menanyakan <strong>cara, metode, atau rute</strong> untuk pergi ke suatu tempat, atau cara mengoperasikan sesuatu. Jawabannya biasanya menggunakan rentetan kalimat bentuk <strong>〜て</strong>.
+      </p>
+      <p>
+        <span class="example-jp">⑯ <ruby>大学<rt>だいがく</rt></ruby>まで どうやって <ruby>行きます<rt>い</rt></ruby>か。</span><br>
+        Bagaimana caranya pergi sampai ke universitas?<br>
+        <span class="example-jp" style="margin-left:20px;">……<ruby>京都駅<rt>きょうとえき</rt></ruby>から 16<ruby>番<rt>ばん</rt></ruby>の バスに <ruby>乗って<rt>の</rt></ruby>、<ruby>大学前<rt>だいがくまえ</rt></ruby>で <ruby>降ります<rt>お</rt></ruby>。</span><br>
+        <span style="margin-left:20px;">……Dari Stasiun Kyoto naik bus nomor 16, lalu turun di halte Daigakumae.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 6 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>6.</span>
+      <span class="formula-box">どれ</span>
+      <span class="formula-box particle">/</span>
+      <span class="formula-box">どの + Kata Benda</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Digunakan untuk meminta seseorang memilih <strong>satu di antara tiga pilihan atau lebih</strong> yang ditunjukkan secara konkret.
+      </p>
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-top:3px solid var(--verb-group-I);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">1) どれ (dore - yang mana)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Berdiri sendiri sebagai kata ganti tanya benda mandiri.</p>
+        <p>
+          <span class="example-jp">⑰ ミラーさんの <ruby>傘<rt>かさ</rt></ruby>は どれですか。</span><br>
+          Yang mana payung Sdr. Miller?<br>
+          <span class="example-jp" style="margin-left:20px;">……あの <ruby>青い<rt>あお</rt></ruby> <ruby>傘<rt>かさ</rt></ruby>です。</span><br>
+          <span style="margin-left:20px;">……Payung biru yang di sana itu.</span>
+        </p>
+      </div>
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-top:3px solid var(--verb-group-II);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">2) どの + KB (dono - KB yang mana)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Harus diikuti secara langsung oleh Kata Benda yang diterangkannya.</p>
+        <p>
+          <span class="example-jp">⑱ サントスさんは どの <ruby>人<rt>ひと</rt></ruby>ですか。</span><br>
+          Sdr. Santos orang yang mana?<br>
+          <span class="example-jp" style="margin-left:20px;">……あの <ruby>背<rt>せ</rt></ruby>が <ruby>高くて<rt>たか</rt></ruby>、<ruby>髪<rt>かみ</rt></ruby>が <ruby>黒い<rt>くろ</rt></ruby> <ruby>人<rt>ひと</rt></ruby>です。</span><br>
+          <span style="margin-left:20px;">……Orang yang badannya tinggi dan rambutnya hitam di sebelah sana itu.</span>
+        </p>
+      </div>
+      
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+        💡 <strong>Catatan Penting Pilihan Tanya (2 vs 3+):</strong><br>
+        • Untuk memilih di antara <strong>2 pilihan</strong>: Gunakan <strong>どちら (dochira)</strong> atau <strong>どっち (docchi)</strong>.<br>
+        • Untuk memilih di antara <strong>3 pilihan atau lebih</strong>: Gunakan <strong>どれ (dore)</strong> atau <strong>どの (dono)</strong>.
+      </div>
+    </div>
+  </div>
+</div>
+
   `,
   quiz: [
     {

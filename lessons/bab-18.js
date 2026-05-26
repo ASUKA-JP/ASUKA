@@ -294,6 +294,292 @@ window.lessonData[18] = {
   ],
   patterns: String.raw`
 
+<!-- Pattern 1 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>1.</span>
+      <span class="formula-box">Kata Kerja Bentuk Kamus (Jisho-kei)</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Bentuk <strong>Kamus (Jisho-kei / Dictionary Form)</strong> adalah bentuk kata dasar yang biasa Anda temukan saat mencari kata di kamus bahasa Jepang. Dalam bahasa kasual sehari-hari, bentuk ini juga digunakan sebagai bentuk positif biasa (non-lampau). Cara mengubah kata kerja bentuk <strong>ます</strong> ke bentuk <strong>Kamus</strong>:
+      </p>
+
+      <!-- Group 1 -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">1) Golongan I (Ubah vokal i → u)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Mengubah bunyi vokal baris <strong>い (i)</strong> sebelum <strong>ます</strong> menjadi baris <strong>う (u)</strong>.</p>
+        
+        <table style="width:100%; border-collapse:collapse; font-size:0.9em; margin-bottom:12px;">
+          <thead>
+            <tr style="background:rgba(0,0,0,0.03);">
+              <th style="border:1px solid #ddd; padding:6px; text-align:left;">Akhiran</th>
+              <th style="border:1px solid #ddd; padding:6px; text-align:left;">Bentuk ます</th>
+              <th style="border:1px solid #ddd; padding:6px; text-align:left;">Bentuk Kamus</th>
+              <th style="border:1px solid #ddd; padding:6px; text-align:left;">Arti</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #ddd; padding:6px;">き → く</td>
+              <td style="border:1px solid #ddd; padding:6px;">か<strong>き</strong>ます</td>
+              <td style="border:1px solid #ddd; padding:6px;">か<strong>く</strong></td>
+              <td style="border:1px solid #ddd; padding:6px;">Menulis</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #ddd; padding:6px;">ぎ → ぐ</td>
+              <td style="border:1px solid #ddd; padding:6px;">いそ<strong>ぎ</strong>ます</td>
+              <td style="border:1px solid #ddd; padding:6px;">いそ<strong>ぐ</strong></td>
+              <td style="border:1px solid #ddd; padding:6px;">Bergegas</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #ddd; padding:6px;">み → む</td>
+              <td style="border:1px solid #ddd; padding:6px;">よ<strong>み</strong>ます</td>
+              <td style="border:1px solid #ddd; padding:6px;">よ<strong>む</strong></td>
+              <td style="border:1px solid #ddd; padding:6px;">Membaca</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #ddd; padding:6px;">び → ぶ</td>
+              <td style="border:1px solid #ddd; padding:6px;">あそ<strong>び</strong>ます</td>
+              <td style="border:1px solid #ddd; padding:6px;">あそ<strong>ぶ</strong></td>
+              <td style="border:1px solid #ddd; padding:6px;">Bermain</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #ddd; padding:6px;">ち → つ</td>
+              <td style="border:1px solid #ddd; padding:6px;">ま<strong>ち</strong>ます</td>
+              <td style="border:1px solid #ddd; padding:6px;">ま<strong>つ</strong></td>
+              <td style="border:1px solid #ddd; padding:6px;">Menunggu</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #ddd; padding:6px;">り → る</td>
+              <td style="border:1px solid #ddd; padding:6px;">と<strong>り</strong>ます</td>
+              <td style="border:1px solid #ddd; padding:6px;">と<strong>る</strong></td>
+              <td style="border:1px solid #ddd; padding:6px;">Mengambil</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #ddd; padding:6px;">い → う</td>
+              <td style="border:1px solid #ddd; padding:6px;">か<strong>い</strong>ます</td>
+              <td style="border:1px solid #ddd; padding:6px;">か<strong>う</strong></td>
+              <td style="border:1px solid #ddd; padding:6px;">Membeli</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #ddd; padding:6px;">し → す</td>
+              <td style="border:1px solid #ddd; padding:6px;">はな<strong>し</strong>ます</td>
+              <td style="border:1px solid #ddd; padding:6px;">はな<strong>す</strong></td>
+              <td style="border:1px solid #ddd; padding:6px;">Berbicara</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Group 2 -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">2) Golongan II (Hapus ます → Tambahkan る)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Cukup hilangkan kata <strong>ます</strong> dan langsung gantikan dengan akhiran <strong>る</strong>.</p>
+        <p>
+          • たべます → たべ<strong>る</strong> (Makan)<br>
+          • みます → み<strong>る</strong> (Melihat)
+        </p>
+      </div>
+
+      <!-- Group 3 -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-III);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-III);">3) Golongan III (Perubahan Khusus)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Dua kata kerja golongan III berubah secara khusus:</p>
+        <p>
+          • します → <strong>する</strong><br>
+          • きます (来ます) → <strong>くる (来る)</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 2 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>2.</span>
+      <span class="formula-box">Kata Benda / Kata Kerja (Bentuk Kamus) + こと</span>
+      <span class="formula-box particle">が</span>
+      <span class="formula-box">できます</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Pola ini digunakan untuk menyatakan <strong>kemampuan (dapat/bisa melakukan sesuatu)</strong> atau menyatakan <strong>kemungkinan karena situasi dan kondisi mengizinkan</strong>. Objek yang bisa dikerjakan ditunjukkan dengan partikel <strong>が</strong>.
+      </p>
+
+      <!-- 1) Dengan Kata Benda -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--pink-strong);">
+        <h4 style="margin:0 0 10px 0; color:var(--pink-strong);">1) Menggunakan Kata Benda langsung</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Hanya bisa digunakan dengan Kata Benda yang mengandung unsur aksi/tindakan (seperti olahraga, menari, bahasa, menyetir, dll).</p>
+        <p>
+          <span class="example-jp">① ミラーさんは <ruby>日本語<rt>にほんご</rt></ruby>が できます。</span><br>
+          Sdr. Miller bisa berbahasa Jepang.
+        </p>
+        <p>
+          <span class="example-jp">② <ruby>雪<rt>ゆき</rt></ruby>が たくさん <ruby>降りました<rt>ふ</rt></ruby>から、ことしは スキーが できます。</span><br>
+          Karena salju turun lebat, tahun ini kita bisa bermain ski. (Kemungkinan akibat kondisi)
+        </p>
+      </div>
+
+      <!-- 2) Dengan Kata Kerja -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">2) Menggunakan Kata Kerja (nominalisasi dengan こと)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Jika ingin memasukkan aksi kata kerja, kata kerja harus diubah ke bentuk <strong>Kamus</strong> terlebih dahulu, lalu tambahkan <strong>こと (koto)</strong> untuk merubah frasa kerja tersebut menjadi kata benda.</p>
+        <p>
+          <span class="example-jp">③ ミラーさんは <ruby>漢字<rt>かんじ</rt></ruby>を <ruby>読む<rt>よ</rt></ruby>ことが できます。</span><br>
+          Sdr. Miller bisa membaca Kanji.
+        </p>
+        <p>
+          <span class="example-jp">④ カードで <ruby>払う<rt>はら</rt></ruby>ことが できます。</span><br>
+          Dapat membayar menggunakan kartu kredit/debit. (Kemungkinan situasi/metode)
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 3 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>3.</span>
+      <span class="formula-box">わたしの趣味は</span>
+      <span class="formula-box">Kata Benda / KK (Bentuk Kamus) + こと</span>
+      <span class="formula-box">です</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Pola ini digunakan untuk menyatakan <strong>hobi pembicara</strong>. Apabila hobi tersebut berupa kegiatan kata kerja, maka kata kerja tersebut wajib berbentuk <strong>Kamus + こと</strong> agar kalimatnya berstruktur tepat.
+      </p>
+      <p>
+        <span class="example-jp">⑤ わたしの <ruby>趣味<rt>しゅみ</rt></ruby>は <ruby>音楽<rt>おんがく</rt></ruby>です。</span><br>
+        Hobi saya adalah musik. (Menggunakan Kata Benda langsung)
+      </p>
+      <p>
+        <span class="example-jp">⑥ わたしの <ruby>趣味<rt>しゅみ</rt></ruby>は <ruby>音楽<rt>おんがく</rt></ruby>を <ruby>聞く<rt>き</rt></ruby>ことです。</span><br>
+        Hobi saya adalah mendengarkan musik. (Menggunakan nominalisasi Kata Kerja)
+      </p>
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+        💡 <strong>Penjelasan Tambahan:</strong><br>
+        Pola nominalisasi dengan kata <strong>こと (koto)</strong> ini mengubah arti kata kerja <em>kiku</em> (mendengarkan) menjadi <em>kiku koto</em> (aktivitas mendengarkan). Dengan cara ini, kalimat memiliki padanan struktur yang seimbang dengan kata hobi di depannya.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 4 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>4.</span>
+      <span class="formula-box">KK₁ (Bentuk Kamus) / KBenda の / Jangka Waktu</span>
+      <span class="formula-box particle">まえに、</span>
+      <span class="formula-box">KK₂</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Pola ini menyatakan bahwa aksi <strong>KK₂ dilakukan terlebih dahulu sebelum aksi atau peristiwa KK₁/KBenda terjadi</strong> (artinya: <strong>"Sebelum..."</strong>).
+      </p>
+
+      <!-- 1) Dengan Kata Kerja -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">1) Diikuti Kata Kerja (KK Bentuk Kamus まえに)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Kata kerja pertama harus <strong>selalu menggunakan bentuk Kamus</strong>, bahkan jika aktivitas kedua di akhir kalimat terjadi di masa lampau.</p>
+        <p>
+          <span class="example-jp">⑦ <ruby>日本<rt>にほん</rt></ruby>へ <ruby>来る<rt>く</rt></ruby>まえに、<ruby>日本語<rt>にほんご</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>しました。</span><br>
+          Sebelum datang ke Jepang, saya sudah belajar bahasa Jepang. (Meskipun studinya sudah lampau, kata <em>kuru</em> tetap berbentuk kamus biasa).
+        </p>
+        <p>
+          <span class="example-jp">⑧ <ruby>寝る<rt>ね</rt></ruby>まえに、<ruby>本<rt>ほん</rt></ruby>を <ruby>読みます<rt>よ</rt></ruby>。</span><br>
+          Sebelum tidur, saya membaca buku.
+        </p>
+      </div>
+
+      <!-- 2) Dengan Kata Benda -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">2) Diikuti Kata Benda (KBenda + のまえに)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Ketika diikuti kata benda kegiatan/waktu, hubungkan dengan partikel <strong>の</strong>.</p>
+        <p>
+          <span class="example-jp">⑨ <ruby>食事<rt>しょくじ</rt></ruby>のまえに、<ruby>手<rt>て</rt></ruby>を <ruby>洗います<rt>あら</rt></ruby>。</span><br>
+          Sebelum makan, mencuci tangan terlebih dahulu.
+        </p>
+      </div>
+
+      <!-- 3) Dengan Keterangan Jangka Waktu -->
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-III);">
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-III);">3) Diikuti Jangka Waktu / Bilangan (Jangka Waktu まえに)</h4>
+        <p style="font-size:0.85em; color:var(--muted); margin:0 0 12px 0;">Menunjukkan masa lalu dari durasi waktu tertentu. <strong>Tidak menggunakan partikel の</strong>.</p>
+        <p>
+          <span class="example-jp">⑩ <ruby>田中<rt>たなか</rt></ruby>さんは 1<ruby>時間<rt>じかん</rt></ruby>まえに、<ruby>出かけました<rt>で</rt></ruby>。</span><br>
+          Sdr. Tanaka sudah pergi keluar satu jam yang lalu.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 5 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>5.</span>
+      <span class="formula-box">なかなか + Kalimat Negatif</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Kata keterangan <strong>なかなか (nakanaka)</strong> jika diikuti oleh <strong>kata kerja negatif</strong> di belakangnya menunjukkan arti <strong>"tidak mudah untuk..."</strong> atau <strong>"sulit/jarang bisa terlaksana sebagaimana yang diharapkan"</strong>.
+      </p>
+      <p>
+        <span class="example-jp">⑪ <ruby>日本<rt>にほん</rt></ruby>では なかなか <ruby>馬<rt>うま</rt></ruby>を <ruby>見る<rt>み</rt></ruby>ことが できません。</span><br>
+        Di Jepang tidak mudah/jarang sekali untuk bisa melihat kuda.
+      </p>
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(230,126,34,0.08); border-left:4px solid #e67e22; border-radius:6px; font-size:0.85em;">
+        📌 <strong>Perbedaan Nuansa (Internet):</strong><br>
+        • <em>Nakanaka + Kalimat Positif</em> memiliki arti positif yakni <strong>"cukup, lumayan, luar biasa"</strong> (contoh: <em>kono ryouri wa nakanaka oishii desu</em> = masakan ini lumayan/cukup enak).<br>
+        • Namun, di tingkat dasar Minna no Nihongo Bab 18 ini, fokus utamanya adalah penggunaan <strong>nakanaka + bentuk negatif</strong> untuk menekankan tingkat kesulitan yang tinggi.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pattern 6 -->
+<div class="vocab-card open">
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+      <span>6.</span>
+      <span class="formula-box">ぜひ + Ekspresi Keinginan / Ajakan</span>
+    </div>
+  </div>
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+    <div class="detail-explanation" style="max-width:100%;">
+      <p style="margin-top:0;">
+        Kata keterangan <strong>ぜひ (zehi)</strong> digunakan untuk memberikan penekanan yang sangat kuat terhadap **harapan, keinginan, atau ajakan antusias pembicara**. Biasanya digabungkan dengan bentuk <strong>〜たいです</strong> (ingin) atau <strong>〜てください</strong> (tolong/silakan). Artinya adalah <strong>"benar-benar / sungguh / sangat"</strong>.
+      </p>
+      <p>
+        <span class="example-jp">⑫ ぜひ <ruby>北海道<rt>ほっかいどう</rt></ruby>へ <ruby>行きたいです<rt>い</rt></ruby>。</span><br>
+        Saya benar-benar/sangat ingin pergi ke Hokkaido. (Keinginan kuat diri sendiri)
+      </p>
+      <p>
+        <span class="example-jp">⑬ ぜひ <ruby>遊びに<rt>あそ</rt></ruby> <ruby>来てください<rt>き</rt></ruby>。</span><br>
+        Sungguh diharapkan Anda datang berkunjung/bermain ke tempat saya. (Ajakan antusias kepada orang lain)
+      </p>
+    </div>
+  </div>
+</div>
+
   `,
   quiz: [
     {
