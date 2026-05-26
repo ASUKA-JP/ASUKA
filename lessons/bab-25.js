@@ -169,6 +169,421 @@ window.lessonData[25] = {
   ],
   patterns: String.raw`
 
+<!-- Pattern 1 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>1.</span>
+
+      <span class="formula-box">
+        Bentuk Biasa Lampau + ら
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Pola <strong>～たら</strong> digunakan untuk menyatakan syarat atau asumsi.
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “kalau...”<br>
+        • “jika...”<br>
+        • “apabila...”
+      </p>
+
+      <p>
+        Pola ini sangat fleksibel dan dapat digunakan untuk:
+      </p>
+
+      <p>
+        • Keinginan<br>
+        • Harapan<br>
+        • Ajakan<br>
+        • Permintaan
+      </p>
+
+      <!-- Verb -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">
+          1) Kata Kerja
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ① お金が あったら、旅行します。
+          </span><br>
+          Kalau punya uang, berwisata.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ② 時間が なかったら、テレビを 見ません。
+          </span><br>
+          Kalau tidak ada waktu, tidak menonton TV.
+        </p>
+
+      </div>
+
+      <!-- Adjective -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">
+          2) Kata Sifat
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ③ 安かったら、パソコンを 買いたいです。
+          </span><br>
+          Kalau murah, ingin membeli komputer.
+        </p>
+
+      </div>
+
+      <!-- Noun -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-III);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-III);">
+          3) Kata Benda
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ④ 暇だったら、手伝って ください。
+          </span><br>
+          Kalau sedang luang, tolong bantu saya.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑤ いい 天気だったら、散歩しませんか。
+          </span><br>
+          Kalau cuaca baik, bagaimana kita jalan-jalan?
+        </p>
+
+      </div>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(230,126,34,0.08); border-left:4px solid #e67e22; border-radius:6px; font-size:0.85em;">
+
+        📌 <strong>Perhatian:</strong><br>
+        Berbeda dengan 「～と」, pola 「～たら」 dapat digunakan untuk ajakan, keinginan, harapan, dan permintaan.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 2 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>2.</span>
+
+      <span class="formula-box">
+        Kata Kerja Bentuk たら
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Jika menggunakan bentuk kata kerja 「～たら」, maka setelah kondisi tersebut selesai terjadi, aksi berikutnya dilakukan.
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “kalau sudah...”<br>
+        • “setelah...”
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑥ 10時に なったら、出かけましょう。
+        </span><br>
+        Kalau sudah sampai pukul sepuluh, kita berangkat.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑦ うちへ 帰ったら、すぐ シャワーを 浴びます。
+        </span><br>
+        Kalau pulang ke rumah, saya langsung mandi.
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+
+        💡 <strong>Tambahan:</strong><br>
+        「～たら」 sering dipakai dalam percakapan sehari-hari karena terdengar natural dan fleksibel.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 3 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>3.</span>
+
+      <span class="formula-box">
+        ～ても
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Pola <strong>～ても</strong> digunakan untuk menyatakan hal yang bertentangan dengan dugaan atau harapan.
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “walaupun...”<br>
+        • “meskipun...”
+      </p>
+
+      <!-- Verb -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">
+          1) Kata Kerja
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ⑧ 雨が 降っても、洗濯します。
+          </span><br>
+          Walaupun hujan, mencuci pakaian.
+        </p>
+
+      </div>
+
+      <!-- I adjective -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">
+          2) Kata Sifat い
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ⑨ 安くても、わたしは グループ旅行が 嫌いです。
+          </span><br>
+          Walaupun murah, saya tidak suka tur rombongan.
+        </p>
+
+      </div>
+
+      <!-- Na adjective -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-III);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-III);">
+          3) Kata Sifat な / Kata Benda
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ⑩ 便利でも、パソコンを 使いません。
+          </span><br>
+          Walaupun praktis, tidak memakai komputer.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑪ 日曜日でも、働きます。
+          </span><br>
+          Walaupun hari Minggu, bekerja.
+        </p>
+
+      </div>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(46,204,113,0.08); border-left:4px solid #2ecc71; border-radius:6px; font-size:0.85em;">
+
+        🌐 <strong>Tambahan:</strong><br>
+        「～ても」 sering digunakan untuk menunjukkan situasi yang bertolak belakang dengan ekspektasi normal.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 4 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>4.</span>
+
+      <span class="formula-box">
+        もし ～たら
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        <strong>もし</strong> digunakan bersama pola syarat seperti 「～たら」 untuk menekankan asumsi atau kemungkinan.
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “jika seandainya...”<br>
+        • “kalau misalnya...”
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑫ もし 1億円 あったら、いろいろな 国を 旅行したいです。
+        </span><br>
+        Kalau punya seratus juta yen, ingin berwisata di berbagai negara.
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(155,89,182,0.08); border-left:4px solid #9b59b6; border-radius:6px; font-size:0.85em;">
+
+        💡 <strong>Catatan:</strong><br>
+        「もし」 tidak wajib dipakai, tetapi membuat nuansa kalimat terasa lebih hipotetis atau imajinatif.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 5 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>5.</span>
+
+      <span class="formula-box">
+        Subjek dalam Anak Kalimat
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Dalam anak kalimat seperti:
+      </p>
+
+      <p>
+        • ～てから<br>
+        • ～とき<br>
+        • ～まえに<br>
+        • ～たら<br>
+        • ～ても
+      </p>
+
+      <p>
+        subjek biasanya menggunakan partikel <strong>が</strong>.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑬ 友達が 来る まえに、部屋を 掃除します。
+        </span><br>
+        Sebelum teman datang, membersihkan kamar.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑭ 妻が 病気の とき、会社を 休みます。
+        </span><br>
+        Waktu istri sakit, saya tidak masuk kerja.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑮ 友達が 約束の 時間に 来なかったら、どう しますか。
+        </span><br>
+        Kalau teman tidak datang pada waktu janji, bagaimana?
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+
+        📌 <strong>Perhatian:</strong><br>
+        Dalam anak kalimat, partikel 「は」 sering berubah menjadi 「が」 untuk menunjukkan subjek secara jelas.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
   `,
   quiz: [
     {
