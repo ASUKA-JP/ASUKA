@@ -276,6 +276,427 @@ window.lessonData[23] = {
   ],
   patterns: String.raw`
 
+<!-- Pattern 1 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>1.</span>
+
+      <span class="formula-box">
+        ～とき
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Pola <strong>～とき</strong> digunakan untuk menunjukkan waktu ketika suatu kejadian terjadi.
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “ketika...”<br>
+        • “saat...”<br>
+        • “waktu...”
+      </p>
+
+      <p>
+        Bentuk sebelum <strong>とき</strong> sama seperti bentuk yang digunakan untuk menerangkan kata benda.
+      </p>
+
+      <!-- Verb -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">
+          1) Kata Kerja
+        </h4>
+
+        <p>
+          • Bentuk Kamus + とき<br>
+          • Bentuk ない + とき
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ① 図書館で 本を 借りる とき、カードが 要ります。
+          </span><br>
+          Ketika meminjam buku di perpustakaan, diperlukan kartu.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ② 使い方が わからない とき、わたしに 聞いてください。
+          </span><br>
+          Jika tidak tahu cara pemakaiannya, silakan tanya kepada saya.
+        </p>
+
+      </div>
+
+      <!-- Adjective -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">
+          2) Kata Sifat
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ③ 体の 調子が 悪い とき、「元気茶」を 飲みます。
+          </span><br>
+          Ketika badan tidak enak, minum “Genki-cha”.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ④ 暇な とき、うちへ 遊びに 来ませんか。
+          </span><br>
+          Saat luang, bagaimana kalau datang bermain ke rumah saya?
+        </p>
+
+      </div>
+
+      <!-- Noun -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-III);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-III);">
+          3) Kata Benda
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ⑤ 妻が 病気の とき、会社を 休みます。
+          </span><br>
+          Ketika istri sakit, saya tidak masuk kerja.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑥ 若い とき、あまり 勉強しませんでした。
+          </span><br>
+          Waktu muda, tidak begitu belajar.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑦ 子どもの とき、よく 川で 泳ぎました。
+          </span><br>
+          Waktu masih kecil, sering berenang di sungai.
+        </p>
+
+      </div>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+
+        💡 <strong>Catatan:</strong><br>
+        Kalimat sebelum 「とき」 tidak mempengaruhi bentuk waktu pada kalimat utama.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 2 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>2.</span>
+
+      <span class="formula-box">
+        Bentuk Kamus / Bentuk た + とき
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Perbedaan bentuk sebelum 「とき」 mempengaruhi urutan waktu kejadian.
+      </p>
+
+      <!-- Dictionary -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">
+          1) Bentuk Kamus + とき
+        </h4>
+
+        <p>
+          Menunjukkan bahwa aksi pada kalimat utama terjadi <strong>sebelum</strong> aksi pada ～とき selesai.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑧ パリへ 行く とき、かばんを 買いました。
+          </span><br>
+          Waktu mau pergi ke Paris, saya membeli tas.
+        </p>
+
+        <p>
+          Artinya tas dibeli sebelum tiba di Paris.
+        </p>
+
+      </div>
+
+      <!-- Ta form -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">
+          2) Bentuk た + とき
+        </h4>
+
+        <p>
+          Menunjukkan bahwa aksi pada kalimat utama terjadi <strong>setelah</strong> aksi pada ～とき selesai.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑨ パリへ 行った とき、かばんを 買いました。
+          </span><br>
+          Waktu pergi ke Paris, saya membeli tas.
+        </p>
+
+        <p>
+          Artinya tas dibeli setelah tiba di Paris.
+        </p>
+
+      </div>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(230,126,34,0.08); border-left:4px solid #e67e22; border-radius:6px; font-size:0.85em;">
+
+        📌 <strong>Perhatian:</strong><br>
+        Perbedaan Bentuk Kamus dan Bentuk た pada 「とき」 sangat penting karena mengubah urutan waktu kejadian.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 3 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>3.</span>
+
+      <span class="formula-box">
+        Kata Kerja Bentuk Kamus + と
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Pola <strong>～と</strong> digunakan untuk menyatakan bahwa jika suatu aksi terjadi, maka hasil tertentu akan terjadi secara otomatis atau pasti.
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “kalau...”<br>
+        • “jika...”<br>
+        • “begitu...”
+      </p>
+
+      <p>
+        Biasanya digunakan untuk:
+      </p>
+
+      <p>
+        • Mesin<br>
+        • Petunjuk arah<br>
+        • Fenomena alam<br>
+        • Hasil otomatis
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑩ この ボタンを 押すと、お釣りが 出ます。
+        </span><br>
+        Kalau tekan tombol ini, uang kembaliannya keluar.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑪ これを 回すと、音が 大きく なります。
+        </span><br>
+        Kalau memutar ini, suaranya akan membesar.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑫ 右へ 曲がると、郵便局が あります。
+        </span><br>
+        Kalau belok ke kanan, ada kantor pos.
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(46,204,113,0.08); border-left:4px solid #2ecc71; border-radius:6px; font-size:0.85em;">
+
+        🌐 <strong>Tambahan:</strong><br>
+        「～と」 biasanya tidak digunakan untuk menyatakan keinginan, ajakan, atau perintah karena hasil setelah 「と」 dianggap terjadi secara otomatis.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 4 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>4.</span>
+
+      <span class="formula-box">
+        Kata Benda が Kata Sifat
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Partikel <strong>が</strong> dapat digunakan untuk menunjukkan sesuatu yang dirasakan langsung oleh panca indera atau sesuatu yang diamati secara objektif.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑬ 音が 小さいです。
+        </span><br>
+        Suaranya kecil.
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(155,89,182,0.08); border-left:4px solid #9b59b6; border-radius:6px; font-size:0.85em;">
+
+        💡 <strong>Contoh Lain:</strong><br>
+        • 景色が きれいです。→ Pemandangannya indah.<br>
+        • 声が 大きいです。→ Suaranya besar.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 5 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>5.</span>
+
+      <span class="formula-box">
+        Tempat を Kata Kerja Gerakan
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Partikel <strong>を</strong> dapat digunakan bersama kata kerja gerakan untuk menunjukkan tempat yang dilewati.
+      </p>
+
+      <p>
+        Kata kerja yang sering digunakan:
+      </p>
+
+      <p>
+        • 散歩します → berjalan-jalan<br>
+        • 渡ります → menyeberang<br>
+        • 曲がります → berbelok
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑭ 公園を 散歩します。
+        </span><br>
+        Berjalan-jalan di taman.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑮ 道を 渡ります。
+        </span><br>
+        Menyeberangi jalan.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑯ 交差点を 右へ 曲がります。
+        </span><br>
+        Di perempatan belok ke kanan.
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+
+        🌐 <strong>Tambahan:</strong><br>
+        Pada pola ini, 「を」 bukan menunjukkan objek, tetapi jalur atau tempat yang dilewati oleh pergerakan.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
   `,
   quiz: [
     {
