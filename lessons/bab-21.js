@@ -350,6 +350,518 @@ window.lessonData[21] = {
   ],
   patterns: String.raw`
 
+<!-- Pattern 1 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>1.</span>
+
+      <span class="formula-box">Bentuk Biasa + と 思います</span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Pola <strong>〜と 思います</strong> digunakan untuk menyatakan:
+      </p>
+
+      <p>
+        • Dugaan<br>
+        • Pendapat<br>
+        • Pikiran pribadi
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “Saya pikir...”<br>
+        • “Saya kira...”
+      </p>
+
+      <!-- Dugaan -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">
+          1) Menyatakan Dugaan
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ① あした 雨が 降ると 思います。
+          </span><br>
+          Saya kira besok hujan turun.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ② テレサちゃんは もう 寝たと 思います。
+          </span><br>
+          Saya kira Teresa sudah tidur.
+        </p>
+
+        <p>
+          Jika isi dugaan negatif, bentuk negatif diletakkan sebelum partikel <strong>と</strong>.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ③ ミラーさんは このニュースを 知らないと 思います。
+          </span><br>
+          Saya kira Sdr. Miller tidak tahu berita ini.
+        </p>
+
+      </div>
+
+      <!-- Pendapat -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">
+          2) Menyatakan Pendapat
+        </h4>
+
+        <p>
+          <span class="example-jp">
+            ④ 日本は 物価が 高いと 思います。
+          </span><br>
+          Saya pikir harga barang di Jepang mahal.
+        </p>
+
+        <p>
+          Untuk meminta pendapat orang lain digunakan pola:
+        </p>
+
+        <p>
+          <span class="formula-box">～について どう 思いますか</span>
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑤ 新しい空港について どう 思いますか。
+          </span><br>
+          Bagaimana menurut Anda tentang bandara baru?
+        </p>
+
+      </div>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+
+        🌐 <strong>Tambahan:</strong><br>
+        Dalam budaya Jepang, penggunaan 「と思います」 membuat opini terdengar lebih sopan dan tidak terlalu memaksa. Oleh karena itu, pola ini sangat sering digunakan dalam percakapan formal maupun bisnis.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 2 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>2.</span>
+
+      <span class="formula-box">“Kalimat” + と 言います</span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Pola ini digunakan untuk mengutip ucapan seseorang.
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “Mengatakan bahwa...”<br>
+        • “Berkata bahwa...”
+      </p>
+
+      <!-- Kutipan langsung -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-I);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-I);">
+          1) Kutipan Langsung
+        </h4>
+
+        <p>
+          Jika mengutip langsung, isi ucapan dimasukkan ke dalam tanda kutip 「 」.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑥ 寝るまえに、「お休みなさい」と 言います。
+          </span><br>
+          Sebelum tidur mengucapkan “selamat tidur”.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑦ ミラーさんは 「来週 東京へ 出張します」 と 言いました。
+          </span><br>
+          Sdr. Miller berkata “minggu depan dinas ke Tokyo”.
+        </p>
+
+      </div>
+
+      <!-- Kutipan tidak langsung -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-II);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-II);">
+          2) Kutipan Tidak Langsung
+        </h4>
+
+        <p>
+          Dalam kutipan tidak langsung, isi ucapan diringkas menggunakan bentuk biasa.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑧ ミラーさんは 東京へ 出張すると 言いました。
+          </span><br>
+          Sdr. Miller mengatakan bahwa akan dinas ke Tokyo.
+        </p>
+
+      </div>
+
+      <!-- Kepada siapa -->
+
+      <div style="margin:16px 0; padding:14px 16px; border-radius:12px; background:var(--surface-soft); border-left:4px solid var(--verb-group-III);">
+
+        <h4 style="margin:0 0 10px 0; color:var(--verb-group-III);">
+          3) Menunjukkan Lawan Bicara
+        </h4>
+
+        <p>
+          Lawan bicara ditunjukkan dengan partikel <strong>に</strong>.
+        </p>
+
+        <p>
+          <span class="example-jp">
+            ⑨ 父に 留学したいと 言いました。
+          </span><br>
+          Saya berkata kepada ayah bahwa saya ingin belajar di luar negeri.
+        </p>
+
+      </div>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(230,126,34,0.08); border-left:4px solid #e67e22; border-radius:6px; font-size:0.85em;">
+
+        📌 <strong>Perhatian:</strong><br>
+        Bagian kutipan sebelum 「と」 menggunakan bentuk biasa dan tidak dipengaruhi waktu pada kalimat utama.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 3 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>3.</span>
+
+      <span class="formula-box">Bentuk Biasa + でしょう？</span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Pola <strong>〜でしょう？</strong> digunakan untuk:
+      </p>
+
+      <p>
+        • Meminta persetujuan<br>
+        • Memastikan sesuatu<br>
+        • Menegaskan dugaan
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “..., bukan?”<br>
+        • “..., ya?”
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑩ あした パーティーに 行くでしょう？
+        </span><br>
+        Besok pergi ke pesta, bukan?
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑪ 北海道は 寒かったでしょう？
+        </span><br>
+        Hokkaido dingin, bukan?
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(155,89,182,0.08); border-left:4px solid #9b59b6; border-radius:6px; font-size:0.85em;">
+
+        💡 <strong>Catatan:</strong><br>
+        「でしょう」 sering diucapkan dengan nada naik untuk meminta konfirmasi dari lawan bicara.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 4 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>4.</span>
+
+      <span class="formula-box">Kata Benda₁ (Tempat) で Kata Benda₂ が あります</span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Jika kata benda kedua menunjukkan acara atau peristiwa, maka pola ini berarti:
+      </p>
+
+      <p>
+        • “Diadakan...”<br>
+        • “Terjadi...”
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑫ 東京で 日本と ブラジルの サッカーの 試合が あります。
+        </span><br>
+        Di Tokyo diadakan pertandingan sepak bola Jepang vs Brasil.
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(46,204,113,0.08); border-left:4px solid #2ecc71; border-radius:6px; font-size:0.85em;">
+
+        🌐 <strong>Tambahan:</strong><br>
+        Pola ini sering digunakan untuk konser, festival, pertandingan olahraga, event anime, dan acara sekolah di Jepang.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 5 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>5.</span>
+
+      <span class="formula-box">Kata Benda (Adegan) + で</span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Partikel <strong>で</strong> digunakan untuk menunjukkan situasi atau adegan tempat suatu aksi dilakukan.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑬ 会議で 何か 意見を 言いましたか。
+        </span><br>
+        Di rapat, apakah mengutarakan suatu pendapat?
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
+
+        💡 <strong>Contoh Tempat/Adegan:</strong><br>
+        • 会議で → di rapat<br>
+        • 授業で → di kelas<br>
+        • パーティーで → di pesta
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 6 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>6.</span>
+
+      <span class="formula-box">Kata Benda + でも</span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Partikel <strong>でも</strong> digunakan untuk:
+      </p>
+
+      <p>
+        • Memberi contoh<br>
+        • Menawarkan sesuatu<br>
+        • Mengusulkan pilihan
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “atau semacam...”<br>
+        • “bagaimana kalau...”
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑭ ちょっと ビールでも 飲みませんか。
+        </span><br>
+        Bagaimana kalau minum bir atau semacamnya?
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(230,126,34,0.08); border-left:4px solid #e67e22; border-radius:6px; font-size:0.85em;">
+
+        📌 <strong>Nuansa:</strong><br>
+        「でも」 membuat ajakan terdengar lebih santai dan tidak terlalu memaksa.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Pattern 7 -->
+<div class="vocab-card open">
+
+  <div class="vocab-main" style="grid-template-columns:1fr;">
+
+    <div class="japanese" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; line-height:1.5;">
+
+      <span>7.</span>
+
+      <span class="formula-box">Kata Kerja Bentuk ない + と…</span>
+
+    </div>
+
+  </div>
+
+  <div class="vocab-detail" style="display:block; padding-top:0;">
+
+    <div class="detail-explanation" style="max-width:100%;">
+
+      <p style="margin-top:0;">
+        Pola ini adalah bentuk singkat dari:
+      </p>
+
+      <p>
+        • ～ないと いけません<br>
+        • ～なければ なりません
+      </p>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “harus...”<br>
+        • “perlu...”
+      </p>
+
+      <p>
+        <span class="example-jp">
+          ⑮ もう 帰らないと……。
+        </span><br>
+        Sudah harus pulang...
+      </p>
+
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(46,204,113,0.08); border-left:4px solid #2ecc71; border-radius:6px; font-size:0.85em;">
+
+        🌐 <strong>Tambahan:</strong><br>
+        Dalam percakapan sehari-hari, orang Jepang sangat sering memakai bentuk singkat:
+        <br><br>
+        • 行かないと<br>
+        • 勉強しないと<br>
+        • 寝ないと
+        <br><br>
+        karena terdengar lebih natural dan santai.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
   `,
   quiz: [
     {
