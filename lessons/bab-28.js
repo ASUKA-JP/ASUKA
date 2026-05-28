@@ -1,13 +1,13 @@
 window.lessonData = window.lessonData || {};
 
 window.lessonData[28] = {
-  title: "Bab 28: Pengalaman dan Penilaian",
+  title: "Bab 28: Kebiasaan dan Alasan",
 
   vocabulary: [
     {
       "japanese": "売れます I",
       "furigana": "うれます",
-      "meaning": "terjual 🛒",
+      "meaning": "terjual / laku 🛒",
       "romaji": "uremasu",
       "dictionaryForm": "売れる（うれる）",
       "dictionaryRomaji": "ureru",
@@ -22,14 +22,14 @@ window.lessonData[28] = {
       "romaji": "odorimasu",
       "dictionaryForm": "踊る（おどる）",
       "dictionaryRomaji": "odoru",
-      "example": "盆踊り を 踊ります。",
-      "exampleRomaji": "Bonodori o odorimasu.",
-      "translation": "Menari Bon Odori."
+      "example": "みんなで 踊ります。",
+      "exampleRomaji": "Minna de odorimasu.",
+      "translation": "Menari bersama."
     },
     {
       "japanese": "かみます I",
       "furigana": "",
-      "meaning": "mengunyah / menggigit 😬",
+      "meaning": "menggigit / mengunyah 😬",
       "romaji": "kamimasu",
       "dictionaryForm": "かむ",
       "dictionaryRomaji": "kamu",
@@ -51,13 +51,13 @@ window.lessonData[28] = {
     {
       "japanese": "通います I",
       "furigana": "かよいます",
-      "meaning": "pergi pulang secara rutin 🚃",
+      "meaning": "pergi-pulang / rutin pergi 🚃",
       "romaji": "kayoimasu",
       "dictionaryForm": "通う（かよう）",
       "dictionaryRomaji": "kayou",
-      "example": "大学 に 通っています。",
-      "exampleRomaji": "Daigaku ni kayotteimasu.",
-      "translation": "Sedang kuliah / rutin pergi ke universitas."
+      "example": "会社 に 通っています。",
+      "exampleRomaji": "Kaisha ni kayotteimasu.",
+      "translation": "Pergi kerja secara rutin."
     },
     {
       "japanese": "メモします III",
@@ -71,31 +71,22 @@ window.lessonData[28] = {
       "translation": "Mencatat hal penting."
     },
     {
-      "japanese": "真面目な",
-      "furigana": "まじめな",
+      "japanese": "真面目",
+      "furigana": "まじめ",
       "meaning": "serius 🤓",
-      "romaji": "majime na",
-      "example": "彼 は 真面目な 学生 です。",
-      "exampleRomaji": "Kare wa majime na gakusei desu.",
-      "translation": "Dia murid yang serius."
+      "romaji": "majime",
+      "example": "真面目な 学生 です。",
+      "exampleRomaji": "Majime na gakusei desu.",
+      "translation": "Murid yang serius."
     },
     {
-      "japanese": "熱心な",
-      "furigana": "ねっしんな",
+      "japanese": "熱心",
+      "furigana": "ねっしん",
       "meaning": "rajin / antusias 🔥",
-      "romaji": "nesshin na",
-      "example": "熱心な 人 です。",
-      "exampleRomaji": "Nesshin na hito desu.",
-      "translation": "Dia orang yang antusias."
-    },
-    {
-      "japanese": "優しい",
-      "furigana": "やさしい",
-      "meaning": "baik hati 😊",
-      "romaji": "yasashii",
-      "example": "先生 は 優しい です。",
-      "exampleRomaji": "Sensei wa yasashii desu.",
-      "translation": "Gurunya baik hati."
+      "romaji": "nesshin",
+      "example": "熱心な 人 ですね。",
+      "exampleRomaji": "Nesshin na hito desu ne.",
+      "translation": "Orang yang antusias ya."
     },
     {
       "japanese": "偉い",
@@ -107,11 +98,11 @@ window.lessonData[28] = {
       "translation": "Ingin menjadi orang hebat."
     },
     {
-      "japanese": "丁度いい",
-      "furigana": "ちょうどいい",
+      "japanese": "ちょうどいい",
+      "furigana": "",
       "meaning": "pas / cocok 👍",
       "romaji": "choudo ii",
-      "example": "この サイズ は 丁度いい です。",
+      "example": "この サイズ は ちょうどいい です。",
       "exampleRomaji": "Kono saizu wa choudo ii desu.",
       "translation": "Ukuran ini pas."
     },
@@ -140,7 +131,7 @@ window.lessonData[28] = {
       "romaji": "chikara",
       "example": "力 が 強い です。",
       "exampleRomaji": "Chikara ga tsuyoi desu.",
-      "translation": "Kekuatannya kuat."
+      "translation": "Kekuatannya besar."
     },
     {
       "japanese": "人気",
@@ -156,18 +147,18 @@ window.lessonData[28] = {
       "furigana": "かたち",
       "meaning": "bentuk 🔺",
       "romaji": "katachi",
-      "example": "変な 形 ですね。",
-      "exampleRomaji": "Henna katachi desu ne.",
-      "translation": "Bentuknya aneh ya."
+      "example": "面白い 形 ですね。",
+      "exampleRomaji": "Omoshiroi katachi desu ne.",
+      "translation": "Bentuknya menarik ya."
     },
     {
       "japanese": "色",
       "furigana": "いろ",
       "meaning": "warna 🎨",
       "romaji": "iro",
-      "example": "赤い 色 が 好きです。",
-      "exampleRomaji": "Akai iro ga suki desu.",
-      "translation": "Suka warna merah."
+      "example": "青い 色 が 好きです。",
+      "exampleRomaji": "Aoi iro ga suki desu.",
+      "translation": "Suka warna biru."
     },
     {
       "japanese": "味",
@@ -177,33 +168,6 @@ window.lessonData[28] = {
       "example": "味 が おいしい です。",
       "exampleRomaji": "Aji ga oishii desu.",
       "translation": "Rasanya enak."
-    },
-    {
-      "japanese": "ガム",
-      "furigana": "",
-      "meaning": "permen karet 🍬",
-      "romaji": "gamu",
-      "example": "ガム を かんでいます。",
-      "exampleRomaji": "Gamu o kandeimasu.",
-      "translation": "Sedang mengunyah permen karet."
-    },
-    {
-      "japanese": "品物",
-      "furigana": "しなもの",
-      "meaning": "barang 📦",
-      "romaji": "shinamono",
-      "example": "安い 品物 です。",
-      "exampleRomaji": "Yasui shinamono desu.",
-      "translation": "Barang murah."
-    },
-    {
-      "japanese": "値段",
-      "furigana": "ねだん",
-      "meaning": "harga 💴",
-      "romaji": "nedan",
-      "example": "値段 が 高い です。",
-      "exampleRomaji": "Nedan ga takai desu.",
-      "translation": "Harganya mahal."
     },
     {
       "japanese": "給料",
@@ -221,25 +185,7 @@ window.lessonData[28] = {
       "romaji": "boonasu",
       "example": "ボーナス が 出ました。",
       "exampleRomaji": "Boonasu ga demashita.",
-      "translation": "Bonusnya keluar."
-    },
-    {
-      "japanese": "番組",
-      "furigana": "ばんぐみ",
-      "meaning": "program TV 📺",
-      "romaji": "bangumi",
-      "example": "好きな 番組 を 見ます。",
-      "exampleRomaji": "Sukina bangumi o mimasu.",
-      "translation": "Menonton program favorit."
-    },
-    {
-      "japanese": "ドラマ",
-      "furigana": "",
-      "meaning": "drama 🎬",
-      "romaji": "dorama",
-      "example": "日本 の ドラマ が 好きです。",
-      "exampleRomaji": "Nihon no dorama ga suki desu.",
-      "translation": "Suka drama Jepang."
+      "translation": "Bonus keluar."
     },
     {
       "japanese": "小説",
@@ -249,6 +195,51 @@ window.lessonData[28] = {
       "example": "小説 を 読みます。",
       "exampleRomaji": "Shousetsu o yomimasu.",
       "translation": "Membaca novel."
+    },
+    {
+      "japanese": "小説家",
+      "furigana": "しょうせつか",
+      "meaning": "novelis ✍️",
+      "romaji": "shousetsuka",
+      "example": "有名な 小説家 です。",
+      "exampleRomaji": "Yuumeina shousetsuka desu.",
+      "translation": "Novelis terkenal."
+    },
+    {
+      "japanese": "歌手",
+      "furigana": "かしゅ",
+      "meaning": "penyanyi 🎤",
+      "romaji": "kashu",
+      "example": "好きな 歌手 が います。",
+      "exampleRomaji": "Sukina kashu ga imasu.",
+      "translation": "Punya penyanyi favorit."
+    },
+    {
+      "japanese": "管理人",
+      "furigana": "かんりにん",
+      "meaning": "pengelola 🏢",
+      "romaji": "kanrinin",
+      "example": "管理人 に 聞きます。",
+      "exampleRomaji": "Kanrinin ni kikimasu.",
+      "translation": "Bertanya kepada pengelola."
+    },
+    {
+      "japanese": "将来",
+      "furigana": "しょうらい",
+      "meaning": "masa depan 🌈",
+      "romaji": "shourai",
+      "example": "将来 日本で 働きたいです。",
+      "exampleRomaji": "Shourai Nihon de hatarakitai desu.",
+      "translation": "Ingin bekerja di Jepang di masa depan."
+    },
+    {
+      "japanese": "無料",
+      "furigana": "むりょう",
+      "meaning": "gratis 🆓",
+      "romaji": "muryou",
+      "example": "この イベント は 無料 です。",
+      "exampleRomaji": "Kono ibento wa muryou desu.",
+      "translation": "Acara ini gratis."
     }
   ],
 
@@ -275,34 +266,55 @@ window.lessonData[28] = {
       </p>
 
       <p>
-        Dalam bahasa Indonesia berarti:
+        Artinya:
       </p>
 
       <p>
-        • “sambil…”<br>
-        • “sementara…”
+        • “sambil...”<br>
+        • “sementara...”
+      </p>
+
+      <p>
+        Rumus:
+      </p>
+
+      <p>
+        <strong>Vます → hilangkan ます + ながら</strong>
+      </p>
+
+      <p>
+        Contoh perubahan:
+      </p>
+
+      <p>
+        • 聞きます → 聞きながら<br>
+        • 食べます → 食べながら
       </p>
 
       <p>
         <span class="example-jp">
-          音楽 を 聞きながら 勉強します。
+          音楽を聞きながら メモします。
         </span><br>
-        Belajar sambil mendengarkan musik.
+        Mencatat sambil mendengarkan musik.
       </p>
 
       <p>
         <span class="example-jp">
-          コーヒー を 飲みながら 話します。
+          テレビを見ながら おどります。
         </span><br>
-        Berbicara sambil minum kopi.
+        Menari sambil menonton TV.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          会社に通いながら 日本語を勉強しています。
+        </span><br>
+        Belajar bahasa Jepang sambil bekerja.
       </p>
 
       <div style="margin-top:12px; padding:10px 14px; background:rgba(52,152,219,0.08); border-left:4px solid #3498db; border-radius:6px; font-size:0.85em;">
-        💡 <strong>Cara Membuat:</strong><br>
-        Kata kerja diubah ke bentuk masu tanpa ます, lalu ditambah <strong>ながら</strong>.
-        <br><br>
-        • 食べます → 食べながら<br>
-        • 聞きます → 聞きながら
+        💡 <strong>Tambahan:</strong><br>
+        Dalam bahasa Jepang, aktivitas setelah <strong>ながら</strong> biasanya dianggap sebagai aktivitas utama.
       </div>
 
     </div>
@@ -317,7 +329,7 @@ window.lessonData[28] = {
       <span>2.</span>
 
       <span class="formula-box">
-        ～し、
+        ～ています
       </span>
     </div>
   </div>
@@ -326,35 +338,49 @@ window.lessonData[28] = {
     <div class="detail-explanation">
 
       <p style="margin-top:0;">
-        Pola <strong>～し</strong> digunakan untuk menyebutkan beberapa alasan atau beberapa sifat sekaligus.
+        Bentuk <strong>～ています</strong> selain dipakai untuk kegiatan yang sedang berlangsung, juga dipakai untuk menunjukkan kebiasaan atau aktivitas rutin.
       </p>
 
       <p>
-        Artinya:
+        Rumus:
       </p>
 
       <p>
-        • “dan juga…”<br>
-        • “selain itu…”
+        <strong>Vて + います</strong>
+      </p>
+
+      <p>
+        Contoh perubahan:
+      </p>
+
+      <p>
+        • 通います → 通って → 通っています
       </p>
 
       <p>
         <span class="example-jp">
-          この 店 は 安いし、おいしいです。
+          父は 車で 会社に 通っています。
         </span><br>
-        Toko ini murah dan juga enak.
+        Ayah pergi kerja dengan mobil.
       </p>
 
       <p>
         <span class="example-jp">
-          彼 は 真面目だし、親切です。
+          毎日 日本語を 勉強しています。
         </span><br>
-        Dia serius dan juga baik hati.
+        Setiap hari belajar bahasa Jepang.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          毎朝 ガムを かんでいます。
+        </span><br>
+        Setiap pagi mengunyah permen karet.
       </p>
 
       <div style="margin-top:12px; padding:10px 14px; background:rgba(46,204,113,0.08); border-left:4px solid #2ecc71; border-radius:6px; font-size:0.85em;">
-        🌐 <strong>Tambahan:</strong><br>
-        Dalam percakapan Jepang, pola ini sering dipakai untuk memberi lebih dari satu alasan secara natural.
+        🌐 <strong>Penjelasan Tambahan:</strong><br>
+        Pola ini sangat sering dipakai untuk menjelaskan rutinitas harian, pekerjaan, atau kebiasaan hidup di Jepang.
       </div>
 
     </div>
@@ -369,7 +395,7 @@ window.lessonData[28] = {
       <span>3.</span>
 
       <span class="formula-box">
-        ～そうです
+        ～し、～し
       </span>
     </div>
   </div>
@@ -378,36 +404,49 @@ window.lessonData[28] = {
     <div class="detail-explanation">
 
       <p style="margin-top:0;">
-        Pola <strong>～そうです</strong> digunakan untuk menyatakan kesan atau dugaan berdasarkan apa yang terlihat.
+        Pola <strong>～し、～し</strong> digunakan untuk:
       </p>
 
       <p>
-        Artinya:
+        • menyebut beberapa alasan<br>
+        • menyebut beberapa kelebihan
       </p>
 
       <p>
-        • “kelihatannya…”<br>
-        • “sepertinya…”
+        Bentuk:
+      </p>
+
+      <p>
+        • い-adjective + し<br>
+        • な-adjective + だし<br>
+        • Noun + だし<br>
+        • Verb bentuk biasa + し
       </p>
 
       <p>
         <span class="example-jp">
-          この ケーキ は おいしそうです。
+          この歌手は 人気があるし、歌も 上手です。
         </span><br>
-        Kue ini terlihat enak.
+        Penyanyi ini populer dan pandai bernyanyi.
       </p>
 
       <p>
         <span class="example-jp">
-          雨 が 降りそうです。
+          ワット先生は 熱心だし、まじめだし、経験もあります。
         </span><br>
-        Sepertinya akan hujan.
+        Pak Watt rajin, serius, dan punya pengalaman.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          この品物は 形もいいし、色もきれいです。
+        </span><br>
+        Barang ini bentuk dan warnanya bagus.
       </p>
 
       <div style="margin-top:12px; padding:10px 14px; background:rgba(230,126,34,0.08); border-left:4px solid #e67e22; border-radius:6px; font-size:0.85em;">
-        📌 <strong>Catatan Penting:</strong><br>
-        • Kata sifat い → hilangkan い + そうです<br>
-        • Kata sifat な → langsung + そうです
+        📌 <strong>Catatan:</strong><br>
+        Pola ini membuat kalimat terdengar lebih natural dibanding hanya memakai “dan”.
       </div>
 
     </div>
@@ -422,44 +461,89 @@ window.lessonData[28] = {
       <span>4.</span>
 
       <span class="formula-box">
-        ～てみます
+        それに
       </span>
+
+      <span class="formula-box">
+        それで
+      </span>
+
     </div>
   </div>
 
   <div class="vocab-detail" style="display:block;">
     <div class="detail-explanation">
 
-      <p style="margin-top:0;">
-        Pola <strong>～てみます</strong> digunakan untuk menyatakan mencoba melakukan sesuatu.
-      </p>
+      <h4 style="margin-top:0;">① それに</h4>
 
       <p>
         Artinya:
       </p>
 
       <p>
-        • “mencoba…”<br>
-        • “coba lakukan…”
+        • “selain itu”<br>
+        • “lagipula”
+      </p>
+
+      <p>
+        Rumus:
+      </p>
+
+      <p>
+        <strong>Kalimat 1。<br>
+        それに、Kalimat 2。</strong>
       </p>
 
       <p>
         <span class="example-jp">
-          日本料理 を 食べてみます。
+          このマンションは 駅に近いです。
+          それに、台所が 広いです。
         </span><br>
-        Mencoba makan masakan Jepang.
+        Apartemen ini dekat stasiun. Selain itu dapurnya luas.
+      </p>
+
+      <hr style="margin:18px 0; opacity:0.3;">
+
+      <h4>② それで</h4>
+
+      <p>
+        Artinya:
+      </p>
+
+      <p>
+        • “jadi”<br>
+        • “oleh karena itu”
+      </p>
+
+      <p>
+        Rumus:
+      </p>
+
+      <p>
+        <strong>Penyebab。<br>
+        それで、Hasil。</strong>
       </p>
 
       <p>
         <span class="example-jp">
-          この 靴 を はいてみます。
+          この店は 値段が 安いです。
+          それで、人気があります。
         </span><br>
-        Mencoba memakai sepatu ini.
+        Toko ini murah. Karena itu populer.
+      </p>
+
+      <p>
+        <span class="example-jp">
+          熱がありました。
+          それで、会社を 休みました。
+        </span><br>
+        Saya demam. Karena itu saya libur kerja.
       </p>
 
       <div style="margin-top:12px; padding:10px 14px; background:rgba(155,89,182,0.08); border-left:4px solid #9b59b6; border-radius:6px; font-size:0.85em;">
-        💡 <strong>Tambahan dari penggunaan asli:</strong><br>
-        Pola ini sangat sering dipakai saat belanja, mencoba makanan baru, atau mencoba pengalaman baru di Jepang.
+        💡 <strong>Perbedaan Penting:</strong><br>
+        • <strong>それに</strong> → menambah informasi<br>
+        • <strong>それで</strong> → menunjukkan sebab-akibat
       </div>
 
     </div>
@@ -473,9 +557,9 @@ window.lessonData[28] = {
       "question": "Apa arti dari 売れます?",
       "options": [
         "terjual",
-        "memilih",
         "menari",
-        "mencatat"
+        "memilih",
+        "mengobrol"
       ],
       "answer": "terjual",
       "explanation": "売れます dibaca uremasu. Artinya terjual atau laku."
@@ -483,101 +567,101 @@ window.lessonData[28] = {
     {
       "question": "Apa arti dari 通います?",
       "options": [
-        "pergi pulang secara rutin",
-        "mengunyah",
-        "membangun",
-        "memilih"
+        "pergi-pulang secara rutin",
+        "mencatat",
+        "menggigit",
+        "menari"
       ],
-      "answer": "pergi pulang secara rutin",
-      "explanation": "通います dibaca kayoimasu. Digunakan untuk sekolah atau kerja rutin."
+      "answer": "pergi-pulang secara rutin",
+      "explanation": "通います dibaca kayoimasu. Dipakai untuk sekolah atau kerja rutin."
     },
     {
-      "question": "Apa arti dari 真面目な?",
+      "question": "Apa arti dari 熱心?",
       "options": [
+        "rajin / antusias",
         "serius",
-        "baik hati",
         "hebat",
-        "populer"
+        "gratis"
       ],
-      "answer": "serius",
-      "explanation": "真面目な dibaca majime na. Artinya serius."
+      "answer": "rajin / antusias",
+      "explanation": "熱心 dibaca nesshin. Artinya rajin atau antusias."
     },
     {
-      "question": "Apa arti dari 熱心な?",
+      "question": "Apa arti dari 人気?",
       "options": [
-        "antusias",
-        "serius",
-        "baik hati",
-        "murah"
-      ],
-      "answer": "antusias",
-      "explanation": "熱心な dibaca nesshin na. Artinya antusias atau rajin."
-    },
-    {
-      "question": "Apa arti dari 習慣?",
-      "options": [
-        "kebiasaan",
+        "populer",
         "pengalaman",
-        "harga",
-        "barang"
+        "kebiasaan",
+        "warna"
       ],
-      "answer": "kebiasaan",
-      "explanation": "習慣 dibaca shuukan. Artinya kebiasaan."
+      "answer": "populer",
+      "explanation": "人気 dibaca ninki. Artinya populer."
     },
     {
       "question": "Apa arti dari 経験?",
       "options": [
         "pengalaman",
         "kekuatan",
-        "warna",
-        "bentuk"
+        "masa depan",
+        "harga"
       ],
       "answer": "pengalaman",
       "explanation": "経験 dibaca keiken. Artinya pengalaman."
     },
     {
-      "question": "Apa arti dari 人気?",
+      "question": "Apa arti dari 小説家?",
       "options": [
-        "populer",
-        "bonus",
-        "gaji",
-        "novel"
+        "novelis",
+        "penyanyi",
+        "pengelola",
+        "guru"
       ],
-      "answer": "populer",
-      "explanation": "人気 dibaca ninki. Artinya populer."
+      "answer": "novelis",
+      "explanation": "小説家 dibaca shousetsuka. Artinya novelis."
     },
     {
-      "question": "Apa arti dari 味?",
+      "question": "Apa arti dari 将来?",
       "options": [
-        "rasa",
-        "warna",
-        "harga",
+        "masa depan",
+        "diri sendiri",
+        "tanggal",
         "barang"
       ],
-      "answer": "rasa",
-      "explanation": "味 dibaca aji. Artinya rasa."
+      "answer": "masa depan",
+      "explanation": "将来 dibaca shourai. Artinya masa depan."
     },
     {
-      "question": "Apa arti dari 値段?",
+      "question": "Apa arti dari 無料?",
       "options": [
-        "harga",
-        "gaji",
+        "gratis",
         "bonus",
-        "barang"
+        "gaji",
+        "murah"
       ],
-      "answer": "harga",
-      "explanation": "値段 dibaca nedan. Artinya harga."
+      "answer": "gratis",
+      "explanation": "無料 dibaca muryou. Artinya gratis."
     },
     {
-      "question": "Apa arti dari 小説?",
+      "question": "Apa arti dari それに?",
       "options": [
-        "novel",
-        "drama",
-        "program TV",
-        "manga"
+        "selain itu",
+        "oleh karena itu",
+        "biasanya",
+        "sebentar"
       ],
-      "answer": "novel",
-      "explanation": "小説 dibaca shousetsu. Artinya novel."
+      "answer": "selain itu",
+      "explanation": "それに dipakai untuk menambah informasi."
+    },
+    {
+      "question": "Apa arti dari それで?",
+      "options": [
+        "oleh karena itu",
+        "selain itu",
+        "gratis",
+        "hebat"
+      ],
+      "answer": "oleh karena itu",
+      "explanation": "それで dipakai untuk hubungan sebab-akibat."
     }
   ],
 };
