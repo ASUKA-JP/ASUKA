@@ -249,34 +249,75 @@ function getVerbGroup(word) {
     return "III";
   }
 
-  // 2. Group II exceptions (known -i stem verbs that are actually Group II)
-  const groupIIExceptionsJp = [
-    "います", "見ます", "みます", "起きます", "おきます", 
-    "降ります", "おります", "借ります", "かります", 
-    "浴びます", "あびます", "できます", "足ります", "たります",
-    "着ます", "きます", "信じます", "しんじます", "過ぎます", "すぎます"
-  ];
-  
-  const groupIIExceptionsRomaji = [
-    "imasu", "mimasu", "okimasu", "orimasu", "karimasu", 
-    "abimasu", "dekimasu", "tarimasu", "shinjimasu", "sugimasu"
-  ];
+  // Group II exceptions (verbs that look like Group I but are actually Group II)
+const groupIIExceptionsJp = [
+  "います",
+  "見ます", "みます",
+  "起きます", "おきます",
+  "借ります", "かります",
+  "浴びます", "あびます",
+  "できます",
+  "足ります", "たります",
+  "着ます", "きます",
+  "信じます", "しんじます",
+  "過ぎます", "すぎます",
 
-  if (romaji === "kimasu") {
-    if (word.meaning && word.meaning.toLowerCase().includes("pakai")) {
-      return "II";
-    }
-    return "III";
-  }
-  if (romaji === "furimasu" || (word.meaning && word.meaning.toLowerCase().includes("turun (hujan/salju)"))) {
-    return "I";
-  }
+  "教えます", "おしえます",
+  "開けます", "あけます",
+  "閉めます", "しめます",
+  "捨てます", "すてます",
+  "答えます", "こたえます",
+  "調べます", "しらべます",
+  "出ます", "でます",
+  "寝ます", "ねます",
+  "食べます", "たべます"
+];
 
-  if (groupIIExceptionsJp.some(exc => jp.endsWith(exc)) || 
-      groupIIExceptionsRomaji.some(exc => romaji.endsWith(exc))) {
-    return "II";
-  }
+const groupIIExceptionsRomaji = [
+  "imasu",
+  "mimasu",
+  "okimasu",
+  "karimasu",
+  "abimasu",
+  "dekimasu",
+  "tarimasu",
+  "shinjimasu",
+  "sugimasu",
 
+  "oshiemasu",
+  "akemasu",
+  "shimemasu",
+  "sutemasu",
+  "kotaemasu",
+  "shirabemasu",
+  "demasu",
+  "nemasu",
+  "tabemasu"
+];
+
+// Special handling for きます
+if (romaji === "kimasu") {
+  if (
+    word.meaning &&
+    word.meaning.toLowerCase().includes("pakai")
+  ) {
+    return "II"; // 着ます
+  }
+  return "III"; // 来ます
+}
+
+// Special handling for 降ります（ふります）
+if (romaji === "furimasu") {
+  return "I";
+}
+
+// Check Group II exceptions
+if (
+  groupIIExceptionsJp.some(exc => jp.endsWith(exc)) ||
+  groupIIExceptionsRomaji.some(exc => romaji.endsWith(exc))
+) {
+  return "II";
+}
   // 3. Regular Group II: Stem ends in -e beforeます
   const cleanRomaji = romaji.replace(/[~]/g, "").trim();
   if (cleanRomaji.endsWith("emasu")) {
