@@ -291,6 +291,141 @@ window.lessonData[8] = {
       "exampleRomaji": "Sora ga aoi desu.",
       "translation": "Langit berwarna biru."
     }
+    {
+  "japanese": "桜",
+  "furigana": "さくら",
+  "meaning": "bunga sakura 🌸",
+  "romaji": "sakura",
+  "example": "桜 が きれい です。",
+  "exampleRomaji": "Sakura ga kirei desu.",
+  "translation": "Bunga sakura itu indah."
+},
+{
+  "japanese": "山",
+  "furigana": "やま",
+  "meaning": "gunung ⛰️",
+  "romaji": "yama",
+  "example": "富士山 は 有名 です。",
+  "exampleRomaji": "Fujisan wa yuumei desu.",
+  "translation": "Gunung Fuji terkenal."
+},
+{
+  "japanese": "町",
+  "furigana": "まち",
+  "meaning": "kota, daerah 🏘️",
+  "romaji": "machi",
+  "example": "この 町 は にぎやか です。",
+  "exampleRomaji": "Kono machi wa nigiyaka desu.",
+  "translation": "Kota ini ramai."
+},
+{
+  "japanese": "食べ物",
+  "furigana": "たべもの",
+  "meaning": "makanan 🍱",
+  "romaji": "tabemono",
+  "example": "日本 の 食べ物 が 好き です。",
+  "exampleRomaji": "Nihon no tabemono ga suki desu.",
+  "translation": "Saya suka makanan Jepang."
+},
+{
+  "japanese": "所",
+  "furigana": "ところ",
+  "meaning": "tempat 📍",
+  "romaji": "tokoro",
+  "example": "ここ は 静か な 所 です。",
+  "exampleRomaji": "Koko wa shizuka na tokoro desu.",
+  "translation": "Ini adalah tempat yang tenang."
+},
+{
+  "japanese": "寮",
+  "furigana": "りょう",
+  "meaning": "asrama 🏢",
+  "romaji": "ryou",
+  "example": "私 は 寮 に 住んで います。",
+  "exampleRomaji": "Watashi wa ryou ni sunde imasu.",
+  "translation": "Saya tinggal di asrama."
+},
+{
+  "japanese": "レストラン",
+  "furigana": "",
+  "meaning": "restoran 🍴",
+  "romaji": "resutoran",
+  "example": "あの レストラン は 有名 です。",
+  "exampleRomaji": "Ano resutoran wa yuumei desu.",
+  "translation": "Restoran itu terkenal."
+},
+{
+  "japanese": "生活",
+  "furigana": "せいかつ",
+  "meaning": "kehidupan 🏠",
+  "romaji": "seikatsu",
+  "example": "日本 の 生活 は 楽しい です。",
+  "exampleRomaji": "Nihon no seikatsu wa tanoshii desu.",
+  "translation": "Kehidupan di Jepang menyenangkan."
+},
+{
+  "japanese": "お仕事",
+  "furigana": "おしごと",
+  "meaning": "pekerjaan 💼",
+  "romaji": "oshigoto",
+  "example": "お仕事 は どう ですか。",
+  "exampleRomaji": "Oshigoto wa dou desu ka.",
+  "translation": "Bagaimana pekerjaan Anda?"
+},
+{
+  "japanese": "どう",
+  "furigana": "",
+  "meaning": "bagaimana 🤔",
+  "romaji": "dou",
+  "example": "日本 の 生活 は どう ですか。",
+  "exampleRomaji": "Nihon no seikatsu wa dou desu ka.",
+  "translation": "Bagaimana kehidupan di Jepang?"
+},
+{
+  "japanese": "どんな～",
+  "furigana": "",
+  "meaning": "yang bagaimana ~ ❓",
+  "romaji": "donna",
+  "example": "どんな 町 ですか。",
+  "exampleRomaji": "Donna machi desu ka.",
+  "translation": "Kota seperti apa itu?"
+},
+{
+  "japanese": "とても",
+  "furigana": "",
+  "meaning": "sangat ✨",
+  "romaji": "totemo",
+  "example": "この 町 は とても きれい です。",
+  "exampleRomaji": "Kono machi wa totemo kirei desu.",
+  "translation": "Kota ini sangat bersih."
+},
+{
+  "japanese": "あまり",
+  "furigana": "",
+  "meaning": "tidak begitu ~ 🚫",
+  "romaji": "amari",
+  "example": "この 町 は あまり にぎやか じゃ ありません。",
+  "exampleRomaji": "Kono machi wa amari nigiyaka ja arimasen.",
+  "translation": "Kota ini tidak begitu ramai."
+},
+{
+  "japanese": "そして",
+  "furigana": "",
+  "meaning": "kemudian, dan ➕",
+  "romaji": "soshite",
+  "example": "この 町 は きれい です。そして 静か です。",
+  "exampleRomaji": "Kono machi wa kirei desu. Soshite shizuka desu.",
+  "translation": "Kota ini bersih. Dan juga tenang."
+},
+{
+  "japanese": "～が、～",
+  "furigana": "",
+  "meaning": "~ tetapi ~ ↔️",
+  "romaji": "ga",
+  "example": "この 町 は きれい ですが、少し 不便 です。",
+  "exampleRomaji": "Kono machi wa kirei desu ga, sukoshi fuben desu.",
+  "translation": "Kota ini bersih, tetapi agak tidak praktis."
+}
   ],
   patterns: String.raw`
 <!-- Pattern 1 -->
