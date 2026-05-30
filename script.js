@@ -240,117 +240,53 @@ function getVerbGroup(word) {
   const jp = word.japanese || "";
   const romaji = (word.romaji || "").toLowerCase().trim();
 
-  // 1. Group III: Ends in します or shimasu, or is 来ます (kimasu, to come)
-  if (jp.endsWith("します") || romaji.endsWith("shimasu") || romaji.endsWith(" shimasu")) {
-    return "III";
-  }
-  
-  if (jp === "来ます" || jp === "きます" || (romaji === "kimasu" && word.meaning && word.meaning.toLowerCase().includes("datang"))) {
-    return "III";
-  }
+  // =========================
+// Verb Utilities
+// Format:
+// {
+//   jp: "かきますI"
+// }
+// =========================
 
-  // Group II exceptions (verbs that look like Group I but are actually Group II)
-const groupIIExceptionsJp = [
-  "います",
-  "見ます", "みます",
-  "起きます", "おきます",
-  "借ります", "かります",
-  "浴びます", "あびます",
-  "できます",
-  "足ります", "たります",
-  "着ます", "きます",
-  "信じます", "しんじます",
-  "過ぎます", "すぎます",
+// Ambil golongan kata kerja
+function detectVerbGroup(word) {
+  const jp = (word.jp || "").trim();
 
-  "教えます", "おしえます",
-  "開けます", "あけます",
-  "閉めます", "しめます",
-  "捨てます", "すてます",
-  "答えます", "こたえます",
-  "調べます", "しらべます",
-  "出ます", "でます",
-  "寝ます", "ねます",
-  "食べます", "たべます"
+  const match = jp.match(/(III|II|I)$/);
+
+  return match ? match[1] : null;
+}
+
+// Ambil kata kerja tanpa kode golongan
+function getVerb(word) {
+  return (word.jp || "").trim().replace(/(III|II|I)$/, "");
+}
+
+// =========================
+// Contoh penggunaan
+// =========================
+
+const words = [
+  {
+    jp: "かきますI",
+    meaning: "menulis"
+  },
+  {
+    jp: "たべますII",
+    meaning: "makan"
+  },
+  {
+    jp: "きますIII",
+    meaning: "datang"
+  }
 ];
 
-const groupIIExceptionsRomaji = [
-  "imasu",
-  "mimasu",
-  "okimasu",
-  "karimasu",
-  "abimasu",
-  "dekimasu",
-  "tarimasu",
-  "shinjimasu",
-  "sugimasu",
-
-  "oshiemasu",
-  "akemasu",
-  "shimemasu",
-  "sutemasu",
-  "kotaemasu",
-  "shirabemasu",
-  "demasu",
-  "nemasu",
-  "tabemasu"
-];
-
-// Special handling for きます
-if (romaji === "kimasu") {
-  if (
-    word.meaning &&
-    word.meaning.toLowerCase().includes("pakai")
-  ) {
-    return "II"; // 着ます
-  }
-  return "III"; // 来ます
-}
-
-// Special handling for 降ります（ふります）
-if (romaji === "furimasu") {
-  return "I";
-}
-
-// Check Group II exceptions
-if (
-  groupIIExceptionsJp.some(exc => jp.endsWith(exc)) ||
-  groupIIExceptionsRomaji.some(exc => romaji.endsWith(exc))
-) {
-  return "II";
-}
-  // 3. Regular Group II: Stem ends in -e beforeます
-  const cleanRomaji = romaji.replace(/[~]/g, "").trim();
-  if (cleanRomaji.endsWith("emasu")) {
-    return "II";
-  }
-
-  if (jp.endsWith("ます") && jp.length >= 3) {
-    const stemChar = jp.charAt(jp.length - 3);
-    const eColumn = ["え", "け", "せ", "て", "ね", "へ", "め", "れ", "げ", "ぜ", "で", "べ", "ぺ"];
-    if (eColumn.includes(stemChar)) {
-      return "II";
-    }
-  }
-
-  // 4. Regular Group I: Stem ends in -i beforeます
-  if (cleanRomaji.endsWith("imasu") || cleanRomaji.endsWith("chimasu") || cleanRomaji.endsWith("shimasu") || cleanRomaji.endsWith("rimasu") || cleanRomaji.endsWith("bimasu") || cleanRomaji.endsWith("gimasu") || cleanRomaji.endsWith("mimasu") || cleanRomaji.endsWith("kimasu") || cleanRomaji.endsWith("nimasu")) {
-    return "I";
-  }
-  
-  if (jp.endsWith("ます") && jp.length >= 3) {
-    const stemChar = jp.charAt(jp.length - 3);
-    const iColumn = ["い", "き", "し", "ち", "に", "ひ", "み", "り", "ぎ", "じ", "ぢ", "び", "ぴ"];
-    if (iColumn.includes(stemChar)) {
-      return "I";
-    }
-  }
-
-  if (jp.endsWith("ます") || cleanRomaji.endsWith("masu")) {
-    return "I";
-  }
-
-  return null;
-}
+words.forEach(word => {
+  console.log("Kata Kerja:", getVerb(word));
+  console.log("Golongan:", detectVerbGroup(word));
+  console.log("Arti:", word.meaning);
+  console.log("-------------------");
+});
 
 function highlightVerbText(text, group) {
   if (!text || !group) return text;
