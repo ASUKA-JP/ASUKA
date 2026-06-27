@@ -388,7 +388,7 @@ window.lessonData[2] = {
       "translation": "O, begitu."
     },
     {
-      "japanese": "違います",
+      "japanese": "違います I",
       "furigana": "ちがいます",
       "meaning": "bukan, salah ❌",
       "romaji": "chigaimasu",

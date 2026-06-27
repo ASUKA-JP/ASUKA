@@ -1,3 +1,21 @@
+// Load local storage edits before script loads
+(function() {
+  const localEdits = localStorage.getItem("asuka_lesson_data_edits");
+  if (localEdits) {
+    try {
+      const parsed = JSON.parse(localEdits);
+      window.lessonData = window.lessonData || {};
+      for (const lessonNum in parsed) {
+        if (parsed[lessonNum]) {
+          window.lessonData[lessonNum] = parsed[lessonNum];
+        }
+      }
+    } catch (e) {
+      console.error("Gagal memuat data edit lokal:", e);
+    }
+  }
+})();
+
 const countryLanguageData = [
   {
     country: { japanese: "アメリカ", meaning: "Amerika Serikat" },
@@ -233,11 +251,23 @@ function getLessonVocabulary(lessonNumber = activeLesson) {
   return getLesson(lessonNumber)?.vocabulary ?? [];
 }
 
+// Returns the clean japanese string with any trailing group marker (" I", " II", " III") stripped.
+function getCleanJapanese(word) {
+  return (word.japanese || "").replace(/\s+(I{1,3})$/, "").trim();
+}
+
 function getVerbGroup(word) {
+  // Priority 1: explicit field
   if (word.group) return word.group;
+
+  // Priority 2: marker embedded in the japanese field (e.g. "集まります I")
+  const jpRaw = word.japanese || "";
+  const markerMatch = jpRaw.match(/\s+(III|II|I)$/);
+  if (markerMatch) return markerMatch[1];
+
   if (!word.dictionaryForm) return null;
 
-  const jp = word.japanese || "";
+  const jp = getCleanJapanese(word);
   const romaji = (word.romaji || "").toLowerCase().trim();
 
   // 1. Group III: Ends in します or shimasu, or is 来ます (kimasu, to come)
@@ -335,7 +365,8 @@ function highlightVerbText(text, group) {
 }
 
 function makeJapaneseMarkup(word) {
-  let displayJp = word.japanese;
+  // Strip group marker from displayed text (e.g. "集まります I" → "集まります")
+  let displayJp = getCleanJapanese(word);
   let displayFurigana = word.furigana;
 
   const group = getVerbGroup(word);
@@ -997,3 +1028,734 @@ customPink.addEventListener("input", updateCustomColor);
 
 // Initialize settings on load
 applySettings();
+
+// =============================================
+// ADMIN PANEL FUNCTIONALITY
+// =============================================
+
+(function() {
+  // Select DOM Elements
+  const openAdminBtn = document.getElementById("openAdminBtn");
+  const adminPasswordModal = document.getElementById("adminPasswordModal");
+  const closeAdminPwBtn = document.getElementById("closeAdminPwBtn");
+  const adminPasswordInput = document.getElementById("adminPasswordInput");
+  const adminLoginBtn = document.getElementById("adminLoginBtn");
+  const adminPwError = document.getElementById("adminPwError");
+
+  const adminPanelModal = document.getElementById("adminPanelModal");
+  const closeAdminPanelBtn = document.getElementById("closeAdminPanelBtn");
+  const adminLessonList = document.getElementById("adminLessonList");
+  const adminLessonTitle = document.getElementById("adminLessonTitle");
+  const adminAddWordBtn = document.getElementById("adminAddWordBtn");
+  const adminWordList = document.getElementById("adminWordList");
+
+  const adminExportBtn = document.getElementById("adminExportBtn");
+  const adminExportModal = document.getElementById("adminExportModal");
+  const closeExportBtn = document.getElementById("closeExportBtn");
+  const exportCodeArea = document.getElementById("exportCodeArea");
+  const copyExportBtn = document.getElementById("copyExportBtn");
+
+  let adminSelectedLesson = 1;
+  const adminPasswordHash = "asuka3821"; // The plain text password required
+
+  // 1. Password Verification & Modal Toggle
+  if (openAdminBtn) {
+    openAdminBtn.addEventListener("click", () => {
+      // Hide settings modal first if it is open
+      const settingsModal = document.getElementById("settingsModal");
+      if (settingsModal) {
+        settingsModal.classList.remove("show");
+      }
+      adminPasswordInput.value = "";
+      adminPwError.style.display = "none";
+      adminPasswordModal.classList.add("show");
+      adminPasswordInput.focus();
+    });
+  }
+
+  if (closeAdminPwBtn) {
+    closeAdminPwBtn.addEventListener("click", () => {
+      adminPasswordModal.classList.remove("show");
+    });
+  }
+
+  adminPasswordModal.addEventListener("click", (e) => {
+    if (e.target === adminPasswordModal) {
+      adminPasswordModal.classList.remove("show");
+    }
+  });
+
+  function attemptAdminLogin() {
+    const entered = adminPasswordInput.value.trim();
+    if (entered === adminPasswordHash) {
+      adminPasswordModal.classList.remove("show");
+      openAdminPanel();
+    } else {
+      adminPwError.style.display = "block";
+    }
+  }
+
+  if (adminLoginBtn) {
+    adminLoginBtn.addEventListener("click", attemptAdminLogin);
+  }
+
+  if (adminPasswordInput) {
+    adminPasswordInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        attemptAdminLogin();
+      }
+    });
+  }
+
+  // 2. Open Admin Panel & Build Sidebar
+  function openAdminPanel() {
+    adminPanelModal.classList.add("show");
+    // Default to activeLesson in main app or selected lesson
+    adminSelectedLesson = activeLesson || 1;
+    buildAdminSidebar();
+    loadAdminLesson(adminSelectedLesson);
+  }
+
+  if (closeAdminPanelBtn) {
+    closeAdminPanelBtn.addEventListener("click", () => {
+      adminPanelModal.classList.remove("show");
+    });
+  }
+
+  // 3. Build Sidebar Lesson List (1 to 50)
+  function buildAdminSidebar() {
+    if (!adminLessonList) return;
+    adminLessonList.innerHTML = "";
+    for (let i = 1; i <= 50; i++) {
+      const btn = document.createElement("button");
+      btn.className = "admin-lesson-btn";
+      if (i === adminSelectedLesson) {
+        btn.classList.add("active");
+      }
+      btn.textContent = `Bab ${i}`;
+      btn.addEventListener("click", () => {
+        // Remove active class from previous
+        const activeBtn = adminLessonList.querySelector(".admin-lesson-btn.active");
+        if (activeBtn) activeBtn.classList.remove("active");
+        btn.classList.add("active");
+        
+        adminSelectedLesson = i;
+        loadAdminLesson(i);
+      });
+      adminLessonList.appendChild(btn);
+    }
+  }
+
+  // 4. Load Lesson Vocabulary into Admin Editor
+  function loadAdminLesson(lessonNum) {
+    adminLessonTitle.textContent = `Bab ${lessonNum}`;
+    renderAdminWords();
+  }
+
+  function getLessonData(lessonNum) {
+    if (!window.lessonData) {
+      window.lessonData = {};
+    }
+    if (!window.lessonData[lessonNum]) {
+      window.lessonData[lessonNum] = {
+        title: `Bab ${lessonNum}`,
+        vocabulary: []
+      };
+    }
+    return window.lessonData[lessonNum];
+  }
+
+  // 4. Tab Toggling Logic
+  const adminTabBtns = document.querySelectorAll(".admin-tab-btn");
+  const adminPatternsArea = document.getElementById("adminPatternsArea");
+  const adminPatternsTextarea = document.getElementById("adminPatternsTextarea");
+  const adminSavePatternsBtn = document.getElementById("adminSavePatternsBtn");
+  const adminAddQuizBtn = document.getElementById("adminAddQuizBtn");
+  const adminQuizList = document.getElementById("adminQuizList");
+
+  let adminActiveTab = "vocabulary";
+
+  adminTabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      adminTabBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      adminActiveTab = btn.dataset.tab;
+      
+      // Update Active Panels
+      adminWordList.style.display = adminActiveTab === "vocabulary" ? "flex" : "none";
+      adminPatternsArea.style.display = adminActiveTab === "patterns" ? "flex" : "none";
+      adminQuizList.style.display = adminActiveTab === "quiz" ? "flex" : "none";
+
+      // Update Action Buttons in Header
+      adminAddWordBtn.style.display = adminActiveTab === "vocabulary" ? "inline-block" : "none";
+      adminSavePatternsBtn.style.display = adminActiveTab === "patterns" ? "inline-block" : "none";
+      adminAddQuizBtn.style.display = adminActiveTab === "quiz" ? "inline-block" : "none";
+
+      // Load Tab Data
+      refreshAdminTabContent();
+    });
+  });
+
+  function refreshAdminTabContent() {
+    if (adminActiveTab === "vocabulary") {
+      renderAdminWords();
+    } else if (adminActiveTab === "patterns") {
+      renderAdminPatterns();
+    } else if (adminActiveTab === "quiz") {
+      renderAdminQuiz();
+    }
+  }
+
+  // 5. Load Lesson Vocabulary, Patterns, or Quiz
+  function loadAdminLesson(lessonNum) {
+    adminLessonTitle.textContent = `Bab ${lessonNum}`;
+    refreshAdminTabContent();
+  }
+
+  function getLessonData(lessonNum) {
+    if (!window.lessonData) {
+      window.lessonData = {};
+    }
+    if (!window.lessonData[lessonNum]) {
+      window.lessonData[lessonNum] = {
+        title: `Bab ${lessonNum}`,
+        vocabulary: [],
+        patterns: "",
+        quiz: []
+      };
+    }
+    return window.lessonData[lessonNum];
+  }
+
+  // Render Vocabulary Cards
+  function renderAdminWords() {
+    if (!adminWordList) return;
+    adminWordList.innerHTML = "";
+    const lesson = getLessonData(adminSelectedLesson);
+    const vocabulary = lesson.vocabulary || [];
+
+    if (vocabulary.length === 0) {
+      adminWordList.innerHTML = `<div style="text-align: center; padding: 40px; color: #64748b; font-weight: 500;">Belum ada kata kerja atau kosakata di bab ini. Klik "+ Tambah Kata" di atas untuk menambahkan.</div>`;
+      return;
+    }
+
+    vocabulary.forEach((word, idx) => {
+      const card = document.createElement("div");
+      card.className = "admin-word-card";
+      card.dataset.index = idx;
+
+      const currentGroup = getVerbGroup(word) || "";
+      const jpClean = getCleanJapanese(word);
+      const meaningText = word.meaning || "";
+
+      card.innerHTML = `
+        <div class="admin-word-card-header">
+          <div class="admin-word-preview">
+            <span class="admin-word-jp">${escapeHtml(word.japanese || '')}</span>
+            <span class="admin-word-meaning-preview">&ndash; ${escapeHtml(meaningText)}</span>
+          </div>
+          <div class="admin-word-card-actions">
+            <!-- Normal Mode Actions -->
+            <button class="admin-word-edit-btn normal-action">✏️ Edit</button>
+            <button class="admin-word-delete-btn normal-action">🗑️ Hapus</button>
+            <!-- Edit Mode Actions -->
+            <button class="admin-word-save-btn edit-action" style="display: none;">💾 Simpan</button>
+            <button class="admin-word-cancel-btn edit-action" style="display: none;">❌ Batal</button>
+          </div>
+        </div>
+        <div class="admin-word-form">
+          <div class="admin-field">
+            <label>Jepang / Kanji (Tanpa Golongan)</label>
+            <input type="text" class="jp-input field-japanese" value="${escapeHtml(jpClean)}" placeholder="e.g. 集まります">
+          </div>
+          <div class="admin-field">
+            <label>Golongan Kata Kerja</label>
+            <select class="field-group">
+              <option value="" ${currentGroup === '' ? 'selected' : ''}>Bukan Kata Kerja / Deteksi Otomatis</option>
+              <option value="I" ${currentGroup === 'I' ? 'selected' : ''}>Golongan 1 (I)</option>
+              <option value="II" ${currentGroup === 'II' ? 'selected' : ''}>Golongan 2 (II)</option>
+              <option value="III" ${currentGroup === 'III' ? 'selected' : ''}>Golongan 3 (III)</option>
+            </select>
+          </div>
+          <div class="admin-field">
+            <label>Furigana / Kana</label>
+            <input type="text" class="field-furigana" value="${escapeHtml(word.furigana || '')}" placeholder="e.g. あつまります">
+          </div>
+          <div class="admin-field">
+            <label>Romaji</label>
+            <input type="text" class="field-romaji" value="${escapeHtml(word.romaji || '')}" placeholder="e.g. atsumarimasu">
+          </div>
+          <div class="admin-field">
+            <label>Arti / Makna</label>
+            <input type="text" class="field-meaning" value="${escapeHtml(word.meaning || '')}" placeholder="e.g. berkumpul">
+          </div>
+          <div class="admin-field">
+            <label>Bentuk Kamus (Opsional)</label>
+            <input type="text" class="field-dictionaryForm" value="${escapeHtml(word.dictionaryForm || '')}" placeholder="e.g. 集まる（あつまる）">
+          </div>
+          <div class="admin-field">
+            <label>Romaji Kamus (Opsional)</label>
+            <input type="text" class="field-dictionaryRomaji" value="${escapeHtml(word.dictionaryRomaji || '')}" placeholder="e.g. atsumaru">
+          </div>
+          <div class="admin-field full-width">
+            <label>Contoh Kalimat (Opsional)</label>
+            <input type="text" class="field-example" value="${escapeHtml(word.example || '')}" placeholder="e.g. 人が 集まっています。">
+          </div>
+          <div class="admin-field">
+            <label>Romaji Contoh (Opsional)</label>
+            <input type="text" class="field-exampleRomaji" value="${escapeHtml(word.exampleRomaji || '')}" placeholder="e.g. Hito ga atsumatte imasu.">
+          </div>
+          <div class="admin-field">
+            <label>Terjemahan Contoh (Opsional)</label>
+            <input type="text" class="field-translation" value="${escapeHtml(word.translation || '')}" placeholder="e.g. Orang-orang sedang berkumpul.">
+          </div>
+        </div>
+      `;
+
+      // Event Listeners
+      const editBtn = card.querySelector(".admin-word-edit-btn");
+      const deleteBtn = card.querySelector(".admin-word-delete-btn");
+      const saveBtn = card.querySelector(".admin-word-save-btn");
+      const cancelBtn = card.querySelector(".admin-word-cancel-btn");
+
+      editBtn.addEventListener("click", () => {
+        card.classList.add("editing");
+        card.querySelectorAll(".normal-action").forEach(el => el.style.display = "none");
+        card.querySelectorAll(".edit-action").forEach(el => el.style.display = "inline-block");
+      });
+
+      cancelBtn.addEventListener("click", () => {
+        card.classList.remove("editing");
+        card.querySelectorAll(".normal-action").forEach(el => el.style.display = "inline-block");
+        card.querySelectorAll(".edit-action").forEach(el => el.style.display = "none");
+        // Reset
+        card.querySelector(".field-japanese").value = jpClean;
+        card.querySelector(".field-group").value = currentGroup;
+        card.querySelector(".field-furigana").value = word.furigana || "";
+        card.querySelector(".field-romaji").value = word.romaji || "";
+        card.querySelector(".field-meaning").value = word.meaning || "";
+        card.querySelector(".field-dictionaryForm").value = word.dictionaryForm || "";
+        card.querySelector(".field-dictionaryRomaji").value = word.dictionaryRomaji || "";
+        card.querySelector(".field-example").value = word.example || "";
+        card.querySelector(".field-exampleRomaji").value = word.exampleRomaji || "";
+        card.querySelector(".field-translation").value = word.translation || "";
+      });
+
+      saveBtn.addEventListener("click", () => {
+        const cleanJp = card.querySelector(".field-japanese").value.trim();
+        const selectedGroup = card.querySelector(".field-group").value;
+
+        // Append Roman Numeral suffix if group is specified
+        let finalJp = cleanJp;
+        if (selectedGroup) {
+          finalJp = `${cleanJp} ${selectedGroup}`;
+        }
+
+        const updatedWord = {
+          japanese: finalJp,
+          furigana: card.querySelector(".field-furigana").value.trim(),
+          romaji: card.querySelector(".field-romaji").value.trim(),
+          meaning: card.querySelector(".field-meaning").value.trim()
+        };
+
+        if (selectedGroup) {
+          updatedWord.group = selectedGroup;
+        } else {
+          // delete explicit group if set to automatic/none
+          delete updatedWord.group;
+        }
+
+        const dictForm = card.querySelector(".field-dictionaryForm").value.trim();
+        if (dictForm) updatedWord.dictionaryForm = dictForm;
+
+        const dictRomaji = card.querySelector(".field-dictionaryRomaji").value.trim();
+        if (dictRomaji) updatedWord.dictionaryRomaji = dictRomaji;
+
+        const example = card.querySelector(".field-example").value.trim();
+        if (example) updatedWord.example = example;
+
+        const exampleRomaji = card.querySelector(".field-exampleRomaji").value.trim();
+        if (exampleRomaji) updatedWord.exampleRomaji = exampleRomaji;
+
+        const translation = card.querySelector(".field-translation").value.trim();
+        if (translation) updatedWord.translation = translation;
+
+        vocabulary[idx] = updatedWord;
+        saveEditsToLocalStorage();
+
+        card.classList.remove("editing");
+        card.querySelector(".admin-word-jp").textContent = updatedWord.japanese;
+        card.querySelector(".admin-word-meaning-preview").textContent = `– ${updatedWord.meaning}`;
+        card.querySelectorAll(".normal-action").forEach(el => el.style.display = "inline-block");
+        card.querySelectorAll(".edit-action").forEach(el => el.style.display = "none");
+        
+        refreshMainAppUI();
+      });
+
+      deleteBtn.addEventListener("click", () => {
+        if (confirm(`Apakah Anda yakin ingin menghapus kata "${word.japanese || word.meaning}"?`)) {
+          vocabulary.splice(idx, 1);
+          saveEditsToLocalStorage();
+          renderAdminWords();
+          refreshMainAppUI();
+        }
+      });
+
+      adminWordList.appendChild(card);
+    });
+  }
+
+  // Render Grammar Patterns Editor
+  function renderAdminPatterns() {
+    if (!adminPatternsTextarea) return;
+    const lesson = getLessonData(adminSelectedLesson);
+    adminPatternsTextarea.value = lesson.patterns || "";
+  }
+
+  if (adminSavePatternsBtn) {
+    adminSavePatternsBtn.addEventListener("click", () => {
+      const lesson = getLessonData(adminSelectedLesson);
+      lesson.patterns = adminPatternsTextarea.value;
+      saveEditsToLocalStorage();
+      
+      // Update Main App Pola Kalimat View
+      if (typeof renderPatterns === "function") {
+        renderPatterns();
+      }
+
+      // Visual feedback on save
+      const origText = adminSavePatternsBtn.textContent;
+      adminSavePatternsBtn.textContent = "✅ Tersimpan!";
+      adminSavePatternsBtn.style.background = "#059669";
+      setTimeout(() => {
+        adminSavePatternsBtn.textContent = origText;
+        adminSavePatternsBtn.style.background = "#3b82f6";
+      }, 1500);
+    });
+  }
+
+  // Render Quiz Editor
+  function renderAdminQuiz() {
+    if (!adminQuizList) return;
+    adminQuizList.innerHTML = "";
+    const lesson = getLessonData(adminSelectedLesson);
+    const quizItems = lesson.quiz || [];
+
+    if (quizItems.length === 0) {
+      adminQuizList.innerHTML = `<div style="text-align: center; padding: 40px; color: #64748b; font-weight: 500;">Belum ada kuis untuk bab ini. Klik "+ Tambah Kuis" di atas untuk menambahkan.</div>`;
+      return;
+    }
+
+    quizItems.forEach((quiz, idx) => {
+      const card = document.createElement("div");
+      card.className = "admin-word-card";
+      card.dataset.index = idx;
+
+      const questionText = quiz.question || "";
+      const answerText = quiz.answer || "";
+
+      card.innerHTML = `
+        <div class="admin-word-card-header">
+          <div class="admin-word-preview">
+            <span class="admin-word-jp" style="font-size: 15px;">${idx + 1}. ${escapeHtml(questionText)}</span>
+            <span class="admin-word-meaning-preview">&ndash; Jawaban: ${escapeHtml(answerText)}</span>
+          </div>
+          <div class="admin-word-card-actions">
+            <!-- Normal Mode Actions -->
+            <button class="admin-word-edit-btn normal-action">✏️ Edit</button>
+            <button class="admin-word-delete-btn normal-action">🗑️ Hapus</button>
+            <!-- Edit Mode Actions -->
+            <button class="admin-word-save-btn edit-action" style="display: none;">💾 Simpan</button>
+            <button class="admin-word-cancel-btn edit-action" style="display: none;">❌ Batal</button>
+          </div>
+        </div>
+        <div class="admin-word-form">
+          <div class="admin-field full-width">
+            <label>Pertanyaan Kuis</label>
+            <input type="text" class="field-question" value="${escapeHtml(questionText)}" placeholder="e.g. Apa arti dari わたし?">
+          </div>
+          <div class="admin-field">
+            <label>Pilihan A</label>
+            <input type="text" class="field-option-a" value="${escapeHtml(quiz.options?.[0] || '')}" placeholder="Pilihan A">
+          </div>
+          <div class="admin-field">
+            <label>Pilihan B</label>
+            <input type="text" class="field-option-b" value="${escapeHtml(quiz.options?.[1] || '')}" placeholder="Pilihan B">
+          </div>
+          <div class="admin-field">
+            <label>Pilihan C</label>
+            <input type="text" class="field-option-c" value="${escapeHtml(quiz.options?.[2] || '')}" placeholder="Pilihan C">
+          </div>
+          <div class="admin-field">
+            <label>Pilihan D</label>
+            <input type="text" class="field-option-d" value="${escapeHtml(quiz.options?.[3] || '')}" placeholder="Pilihan D">
+          </div>
+          <div class="admin-field">
+            <label>Jawaban yang Benar</label>
+            <select class="field-answer">
+              <option value="" ${answerText === '' ? 'selected' : ''}>-- Pilih Jawaban --</option>
+              <option value="A" ${quiz.options?.[0] === answerText && answerText !== '' ? 'selected' : ''}>Pilihan A</option>
+              <option value="B" ${quiz.options?.[1] === answerText && answerText !== '' ? 'selected' : ''}>Pilihan B</option>
+              <option value="C" ${quiz.options?.[2] === answerText && answerText !== '' ? 'selected' : ''}>Pilihan C</option>
+              <option value="D" ${quiz.options?.[3] === answerText && answerText !== '' ? 'selected' : ''}>Pilihan D</option>
+            </select>
+          </div>
+          <div class="admin-field full-width">
+            <label>Penjelasan Jawaban (Opsional)</label>
+            <textarea class="field-explanation" placeholder="Penjelasan tambahan saat menjawab...">${escapeHtml(quiz.explanation || '')}</textarea>
+          </div>
+        </div>
+      `;
+
+      const editBtn = card.querySelector(".admin-word-edit-btn");
+      const deleteBtn = card.querySelector(".admin-word-delete-btn");
+      const saveBtn = card.querySelector(".admin-word-save-btn");
+      const cancelBtn = card.querySelector(".admin-word-cancel-btn");
+
+      editBtn.addEventListener("click", () => {
+        card.classList.add("editing");
+        card.querySelectorAll(".normal-action").forEach(el => el.style.display = "none");
+        card.querySelectorAll(".edit-action").forEach(el => el.style.display = "inline-block");
+      });
+
+      cancelBtn.addEventListener("click", () => {
+        card.classList.remove("editing");
+        card.querySelectorAll(".normal-action").forEach(el => el.style.display = "inline-block");
+        card.querySelectorAll(".edit-action").forEach(el => el.style.display = "none");
+        
+        card.querySelector(".field-question").value = questionText;
+        card.querySelector(".field-option-a").value = quiz.options?.[0] || "";
+        card.querySelector(".field-option-b").value = quiz.options?.[1] || "";
+        card.querySelector(".field-option-c").value = quiz.options?.[2] || "";
+        card.querySelector(".field-option-d").value = quiz.options?.[3] || "";
+        card.querySelector(".field-answer").value = quiz.options?.findIndex(o => o === answerText) !== -1 ? ["A","B","C","D"][quiz.options.findIndex(o => o === answerText)] : "";
+        card.querySelector(".field-explanation").value = quiz.explanation || "";
+      });
+
+      saveBtn.addEventListener("click", () => {
+        const qText = card.querySelector(".field-question").value.trim();
+        const optA = card.querySelector(".field-option-a").value.trim();
+        const optB = card.querySelector(".field-option-b").value.trim();
+        const optC = card.querySelector(".field-option-c").value.trim();
+        const optD = card.querySelector(".field-option-d").value.trim();
+        const ansChoice = card.querySelector(".field-answer").value;
+        const explanationVal = card.querySelector(".field-explanation").value.trim();
+
+        const optionsArr = [optA, optB, optC, optD];
+        let correctAns = "";
+        if (ansChoice === "A") correctAns = optA;
+        else if (ansChoice === "B") correctAns = optB;
+        else if (ansChoice === "C") correctAns = optC;
+        else if (ansChoice === "D") correctAns = optD;
+
+        const updatedQuiz = {
+          question: qText,
+          options: optionsArr,
+          answer: correctAns
+        };
+
+        if (explanationVal) {
+          updatedQuiz.explanation = explanationVal;
+        }
+
+        quizItems[idx] = updatedQuiz;
+        saveEditsToLocalStorage();
+
+        card.classList.remove("editing");
+        card.querySelector(".admin-word-preview").querySelector(".admin-word-jp").textContent = `${idx + 1}. ${updatedQuiz.question}`;
+        card.querySelector(".admin-word-preview").querySelector(".admin-word-meaning-preview").textContent = `– Jawaban: ${updatedQuiz.answer}`;
+        card.querySelectorAll(".normal-action").forEach(el => el.style.display = "inline-block");
+        card.querySelectorAll(".edit-action").forEach(el => el.style.display = "none");
+
+        // Sync to main application kuis view
+        if (typeof renderQuiz === "function") {
+          renderQuiz();
+        }
+      });
+
+      deleteBtn.addEventListener("click", () => {
+        if (confirm(`Apakah Anda yakin ingin menghapus kuis "${quiz.question}"?`)) {
+          quizItems.splice(idx, 1);
+          saveEditsToLocalStorage();
+          renderAdminQuiz();
+          if (typeof renderQuiz === "function") {
+            renderQuiz();
+          }
+        }
+      });
+
+      adminQuizList.appendChild(card);
+    });
+  }
+
+  // Add Quiz Question
+  if (adminAddQuizBtn) {
+    adminAddQuizBtn.addEventListener("click", () => {
+      const lesson = getLessonData(adminSelectedLesson);
+      const quizItems = lesson.quiz || [];
+
+      const newQuiz = {
+        question: "",
+        options: ["", "", "", ""],
+        answer: "",
+        explanation: ""
+      };
+
+      quizItems.unshift(newQuiz);
+      saveEditsToLocalStorage();
+      renderAdminQuiz();
+
+      // Put first card in editing state
+      const firstCard = adminQuizList.querySelector(".admin-word-card");
+      if (firstCard) {
+        firstCard.classList.add("editing");
+        firstCard.querySelectorAll(".normal-action").forEach(el => el.style.display = "none");
+        firstCard.querySelectorAll(".edit-action").forEach(el => el.style.display = "inline-block");
+        firstCard.querySelector(".field-question").focus();
+      }
+    });
+  }
+
+  // 6. Add Word Functionality
+  if (adminAddWordBtn) {
+    adminAddWordBtn.addEventListener("click", () => {
+      const lesson = getLessonData(adminSelectedLesson);
+      const vocabulary = lesson.vocabulary || [];
+      
+      // Create new empty word object
+      const newWord = {
+        japanese: "",
+        furigana: "",
+        romaji: "",
+        meaning: ""
+      };
+
+      // Add to beginning of array so it shows up at the top
+      vocabulary.unshift(newWord);
+      
+      // Save and re-render
+      saveEditsToLocalStorage();
+      renderAdminWords();
+      
+      // Automatically focus and put the first card into edit mode
+      const firstCard = adminWordList.querySelector(".admin-word-card");
+      if (firstCard) {
+        firstCard.classList.add("editing");
+        firstCard.querySelectorAll(".normal-action").forEach(el => el.style.display = "none");
+        firstCard.querySelectorAll(".edit-action").forEach(el => el.style.display = "inline-block");
+        firstCard.querySelector(".jp-input").focus();
+      }
+    });
+  }
+
+  // 7. Save Edits to Local Storage
+  function saveEditsToLocalStorage() {
+    const localEdits = {};
+    for (let i = 1; i <= 50; i++) {
+      if (window.lessonData && window.lessonData[i]) {
+        localEdits[i] = window.lessonData[i];
+      }
+    }
+    localStorage.setItem("asuka_lesson_data_edits", JSON.stringify(localEdits));
+  }
+
+  // 8. Refresh Main Application UI
+  function refreshMainAppUI() {
+    // Check if the functions exist in main script context
+    if (typeof renderVocabulary === "function") {
+      renderVocabulary();
+    }
+    if (typeof renderExtraVocabulary === "function") {
+      renderExtraVocabulary();
+    }
+    // Update word count indicator in current header if any
+    const activePage = document.querySelector(".page.active");
+    if (activePage && activePage.id === "vocabularyPage") {
+      const wordCount = document.getElementById("wordCount");
+      if (wordCount && typeof getLessonVocabulary === "function") {
+        wordCount.textContent = getLessonVocabulary().length;
+      }
+    }
+  }
+
+  // 9. Export JS Modal Handling
+  if (adminExportBtn) {
+    adminExportBtn.addEventListener("click", () => {
+      const lesson = getLessonData(adminSelectedLesson);
+      const output = generateJsCodeString(adminSelectedLesson, lesson);
+      exportCodeArea.value = output;
+      adminExportModal.classList.add("show");
+    });
+  }
+
+  if (closeExportBtn) {
+    closeExportBtn.addEventListener("click", () => {
+      adminExportModal.classList.remove("show");
+    });
+  }
+
+  adminExportModal.addEventListener("click", (e) => {
+    if (e.target === adminExportModal) {
+      adminExportModal.classList.remove("show");
+    }
+  });
+
+  if (copyExportBtn) {
+    copyExportBtn.addEventListener("click", () => {
+      exportCodeArea.select();
+      try {
+        const successful = document.execCommand("copy");
+        if (successful) {
+          copyExportBtn.textContent = "✅ Tersalin!";
+          setTimeout(() => {
+            copyExportBtn.textContent = "📋 Salin Semua";
+          }, 2000);
+        }
+      } catch (err) {
+        console.error("Gagal menyalin kode:", err);
+      }
+    });
+  }
+
+  function generateJsCodeString(lessonNum, lessonData) {
+    const title = lessonData.title || `Bab ${lessonNum}`;
+    const vocabJson = JSON.stringify(lessonData.vocabulary || [], null, 2);
+    const quizJson = JSON.stringify(lessonData.quiz || [], null, 2);
+    const patternsHtml = lessonData.patterns || "";
+
+    // Indent vocabJson correctly to look exactly like standard code files
+    const indentedVocab = vocabJson.split("\n").map((line, idx) => {
+      if (idx === 0) return line;
+      return "  " + line;
+    }).join("\n");
+
+    const indentedQuiz = quizJson.split("\n").map((line, idx) => {
+      if (idx === 0) return line;
+      return "  " + line;
+    }).join("\n");
+
+    return `window.lessonData = window.lessonData || {};
+
+window.lessonData[${lessonNum}] = {
+  title: "${title}",
+
+  vocabulary: ${indentedVocab},
+
+  patterns: String.raw\`${patternsHtml}\`,
+
+  quiz: ${indentedQuiz}
+};
+`;
+  }
+
+  // Helper function to escape HTML
+  function escapeHtml(str) {
+    if (!str) return "";
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+})();
